@@ -207,20 +207,21 @@ function custom_page_template( $template ) {
 		/*
 		 * Custom Archive Page
 		 */
-		$reg = '/\/(exhibitor)$/';
 		if ( preg_match( '/^\/en$/', $redirect_url ) ||
 		     preg_match( '/^\/cn$/', $redirect_url ) ||
 		     preg_match( '/^\/$/', $redirect_url ) ) {
 			$custom_page_name = 'DESIGNART | TOP';
 
-			if ( preg_match( '/designart2017$/', home_url() ) ) {
+			if ( preg_match( '/designarttokyo2019$/', home_url() ) ) {
 				$custom_page_name = 'DESIGNART | TOP';
 
-				return get_template_directory() . '/page-template/designart2017.php';
+				return get_template_directory() . '/page-template/designarttokyo2019.php';
 			}
 
 			return get_template_directory() . '/page-top.php';
 		}
+
+		$reg = '/\/(exhibitor)$/';
 
 		if ( preg_match( $reg, $redirect_url ) ) {
 			$custom_page_name = 'DESIGNART | EXHIBITOR';
@@ -377,7 +378,6 @@ function custom_page_template( $template ) {
 			}
 		}
 
-
 		$reg = '/(.*)\/(.*)$/';
 		if ( preg_match( $reg, $redirect_url, $maths ) ) {
 			if ( isset( $maths[2] ) && $maths[2] == 'designart2017' ) {
@@ -451,8 +451,11 @@ function get_request_url() {
 	if ( isset( $_SERVER['HTTP_HOST'] ) && isset( $_SERVER['REQUEST_URI'] ) ) {
 		$current_url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		$home_url    = get_home_url();
+
 		$pattern     = str_replace( '/', '\/', $home_url );
+
 		if ( preg_match( '/^' . $pattern . '(.*)/', $current_url, $maths ) ) {
+
 			if ( isset( $maths[1] ) ) {
 				return $maths[1];
 			}

@@ -7,10 +7,9 @@ get_header( 'teaser' );
 $redirect_url = $_SERVER['REDIRECT_URL'];
 $reg          = '/(.*)\/(.*)\/$/';
 preg_match( $reg, $redirect_url, $maths );
-if(is_front_page()){
-	$frontpage_id = get_option( 'page_on_front' );
-}
-$post=get_post($frontpage_id);
+$frontpage_id = get_option( 'page_on_front' );
+$post         = get_post( $frontpage_id );
+
 if ( ! empty( $post ) ) {
 	$post_id        = $post->ID;
 	$language       = get_key_languagle();
