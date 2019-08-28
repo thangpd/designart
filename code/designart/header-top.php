@@ -91,7 +91,7 @@
                     <ul class="list_scroll_section list-menu-item items-black-header">
                         <li>
                             <a href="<?php echo get_home_url() ?>/about/" id="mn-about"
-                               ><?php echo translate_text_language( 'about' ) ?></a>
+                            ><?php echo translate_text_language( 'about' ) ?></a>
                         </li>
                         <li>
                             <a href="#report"
@@ -110,14 +110,14 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="<?php site_url(); echo PATH_CURRENT_SITE; ?>conference2019/"
+                            <a href="<?php echo PATH_CURRENT_SITE; ?>conference2019/"
                                class="anchor_scroll"><?php echo translate_text_language( 'conference' ) ?></a>
                             <ul class="sub-menu">
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                    <a href="<?php echo site_url(); echo PATH_CURRENT_SITE; ?>conference2019/"><?php echo translate_text_language( 'conference' ) ?> 2019</a>
+                                    <a href="<?php echo PATH_CURRENT_SITE; ?>conference2019/"><?php echo translate_text_language( 'conference' ) ?> 2019</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                    <a href="<?php echo site_url(); echo PATH_CURRENT_SITE; ?>conference2018/"><?php echo translate_text_language( 'conference' ) ?> 2018</a>
+                                    <a href="<?php echo PATH_CURRENT_SITE; ?>conference2018/"><?php echo translate_text_language( 'conference' ) ?> 2018</a>
                                 </li>
 
 
