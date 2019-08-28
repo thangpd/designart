@@ -110,7 +110,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="<?php echo PATH_CURRENT_SITE; ?>conference2019/"
+                            <a href="<?php echo PATH_CURRENT_SITE; ?>conference2019/" id="mn-conference"
                                class="anchor_scroll"><?php echo translate_text_language( 'conference' ) ?></a>
                             <ul class="sub-menu">
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
