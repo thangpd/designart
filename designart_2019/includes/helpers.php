@@ -242,10 +242,10 @@ function custom_page_template( $template ) {
 		) {
 			$custom_page_name = 'DESIGNART | TOP';
 
-			if ( preg_match( '/designarttokyo2018/', home_url() ) ) {
+			if ( preg_match( '/designarttokyo2019/', home_url() ) ) {
 				$custom_page_name = 'DESIGNART2018 | TOP';
 
-				return get_template_directory() . '/page-template/designart2018.php';
+				return get_template_directory() . '/page-template/designarttokyo2019.php';
 			}
 
 			return get_template_directory() . '/page-top.php';
