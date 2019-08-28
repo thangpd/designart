@@ -1,0 +1,28 @@
+.fancybox-slide .fancybox-image-wrap{
+    top:-25px;
+}
+.fancybox-show-caption .fancybox-caption-wrap {
+    opacity: 0;
+}
+
+.fancybox-custom-caption {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.fancybox-image {
+    position: relative;
+}
+
+.fancybox-caption-left {
+    display: inline-block;
+}
+
+.fancybox-caption-right {
+    float: right;
+}
+
+.fancybox-caption-right .text {
+    text-align: left;
+}
