@@ -110,9 +110,20 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="<?php site_url(); echo PATH_CURRENT_SITE; ?>conference/" id="mn-conference"
-                            ><?php echo translate_text_language( 'conference' ) ?></a>
+                            <a href="<?php site_url(); echo PATH_CURRENT_SITE; ?>conference2019/"
+                               class="anchor_scroll"><?php echo translate_text_language( 'conference' ) ?></a>
+                            <ul class="sub-menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="<?php echo site_url(); echo PATH_CURRENT_SITE; ?>conference2019/"><?php echo translate_text_language( 'conference' ) ?> 2019</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="<?php echo site_url(); echo PATH_CURRENT_SITE; ?>conference2018/"><?php echo translate_text_language( 'conference' ) ?> 2018</a>
+                                </li>
+
+
+                            </ul>
                         </li>
+
                         <li>
                             <a href="<?php site_url(); echo PATH_CURRENT_SITE; ?>artist-brand/"
                                id="mn-artist-brand"><?php echo translate_text_language( 'artist&brand' ) ?></a>
