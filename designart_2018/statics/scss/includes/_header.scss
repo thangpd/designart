@@ -1,0 +1,181 @@
+
+@import "../_mixins";
+
+/*====================================
+=            Header style            =
+====================================*/
+
+	.site-header {
+		background: #FFFFFF;
+		@include box-shadow(0px 0px 3px rgba(0,0,0,0.3));
+		.header-top {
+			text-align: right;
+			.btn-link {
+				color: $primary-color;
+				background-color: $gray-color;
+				border:none;
+				height: 36px;
+				padding: 0px 50px 0px 50px;
+				position: relative;
+				line-height: 36px;
+				&:hover{
+					opacity: 0.8;
+				}
+				&:before{
+					content: "";
+					position: absolute;
+					top: 3px;
+					left:15px;
+					background: url(../images/commons/icon-designart.png) no-repeat;
+					background-size: 100%;
+					width:25px;
+					height: 24px;
+				}
+				.icons {
+					position: absolute;
+					top: 0;
+					right: 0;
+					display: inline-block;
+					height: 36px;
+					text-align: center;
+					line-height: 36px;
+					width:36px;
+					background-color: $text-color;
+					&:before{
+						font-family: $icon-font;
+						content: "\f105";
+					}
+				}
+			}
+		}
+		.header-main {
+			padding-left: 26px;
+			padding-right: 26px;
+			padding-bottom: 40px;
+			position: relative;
+			@extend .clearfix;
+		}
+		.main-navigation {
+			width:75%;
+			float: left;
+		}
+		.right-site {
+			float: left;
+			width: 25%;
+			position: relative;
+			text-align: right;
+		}
+		.social-list {
+			vertical-align: bottom;
+		}
+	}
+
+	.logo-site {
+		float: left;
+		width: 238px;
+		position: relative; 
+	}
+
+	.nav-collapse {
+		float: left;
+		width: -webkit-calc(100% - 238px);
+		width: -moz-calc(100% - 238px);
+		width: calc(100% - 238px);
+		@extend .clearfix;
+	}
+
+	.social-list {
+		display: inline-block;
+		.social-item{
+			display: inline-block;
+			margin-left: 5px;
+			margin-right: 5px;
+			width:26px;
+			height: 26px;
+			line-height: 26px;
+			font-size: 16px;
+			text-align: center;
+			color:#FFFFFF;
+			background-color: $primary-color;
+			@include border-radius(50%);
+			&:hover{
+				background-color:$text-color; 
+			}
+		}
+	}
+
+	.language-dropdown {
+		display: inline-block;
+		width: 110px;
+		vertical-align: top;
+		text-align: left;
+		.lb-text {
+			font-size: 11px;
+			color: $primary-color;
+		}
+		.form-control {
+			@include border-radius(0px);
+			border:2px solid $primary-color;
+			color: $primary-color;
+			@include box-shadow(none);
+		}
+	}
+
+/*=====  End of Header style  ======*/
+
+/*===================================
+=            Menu style             =
+===================================*/
+
+	.menu {
+		>.menu-item {
+			margin-left: 20px;
+			margin-right: 20px;
+			margin-top: 30px;
+			padding-bottom: 10px;
+			>a{
+				font-weight: 500;
+				&:hover{
+					color: $primary-color;
+				}
+			}
+		}
+		a {
+			text-transform: uppercase;
+			color: $text-color;
+			font-size: 13px;
+			font-family: $primary-font;
+			&:hover{
+				color: #FFFFFF;
+			}
+		}
+		.sub-menu {
+			background: $primary-color;
+			border-top: 4px solid $text-color;
+			padding: 10px 12px;
+			.menu-item  {
+				display: block;
+				margin-bottom: 10px;
+				padding-left: 20px;
+				position: relative;
+				padding-left: 15px;
+				&:hover{
+					color: #FFFFFF;
+				}
+				&:before{
+					font-family: $icon-font;
+					content: "\f105";
+					position: absolute;
+					left: 0;
+					top: 2px;
+					font-size: 12px;
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+
+/*=====  End of Menu style   ======*/
