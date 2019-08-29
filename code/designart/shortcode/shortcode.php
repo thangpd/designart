@@ -89,7 +89,7 @@ function get_conference_list( $args, $content ) {
 
 					$format_html_body .= '<div class="date title">' . str_replace( '/', '.', $date_conference ) . '<small>(' . strtoupper( $chaos_date[$prefix_varible."date"] ) . ')</small></div>';
 
-
+                    if(!empty($time_list)){
 					foreach ( $time_list as $time ) {
 						$time_from    = $time['time_from'];
 						$time_to      = $time['time_to'];
@@ -130,7 +130,7 @@ function get_conference_list( $args, $content ) {
 						$format_html_body .= '<!--day la dau--></div>';
 
 					}
-
+                    }
 
 					$format_html_head .= '</ul>';
 
