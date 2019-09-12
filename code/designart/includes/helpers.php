@@ -272,12 +272,20 @@ function custom_page_template( $template ) {
 
 			return get_template_directory() . '/page-template/artist-brand.php';
 		}
-		$reg = '/\/(conference)|(conference\/)|(conference?(.*))$/';
+		$reg = '/\/(conference2018)|(conference2018\/)|(conference2018(.*))$/';
+		if ( preg_match( $reg, $redirect_url, $maths ) ) {
+
+			$custom_page_name = 'DESIGNART | Conference';
+			$custom_page      = get_page_by_path( 'conference2018', OBJECT, 'page' );
+
+			return get_template_directory() . '/page-template/page-conference2018.php';
+		}
+		$reg = '/\/(conference2019)|(conference2019\/)|(conference2019(.*))$/';
 		if ( preg_match( $reg, $redirect_url, $maths ) ) {
 			$custom_page_name = 'DESIGNART | Conference';
-			$custom_page      = get_page_by_path( 'conference', OBJECT, 'page' );
+			$custom_page      = get_page_by_path( 'conference2019', OBJECT, 'page' );
 
-			return get_template_directory() . '/page-template/page-conference.php';
+			return get_template_directory() . '/page-template/page-conference2019.php';
 		}
 
 		$reg = '/\/(news)\/page\/(.*)$/';
