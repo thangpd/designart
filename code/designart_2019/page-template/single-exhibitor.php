@@ -44,7 +44,7 @@ if (!empty($custom_page)) {
 	$description_bottom = get_field($prefix_varible.'description_bottom', $post_id, '');
 }
 ?>
-    <div class="exhibiton-detai-page padding-tb-60">
+    <div class="exhibiton-detai-page padding-t-60">
         <div class="container">
             <!-- back button -->
             <!-- <?php back_page_history(true, 'top') ?> -->
@@ -280,19 +280,21 @@ if (!empty($custom_page)) {
                     </a>
                 </div>
             </div>
-            <!-- landing-share -->
-            <div class="landing-st contact-st">
-                <div class="container">
-					<?php get_html_share() ?>
-                    <div class="contact-info">
-						<?php get_html_contact(); ?>
-                    </div>
+        </div>
+
+        <!-- landing-share -->
+        <div class="landing-st contact-st">
+            <div class="container">
+                <!--					--><?php //get_html_share() ?>
+                <div class="contact-info">
+                    <?php get_html_contact(); ?>
                 </div>
             </div>
-            <!-- landing-back-to-top -->
-            <div class="wp-back-to-top top2 show">
-                <span class="line"></span>
-                <span class="text">TOP</span>
+        </div>
+        <!-- landing-back-to-top -->
+        <div class="wp-back-to-top-wrap">
+            <div class="wp-back-to-top top2">
+                <img src="<?php echo URL_STATICS; ?>/images/commons/to_top_bt.png" alt="TOP">
             </div>
         </div>
     </div>
@@ -320,7 +322,7 @@ if (!empty($custom_page)) {
                 ]
             });
             $(document).ready(function () {
-                $('#primary-menu').find('a[data-demo=item-2]').parent().addClass('current-menu-item');
+                $('#primary-menu').find('a[data-demo=item-1]').parent().addClass('current-menu-item');
             })
         })
     </script>

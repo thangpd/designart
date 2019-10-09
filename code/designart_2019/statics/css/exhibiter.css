@@ -63,6 +63,11 @@ body.language-en .title-des {
   transition: all 0.3s ease-in-out;
 }
 
+
+.exhibition-page > .container{
+  margin-bottom: 50px;
+}
+
 li.exhibitor-cat-list {
   display: inline-block;
   vertical-align: middle;

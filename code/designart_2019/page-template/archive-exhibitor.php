@@ -13,9 +13,9 @@ if ( isset( $term_venue ) ) {
 //    'parent' => $term_parent
 //) );
 
+
 if ( function_exists( 'acf_add_options_page' ) && ! empty( $terms = get_field( 'exhibitor_category_setting', 'option' ) ) ) {
 } else {
-
 	$terms          = get_terms( [ 'taxonomy' => 'exhibitor-cat', 'hide_empty' => true ] );
 }
 
@@ -23,10 +23,15 @@ $language       = get_key_languagle();
 $prefix_varible = get_prefix_languagle( $language, "_" );
 
 $page        = get_page_by_path( 'exhibitor' );
+
 $description = get_field( $prefix_varible . 'description', $page->ID, '' );
+
+$terms2 = get_field( 'exhibitor_category_setting2', 'option' );
 ?>
 
-<div class="exhibition-page padding-tb-50">
+<?php /*get_search_form(); */?>
+
+<div class="exhibition-page padding-t-50">
     <div class="container">
         <!-- back button -->
         <!-- <?php back_page_history( true, 'top' ) ?> -->
@@ -43,7 +48,7 @@ $description = get_field( $prefix_varible . 'description', $page->ID, '' );
         <div class="filter_category">
             <div class="block-category">
 	            <?php
-	            $tranlated_term=get_category_exhibitor($terms,'',true);
+	            $tranlated_term = get_category_exhibitor($terms,'',true);
 	            echo $tranlated_term;
 	            ?>
             </div>
@@ -59,7 +64,6 @@ $description = get_field( $prefix_varible . 'description', $page->ID, '' );
 
 				as $term
 			):
-
 
 				$posts = get_posts( array(
 					'post_type'      => 'exhibitor',
@@ -127,12 +131,14 @@ $description = get_field( $prefix_varible . 'description', $page->ID, '' );
                         <!--wp-list-exhibiter--></ul>
                     <!--section_scroll wp-block-section--></div>
 				<?php
-				if ( ! empty( $map_cat ) ) {
+/*
+                //一旦消す(2019/9/20)
+                if ( ! empty( $map_cat ) ) {
 					echo '<div class="text-center">
 <a href="' . $map_cat . '" class="btn btn-line yellow" target="_blank">'.translate_text_language('View in Google Map').'
 </a>
 </div>';
-				}
+				}*/
 				?>
 
 			<?php
@@ -146,24 +152,33 @@ $description = get_field( $prefix_varible . 'description', $page->ID, '' );
 		<?php back_page_history( false, 'bot' ) ?>
     </div>
     <!-- landing-share -->
-    <div class="landing-st contact-st">
+<!--    <div class="landing-st contact-st">
         <div class="container">
-			<?php get_html_share() ?>
+			<?php /*get_html_share() */?>
             <div class="contact-info">
-				<?php get_html_contact(); ?>
+				<?php /*get_html_contact(); */?>
             </div>
         </div>
-    </div>
+    </div>-->
+
+    <div class="landing-st contact-st">
+        <div class="container">
+            <?php get_html_contact(); ?>
+        </div>
+    </div><!-- ./end .contact-st -->
+
+
     <!-- landing-back-to-top -->
-    <div class="wp-back-to-top top2 show">
-        <span class="line"></span>
-        <span class="text">TOP</span>
+    <div class="wp-back-to-top-wrap">
+        <div class="wp-back-to-top top2">
+            <img src="<?php echo URL_STATICS; ?>/images/commons/to_top_bt.png" alt="TOP">
+        </div>
     </div>
 </div>
 <script>
     jQuery(function ($) {
         $(document).ready(function () {
-            $('a[data-demo=item-2]').parent().addClass('current-menu-item');
+            $('a[data-demo=item-1]').parent().addClass('current-menu-item');
             $('.filter_category a.category').on('click', function (e) {
                 e.preventDefault();
                 var window = screen.width;

@@ -53,11 +53,13 @@ $conference = get_field( 'list_conference', $post_id );
 <section class="wp-page conference-page" >
     <div class="container">
 
-
+<!--
         <a href="https://dat2018-conf.peatix.com/" role="button" class="btn btn-entry-fixed" target="_blank">
             <span class="text mb-10">TICKET</span>
             <span class="icon"></span>
-        </a><!-- ./end .btn-entry-fixed -->
+        </a>
+-->
+<!-- ./end .btn-entry-fixed -->
 
         <div class="conference-banner heading-title heading-style-02 mb-30">
             <h1 class="title mb-30"><?php echo $page_title; ?></h1>
@@ -99,6 +101,7 @@ $conference = get_field( 'list_conference', $post_id );
             </div>
         </div><!-- ./end .conference-summary-list -->
 
+		<!--
         <div class="conference-program heading-title heading-style-02">
             <h2 class="title lineb"><?php echo translate_text_language('DESIGNART CONFERECNE 2018 PROGRAM') ?></h2>
 			<?php
@@ -110,7 +113,10 @@ $conference = get_field( 'list_conference', $post_id );
 			?>
 
 
-        </div><!-- ./end .conference-program -->
+        </div>
+
+-->
+<!-- ./end .conference-program -->
 
 
     </div>

@@ -29,6 +29,10 @@ $cfg_text_translate = array(
 		'jp' => '展示作品',
 		'cn' => '参展商'
 	),
+    'exhibition map'              => array(
+        'jp' => '展示MAP'
+    ),
+
 	'architectures'           => array(
 		'jp' => '建築スポット',
 	),
@@ -52,6 +56,9 @@ $cfg_text_translate = array(
 		'jp' => 'テーマ別巡り方',
 		'cn' => '概念'
 	),
+    'conference'              => array(
+        'jp'    => 'カンファレンス'
+    ),
 	'report'                  => array(
 		'jp' => 'レポート'
 	),
@@ -74,12 +81,36 @@ $cfg_text_translate = array(
 		'jp' => 'プレスの問い合わせ',
 		'cn' => '联系方式'
 	),
+    'Mail magazine registration' => array(
+        'jp' => 'メルマガ登録'
+    ),
+    'Press registration' => array(
+        'jp' => 'プレス登録'
+    ),
+
+    'Annual activities of DESIGNART will be informed through press release.' => array(
+        'jp' => 'デザイナートの年間活動などをプレスリリースでお知らせします。'
+    ),
+
+    'Press registration from here' => array(
+        'jp' => 'プレス登録をご希望の方はこちらから'
+    ),
 	'Privacy Policy'          => array(
 		'jp' => 'プライバシーポリシー'
 	),
-	'Contact us'              => array(
-		'jp' => 'お問い合わせ'
+	'Contact about DESIGNART'              => array(
+		'jp' => 'デザイナートへお問い合わせ'
 	),
+
+    'Contact about Press'              => array(
+        'jp' => 'プレスへお問い合わせ'
+    ),
+
+    'BRAND SITE'              => array(
+        'jp' => 'ブランドサイト'
+    ),
+
+
 	'Site Map'                => array(
 		'jp' => 'サイトマップ'
 	),
@@ -131,19 +162,72 @@ $cfg_text_translate = array(
 		'jp' => '※一部会場では、すでに展示が終了している場合があります。 <br>
 展示期間など詳細は個別の出展者ページにてご確認くださいますようお願い申し上げます。',
 	),
-	'how to use areamap'                                                                                           => array(
-		'jp' => 'エリアマップの使い方',
+
+    'TOKYO TRANSFORMED INTO A MUSEUM' => array(
+        'jp' => '東京の街全体がミュージアムになる10日間',
+    ),
+
+    'Held in Omotesando / Gaienmae / Harajuku・Meiji Jingumae / Shibuya・Ebisu / Daikanyama・Nakameguro / Roppongi / Shinjuku / Ginza' => array(
+        'jp' => '表参道・外苑前 / 原宿・明治神宮前 / 渋谷・恵比寿 /代官山・中目黒 / 六本木 / 新宿 / 銀座 で開催！',
+    ),
+
+    'Bringing Emotion into Lives' => array(
+        'jp' => '感動を、すべての人々に',
+    ),
+
+    '"DESIGNART TOKYO" is a design & art festival held every fall. There are many exhibitions to bring together diverse objects and experiences created in crossover fields of art, interior design, fashion, and food from around the globe to be presented on the stages in various locations in Tokyo, one of the world\'s leading mixed culture cities.' => array(
+        'jp' => '「DESIGNART TOKYO」は、毎年秋に開催するデザイン＆アートフェスティバルです。世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、インテリア、ファッション、テクノロジーなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩な作品を発表していきます。',
+    ),
+
+    'Everyone can enjoy design & art'                                                                                           => array(
+        'jp' => '見て、触れて、アートを全身で感じてください',
+    ),
+
+
+    'how to use areamap'                                                                                           => array(
+        'jp' => 'エリアマップの使い方',
+    ),
+
+    'Discover<br>Art'                                                                                           => array(
+		'jp' => 'アートに<br>出会う',
 	),
-	'area map'                                                                                                     => array(
-		'jp' => 'エリアマップ',
+
+    'The 120 groups exhibit their works in the 11 areas in 2019.'                                                                                           => array(
+        'jp' => '2019年は120組、11エリアで作品を展示します。',
+    ),
+
+    'Learn<br>Art'                                                                                           => array(
+        'jp' => 'アートを<br>学ぶ',
+    ),
+
+
+    'DESIGNART Conference “BRIDGE” is a platform to learn and exchange opinions about what is happening in the field of art and design.'                                                                                           => array(
+        'jp' => 'デザイナートカンファレンス「BRIDGE」は、アートとデザインの視点から今、社会に起きている変化について考え学び意見を交換し合う場です。',
+    ),
+
+
+    'https://docs.google.com/forms/d/e/1FAIpQLSdSWZa58t587HPY5JoP-GwW527z2rXhn0KNNfM2iTN_Ki1F8g/viewform?usp=sf_link'                                                                                           => array(
+        'jp' => 'https://docs.google.com/forms/d/e/1FAIpQLSdyCbRINFfrORznLiiqDBL9pFwRuWJ9Xy9tx7abssraPl2EFA/viewform?usp=sf_link',
+    ),
+
+    'https://docs.google.com/forms/d/e/1FAIpQLScRG7lZN5jodO08ZABtdpsJGk-kdvNMPOVMLytlDJYVzdc3dQ/viewform?usp=sf_link'                                                                                           => array(
+        'jp' => 'https://docs.google.com/forms/d/e/1FAIpQLSc8D3ZbGHlbPzTRHQ7yYt7do9SFQH7AemvAgFBX_CI7x1EvmQ/viewform?usp=sf_link',
+    ),
+
+    'area map'                                                                                                     => array(
+        'jp' => 'エリアマップ',
+    ),
+
+	'Early October<br>All program information release!!'                                                                                                     => array(
+		'jp' => '10月上旬<br>全プログラム情報リリース！！',
 	),
 	'all'                                                                                                          => array(
 		'jp' => 'すべて',
 	),
-	'more info'                                                                                                    => array(
+	'More Info'                                                                                                    => array(
 		'jp' => 'もっと見る',
 	),
-	'exhibition list'                                                                                              => array(
+	'Exhibition List'                                                                                              => array(
 		'jp' => '展示作品一覧',
 	),
 	'Squeeze by tag'                                                                                               => array(

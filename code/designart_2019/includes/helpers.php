@@ -46,10 +46,15 @@ function generate_select_languagle() {
     <div class="language-dropdown dropdown" id="custome-multi-languagle" data-current="<?php echo $languagle ?>"
          data-home="<?php echo home_url(); ?>">
         <span class="lb-text">language:</span>
-        <a href="javascript:void(0)" class="btn btn-lang dropdown-toggle" data-toggle="dropdown">English</a>
+        <a href="javascript:void(0)" class="btn btn-lang dropdown-toggle" data-toggle="dropdown">ENGLISH</a>
         <ul class="dropdown-menu">
             <li class="current"><a href="javascript:void(0)" data-val="">日本語</a></li>
-            <li><a href="javascript:void(0)" data-val="en">English</a></li>
+            <li><a href="javascript:void(0)" data-val="en">ENGLISH</a></li>
+        </ul>
+
+        <ul class="language-select">
+            <li><a href="javascript:void(0)" data-val="">日本語</a></li>
+            <li><a href="javascript:void(0)" data-val="en">ENGLISH</a></li>
         </ul>
 
     </div>
@@ -76,16 +81,15 @@ function generate_select_languagle() {
                 var home_url = $('#custome-multi-languagle').attr('data-home');
                 $('#custome-multi-languagle .dropdown-menu li').removeClass("current");
                 $('#custome-multi-languagle').find('a[data-val="' + languagle + '"]').parents("li").addClass('current');
-                var txt = $('#custome-multi-languagle li.current a[data-val="' + languagle + '"]').text();
-                // alert(txt);
+                var txt = $('#custome-multi-languagle .dropdown-menu li.current a[data-val="' + languagle + '"]').text();
                 $(".language-dropdown .btn-lang").text(txt);
-                console.log("current languagle: " + languagle);
-                $(document).on('click', '.language-dropdown .dropdown-menu a', function () {
+                $(document).on('click', '.language-dropdown .dropdown-menu a, .language-dropdown .language-select a', function () {
                     var languagle_change = $(this).data("val");
 
                     jCookies.set('language', languagle_change, 1);
 
-                    var txt = $('#custome-multi-languagle li a[data-val="' + languagle + '"]').text();
+                    var txt = $('#custome-multi-languagle .dropdown-menu li a[data-val="' + languagle + '"]').text();
+
                     $(this).parents(".language-dropdown ").find(".btn-lang").text(txt);
                     window.location = gotoLanguageurl(languagle_change, home_url);
                 })
@@ -243,7 +247,7 @@ function custom_page_template( $template ) {
 			$custom_page_name = 'DESIGNART | TOP';
 
 			if ( preg_match( '/designarttokyo2019/', home_url() ) ) {
-				$custom_page_name = 'DESIGNART2018 | TOP';
+				$custom_page_name = 'DESIGNART2019 | TOP';
 
 				return get_template_directory() . '/page-template/designarttokyo2019.php';
 			}
@@ -253,7 +257,7 @@ function custom_page_template( $template ) {
 
 		$reg = '/\/(exhibitor)$/';
 		if ( preg_match( $reg, $redirect_url ) ) {
-			$custom_page_name = 'DESIGNART2018 | EXHIBITION';
+			$custom_page_name = 'DESIGNART2019 | EXHIBITION';
 			$custom_page      = get_page_by_path( 'exhibitor', OBJECT, 'page' );
 //            if (isset($cfg_data_meta['archive-exhibitor'])) {
 //                $custom_page = $cfg_data_meta['archive-exhibitor'];
@@ -263,7 +267,7 @@ function custom_page_template( $template ) {
 
 		$reg = '/(exploremore\/exhibitorguide)$/';
 		if ( preg_match( $reg, $redirect_url ) ) {
-			$custom_page_name = 'DESIGNART2018 | EXHIBITOR GUIDE';
+			$custom_page_name = 'DESIGNART2019 | EXHIBITOR GUIDE';
 			$custom_page      = get_page_by_path( 'exhibitor', OBJECT, 'page' );
 //            if (isset($cfg_data_meta['archive-exhibitor'])) {
 //                $custom_page = $cfg_data_meta['archive-exhibitor'];
@@ -272,7 +276,7 @@ function custom_page_template( $template ) {
 		}
 		$reg = '/\/(event-party)$/';
 		if ( preg_match( $reg, $redirect_url ) ) {
-			$custom_page_name = 'DESIGNART2018 | EVENT & PARTY';
+			$custom_page_name = 'DESIGNART2019 | EVENT & PARTY';
 			$custom_page      = get_page_by_path( 'event-party', OBJECT, 'page' );
 //            if (isset($cfg_data_meta['archive-event-party'])) {
 //                $custom_page = $cfg_data_meta['archive-event-party'];
@@ -283,7 +287,7 @@ function custom_page_template( $template ) {
 
 		$reg = '/(exploremore\/architecture)$/';
 		if ( preg_match( $reg, $redirect_url ) ) {
-			$custom_page_name = 'DESIGNART2018 | ARCHITECTURE';
+			$custom_page_name = 'DESIGNART2019 | ARCHITECTURE';
 			$custom_page      = get_page_by_path( 'architecture', OBJECT, 'page' );
 //            if (isset($cfg_data_meta['architecture'])) {
 //                $custom_page = $cfg_data_meta['architecture'];
@@ -293,7 +297,7 @@ function custom_page_template( $template ) {
 
 		$reg = '/\/(news)$/';
 		if ( preg_match( $reg, $redirect_url ) ) {
-			$custom_page_name = 'DESIGNART2018 | NEWS';
+			$custom_page_name = 'DESIGNART2019 | NEWS';
 			$custom_page      = get_page_by_path( 'news', OBJECT, 'page' );
 //            if (isset($cfg_data_meta['archive-news'])) {
 //                $custom_page = $cfg_data_meta['archive-news'];
@@ -304,7 +308,7 @@ function custom_page_template( $template ) {
 
 		$reg = '/\/(artist&brand)|(artist&brand\/)|(artist&brand?(.*))$/';
 		if ( preg_match( $reg, $redirect_url ) ) {
-			$custom_page_name = 'DESIGNART2018 | Artist & Brand';
+			$custom_page_name = 'DESIGNART2019 | Artist & Brand';
 			$custom_page      = get_page_by_path( 'artist-brand', OBJECT, 'page' );
 //            if (isset($cfg_data_meta['architecture'])) {
 //                $custom_page = $cfg_data_meta['architecture'];
@@ -314,7 +318,7 @@ function custom_page_template( $template ) {
 
 		$reg = '/\/(news)\/page\/(.*)$/';
 		if ( preg_match( $reg, $redirect_url ) ) {
-			$custom_page_name = 'DESIGNART2018 | NEWS';
+			$custom_page_name = 'DESIGNART2019 | NEWS';
 			if ( isset( $cfg_data_meta['archive-news'] ) ) {
 				$custom_page = $cfg_data_meta['archive-news'];
 			}
@@ -328,7 +332,7 @@ function custom_page_template( $template ) {
 			if ( isset( $maths[2] ) && ! empty( $maths[2] ) ) {
 				$custom_page_name = $maths[2];
 				$custom_page      = get_page_by_path( $custom_page_name, OBJECT, 'exhibitor' );
-				$custom_page_name = 'DESIGNART2018 | EXHIBITOR | ' . $maths[2];
+				$custom_page_name = 'DESIGNART2019 | EXHIBITOR | ' . $maths[2];
 				if ( isset( $custom_page ) ) {
 					return get_template_directory() . '/page-template/single-exhibitor.php';
 				}
@@ -340,7 +344,7 @@ function custom_page_template( $template ) {
 			if ( isset( $maths[2] ) && ! empty( $maths[2] ) ) {
 				$custom_page_name = $maths[2];
 				$custom_page      = get_page_by_path( $custom_page_name, OBJECT, 'exhibitorguide' );
-				$custom_page_name = 'DESIGNART2018 | EXHIBITOR GUIDE| ' . $maths[2];
+				$custom_page_name = 'DESIGNART2019 | EXHIBITOR GUIDE| ' . $maths[2];
 				if ( isset( $custom_page ) ) {
 					return get_template_directory() . '/page-template/single-exhibitorguide.php';
 				}
@@ -353,7 +357,7 @@ function custom_page_template( $template ) {
 			if ( isset( $maths[2] ) && ! empty( $maths[2] ) ) {
 				$custom_page_name = preg_replace( '/^news-/', '', $maths[2] );
 				$custom_page      = get_page_by_path( $custom_page_name, OBJECT, 'post' );
-				$custom_page_name = 'DESIGNART2018 | NEWS | ' . $custom_page->post_title;
+				$custom_page_name = 'DESIGNART2019 | NEWS | ' . $custom_page->post_title;
 				if ( isset( $custom_page ) ) {
 					return get_template_directory() . '/single.php';
 				}
@@ -366,7 +370,7 @@ function custom_page_template( $template ) {
 			if ( isset( $maths[2] ) && ! empty( $maths[2] ) ) {
 				$custom_page_name = $maths[2];
 				$custom_page      = get_page_by_path( $custom_page_name, OBJECT, 'architecture' );
-				$custom_page_name = 'DESIGNART2018 | ARCHITECTURE | ' . $maths[2];
+				$custom_page_name = 'DESIGNART2019 | ARCHITECTURE | ' . $maths[2];
 				if ( isset( $custom_page ) ) {
 					return get_template_directory() . '/page-template/single-architecture.php';
 				}
@@ -379,7 +383,7 @@ function custom_page_template( $template ) {
 			if ( isset( $maths[2] ) && ! empty( $maths[2] ) ) {
 				$custom_page_name = $maths[2];
 				$custom_page      = get_page_by_path( $custom_page_name, OBJECT, 'event-party' );
-				$custom_page_name = 'DESIGNART2018 | EVENT & PARTY | ' . $maths[2];
+				$custom_page_name = 'DESIGNART2019 | EVENT & PARTY | ' . $maths[2];
 				if ( isset( $custom_page ) ) {
 					return get_template_directory() . '/page-template/single-event-party.php';
 				}
@@ -392,7 +396,7 @@ function custom_page_template( $template ) {
 			if ( isset( $maths[2] ) && ! empty( $maths[2] ) ) {
 				$custom_page_name = $maths[2];
 				$custom_page      = get_page_by_path( $custom_page_name, OBJECT, 'artist-brand' );
-				$custom_page_name = 'DESIGNART2018 | Artist & Brand | ' . $maths[2];
+				$custom_page_name = 'DESIGNART2019 | Artist & Brand | ' . $maths[2];
 				if ( isset( $custom_page ) ) {
 					return get_template_directory() . '/page-template/single-artist-brand.php';
 				}
@@ -403,14 +407,14 @@ function custom_page_template( $template ) {
 		if ( preg_match( $reg, $redirect_url, $maths ) ) {
 
 			if ( isset( $maths[2] ) && $maths[2] == 'designarttokyo2018' ) {
-				$custom_page_name = 'DESIGNART2018 | TOP';
+				$custom_page_name = 'DESIGNART2019 | TOP';
 
-				return get_template_directory() . '/page-template/designart2018.php';
+				return get_template_directory() . '/page-template/DESIGNART2019.php';
 			}
 
 
 			if ( isset( $maths[2] ) && ! empty( $maths[2] ) ) {
-				$custom_page_name = 'DESIGNART2018 | ' . strtoupper( $maths[2] );
+				$custom_page_name = 'DESIGNART2019 | ' . strtoupper( $maths[2] );
 			}
 		}
 
@@ -478,8 +482,8 @@ function get_request_url() {
 			if ( isset( $maths[1] ) ) {
 				return $maths[1];
 			}
+        }
 		}
-	}
 
 	return '';
 }
@@ -516,17 +520,10 @@ function get_html_share( $is_echo = true ) {
 
 function get_html_contact( $is_echo = true ) {
 	$html = '
-	<div class="heading-title heading-style-01">
-                <div class="title-wrapp">
-                    <div class="first-letter">' . translate_text_language( 'contact' ) . '</div>
-                    <h2 class="title case-5">' . translate_text_language( 'contact' ) . '</h2>
-                </div>
-            </div>
-            <div class="text-center group-btn">
-                <a href="mailto:info@designart.jp" class="btn btn-bg yellow ">' . translate_text_language( "Contact about DESIGNART" ) . '</a>
-                <a href="mailto:press@designart.jp" class="btn btn-bg yellow ">' . translate_text_language( "Contact about Press" ) . '</a>
-            </div>
-	
+        <div class="text-center group-btn">
+            <a href="' . translate_text_language( "https://docs.google.com/forms/d/e/1FAIpQLSdSWZa58t587HPY5JoP-GwW527z2rXhn0KNNfM2iTN_Ki1F8g/viewform?usp=sf_link" ) . '" target="_blank" class="btn btn-bg yellow ">' . translate_text_language( "Mail magazine registration" ) . '<br><span>' . translate_text_language( "Annual activities of DESIGNART will be informed through press release." ) . '</span></a>
+            <a href="' . translate_text_language( "https://docs.google.com/forms/d/e/1FAIpQLScRG7lZN5jodO08ZABtdpsJGk-kdvNMPOVMLytlDJYVzdc3dQ/viewform?usp=sf_link" ) . '" target="_blank" class="btn btn-bg yellow ">' . translate_text_language( "Press registration" ) . '<br><span>' . translate_text_language( "Press registration from here" ) . '</span></a>
+        </div>
 	';
 	if ( $is_echo ) {
 		echo $html;
@@ -565,7 +562,7 @@ function get_url_image_event_cat( $slug ) {
 }
 
 function get_html_back_to_top( $is_echo = true ) {
-	$link_top = home_url() . '/designart2018';
+	$link_top = home_url() . '/DESIGNART2019';
 	$html     = '<div class="text-center"><a href="' . $link_top . '" class="btn btn-line black "><i class="icons fa fa-angle-left"></i> BACK to TOP</a></div>';
 	if ( ! $is_echo ) {
 		return $html;
@@ -821,8 +818,10 @@ function get_category_exhibitor( $get_the_term, $format = '', $hide_empty = fals
 	$cat_list_html = '';
 	if ( ! empty( $get_the_term ) ) {
 		foreach ( $get_the_term as $vl_term ) {
-			if ( $hide_empty ) {
+//		    var_dump($vl_term);
+//		    echo "------------";
 
+			if ( $hide_empty ) {
 				$posts = get_posts( array(
 					'post_type' => 'exhibitor',
 					'tax_query' => array(
@@ -838,6 +837,10 @@ function get_category_exhibitor( $get_the_term, $format = '', $hide_empty = fals
 				}
 			}
 			$cat_name      = translate_category_name( $vl_term, $prefix_varible );
+//            echo $cat_name;
+//            echo "--------";
+//            echo $vl_term->slug;
+
 			$cat_list_html .= sprintf( $format,
 				$vl_term->slug,
 				$cat_name );
@@ -851,7 +854,6 @@ function get_category_exhibitor( $get_the_term, $format = '', $hide_empty = fals
 	return $res;
 
 }
-
 
 /*END EXHIBITOR*/
 

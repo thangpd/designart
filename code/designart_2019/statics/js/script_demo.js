@@ -30,6 +30,20 @@ jQuery(function ($) {
     }
 
     $(window).scroll(function () {
+        var contact = document.querySelector('.contact-st');
+        var contactH = contact ? contact.clientHeight : 0;
+        var footerH = document.querySelector('.site-footer').clientHeight;
+        var bp = 767;
+        var marginBottom = (window.innerWidth <= bp)? 57 : 20;
+        var scroll = (document.body.clientHeight - 	window.innerHeight);
+        var targetY = contactH + footerH - marginBottom;
+
+        if($(this).scrollTop() > scroll - targetY){
+            $('.wp-back-to-top').addClass('absolute');
+        }else{
+            $('.wp-back-to-top').removeClass('absolute');
+        }
+
         if ($(this).scrollTop() > 600) {
             $('.wp-back-to-top').addClass('show');
         } else {

@@ -21,9 +21,9 @@ $prefix_varible = get_prefix_languagle($language, "_");
     <div class="container">
         <h1 style="text-align:center;">PAGE NOT FOUND!</h1>
     </div>
-    <div class="landing-st contact-st">
-		<?php get_html_share() ?>
-    </div>
+<!--    <div class="landing-st contact-st">
+		<?php /*get_html_share() */?>
+    </div>-->
 	<?php get_html_banner_page(true); ?>
     <div class="wp-back-to-top top2 show">
         <span class="line"></span>

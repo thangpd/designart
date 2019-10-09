@@ -76,9 +76,9 @@
                             <a href="<?php echo home_url().'/news/' ?>" class="btn btn-line black"><i class="icons fa fa-angle-left"></i> <?php echo translate_text_language('BACK to LIST') ?></a>
                         </div>
                     </div>
-                    <div class="landing-st contact-st">
-                        <?php get_html_share() ?>
-                    </div>
+<!--                    <div class="landing-st contact-st">
+                        <?php /*get_html_share() */?>
+                    </div>-->
                     <div class="landing-st contact-st">
                         <div class="container">
 			                <?php get_html_contact(); ?>

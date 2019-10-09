@@ -84,7 +84,7 @@ $maxpage = numPage( count( $post_total ), intval( $post_num ) );
                 <!--            end panigation-->
             </div>
             <div class="landing-st contact-st">
-                <?php get_html_share() ?>
+<!--                --><?php //get_html_share() ?>
                 <div class="contact-info">
 	                <?php get_html_contact(); ?>
                 </div>

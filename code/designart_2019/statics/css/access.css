@@ -35,7 +35,7 @@
 	=              Access              =
 	===================================*/
 .access-page {
-  padding-bottom: 0px;
+  /*padding-bottom: 0px;*/
 }
 
 .access-page .logo-st figure {
@@ -43,7 +43,7 @@
 }
 
 .access-page .contact-st {
-  margin-bottom: 30px;
+  /*margin-bottom: 30px;*/
 }
 
 .access-page .clear-padding-btn-move.bot {

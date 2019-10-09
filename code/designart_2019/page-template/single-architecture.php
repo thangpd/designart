@@ -283,7 +283,7 @@ if (!empty($custom_page)) {
             <!-- landing-share -->
             <div class="landing-st contact-st">
                 <div class="container">
-					<?php get_html_share() ?>
+<!--					--><?php //get_html_share() ?>
                     <div class="contact-info">
 						<?php get_html_contact(); ?>
                     </div>

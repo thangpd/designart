@@ -6,6 +6,7 @@ jQuery(function ($) {
     var lastScrollPosition = 0,
         fixNotopBar = 36,
         adminbar;
+    var openNavi = false;
     if($('body').hasClass('admin-bar')){
         adminbar =32;
     }
@@ -35,10 +36,11 @@ jQuery(function ($) {
     });
 
     // Menu mobile JS
+    /*
     $(document).on('click', '#nav-icon3', function(e) {
         e.preventDefault();
         $(this).parents('.site-header').removeClass('menu-mb-active');
-        $('.menu-backdrops').remove();
+        // $('.menu-backdrops').remove();
         $("body").removeAttr( 'style' );
     });
     $(document).on('click', '.menu-backdrops', function(event) {
@@ -47,17 +49,26 @@ jQuery(function ($) {
         $("body").removeAttr( 'style' );
         $(this).remove();
     });
+    */
     $(document).on('click', '#nav-icon2', function(e) {
         e.preventDefault();
-        $(this).parents('.site-header').addClass('menu-mb-active');
-        $('.header-main').append('<div class="menu-backdrops"></div>');
-        $("body").css({
-            'position': 'fixed',
-            'z-index:': '-1',
-            'top':'0px',
-            'left':'0px',
-            'touch-action':'none'
-        });
+        if(openNavi){
+            $(this).parents('.site-header').removeClass('menu-mb-active');
+            // $('.menu-backdrops').remove();
+            $("body").removeAttr( 'style' );
+
+        }else{
+            $(this).parents('.site-header').addClass('menu-mb-active');
+            // $('.header-main').append('<div class="menu-backdrops"></div>');
+            $("body").css({
+                'position': 'fixed',
+                'z-index:': '-1',
+                'top':'0px',
+                'left':'0px',
+                'touch-action':'none'
+            });
+        }
+        openNavi = !openNavi;
     });
     // Back to top
     $(document).on('click','.wp-back-to-top', function(e) {

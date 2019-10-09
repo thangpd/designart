@@ -4,18 +4,25 @@
         <nav class="footer-link">
             <ul class="footer-menu">
                 <li class="li1"><a
-                            href="mailto:info@designart.jp"><?php echo translate_text_language( 'Contact us' ); ?></a>
+                            href="mailto:info@designart.jp"><?php echo translate_text_language( 'Contact about DESIGNART' ); ?></a>
                 </li>
-                <!--<li><a href="<?php /*echo home_url('#'); */ ?>"><?php /*echo translate_text_language('Site Map'); */ ?></a></li>
-                -->
                 <li class="li2"><a
+                            href="mailto:press@designart.jp"><?php echo translate_text_language( 'Contact about Press' ); ?></a>
+                </li>
+                <br>
+                <li class="li3"><a
                             href="<?php echo site_url( '/privacy-policy/' ); ?>"><?php echo translate_text_language( 'Privacy Policy' ); ?></a>
                 </li>
-                <li class="li3"><a href="<?php echo network_site_url(); ?>">BRANDSITE TOP</a></li>
+                <li class="li4"><a href="<?php echo network_site_url(); ?>"><?php echo translate_text_language( 'BRAND SITE' ); ?></a></li>
             </ul>
         </nav>
-		<?php get_html_banner_page_footer( true ) ?>
+
+
         <div class="copy-text">&copy;DESIGNART. All rights Reserved.</div>
+    </div>
+
+    <div class="sp to-exhibitor-wrap">
+        <div class="to-exhibitor"><a href="<?php echo home_url() ?>/exhibitor/"><img src="http://designart.sakura.ne.jp/designart_renew_201810/designarttokyo2019/wp-content/themes/designart_2019/statics/images/commons/f_icon.svg" alt=""><?php echo translate_text_language( 'Exhibition List' ); ?></a></div>
     </div>
 </footer><!-- #footer -->
 </div><!-- #page -->
