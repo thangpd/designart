@@ -109,7 +109,7 @@
             <div class="to-exhibitor"><a href="<?php echo home_url() ?>/exhibitor/">展示作品</a></div>
         </div>
         <div class="sp to-exhibitor-wrap last col-xs-6">
-            <div class="to-exhibitor"><a href="<?php echo home_url() ?>/exhibitor/">展示マップ</a></div>
+            <div class="to-exhibitor"><a href="https://www.google.com/maps/d/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397678%2C139.72963319999997&z=13">展示マップ</a></div>
         </div>
     </div>
 </footer><!-- #footer -->
