@@ -27,7 +27,7 @@ $events = get_posts( array(
 	'post_type'      => 'event-party',
 	'posts_per_page' => 4,
 	'order'          => 'ASC',
-	'orderby'=>'post_date',
+	'orderby'        => 'post_date',
 	'post_status'    => array( 'future' )
 ) );
 
@@ -42,6 +42,25 @@ $prefix_varible_slider = get_prefix_languagle( $language, "-" );
 
 //echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider"]' );
 //echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider-2019"]' );
+if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
+
+	$accessToken = 'EAAGeTfHqa2sBAGT5cdF3PZAqZAibKrtFBzHTpHMRSZBK8x7pgsWkFC5Lt8m8xUyFIdZBM1qjiC4ZCZC4giAexGs5dD3AkHukA8dEU3IV5CQExSQFQ7gGMtFXVwx5M66z7IUEZAOvgZBF9XVkUJt3pTVP2MhAMWemhAWpsldIdEZCVSgZDZD'; // designart アクセストークン(User Token)
+	$search      = 'designart.jp/feed';
+	$url         = 'https://graph.facebook.com/v4.0/' . $search . '?access_token=' . $accessToken;
+	$jsonData    = file_get_contents( $url );
+
+	// jsonデータの整形・出力
+	$json = json_decode( $jsonData, true );
+//    $str = json_encode($json['data']);
+	// It wasn't there, so regenerate the data and save the transient
+	set_transient( 'special_query_fb', $json, 6000 );
+}
+
+//echo '<pre>';
+//print_r( $json );
+//echo '</pre>';
+
+
 ?>
 <section>
     <div class="banner-top">
@@ -49,7 +68,7 @@ $prefix_varible_slider = get_prefix_languagle( $language, "-" );
             <h1 class="title-h1">DESIGN & ART
                 <span>into emotions</span></h1>
             <div class="banner-top-sub">DESIGNART TOKYO 2019
-                <p>2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p> </div>
+                <p>2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p></div>
         </div>
         <button class="banner-top-btn">
             <span class="arrow"><img src="<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png"></span>
@@ -79,8 +98,10 @@ $prefix_varible_slider = get_prefix_languagle( $language, "-" );
             <span>INTO LIVES <span class="mb-block">感動を、すべての人々に</span></span>
         </h4>
         <p class="text-18 dt-block">感動を、すべての人々に</p>
-        <p class="text-20">「DESIGNART TOKYO」は、毎年秋に開催するデザイン＆アートフェスティバルです。世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、インテリア、ファッション、テクノロジーなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩な作品を発表していきます。</p>
-        <a href="#" class="text-38 more dt-block">more <span><img src="<?php echo URL_STATICS; ?>/images/top/arrow-item.png"></span></a>
+        <p class="text-20">「DESIGNART
+            TOKYO」は、毎年秋に開催するデザイン＆アートフェスティバルです。世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、インテリア、ファッション、テクノロジーなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩な作品を発表していきます。</p>
+        <a href="#" class="text-38 more dt-block">more <span><img
+                        src="<?php echo URL_STATICS; ?>/images/top/arrow-item.png"></span></a>
     </div>
 </section>
 <section class="container">
@@ -164,12 +185,14 @@ $prefix_varible_slider = get_prefix_languagle( $language, "-" );
                         <div class="img-item">
                             <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" alt=""/>
                         </div>
-<!--                        <div class="img-item">-->
-<!--                            <img src="--><?php //echo URL_STATICS; ?><!--/images/top/eventandparty.jpg" alt=""/>-->
-<!--                        </div>-->
-<!--                        <div class="img-item">-->
-<!--                            <img src="--><?php //echo URL_STATICS; ?><!--/images/top/eventandparty.jpg" alt=""/>-->
-<!--                        </div>-->
+                        <!--                        <div class="img-item">-->
+                        <!--                            <img src="-->
+						<?php //echo URL_STATICS; ?><!--/images/top/eventandparty.jpg" alt=""/>-->
+                        <!--                        </div>-->
+                        <!--                        <div class="img-item">-->
+                        <!--                            <img src="-->
+						<?php //echo URL_STATICS; ?><!--/images/top/eventandparty.jpg" alt=""/>-->
+                        <!--                        </div>-->
                     </div>
                 </div>
                 <div class="desc">
@@ -224,7 +247,6 @@ $prefix_varible_slider = get_prefix_languagle( $language, "-" );
         <img src="<?php echo URL_STATICS; ?>/images/commons/to_top_bt.png" alt="TOP">
     </div>
 </div>
-
 
 
 <?php get_footer( 'top2' ); ?>
