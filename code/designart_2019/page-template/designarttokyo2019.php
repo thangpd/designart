@@ -222,9 +222,9 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
                 </div>
                 <div class="img-wrapper img-slick">
 
-                   <!-- <div class="img-slick-item">
+                    <!-- <div class="img-slick-item">
                         <div class="img-item">
-                            <img src="<?php /*echo URL_STATICS; */?>/images/top/eventandparty.jpg" alt=""/>
+                            <img src="<?php /*echo URL_STATICS; */ ?>/images/top/eventandparty.jpg" alt=""/>
                         </div>
 
                     </div>-->
@@ -232,17 +232,14 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
 
                         <div class="mySlides ">
                             <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" style="width:100%">
-                            <div class="text">Caption Text</div>
                         </div>
 
                         <div class="mySlides ">
                             <img src="<?php echo URL_STATICS; ?>/images/top/buyart.jpg" style="width:100%">
-                            <div class="text">Caption Two</div>
                         </div>
 
                         <div class="mySlides ">
                             <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" style="width:100%">
-                            <div class="text">Caption Three</div>
                         </div>
 
                         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -253,6 +250,7 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
                         <span class="dot" onclick="currentSlide(1)"></span>
                         <span class="dot" onclick="currentSlide(2)"></span>
                         <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
                     </div>
                 </div>
                 <div class="desc">
@@ -283,41 +281,42 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
                     </div>
                 </div>
                 <!--<div class="img-wrapper img-slick mb-230">
-                    <img src="<?php /*echo URL_STATICS; */?>/images/top/cafeandgood.jpg" alt=""/>
+                    <img src="<?php /*echo URL_STATICS; */ ?>/images/top/cafeandgood.jpg" alt=""/>
                 </div>-->
                 <div class="img-wrapper img-slick mb-230">
 
                     <!-- <div class="img-slick-item">
                         <div class="img-item">
-                            <img src="<?php /*echo URL_STATICS; */?>/images/top/eventandparty.jpg" alt=""/>
+                            <img src="<?php /*echo URL_STATICS; */ ?>/images/top/eventandparty.jpg" alt=""/>
                         </div>
 
                     </div>-->
                     <div class="slideshow-container">
 
                         <div class="mySlides2 ">
-                            <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" style="width:100%">
-                            <div class="text">Caption Text</div>
+                            <img src="<?php echo URL_STATICS; ?>/images/top/slide01.jpg" style="width:100%">
                         </div>
 
                         <div class="mySlides2 ">
-                            <img src="<?php echo URL_STATICS; ?>/images/top/buyart.jpg" style="width:100%">
-                            <div class="text">Caption Two</div>
+                            <img src="<?php echo URL_STATICS; ?>/images/top/slide02.jpg" style="width:100%">
                         </div>
 
                         <div class="mySlides2 ">
-                            <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" style="width:100%">
-                            <div class="text">Caption Three</div>
+                            <img src="<?php echo URL_STATICS; ?>/images/top/slide03.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides2 ">
+                            <img src="<?php echo URL_STATICS; ?>/images/top/slide04.jpg" style="width:100%">
                         </div>
 
-                        <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+                        <a class="prev " onclick="plusSlides2(-1)">&#10094;</a>
+                        <a class="next " onclick="plusSlides2(1)">&#10095;</a>
 
                     </div>
                     <div style="text-align:center;display:none;">
                         <span class="dot" onclick="currentSlide2(1)"></span>
                         <span class="dot" onclick="currentSlide2(2)"></span>
                         <span class="dot" onclick="currentSlide2(3)"></span>
+                        <span class="dot" onclick="currentSlide2(4)"></span>
                     </div>
                 </div>
                 <div class="desc">
@@ -383,17 +382,23 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
         var i;
         var slides = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
     }
+
+
     var slideIndex2 = 1;
     showSlides2(slideIndex2);
 
@@ -409,15 +414,27 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
         var i;
         var slides = document.getElementsByClassName("mySlides2");
         var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex2 = 1}
-        if (n < 1) {slideIndex2 = slides.length}
+        if (n > slides.length) {
+            slideIndex2 = 1
+        }
+        if (n < 1) {
+            slideIndex2 = slides.length
+        }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
-        slides[slideIndex2-1].style.display = "block";
-        dots[slideIndex2-1].className += " active";
+        slides[slideIndex2 - 1].style.display = "block";
+        dots[slideIndex2 - 1].className += " active";
+        // setInterval(plusSlides2(1), 3000);
     }
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        setInterval(function () {
+            plusSlides2(1)
+        }, 3000);
+    });
+
 </script>
