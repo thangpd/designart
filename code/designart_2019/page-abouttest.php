@@ -609,21 +609,21 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                             <!-- ./end About Outline -->
 
                             <!-- About CafeGoods -->
-                            <div class="wp-content" data-value="about-cafegoods">
+                            <div class="wp-content coffee" data-value="about-cafegoods">
                                 <div class="heading-title heading-style-02">
                                     <h2 class="title upper-text">
                                         Official Cafe
                                         <span class="line-middle"></span>
                                     </h2>
                                 </div>
-                                <div class="heading-des official_cafe">
-                                    <div class="left">
+                                <div class="heading-des official_cafe row">
+                                    <div class="left col-md-6">
                                         <img src="<?php echo URL_STATICS; ?>/images/official/cafe_2.png"
                                              alt="Aoyama Area" class="img-responsive">
                                         </a>
                                     </div>
 
-                                    <div class="right">
+                                    <div class="right col-md-6">
                                         <h3> LOOKING FOR A PLACE TO STOP FOR A BREAK? </h3><br>
                                         <div class="info">
                                             We have prepared several ideal cafes for when you get tired at
@@ -645,13 +645,13 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
 
 
                                 <div class="heading-title heading-style-02">
-                                    <h2 class="title md upper-text">
+                                    <h2 class="title upper-text">
                                         Shop Info
                                         <span class="line-middle"></span>
                                     </h2>
                                 </div>
-                                <div class="shoplist">
-                                    <div class="wp-section-area">
+                                <div class="shoplist row">
+                                    <div class="wp-section-area col-md-4">
                                         <div class="area-section">
                                             <div id="aoyama-area">
                                                 <div class="wp-content-area">
@@ -669,7 +669,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="wp-section-area">
+                                    <div class="wp-section-area col-md-4">
                                         <div class="area-section">
                                             <div id="jinguu-area">
 
@@ -691,7 +691,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
 
                                         </div>
                                     </div>
-                                    <div class="wp-section-area">
+                                    <div class="wp-section-area col-md-4">
                                         <div class="area-section">
                                             <div id="shibuya-area">
                                                 <div class="wp-content-area">
@@ -710,75 +710,37 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
 
                                         </div>
                                     </div>
-                                    <div class="wp-section-area">
-                                        <div class="area-section">
-                                            <div id="shibuya-area">
-                                                <div class="wp-content-area">
-                                                    <div class="title">DEAN & DELUCA CAFE <span class="sub-title"> SHIBUYA STREAM</span>
-                                                    </div>
-
-                                                    <div class="address">
-                                                        Address : Shibuya Stream 2F, 3-21-3 Shibuya, Shibuya-ku<br/>
-                                                        TEL : 03-6427-3601<br/>
-                                                        Hours : 7:00 - 22:00<br/>
-                                                        <a href="https://www.deandeluca.co.jp/ddshop/50044"
-                                                           target="_blank">SHOP INFO</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="wp-section-area">
-                                        <div class="area-section">
-                                            <div id="shibuya-area">
-                                                <div class="wp-content-area">
-                                                    <div class="title">DEAN & DELUCA CAFE<span class="sub-title"> TOKYO COLLEGE OF MUSIC NAKAMEGURO / DAIKANYAMA CAMPUS</span>
-                                                    </div>
-
-                                                    <div class="address">
-                                                        Address : Tokyo College of Music Nakameguro / Daikanyama 3F, 1-9
-                                                        Kamimeguro, Meguro-ku<br/>
-                                                        TEL : 03-6416-3431<br/>
-                                                        Hours : 8:00 - 18:00, Mon - Fri 9:00 - 18:00, Sat, Sun &
-                                                        Holidays (Irregular Holidays)<br/>
-                                                        <a href="https://www.deandeluca.co.jp/ddshop/50051/"
-                                                           target="_blank">SHOP INFO</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
                                 </div>
 
-                                <div id="pickup-aoyama" class="pickup">
-                                    <div class="heading-title heading-style-02">
-                                        <h2 class="title md upper-text">
+                                <div id="pickup-aoyama">
+                                    <div class="heading-title heading-style-02 height">
+                                        <h2 class="title upper-text">
                                             SPECIAL DRINK
                                             <span class="line-middle"></span>
                                         </h2>
                                     </div>
-                                    <ul class="wp-block-pickup">
-                                        <li class="item-pickup">
-                                            <div class="wp-image img-cafe">
-                                                <img src="<?php echo URL_STATICS; ?>/images/official/cafe_1.png" alt=""
-                                                     class="img-responsive">
-                                            </div>
-                                            <div class="product">
-                                                <h2 class="title">DESIGNART TOKYO 2019 ORIGINAL DRINK <br>EARLGREY PEAR
-                                                    NECTAR</h2>
-                                                <p class="description">
-                                                    Non alcohol<br>
-                                                    SIZE S ¥540(tax in)
-                                                </p>
-                                            </div>
+                                    <ul class="special-drink container"> <!-- wp-block-pickup -->
+                                       <li> <!-- item-pickup-->
+                                           <div class="row">
+                                                <div class="wp-image img-cafe col-md-5">
+                                                    <img src="<?php echo URL_STATICS; ?>/images/official/cafe_1.png" alt=""
+                                                         class="img-responsive">
+                                                </div>
+                                                <div class="product col-md-7">
+                                                    <h2 class="title">DESIGNART TOKYO 2019 ORIGINAL DRINK <br>EARLGREY PEAR
+                                                        NECTAR</h2>
+                                                    <p class="description">
+                                                        Non alcohol<br>
+                                                        SIZE S ¥540(tax in)
+                                                    </p>
+                                                </div>
+                                           </div>
                                         </li>
                                     </ul>
                                 </div>
 
 
-                                <div class="heading-title heading-style-02">
+                                <div class="heading-title heading-style-02 height">
                                     <h2 class="title upper-text">
                                         Official Goods
                                         <span class="line-middle"></span>
@@ -789,14 +751,14 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                         <div class="title-head background-black">DESIGNART 2019 official tabroid &
                                             booklet
                                         </div>
-                                        <div class="wp-content-inner">
-                                            <div class="wp-left">
-                                                <div class="">
+                                        <div class="wp-content-inner row">
+                                            <div class="wp-left col-md-4">
+                                                <div class="wrap-img">
                                                     <img src="<?php echo URL_STATICS; ?>/images/official/official_goods_renew.png"
                                                          alt="" class="img-responsive">
                                                 </div>
                                             </div>
-                                            <div class="wp-right">
+                                            <div class="wp-right col-md-8">
                                                 <div class="title">DESIGNART TOKYO 2019 <span class="sub-title">official tabroid</span>
                                                 </div>
                                                 <div class="info-area">
@@ -837,14 +799,14 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                         <div class="title-head background-black">
                                             THIS YEAR’S OFFICIAL T-SHIRT ADORNED WITH A SIMPLE LOGO
                                         </div>
-                                        <div class="wp-content-inner wp-content-img-left wp-content-img-left-1">
-                                            <div class="wp-left">
-                                                <div class="">
+                                        <div class="wp-content-inner wp-content-img-left wp-content-img-left-1 row">
+                                            <div class="wp-left col-md-4">
+                                                <div class="wrap-img no-padding">
                                                     <img alt="" class="img-responsive"
                                                          src="<?php echo URL_STATICS; ?>/images/official/official_goods_renew-02.png">
                                                 </div>
                                             </div>
-                                            <div class="wp-right">
+                                            <div class="wp-right col-md-8">
                                                 <div class="title-a">DESIGNART TOKYO 2019 <br/><span
                                                             class="sub-title">OFFICIALT-SHIRT</span></div>
                                                 <div class="info-area-a">
@@ -877,12 +839,14 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                 <div class="wp-section-goods">
                                     <div class="area-section">
                                         <div class="title-head background-black">展示会場の目印はスタイリッシュなフラッグバッグ</div>
-                                        <div class="wp-content-inner wp-content-img-left">
-                                            <div class="left">
+                                        <div class="wp-content-inner wp-content-img-left row">
+                                            <div class="left col-md-4">
+                                                <div class="wrap-img no-padding">
                                                 <img src="<?php echo URL_STATICS; ?>/images/official/official_goods_renew-05.png"
                                                      alt="" class="img-responsive">
+                                                </div>
                                             </div>
-                                            <div class="right">
+                                            <div class="right col-md-8">
                                                 <div class="title-a">DESIGNART TOKYO 2019 <br/><span class="sub-title">オフィシャルフラッグ</span>
                                                 </div>
                                                 <div class="info-area-a">
@@ -923,14 +887,14 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                 <div class="wp-section-area">
                                     <div class="area-section">
                                         <div id="aoyama-area">
-                                            <div class="wp-content-area">
-                                                <div class="wp-left">
+                                            <div class="wp-content-area row">
+                                                <div class="wp-left col-md-4">
                                                     <a href="#" class="">
                                                         <img src="<?php echo URL_STATICS; ?>/images/official/program_1.png"
                                                              alt="Aoyama Area" class="img-responsive">
                                                     </a>
                                                 </div>
-                                                <div class="wp-right">
+                                                <div class="wp-right col-md-8">
                                                     <div class="title">DESIGNART FEATURE 1% for Art EXHIBITION</div>
                                                     <div class="info">
                                                         Design Pier proudly partners with DESIGNART TOKYO to curate and
@@ -952,14 +916,14 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                 <div class="wp-section-area">
                                     <div class="area-section">
                                         <div id="jinguu-area">
-                                            <div class="wp-content-area">
-                                                <div class="wp-left">
+                                            <div class="wp-content-area row">
+                                                <div class="wp-left col-md-4">
                                                     <a href="#" class="">
                                                         <img src="<?php echo URL_STATICS; ?>/images/official/program_2.png"
                                                              alt="Roppongi Area" class="img-responsive">
                                                     </a>
                                                 </div>
-                                                <div class="wp-right">
+                                                <div class="wp-right col-md-8">
                                                     <div class="title">PARTNER COUNTRY ISRAEL</div>
                                                     <div class="info">
                                                         Israel is honored to be invited with the most leading design
@@ -977,14 +941,14 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                 <div class="wp-section-area">
                                     <div class="area-section">
                                         <div id="shibuya-area">
-                                            <div class="wp-content-area">
-                                                <div class="wp-left">
+                                            <div class="wp-content-area row">
+                                                <div class="wp-left col-md-4">
                                                     <a href="#" class=" img-small">
                                                         <img src="<?php echo URL_STATICS; ?>/images/official/program_3.png"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
-                                                <div class="wp-right">
+                                                <div class="wp-right col-md-8">
                                                     <div class="title">DESIGNART GALLERY at TENOHA 代官山</div>
                                                     <div class="info">
                                                         DESIGNART GALLERY @ TENOHA DAIKANYAMA is a creators’ group
@@ -992,28 +956,28 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         domains of design and art.
                                                         <br><br>
                                                         Beyond molecular weight<br>
-                                                        <a href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
                                                         FIL<br>
-                                                        <a href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
                                                         “DECO” by Triple A / Design image seat & VONDS RANSEL / Atsushi
                                                         onuma<br>
-                                                        <a href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
                                                         TIMON<br>
-                                                        <a href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
                                                         HAFT DESIGN<br>
-                                                        <a href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
                                                         Katsuki Connection
                                                         <br>
-                                                        <a href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
                                                         TANSAN DESIGN STUDIO
                                                         <br>
-                                                        <a href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
                                                         Kosuke Araki
                                                         <br>
-                                                        <a href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
                                                         TARAMAN+
                                                         <br>
-                                                        <a href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
 
                                                     </div>
 
@@ -1028,14 +992,14 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                 <div class="wp-section-area">
                                     <div class="area-section">
                                         <div id="shibuya-area">
-                                            <div class="wp-content-area">
-                                                <div class="wp-left">
-                                                    <a href="#" class=" img--big">
+                                            <div class="wp-content-area row">
+                                                <div class="wp-left col-md-4">
+                                                    <a href="#">
                                                         <img src="<?php echo URL_STATICS; ?>/images/official/program_4.png"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
-                                                <div class="wp-right">
+                                                <div class="wp-right col-md-8">
                                                     <div class="title">DESIGNART GALLERY at LIVING DESIGN CENTER OZONE
                                                     </div>
                                                     <div class="info">
@@ -1066,14 +1030,14 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                 <div class="wp-section-area">
                                     <div class="area-section">
                                         <div id="shibuya-area">
-                                            <div class="wp-content-area">
-                                                <div class="wp-left">
-                                                    <a href="#" class=" img--big">
+                                            <div class="wp-content-area row">
+                                                <div class="wp-left col-md-4">
+                                                    <a href="#">
                                                         <img src="<?php echo URL_STATICS; ?>/images/official/program_4.png"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
-                                                <div class="wp-right">
+                                                <div class="wp-right col-md-8">
                                                     <div class="title">DESIGNART CREATIVE CONFERENCE BRIDGE
                                                     </div>
                                                     <div class="info">
@@ -1087,7 +1051,9 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         <br>
                                                         Address：6-12-6 Jingumae, Sibuya-ku, Tokyo
                                                         <br>
-                                                        tickets：<a href="https://dat2019-conf.peatix.com/"
+                                                        tickets：
+                                                        <br>
+                                                        <a href="https://dat2019-conf.peatix.com/"
                                                                    target="_blank" class="noborder">https://dat2019-conf.peatix.com/</a><br>
                                                         <a href="" target="_blank">MORE INFO</a>
                                                     </div>
@@ -1101,14 +1067,14 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                 <div class="wp-section-area">
                                     <div class="area-section">
                                         <div id="shibuya-area">
-                                            <div class="wp-content-area">
-                                                <div class="wp-left">
-                                                    <a href="#" class=" img--big">
+                                            <div class="wp-content-area row">
+                                                <div class="wp-left col-md-4">
+                                                    <a href="#">
                                                         <img src="<?php echo URL_STATICS; ?>/images/official/program_5.png"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
-                                                <div class="wp-right">
+                                                <div class="wp-right col-md-8">
                                                     <div class="title">OPENING PARTY
                                                     </div>
                                                     <div class="info">
@@ -1128,14 +1094,14 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                 <div class="wp-section-area">
                                     <div class="area-section">
                                         <div id="shibuya-area">
-                                            <div class="wp-content-area">
-                                                <div class="wp-left">
-                                                    <a href="#" class=" img--big">
+                                            <div class="wp-content-area row">
+                                                <div class="wp-left col-md-4">
+                                                    <a href="#">
                                                         <img src="<?php echo URL_STATICS; ?>/images/official/program_5.png"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
-                                                <div class="wp-right">
+                                                <div class="wp-right col-md-8">
                                                     <div class="title">CLOSING EVENT</div>
                                                     <div class="info">
                                                         PARTNER COUNTRY ISRAEL X DESIGNART TOKYO<br>
@@ -1154,38 +1120,29 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                 <div class="wp-section-area">
                                     <div class="area-section">
                                         <div id="shibuya-area">
-                                            <div class="wp-content-area">
-                                                <div class="wp-left">
+                                            <div class="wp-content-area row">
+                                                <div class="wp-left col-md-4">
                                                     <a href="#" class=" img--big">
                                                         <img src="<?php echo URL_STATICS; ?>/images/official/program_6.png"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
-                                                <div class="wp-right">
+                                                <div class="wp-right col-md-8">
                                                     <div class="title">FIVE ARTISTS UNDER THIRTY</div>
                                                     <div class="info">
                                                         Here we feature young minds shouldering the design and art of
                                                         tomorrow that have caught the eye of the founders of DESIGNART.
                                                         They present their pick of these promising talents in a unique
                                                         perspective, with the condition that they all be under 30.
-                                                        <br><br>
-                                                        CHIALING CHANG
-                                                        <br>
+                                                        <p>CHIALING CHANG </p>
                                                         <a href="" target="_blank">MORE INFO</a>
-                                                        <br><br>
-                                                        KENJI ABE
-                                                        <br>
+                                                        <p>KENJI ABE </p>
                                                         <a href="" target="_blank">MORE INFO</a>
-                                                        <br><br>
-                                                        KIZUKI NAKANO・AIKA NISHIYAMA
-                                                        <br>
+                                                        <p>KIZUKI NAKANO・AIKA NISHIYAMA</p>
                                                         <a href="" target="_blank">MORE INFO</a>
-                                                        <br><br>
-                                                        HAMID SHAHI
-                                                        <br>
+                                                        <p>HAMID SHAHI</p>
                                                         <a href="" target="_blank">MORE INFO</a>
-                                                        <br><br>
-                                                        M&T<br>
+                                                        <p>M&T</p>
                                                         <a href="" target="_blank">MORE INFO</a>
 
                                                     </div>
@@ -1199,14 +1156,14 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                 <div class="wp-section-area">
                                     <div class="area-section">
                                         <div id="shibuya-area">
-                                            <div class="wp-content-area">
-                                                <div class="wp-left">
+                                            <div class="wp-content-area row">
+                                                <div class="wp-left col-md-4">
                                                     <a href="#" class=" img--big">
                                                         <img src="<?php echo URL_STATICS; ?>/images/official/program_7.png"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
-                                                <div class="wp-right">
+                                                <div class="wp-right col-md-8">
                                                     <div class="title">JOIN THE STAMP RALLY</div>
                                                     <div class="info">
                                                         AND GET PARTICIPATING ITEMS!
