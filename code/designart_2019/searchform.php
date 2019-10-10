@@ -47,10 +47,12 @@ if(count($cate) == 0){
 					<?php
 					$selected = "";
 					$checked  = "";
-					foreach ( $area as $a ) {
-						if ( strcmp( $a, "all_area" ) == 0 ) {
-							$selected = " selected";
-							$checked  = "checked";
+					if ( ! empty( $area ) ) {
+						foreach ( $area as $a ) {
+							if ( strcmp( $a, "all_area" ) == 0 ) {
+								$selected = " selected";
+								$checked  = "checked";
+							}
 						}
 					}
 					?>
@@ -91,10 +93,12 @@ if(count($cate) == 0){
 					<?php
 					$selected = "";
 					$checked  = "";
-					foreach ( $cate as $c ) {
-						if ( strcmp( $c, "all_cate" ) == 0 ) {
-							$selected = " selected";
-							$checked  = "checked";
+					if ( ! empty( $cate ) ) {
+						foreach ( $cate as $c ) {
+							if ( strcmp( $c, "all_cate" ) == 0 ) {
+								$selected = " selected";
+								$checked  = "checked";
+							}
 						}
 					}
 					?>
