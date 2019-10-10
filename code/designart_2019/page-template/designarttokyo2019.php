@@ -43,126 +43,172 @@ $prefix_varible_slider = get_prefix_languagle( $language, "-" );
 //echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider"]' );
 echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider-2019"]' );
 ?>
-<div class="designart-page font-custom">
-
-    <div class="landing-st">
-        <div class="container container2019">
-            <div class="heading-title heading-style-01 custom2019">
-                <div class="title-wrapp">
-                    <h2 class="first-letter first-letter2019"><?php echo translate_text_language('TOKYO TRANSFORMED INTO A MUSEUM') ?></h2>
-                    <p class="date2019">2019.10.18 <span>Fri</span> ー 10.27 <span>Sun</span></p>
-                    <p class="place2019"><?php echo translate_text_language('Held in Omotesando / Gaienmae / Harajuku・Meiji Jingumae / Shibuya・Ebisu / Daikanyama・Nakameguro / Roppongi / Shinjuku / Ginza') ?></p>
-                </div>
-            </div>
+<section>
+    <div class="banner-top">
+        <div class="content">
+            <h1 class="title-h1">DESIGN & ART
+                <span>into emotions</span></h1>
+            <div class="banner-top-sub">DESIGNART TOKYO 2019
+                <p>2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p> </div>
         </div>
+        <button class="banner-top-btn">
+            <span class="arrow"><img src="<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png"></span>
+            <div class="content">
+                <div class="date">2019.10.18</div>
+                <div class="desc dt-block">表参道・外苑前を中心に全11エリアで開催！東京の街全体がアートになる。</div>
+                <div class="desc mb-block">表参道・外苑前 を中心に全11エリアで開催！</div>
+            </div>
+            <span class="arrow"><img src="<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png"></i></span>
+        </button>
     </div>
-
-    <div class="landing-st about">
-        <div class="container">
-            <div class="heading-title heading-style-01">
-                <div class="title-wrapp">
-                    <h2 class="first-letter first-letter-top"><?php echo translate_text_language('Bringing Emotion into Lives') ?></h2>
-                    <p><?php echo translate_text_language('"DESIGNART TOKYO" is a design & art festival held every fall. There are many exhibitions to bring together diverse objects and experiences created in crossover fields of art, interior design, fashion, and food from around the globe to be presented on the stages in various locations in Tokyo, one of the world\'s leading mixed culture cities.') ?></p>
-<!--                    <div class="btn"><a href="">もっと知る</a></div>-->
-                </div>
-            </div>
-        </div>
+</section>
+<section class="container">
+    <div class="banner-center">
+        <h2 class="title-h2">TOKYO TRANSFORMED <br>
+            INTO A MUSEUM</h2>
+        <p class="text-32">東京の街全体がミュージアムになる10日間</p>
+        <p class="text-35">2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p>
+        <p class="text-28">表参道・外苑前、原宿・明治神宮前、渋谷・恵比寿、代官山・中目黒、六本木、新宿、銀座 で開催</p>
     </div>
-
-    <div class="landing-st guide">
-        <div class="container container2">
-            <div class="heading-title heading-style-01">
-                <div class="title-wrapp">
-                    <h2 class="first-letter">DESIGNART GUIDE</h2>
-                    <p><?php echo translate_text_language('Everyone can enjoy design & art') ?></p>
-                </div>
-            </div>
-
-            <div class="item meet">
-                <div class="img"></div>
-                <div class="circle"><?php echo translate_text_language('Discover<br>Art') ?></div>
-                <div class="txt"><?php echo translate_text_language('The 120 groups exhibit their works in the 11 areas in 2019.') ?></div>
-                <div class="bt"><a href="<?php echo home_url() ?>/exhibitor/"><?php echo translate_text_language('Exhibition List') ?></a></div>
-            </div>
-
-            <div class="item learn">
-                <div class="img"></div>
-                <div class="circle"><?php echo translate_text_language('Learn<br>Art') ?></div>
-                <div class="txt"><?php echo translate_text_language('DESIGNART Conference “BRIDGE” is a platform to learn and exchange opinions about what is happening in the field of art and design.') ?></div>
-                <div class="bt"><a href="http://designart.jp/conference2019/" target="_blank"><?php echo translate_text_language('More Info') ?></a></div>
-            </div>
-        </div>
+</section>
+<section class="container-black">
+    <div class="banner-bottom container">
+        <span class="about">ABOUT</span>
+        <h4 class="title-h4">
+            BRINGING EMOTION
+            <span>INTO LIVES <span class="mb-block">感動を、すべての人々に</span></span>
+        </h4>
+        <p class="text-18 dt-block">感動を、すべての人々に</p>
+        <p class="text-20">「DESIGNART TOKYO」は、毎年秋に開催するデザイン＆アートフェスティバルです。世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、インテリア、ファッション、テクノロジーなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩な作品を発表していきます。</p>
+        <a href="#" class="text-38 more dt-block">more <span><img src="<?php echo URL_STATICS; ?>/images/top/arrow-item.png"></span></a>
     </div>
-
-
-    <?php if ( check_enable( 'event-party' ) ): ?>
-        <script>
-            var eventParty = [];
-            <?php
-            $cnt = 0;
-            foreach ( $events as $event ) {
-                $title         = get_field( $prefix_varible . 'title', $event->ID, '' );
-                $area_html = get_field( 'area', $event->ID, '' );
-                $date_html        = get_date_post( $event->ID, 'm.j H:i〜' );
-                $event_link = get_field( 'more_info', $event->ID, '' );
-                $thumbnail =  get_field( 'thumbnail', $event->ID);
-
-                $output = '';
-                $output .= 'eventParty['.$cnt.'] = {';
-                $output .= 'date:"'.addslashes($date_html).'",';
-                $output .= 'title:"'.addslashes($title).'",';
-                $output .= 'place:"'.addslashes($area_html).'",';
-                $output .= 'thumbnail:"'.addslashes($thumbnail).'",';
-                $output .= 'link:"'.addslashes($event_link).'"';
-                $output .= '};'."\n";
-
-                echo $output;
-                $cnt++;
-            }
-            ?>
-        </script>
-        <div class="landing-st event_party">
-            <div class="container container2">
-                <div class="heading-title heading-style-01">
-                    <div class="title-wrapp">
-                        <h2 class="first-letter">EVENT&PARTY</h2>
+</section>
+<section class="container">
+    <div class="main-content">
+        <h3 class="title-h3">DESIGNART GUIDE</h3>
+        <p class="text-28 sub-title">EVERYONE CAN ENJOY<br>
+            DESIGN & ART</p>
+        <div class="steps">
+            <div class="step-item step-1">
+                <div class="title-wrapper">
+                    <div class="main-title">
+                        <span class="number">01.</span>
+                        <span>DISCOVER ART</span>
+                    </div>
+                    <div class="sub-title">アートに出会う
                     </div>
                 </div>
-
-                <div class="item">
-                    <div class="img">
-                        <!--<img src="" alt="">-->
-                    </div>
-                    <div class="date"><!--00.00 00:00〜--></div>
-                    <div class="txt"><!--イベント名@場所--></div>
-
+                <div class="img-wrapper">
+                    <img src="<?php echo URL_STATICS; ?>/images/top/discoverart.jpg" alt=""/>
                 </div>
-                <div class="prev"></div>
-                <div class="next"></div>
+                <div class="desc">
+                    <p class="text-18">2019年は120組、11エリアで作品を展示します。</p>
+                    <div class="link-group">
+                        <a href="#" class="link-step">
+                            <div class="left">
+                                <div class="text-38">exhibition list</div>
+                                <div class="text-20">展示作品一覧</div>
+                            </div>
+                            <div class="right">
+                                <img src="<?php echo URL_STATICS; ?>/images/top/arrow-item.png" alt=""/>
+                            </div>
+                        </a>
+                        <a href="#" class="link-step">
+                            <div class="left">
+                                <div class="text-38">guide map</div>
+                                <div class="text-20">展示マップ</div>
+                            </div>
+                            <div class="right">
+                                <img src="<?php echo URL_STATICS; ?>/images/top/arrow-item.png" alt=""/>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <script src="<?php echo URL_STATICS; ?>/js/top_event_party.js"></script>
-    <?php endif; ?>
-
-
-    <div class="landing-st info">
-        <div class="container">
-            <div class="heading-title heading-style-01">
-                <div class="title-wrapp">
-                    <h2><?php echo translate_text_language('Early October<br>All program information release!!') ?></h2>
+            <div class="step-item step-2">
+                <div class="title-wrapper">
+                    <div class="main-title">
+                        <span class="number">02.</span>
+                        <span>LEARN ART</span>
+                    </div>
+                    <div class="sub-title">アートを学ぶ
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="<?php echo URL_STATICS; ?>/images/top/learnart.jpg" alt=""/>
+                </div>
+                <div class="desc">
+                    <p class="text-16">デザイナートカンファレンス「BRIDGE」は、アート<br>
+                        とデザインの視点から今、社会で起きている変化につ<br>
+                        いて考え学び意見を交換し合う場です。</p>
+                    <div class="link-group">
+                        <a href="#" class="more link-step">
+                            <div class="left">
+                                <div class="text-38">more</div>
+                            </div>
+                            <div class="right">
+                                <img src="<?php echo URL_STATICS; ?>/images/top/arrow-item.png" alt=""/>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="step-item step-slick ">
+                <div class="title-wrapper">
+                    <div class="main-title">
+                        <span>EVENT & PARTY</span>
+                    </div>
+                </div>
+                <div class="img-wrapper img-slick">
+                    <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" alt=""/>
+                </div>
+                <div class="desc">
+                    <p class="text-16">10.18 19:00〜</p>
+                    <p class="text-24"> OPENING PARTY DESIGNART <br> TOKYO 2019 @ ワールド北青山</p>
+                </div>
+            </div>
+            <div class="step-item step-3">
+                <div class="title-wrapper">
+                    <div class="main-title">
+                        <span class="number">03.</span>
+                        <span>BY ART</span>
+                    </div>
+                    <div class="sub-title">アートを買う
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="<?php echo URL_STATICS; ?>/images/top/buyart.jpg" alt=""/>
+                </div>
+                <div class="desc">
+                    <p class="text-16">デザイナートで展示されているアート作品は一部を除<br>いて全て購入可能です。</p>
+                </div>
+            </div>
+            <div class="step-item step-slick mb-110">
+                <div class="title-wrapper">
+                    <div class="main-title">
+                        <span>OFFICIAL CAFE <br> & GOODS</span>
+                    </div>
+                </div>
+                <div class="img-wrapper img-slick mb-230">
+                    <img src="<?php echo URL_STATICS; ?>/images/top/cafeandgood.jpg" alt=""/>
+                </div>
+                <div class="desc">
+                    <p class="text-16 cs-mb"> 展示巡りに役立つオフィシャルガイドブック</p>
+                    <div class="link-group">
+                        <a href="#" class=" more link-step">
+                            <div class="left">
+                                <div class="text-38">more</div>
+                            </div>
+                            <div class="right">
+                                <img src="<?php echo URL_STATICS; ?>/images/top/arrow-item.png" alt=""/>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="landing-st contact-st">
-        <div class="container">
-			<?php get_html_contact(); ?>
-        </div>
-    </div><!-- ./end .contact-st -->
-
-</div>
+</section>
 <div class="wp-back-to-top-wrap">
     <div class="wp-back-to-top top top2">
         <img src="<?php echo URL_STATICS; ?>/images/commons/to_top_bt.png" alt="TOP">
