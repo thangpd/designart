@@ -86,7 +86,7 @@
                                 <a data-demo="item-1"><?php echo translate_text_language('outline') ?></a>
                                 <ul class="sub-menu"-->
                                     <li id="menu-item-543" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-543">
-                                        <a href="<?php echo home_url() ?>" data-demo="item-1"><?php echo translate_text_language('about designart') ?></a>
+                                        <a href="<?php echo home_url() ?>/about/" data-demo="item-1"><?php echo translate_text_language('about designart') ?></a>
                                     </li>
                                     <!--li id="menu-item-613" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-613">
                                         <a href="<?php echo home_url() ?>/official/" data-demo="item-1"><?php echo translate_text_language('official contents') ?></a>

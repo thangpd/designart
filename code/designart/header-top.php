@@ -91,7 +91,7 @@
                     <ul class="list_scroll_section list-menu-item items-black-header">
                         <li>
                             <a href="<?php echo get_home_url() ?>/about/" id="mn-about"
-                            ><?php echo translate_text_language( 'about' ) ?></a>
+                               ><?php echo translate_text_language( 'about' ) ?></a>
                         </li>
                         <li>
                             <a href="#report"

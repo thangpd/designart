@@ -241,8 +241,16 @@ $cfg_text_translate = array(
 		'jp' => '展示ガイド一覧を見る',
 	),
 
+    'AREA'           => array(
+        'jp' => 'エリア',
+    ),
 
-	'1x' => array(
+    'CATEGORY'           => array(
+        'jp' => 'カテゴリー',
+    ),
+
+
+    '1x' => array(
 		''   => 'Special site',
 		'jp' => '特設サイト',
 		'cn' => '特殊的網站'

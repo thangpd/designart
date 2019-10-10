@@ -29,8 +29,6 @@ $description = get_field( $prefix_varible . 'description', $page->ID, '' );
 $terms2 = get_field( 'exhibitor_category_setting2', 'option' );
 ?>
 
-<?php /*get_search_form(); */?>
-
 <div class="exhibition-page padding-t-50">
     <div class="container">
         <!-- back button -->
@@ -44,17 +42,19 @@ $terms2 = get_field( 'exhibitor_category_setting2', 'option' );
         </div>
         <p class="title-des"><?php echo $description ?></p>
 
+
+        <?php get_search_form(); ?>
+
         <!-- Filter category -->
-        <div class="filter_category">
+<!--        <div class="filter_category">
             <div class="block-category">
 	            <?php
-	            $tranlated_term = get_category_exhibitor($terms,'',true);
+/*	            $tranlated_term = get_category_exhibitor($terms,'',true);
 	            echo $tranlated_term;
-	            ?>
+	            */?>
             </div>
-
         </div>
-
+-->
         <!-- scroll - page -->
 		<?php if ( ! empty( $terms ) ): ?>
             <!-- wp-block-section -->
@@ -114,32 +114,15 @@ $terms2 = get_field( 'exhibitor_category_setting2', 'option' );
                                     </a>
                                 </div>
                                 <div class="item-right information">
-                                <div class="category"> 
-                                       ' . $term_venue->name . ': 
-                                    </div> 
                                     <div class="description">
                                         ' . $title . '
                                     </div>
-                                    <a href="' . get_permalink( $post_id ) . '" class="btn btn-line yellow capti-text">
-                                        ' . translate_text_language( 'more info' ) . '
-                                        <i class="icons fa fa-angle-right"></i>
-                                    </a>
                                 </div>
                             </li>';
 						}
 						?>
                         <!--wp-list-exhibiter--></ul>
                     <!--section_scroll wp-block-section--></div>
-				<?php
-/*
-                //一旦消す(2019/9/20)
-                if ( ! empty( $map_cat ) ) {
-					echo '<div class="text-center">
-<a href="' . $map_cat . '" class="btn btn-line yellow" target="_blank">'.translate_text_language('View in Google Map').'
-</a>
-</div>';
-				}*/
-				?>
 
 			<?php
 
@@ -199,5 +182,5 @@ $terms2 = get_field( 'exhibitor_category_setting2', 'option' );
     })
 </script>
 
-
+<script src="<?php echo URL_STATICS; ?>/js/search.js"></script>
 <?php get_footer( 'top2' ) ?>

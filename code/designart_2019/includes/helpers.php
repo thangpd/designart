@@ -91,6 +91,7 @@ function generate_select_languagle() {
                     var txt = $('#custome-multi-languagle .dropdown-menu li a[data-val="' + languagle + '"]').text();
 
                     $(this).parents(".language-dropdown ").find(".btn-lang").text(txt);
+                    // console.log("check", gotoLanguageurl(languagle_change, home_url));
                     window.location = gotoLanguageurl(languagle_change, home_url);
                 })
             }

@@ -5,13 +5,6 @@ $term_parent = 0;
 if ( isset( $term_venue ) ) {
     $term_parent = $term_venue->term_id;
 }
-//$terms = get_terms( array(
-//    'taxonomy' => 'exhibitor-cat',
-//    'hide_empty' => true,
-//    'orderby'   => 'name',
-//    'order' => 'ASC',
-//    'parent' => $term_parent
-//) );
 
 if ( function_exists( 'acf_add_options_page' ) && ! empty( $terms = get_field( 'exhibitor_category_setting', 'option' ) ) ) {
 } else {
@@ -26,11 +19,230 @@ $page        = get_page_by_path( 'exhibitor' );
 $description = get_field( $prefix_varible . 'description', $page->ID, '' );
 
 $terms2 = get_field( 'exhibitor_category_setting2', 'option' );
+
+
+/*
+ * $terms : exhibitor_category_setting 一覧
+ * $terms2 : exhibitor_category_setting2 一覧
+ */
+
+$s = $_GET['s'];
+$area = $_GET['area'];
+$cate = $_GET['cate'];
+$taxonomy = $terms[0]->taxonomy;
+$taxquerysp2;
+
+
+/*var_dump($terms);
+echo "-------------------";
+var_dump($terms2);
+echo "-------------------";
+var_dump($area);
+echo "-------------------";
+var_dump($cate);
+
+echo count($area);*/
+
+/*if(count($area) == 0){
+    $area = array();
+    foreach($terms as $term){
+        array_push($area, $term->slug);
+    }
+}
+
+if(count($cate) == 0){
+    $cate = array();
+    foreach($terms2 as $term){
+        array_push($cate, $term->slug);
+    }
+}*/
+
+//エリアでALL選択時
+foreach($area as $a){
+    if(strcmp($a, "all_area") == 0){
+        $area = array();
+        foreach($terms as $term){
+            array_push($area, $term->slug);
+        }
+    }
+}
+
+//カテゴリーでALL選択時
+foreach($cate as $c){
+    if(strcmp($c, "all_cate") == 0){
+        $cate = array();
+        foreach($terms2 as $term){
+            array_push($cate, $term->slug);
+        }
+    }
+}
+
+//検索対象エリアを設定
+if($area){
+    foreach($area as $val){
+        $taxquerysp[] = array(
+            'taxonomy'=>$taxonomy,
+            'field'    => 'slug',
+            'terms'=> $val
+        );
+    }
+    $taxquerysp['relation'] = 'OR';
+}
+
+//検索対象カテゴリーを設定
+if($cate){
+    foreach($cate as $val){
+        $taxquerysp2[] = array(
+            'taxonomy'=>$taxonomy,
+            'field'    => 'slug',
+            'terms'=> $val
+        );
+    }
+    $taxquerysp2['relation'] = 'OR';
+}
+
+
+//フリーワード検索対象フィールドを設定
+if($s){
+    $metaquerysp[] = array(
+        array(
+            'key' => 'exhibitor_area',
+            'value' => $s, "compare" => "LIKE"
+        ),
+        array(
+            'key' => 'exhibitor_gallery',
+            'value' => $s, "compare" => "LIKE"
+        ),
+        array(
+            'key' => 'exhibitor_title',
+            'value' => $s, "compare" => "LIKE"
+        ),
+        array(
+            'key' => 'exhibitor_description',
+            'value' => $s, "compare" => "LIKE"
+        ),
+        array(
+            'key' => 'text_artist',
+            'value' => $s, "compare" => "LIKE"
+        ),
+        array(
+            'key' => 'text_venue',
+            'value' => $s, "compare" => "LIKE"
+        ),
+        array(
+            'key' => 'exhibitor_artist',
+            'value' => $s, "compare" => "LIKE"
+        ),
+        array(
+            'key' => 'exhibitor_venue',
+            'value' => $s, "compare" => "LIKE"
+        ),
+        array(
+            'key' => 'jp_exhibitor_title',
+            'value' => $s, "compare" => "LIKE"
+        ),
+        array(
+            'key' => 'jp_exhibitor_description',
+            'value' => $s, "compare" => "LIKE"
+        ),
+        array(
+            'key' => 'jp_text_artist',
+            'value' => $s, "compare" => "LIKE"
+        ),
+        array(
+            'key' => 'jp_text_venue',
+            'value' => $s, "compare" => "LIKE"
+        ),
+        array(
+            'key' => 'jp_exhibitor_artist',
+            'value' => $s, "compare" => "LIKE"
+        ),
+        array(
+            'key' => 'jp_exhibitor_venue',
+            'value' => $s, "compare" => "LIKE"
+        ),
+        'relation'=>'OR'
+    );
+}
+
+
+$posts = get_posts( array(
+    'post_type'      => 'exhibitor',
+    'posts_per_page' => - 1,
+    'meta_query' => $metaquerysp,       //カスタムフィールド内、フリーワード検索
+    'tax_query'      => array(
+        $taxquerysp,                    //チェックされたareaのみ(チェックされなければ全て)
+        $taxquerysp2,                   //チェックされたcateのみ(チェックされなければ全て)
+    ),
+    'orderby'        => 'post_title',
+    'order'          => 'ASC'
+) );
+
+
+function get_category_list( $area, $terms, $metaquerysp, $taxquerysp2, $format = '', $hide_empty = false ){
+    $language       = get_key_languagle();
+    $prefix_varible = get_prefix_languagle( $language, "_" );
+    $res            = '';
+
+    if ( empty( $format ) ) {
+        $format = '<a class="category" href="#%1$s">%2$s<i
+                class="fas fa-angle-down"></i></a>';
+    }
+    $cat_list_html = '';
+
+
+    foreach ( $terms as $term ) {
+        //選択されてない地域はスルーする
+        $bool = false;
+        foreach ( $area as $val ) if(strcmp($val, $term->slug) == 0) $bool = true;
+        if($bool == false) continue;
+
+        if ( $hide_empty ) {
+            $search = array(
+                'post_type' => 'exhibitor',
+                'posts_per_page' => -1,
+                'meta_query' => $metaquerysp,                           //カスタムフィールド内、フリーワード検索
+                'tax_query' => array(
+                    //チェックされたareaを指定
+                    array(
+                        array(
+                            'taxonomy' => $term->taxonomy,
+                            'field' => 'slug',
+                            'terms' => $term->slug,
+                        ),
+                        'relation'=>'OR'
+                    ),
+                    $taxquerysp2                                       //チェックされたcateのみ(チェックされなければ全て)
+                ),
+                'orderby' => 'post_title',
+                'order' => 'ASC'
+            );
+            $posts = get_posts($search);
+
+            if ( empty( $posts ) ) {
+                continue;
+            }
+        }
+
+        $cat_name      = translate_category_name( $term, $prefix_varible );
+
+        $cat_list_html .= sprintf( $format,
+            $term->slug,
+            $cat_name );
+
+    }
+
+    if ( ! empty( $cat_list_html ) ) {
+        $res = $cat_list_html;
+    }
+
+    return $res;
+}
 ?>
 
-<?php get_search_form(); ?>
 
-    <div class="exhibition-page padding-tb-50">
+
+    <div class="exhibition-page padding-t-50">
         <div class="container">
             <!-- back button -->
             <!-- <?php back_page_history( true, 'top' ) ?> -->
@@ -43,40 +255,47 @@ $terms2 = get_field( 'exhibitor_category_setting2', 'option' );
             </div>
             <p class="title-des"><?php echo $description ?></p>
 
+            <?php get_search_form(); ?>
+
             <!-- Filter category -->
-            <div class="filter_category">
+<!--            <div class="filter_category">
                 <div class="block-category">
                     <?php
-                    $tranlated_term = get_category_exhibitor($terms,'',true);
-                    echo $tranlated_term;
-                    ?>
+/*                        $tranlated_term = get_category_list($area, $terms, $metaquerysp, $taxquerysp2, '',true);
+                        echo $tranlated_term;
+                    */?>
                 </div>
-
-            </div>
+            </div>-->
 
             <!-- scroll - page -->
             <?php if ( ! empty( $terms ) ): ?>
                 <!-- wp-block-section -->
                 <?php
-                foreach (
-                    $terms
-
-                    as $term
-                ):
+                foreach ($terms as $term):
+                    //選択されてない地域はスルーする
+                    $bool = false;
+                    foreach ( $area as $val ) if(strcmp($val, $term->slug) == 0) $bool = true;
+                    if($bool == false) continue;
 
                     $posts = get_posts( array(
                         'post_type'      => 'exhibitor',
                         'posts_per_page' => - 1,
+                        'meta_query' => $metaquerysp,       //カスタムフィールド内、フリーワード検索
                         'tax_query'      => array(
                             array(
-                                'taxonomy' => $term->taxonomy,
-                                'field'    => 'term_id',
-                                'terms'    => $term->term_id,
-                            )
+                                array(
+                                    'taxonomy' => $term->taxonomy,
+                                    'field'    => 'slug',
+                                    'terms'    => $term->slug,
+                                ),
+                                'relation'=>'OR'
+                            ),
+                            $taxquerysp2
                         ),
                         'orderby'        => 'post_title',
-                        'order'          => 'ASC',
+                        'order'          => 'ASC'
                     ) );
+
                     if ( ! isset( $term ) || empty( $term ) || empty($posts) ) {
                         continue;
                     }
@@ -113,30 +332,15 @@ $terms2 = get_field( 'exhibitor_category_setting2', 'option' );
                                     </a>
                                 </div>
                                 <div class="item-right information">
-                                <div class="category"> 
-                                       ' . $term_venue->name . ': 
-                                    </div> 
                                     <div class="description">
                                         ' . $title . '
                                     </div>
-                                    <a href="' . get_permalink( $post_id ) . '" class="btn btn-line yellow capti-text">
-                                        ' . translate_text_language( 'more info' ) . '
-                                        <i class="icons fa fa-angle-right"></i>
-                                    </a>
                                 </div>
                             </li>';
                             }
                             ?>
                             <!--wp-list-exhibiter--></ul>
                         <!--section_scroll wp-block-section--></div>
-                    <?php
-                    if ( ! empty( $map_cat ) ) {
-                        echo '<div class="text-center">
-<a href="' . $map_cat . '" class="btn btn-line yellow" target="_blank">'.translate_text_language('View in Google Map').'
-</a>
-</div>';
-                    }
-                    ?>
 
                 <?php
 
@@ -166,7 +370,7 @@ $terms2 = get_field( 'exhibitor_category_setting2', 'option' );
     <script>
         jQuery(function ($) {
             $(document).ready(function () {
-                $('a[data-demo=item-2]').parent().addClass('current-menu-item');
+                $('a[data-demo=item-1]').parent().addClass('current-menu-item');
                 $('.filter_category a.category').on('click', function (e) {
                     e.preventDefault();
                     var window = screen.width;
@@ -187,47 +391,12 @@ $terms2 = get_field( 'exhibitor_category_setting2', 'option' );
         })
     </script>
 
-
-
-
-
-    <!-- 以下もとからあったソース -->
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php
-		if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title"><?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'designart' ), '<span>' . get_search_query() . '</span>' );
-				?></h1>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-    <!-- 以上もとからあったソース -->
-
+<!-- landing-back-to-top -->
+<div class="wp-back-to-top-wrap">
+    <div class="wp-back-to-top top top2">
+        <img src="<?php echo URL_STATICS; ?>/images/commons/to_top_bt.png" alt="TOP">
+    </div>
+</div>
+<script src="<?php echo URL_STATICS; ?>/js/search.js"></script>
 <?php get_footer( 'top2' ) ?>
+
