@@ -56,11 +56,6 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
 	set_transient( 'special_query_fb', $json, 6000 );
 }
 
-//echo '<pre>';
-//print_r( $json );
-//echo '</pre>';
-
-
 ?>
 <section>
     <div class="banner-top">
@@ -70,14 +65,59 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
             <div class="banner-top-sub">DESIGNART TOKYO 2019
                 <p>2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p></div>
         </div>
+
         <button class="banner-top-btn">
-            <span class="arrow"><img src="<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png"></span>
+            <!--
+            <span class="arrow"><img src="<?php /*echo URL_STATICS; */ ?>/images/top/arrow-left-banner.png"></span>
             <div class="content">
                 <div class="date">2019.10.18</div>
                 <div class="desc dt-block">表参道・外苑前を中心に全11エリアで開催！東京の街全体がアートになる。</div>
                 <div class="desc mb-block">表参道・外苑前 を中心に全11エリアで開催！</div>
             </div>
-            <span class="arrow"><img src="<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png"></i></span>
+            <span class="arrow"><img src="<?php /*echo URL_STATICS; */ ?>/images/top/arrow-right-banner.png"></i></span>
+-->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+
+
+				<?php if ( ! empty( $json ) && isset( $json['data'] ) ):
+					$active = 'active';
+					?>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+						<?php foreach ( $json['data'] as $value ):
+							if ( empty( $value['message'] ) ) {
+								continue;
+							}
+							?>
+                            <div class="item <?php echo $active; ?>">
+                                <div class="date"><?php echo date( "Y-m-d", strtotime( $value['created_time'] ) ); ?></div>
+                                <div class="desc dt-block">
+									<?php
+									$str1 = trim( strtok( $value['message'], "\n" ) );
+									echo strlen( $str1 ) > 100 ? substr( $str1, 0, 100 ) . "..." : $str1;
+									?>
+
+                                </div>
+                            </div>
+
+							<?php
+							$active = '';
+						endforeach; ?>
+                    </div>
+				<?php endif; ?>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="arrow"><img src="<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png"></span>
+
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="arrow"><img
+                                src="<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png"></i></span>
+
+                </a>
+            </div>
         </button>
     </div>
 </section>
@@ -181,18 +221,33 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
                     </div>
                 </div>
                 <div class="img-wrapper img-slick">
-                    <div class="img-slick-item">
+
+                   <!-- <div class="img-slick-item">
                         <div class="img-item">
-                            <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" alt=""/>
+                            <img src="<?php /*echo URL_STATICS; */?>/images/top/eventandparty.jpg" alt=""/>
                         </div>
-                        <!--                        <div class="img-item">-->
-                        <!--                            <img src="-->
-						<?php //echo URL_STATICS; ?><!--/images/top/eventandparty.jpg" alt=""/>-->
-                        <!--                        </div>-->
-                        <!--                        <div class="img-item">-->
-                        <!--                            <img src="-->
-						<?php //echo URL_STATICS; ?><!--/images/top/eventandparty.jpg" alt=""/>-->
-                        <!--                        </div>-->
+
+                    </div>-->
+                    <div class="slideshow-container">
+
+                        <div class="mySlides ">
+                            <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" style="width:100%">
+                            <div class="text">Caption Text</div>
+                        </div>
+
+                        <div class="mySlides ">
+                            <img src="<?php echo URL_STATICS; ?>/images/top/buyart.jpg" style="width:100%">
+                            <div class="text">Caption Two</div>
+                        </div>
+
+                        <div class="mySlides ">
+                            <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" style="width:100%">
+                            <div class="text">Caption Three</div>
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
                     </div>
                 </div>
                 <div class="desc">
@@ -271,4 +326,32 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
         //     $(this).find('a').attr('data-demo', 'item-'+index);
         // })
     })(jQuery);
+</script>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
 </script>
