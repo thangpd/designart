@@ -4940,10 +4940,6 @@ h3.title-h3{
 .footer-col-4 li{
   margin-top: 10px;
 }
-.footer-col-3 li:first-child,
-.footer-col-4 li:first-child{
-  margin-top: 0;
-}
 .site-footer .copy-text{
   text-align: left;
   font-style: 18px;
