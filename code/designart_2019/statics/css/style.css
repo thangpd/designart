@@ -518,7 +518,7 @@ body.body-white.scrollActive .menu .sub-menu a:hover {
   content: "\f107";
   position: absolute;
   right: 10px;
-  top: 0px;
+  top: 0;
   font-weight: 400;
   font-size: 12px;
   font-family: "fontAwesome";
@@ -4974,6 +4974,11 @@ footer.site-footer{
 }
 .btn-map i{
   padding-right: 5px;
+}
+.btn-map a{
+  color:black;
+}.btn-map a:hover{
+  color:#c4a588;
 }
 .menu-sp{
   display: none;
