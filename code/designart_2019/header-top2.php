@@ -133,7 +133,7 @@
                         </ul></div>
                 </nav>
                 <!-- ./end .main-navigation -->
-                <div class="btn-map"><i class="fa fa-map-marker"></i>展示マップ</div>
+                <div class="btn-map"><a href=""><i class="fa fa-map-marker"></i>展示マップ</a></div>
                 <div class="right-site">
                     <div class="tit">SNS:</div>
                     <div class="social-list">
