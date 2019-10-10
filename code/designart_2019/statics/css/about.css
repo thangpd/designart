@@ -36,14 +36,14 @@
 =            About Page            =
 ==================================*/
 .about-page {
-  padding-top: 0;
+  padding-top: 40px;
   padding-bottom: 0;
 }
 .about-page .wp-content{ display: none;}
 .about-page .wp-content.show-content{ display: block;}
 .about-page .wp-section-area{margin-top: 0;}
-.about-page .heading-style-01 {padding-bottom: 65px;}
-.about-page .block-st {margin-bottom: 0;}
+.about-page .heading-style-01 {padding-bottom: 25px;}
+.about-page .block-st {margin-bottom: 35px;}
 .about-page .block-st > .heading-title {margin-bottom: 25px;}
 
 .about-page .block-st .block-wrapp .col-left {
@@ -57,7 +57,6 @@
   padding-right: 15px;
   float: left;
   width: 72%;
-  padding-top: 6px;
 }
 .about-page .block-st .desc {
   margin-top: -8px;
@@ -71,19 +70,8 @@
   line-height: 1.5;
   color: #c3a384;
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 25px;
 }
-
-.about-page p{
-  line-height: 1.8;
-  letter-spacing: 1.3px;
-}
-
-.about-page p strong{
-  font-size: 18px;
-  font-weight: 600:
-}
-
 .about-page .hidden-col{
   font-size: initial;
   opacity: 0; visibility: hidden;
@@ -179,8 +167,8 @@
   color: #000000;
 }
 .about-page .brand-block .info-text{
-  font-size: 15px;
-  font-weight: 500;
+   font-size: 15px;
+   font-weight: 600;
 }
 .about-page .brand-block .sm-lb-text {
   margin-bottom: 4px;
@@ -255,11 +243,13 @@
   letter-spacing: 2px;
   color: #C3A384;
 }
+
 .about-page .brand-list .brand-item .brand-title.sm-text {
   font-size: 14px;
   letter-spacing: 0px;
   font-weight: 600;
   text-align: center;
+  color:black
 }
 .about-page .brand-list .brand-item .brand-title.text-left {
   text-align: left;
@@ -392,6 +382,7 @@
   width:100%;
   color:black;
   font-size:15px;
+  font-weight: 600;
 }
 
 .about-page .table_col_right_text td{
@@ -420,159 +411,10 @@ ul.table_col_right_text li {
   white-space: nowrap;
 }
 
-
-.about-page .heading-title.heading-style-02 .title{
-  margin-top: 40px;
-}
-
-.about-page .wp-scroll-page .list-scroll-item > li > a {
-  font-size: 20px;
-}
-
-.about-page .tab-filter-section {
-  margin-top: 43px;
-}
-
-.about-page .official_cafe{
-  display: flex;
-}
-
-.about-page .heading-des .left img{
-  max-width: inherit;
-}
-
-.about-page .heading-des .right{
-  margin-left: 40px;
-}
-
-.about-page .heading-des .right h3{
-  color: #c3a384;
-  font-weight: 600;
-}
-
-.about-page .shoplist{
-
-}
-
-.about-page .shoplist .title{
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.about-page .shoplist .wp-section-area{
-  width: 33%;
-  display: inline-block;
-  vertical-align: top;
-  padding-right: 30px;
-  margin-top: 24px;
-}
-
-.about-page .shoplist .wp-section-area .address a{
-  border: 1px solid #c3a384;
-  border-radius: 4px;
-  padding: 7px 23px;
-  font-weight: 600;
-  margin-top: 20px;
-  display: inline-block;
-}
-
-
-.about-page .program .info a{
-  border: 1px solid #c3a384;
-  border-radius: 4px;
-  padding: 7px 23px;
-  font-weight: 600;
-  margin-top: 15px;
-  display: inline-block;
-}
-
-.about-page .program .info a.noborder{
-  padding: 0;
-  border: none;
-  margin: 0;
-}
-
-.about-page .item-pickup{
-  width: 100% !important;
-  display: flex !important;
-}
-
-
-.about-page .item-pickup .img-cafe{
-  width: 435px;
-  overflow: inherit !important;
-}
-
-.about-page .item-pickup .product{
-  margin-left: 40px;
-}
-
-.about-page .item-pickup .img-cafe:before{
-  padding-top: 0 !important;
-}
-
-.about-page .item-pickup .img-cafe img{
-  width: 425px !important;
-  height: 229px !important;
-  position: inherit !important;
-  top: 0 !important;
-  left: 0 !important;
-  -webkit-transform: inherit !important;
-  transform: inherit !important;
-}
-
-.about-page .wp-content-img-left{
-  display: flex;
-}
-
-.about-page .wp-content-img-left .wp-right, .about-page .wp-content-img-left .right{
-  padding-left: 0;
-  margin-left: 40px;
-}
-
-.about-page .wp-content-img-left .left img{
-  max-width:inherit;
-}
-
-.about-page .wp-content-img-left-1 .wp-left{
-  margin-top: 0;
-}
-
-#audio-guide1 .wp-content-inner{
-  display: flex;
-}
-
-.about-page .program .wp-section-area .wp-left{
-
-}
-
-.about-page .program .wp-section-area .wp-left img{
-  max-width: inherit;
-}
-
-.about-page .program .wp-section-area .wp-content-area{
-  display: flex;
-}
-
-.about-page .program .wp-section-area .wp-right{
-  width: auto;
-  margin-left: 26px;
-}
-
-
-.about-page .area-section .title-a .sub-title, .about-page .area-section .wp-right .title .sub-title{
-  display: block;
-}
 /*=====  End of About Page  ======*/
 /*==================================
 =            RESPONSIVE            =
 ==================================*/
-@media (max-width: 1199px) {
-  .wp-scroll-page.tab-filter .list-scroll-item > li > .item-filter {
-    min-width: 140px !important;
-  }
-}
-
 @media (max-width: 1024px) {
   .about-page .table_col_right_text td {
     padding:15px 10px 15px;
@@ -601,63 +443,6 @@ ul.table_col_right_text li {
     width: 128px;
   }
 }
-
-
-@media (max-width: 684px){
-  .wp-scroll-page.tab-filter .list-scroll-item{
-    opacity: 1 !important;
-    visibility: visible !important;
-    border-bottom: 1px solid #000000 !important;
-  }
-  .wp-scroll-page.tab-filter .list-scroll-item > li {
-    display: inline-block !important;
-  }
-
-  .wp-scroll-page.tab-filter .list-scroll-item > li > .item-filter.active-tab {
-    border-bottom: 4px solid !important;
-  }
-
-  .about-page .wp-scroll-page .list-scroll-item > li > a {
-    font-size: 12px;
-  }
-
-  .wp-scroll-page.tab-filter .list-scroll-item > li > .item-filter {
-    min-width: 120px !important;
-    padding: 10px 0 2px !important;
-  }
-
-  .show-tabs {
-    display: block;
-    opacity: 0;
-  }
-
-  .about-page .heading-style-01 {
-    padding-bottom: 5px;
-  }
-
-  .about-page .tab-filter-section {
-    margin-top: 0px;
-  }
-
-  .heading-title.heading-style-02 .title {
-    font-size: 16px;
-  }
-
-  .about-page .block-st .block-wrapp .col-left img {
-    width: 43%;
-  }
-
-  .about-page .heading-title.heading-style-02 .line-middle {
-    width: 65px;
-  }
-}
-
-@media(max-width:540px) {
-  .wp-scroll-page.tab-filter .list-scroll-item > li > .item-filter {
-    min-width: 80px !important;
-  }
-}
-
 @media(max-width:425px){
   ul.table_col_right_text li {
 
@@ -667,9 +452,6 @@ ul.table_col_right_text li {
   }
   .language-en .about-page ul.table_col_right_text li{
     white-space: normal;
-  }
-  .wp-scroll-page.tab-filter .list-scroll-item > li > .item-filter {
-    min-width: 75px !important;
   }
 }
 
@@ -685,9 +467,6 @@ ul.table_col_right_text li {
   }
   .language-en .about-page ul.table_col_right_text li{
     white-space: normal;
-  }
-  .wp-scroll-page.tab-filter .list-scroll-item > li > .item-filter {
-    min-width: 60px !important;
   }
 }
 @media(max-width:361px){
@@ -723,83 +502,11 @@ ul.table_col_right_text li {
     white-space: normal;
   }
 }
-/*@media (max-width: 1199px) {.wp-section-area .heading-title .subtitle
-  .about-page .brand-list .brand-item {
-    min-width: initial;
-  }
-}*/
-
-@media (max-width: 991px) {
-  .about-page .program .wp-section-area .wp-content-area{
-    display: block;
-  }
-
-  .about-page .program .wp-section-area .wp-left img{
-    width: 100%;
-  }
-
-  .about-page .program .wp-section-area .wp-right{
-    margin-left: 0;
-  }
-
-  .about-page .official_cafe{
-    display: block;
-  }
-
-  .about-page .official_cafe .left img{
-    width: 100%;
-  }
-
-  .about-page .heading-des .right {
-    margin-left: 0;
-  }
-
-  .about-page .shoplist .wp-section-area {
-    width: 100%;
-  }
-
-  #audio-guide1 .wp-content-inner {
-    display: block;
-  }
-
-  #audio-guide1 .wp-content-inner .wp-left img{
-    margin: 0 auto;
-  }
-
-  .about-page .wp-content-img-left {
-    display: block;
-  }
-  .about-page .wp-content-img-left .wp-left{
-    width: 348px !important;
-    margin: 0 auto;
-  }
-
-  .about-page .wp-content-img-left .left img {
-    margin: 0 auto;
-  }
-
-  .about-page .item-pickup{
-    display: block !important;
-  }
-
-  .about-page .item-pickup .img-cafe {
-    width: 100%;
-  }
-
-  .about-page .item-pickup .img-cafe img {
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .about-page .item-pickup .product {
-    margin-left: 0;
-  }
-
-  .about-page .wp-content-img-left .wp-right, .about-page .wp-content-img-left .right {
-    margin-left: 0;
-  }
+@media (max-width: 1199px) {.wp-section-area .heading-title .subtitle
+.about-page .brand-list .brand-item {
+  min-width: initial;
 }
-
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .about-page .brand-block .col-left {
     width: 230px;
@@ -840,8 +547,7 @@ ul.table_col_right_text li {
     float: none;
   }
   .about-page .block-st .block-wrapp .col-left {
-    margin-bottom: 11px;
-    margin-top: 10px;
+    margin-bottom: 40px;
     text-align: center;
   }
   .about-page .block-st .block-wrapp .col-left img {
@@ -855,7 +561,7 @@ ul.table_col_right_text li {
     overflow: hidden;
   }
   .about-page {
-    padding-top: 0;
+    padding-top: 80px;
   }
 
   .voice-guide-app-st .voice-block .image-wrapp {
