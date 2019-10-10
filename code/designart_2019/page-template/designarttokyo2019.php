@@ -1,47 +1,30 @@
 <?php /* Template Name: DesignArt2019*/ ?>
 <?php
 get_header( 'top2' );
+
+$post           = get_page_by_title( 'top' );
+$post_id        = $post->ID;
 $language       = get_key_languagle();
 $prefix_varible = get_prefix_languagle( $language, "_" );
+$description    = get_field( $prefix_varible . 'description', $post_id, false );
+$description    = str_replace( '{%URL_STATICS%}', URL_STATICS, $description );
 
-//get id front page
-$frontpage_id = get_option( 'page_on_front' );
+$html_share  = get_html_share( false );
+$description = str_replace( '{%HTML_SHARE%}', $html_share, $description );
 
-$news = get_posts( array(
-	'post_type'      => 'post',
-	'post_status'    => 'publish',
-	'posts_per_page' => 3,
-	'order'          => 'date',
-	'orderby'        => 'DESC',
-) );
+$description = str_replace( '{%HOME_URL%}', home_url(), $description );
 
-$exhibitors = get_posts( array(
-	'post_type'      => 'exhibitor',
-	'post_status'    => 'publish',
-	'posts_per_page' => 10,
-	'orderby'        => 'rand'
-//    'orderby'    => ['post_modified' => 'desc'],
-) );
+$html_info   = get_html_information_post();
+$description = str_replace( '{%INFORMATION_POST%}', $html_info, $description );
 
-$events = get_posts( array(
-	'post_type'      => 'event-party',
-	'posts_per_page' => 4,
-	'order'          => 'ASC',
-	'orderby'        => 'post_date',
-	'post_status'    => array( 'future' )
-) );
+//    back history
+$html_back   = back_page_history( false );
+$description = str_replace( '{%BACK_HISTORY%}', $html_back, $description );
 
-if ( empty( $events ) ) {
-	$events = get_posts( array(
-		'post_type'      => 'event-party',
-		'posts_per_page' => 4,
-		'order'          => 'DESC',
-	) );
-}
-$prefix_varible_slider = get_prefix_languagle( $language, "-" );
+//    back history
+$html_countdown = getHtmlCountdown( $post_id );
+$description    = str_replace( '{%COUNT_DOWN%}', $html_countdown, $description );
 
-//echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider"]' );
-//echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider-2019"]' );
 if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
 
 	$accessToken = 'EAAGeTfHqa2sBAGT5cdF3PZAqZAibKrtFBzHTpHMRSZBK8x7pgsWkFC5Lt8m8xUyFIdZBM1qjiC4ZCZC4giAexGs5dD3AkHukA8dEU3IV5CQExSQFQ7gGMtFXVwx5M66z7IUEZAOvgZBF9XVkUJt3pTVP2MhAMWemhAWpsldIdEZCVSgZDZD'; // designart アクセストークン(User Token)
@@ -56,7 +39,37 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
 	set_transient( 'special_query_fb', $json, 6000 );
 }
 
+
+$active  = 'active';
+$format  = '<div class="item %1$s">
+                                <div class="date">%2$s</div>
+                                <div class="desc dt-block">
+									%3$s
+                                </div>
+                            </div>';
+$content = '';
+foreach ( $json['data'] as $value ):
+	if ( empty( $value['message'] ) ) {
+		continue;
+	}
+	$time    = date( "Y-m-d", strtotime( $value['created_time'] ) );
+	$str1    = trim( strtok( $value['message'], "\n" ) );
+	$str1    = strlen( $str1 ) > 100 ? substr( $str1, 0, 100 ) . "..." : $str1;
+	$content .= sprintf( $format, $active, $time, $str1 );
+
+	$active = '';
+endforeach;
+
+$description    = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
+
+echo $description;
+
+//$prefix_varible_slider = get_prefix_languagle( $language, "-" );
+
+//echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider"]' );
+//echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider-2019"]' );
 ?>
+
 <section>
     <div class="banner-top">
         <div class="content">
@@ -79,33 +92,10 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
 
-
-				<?php if ( ! empty( $json ) && isset( $json['data'] ) ):
-					$active = 'active';
-					?>
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-						<?php foreach ( $json['data'] as $value ):
-							if ( empty( $value['message'] ) ) {
-								continue;
-							}
-							?>
-                            <div class="item <?php echo $active; ?>">
-                                <div class="date"><?php echo date( "Y-m-d", strtotime( $value['created_time'] ) ); ?></div>
-                                <div class="desc dt-block">
-									<?php
-									$str1 = trim( strtok( $value['message'], "\n" ) );
-									echo strlen( $str1 ) > 100 ? substr( $str1, 0, 100 ) . "..." : $str1;
-									?>
-
-                                </div>
-                            </div>
-
-							<?php
-							$active = '';
-						endforeach; ?>
-                    </div>
-				<?php endif; ?>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    {%CAROUSEL_NEWS%}
+                </div>
 
                 <!-- Left and right controls -->
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -285,12 +275,6 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
                 </div>-->
                 <div class="img-wrapper img-slick mb-230">
 
-                    <!-- <div class="img-slick-item">
-                        <div class="img-item">
-                            <img src="<?php /*echo URL_STATICS; */ ?>/images/top/eventandparty.jpg" alt=""/>
-                        </div>
-
-                    </div>-->
                     <div class="slideshow-container">
 
                         <div class="mySlides2 ">
