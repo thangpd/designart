@@ -160,7 +160,17 @@ echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider
                     </div>
                 </div>
                 <div class="img-wrapper img-slick">
-                    <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" alt=""/>
+                    <div class="img-slick-item">
+                        <div class="img-item">
+                            <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" alt=""/>
+                        </div>
+<!--                        <div class="img-item">-->
+<!--                            <img src="--><?php //echo URL_STATICS; ?><!--/images/top/eventandparty.jpg" alt=""/>-->
+<!--                        </div>-->
+<!--                        <div class="img-item">-->
+<!--                            <img src="--><?php //echo URL_STATICS; ?><!--/images/top/eventandparty.jpg" alt=""/>-->
+<!--                        </div>-->
+                    </div>
                 </div>
                 <div class="desc">
                     <p class="text-16">10.18 19:00〜</p>

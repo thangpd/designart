@@ -4915,7 +4915,131 @@ h3.title-h3{
 .footer-cols ul a.title{
   font-family: art-m;
 }
-@media screen and (max-width: 1199px){
+.footer-col{
+  position: relative;
+  padding-left: 30px;
+}
+.footer-col img{
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+.footer-cols{
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.footer-col-1 li:last-child,
+.footer-col-2 li:last-child,
+.footer-col-3 li,
+.footer-col-4 li{
+  margin-top: 10px;
+}
+.footer-col-3 li:first-child,
+.footer-col-4 li:first-child{
+  margin-top: 0;
+}
+.site-footer .copy-text{
+  text-align: left;
+  font-style: 18px;
+  color: #7d7d7d;
+}
+footer.site-footer{
+  padding-bottom: 60px;
+}
+.footer-col-3 li{
+  line-height: normal;
+}
+.btn-map{
+  font-size: 14px;
+  display: block;
+  text-align: left;
+  min-width: initial;
+  font-weight: 400;
+  color: #000;
+  background-color: transparent;
+  font-family: art-m;
+  line-height: 22px;
+  position: relative;
+  -webkit-border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 120px;
+  height: 37px;
+  border-radius: 4px;
+  border: solid 1px #020c12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.btn-map i{
+  padding-right: 5px;
+}
+.menu-sp{
+  display: none;
+}
+@media screen and (max-width: 1350px){
+  .menu-pc{
+    display: none;
+  }
+  .menu-sp{
+    display: block;
+  }
+  .nav-collapse.menu-sp{
+    background-color: #d5bea9;
+    top: 58px;
+    padding: 90px 0 0 50px;
+  }
+  .nav-collapse .nav-menu{
+    margin-bottom: 100px;
+  }
+  .nav-collapse .nav-menu li{
+    margin-bottom: 50px;
+  }
+  .nav-collapse .nav-menu a{
+    font-size: 40px;
+    font-family: art-m;
+    color: black;
+    line-height: 1.28;
+  }
+  .nav-collapse .nav-menu a span{
+    font-size: 30px;
+    display: block;
+    line-height: 1.5;
+  }
+  .block-info{
+    display: flex;
+    font-family: art-m;
+    align-items: flex-end;
+  }
+  .sns{
+    text-align: left;
+  }
+  .social-list .social-item{
+    margin: 0;
+    margin-right: 20px;
+    font-size: 42px;
+    color: black;
+  }
+  .text-22{
+    font-size: 22px;
+  }
+  .block-info .title{
+    color: #a97d54;
+    margin-bottom: 30px;
+  }
+  .language{
+    margin-left: 100px;
+  }
+  .language .item{
+    font-size: 42px;
+    line-height: 42px;
+  }
+  .language .item span{
+    color: #c2a484;
+  }
+}
+.@media screen and (max-width: 1199px){
   .img-wrapper img{
     max-width: 450px;
   }
@@ -4931,6 +5055,21 @@ h3.title-h3{
   }
   .step-item .desc{
     margin-bottom: 50px;
+  }
+  .footer-cols ul a.title{
+    padding-bottom: 10px;
+  }
+  .footer-col-1 li:last-child, .footer-col-2 li:last-child, .footer-col-3 li, .footer-col-4 li{
+    margin-top: 0;
+  }
+  .footer-col{
+    margin-top: 40px;
+  }
+  .footer-col img{
+    top: 20px;
+  }
+  .footer-col-3 li{
+    line-height: inherit;
   }
 }
 @media screen and (max-width: 767px){
@@ -5102,5 +5241,91 @@ h3.title-h3{
   }
   .wp-back-to-top.top.absolute.show{
     bottom: -130px;
+  }
+  .text-30{
+    font-size: 15px;
+  }
+  footer .text-18{
+    font-size: 9px;
+    letter-spacing: 0.72px;
+  }
+  .footer-cols ul a.text-16{
+    font-size: 8px;
+    letter-spacing: 0.64px;
+  }
+  .footer-col{
+    margin-top: 20px;
+    padding-left: 40px;
+  }
+  .footer-cols{
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  footer.site-footer .container{
+    margin-bottom: 50px;
+  }
+  .footer-col img{
+    left: 20px;
+    width: 5px;
+    top: 10px;
+  }
+  footer.site-footer .copy-text{
+    padding-left: 25px;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+  footer.site-footer .to-exhibitor-wrap{
+    position: unset;
+    bottom: auto;
+    width: 50%;
+    margin-top: 0;
+  }
+  footer.site-footer{
+    padding-bottom: 0;
+  }
+  .btn-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    margin: 0;
+  }
+  .btn-footer .first{
+    border-right: 1px solid black;
+  }
+  .nav-collapse.menu-sp{
+    padding: 45px 0 0 25px;
+  }
+  .nav-collapse .nav-menu a{
+    font-size: 20px;
+  }
+  .nav-collapse .nav-menu a span{
+    font-size: 15px;
+  }
+  .nav-collapse .nav-menu li{
+    margin-bottom: 25px;
+  }
+  .nav-collapse .nav-menu{
+    margin-bottom: 50px;
+  }
+  .text-22{
+    font-size: 11px;
+  }
+  .social-list .social-item,
+  .language .item{
+    font-size: 21px;
+    line-height: 30px;
+  }
+  .language{
+    margin-left: 50px;
+  }
+  .block-info .title{
+    margin-bottom: 15px;
+  }
+  .social-list .social-item{
+    margin-right: 10px;
   }
 }

@@ -22,7 +22,8 @@
     <link rel="stylesheet" type="text/css" href="<?php echo URL_STATICS; ?>/libs/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.css">
     <link rel="stylesheet" href="<?php echo URL_STATICS; ?>/libs/fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
-	<?php wp_head(); ?>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <?php wp_head(); ?>
 </head>
 
 <body <?php body_class('body-white'); ?>>
@@ -63,7 +64,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <div class="nav-collapse">
+            <div class="nav-collapse menu-pc">
 <!--                <p class="btn-designart">2018.10.19(Fri.)〜10.28(Sun.) @TOKYO</p>-->
 
                 <!--
@@ -132,7 +133,7 @@
                         </ul></div>
                 </nav>
                 <!-- ./end .main-navigation -->
-
+                <div class="btn-map"><i class="fa fa-map-marker"></i>展示マップ</div>
                 <div class="right-site">
                     <div class="tit">SNS:</div>
                     <div class="social-list">
@@ -149,6 +150,47 @@
                     <a href="https://www.google.com/maps/d/viewer?mid=1BIcFqbsYCO7qKWp891w7vUhK0trHY0cv" target="_blank"><?php echo translate_text_language('exhibition map') ?></a>
                 </div>
 -->
+            </div>
+            <div class="nav-collapse menu-sp">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="#">
+                            ABOUT <br>
+                            DESIGNART
+                            <span>デザイナートについて</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            EXHIBITION
+                            <span>展示作品</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            CONFERENCE
+                            <span>カンファレンス</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            GUIDE MAP
+                            <span> 展示マップ</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="block-info">
+                    <div class="social-list">
+                        <div class="title sns text-22">SNS</div>
+                        <a href="https://twitter.com/DESIGNART_TOKYO" target="_blank" class="social-item"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/designart.jp" target="_blank" class="social-item"><i class="fa fa-facebook-official"></i></a>
+                        <a href="https://www.instagram.com/DESIGNART_TOKYO/" target="_blank" class="social-item"><i class="fa fa-instagram"></i></a>
+                    </div>
+                    <div class="language ">
+                        <div class="language-text title text-22">LANGUAGE</div>
+                        <div class="item"><span>EN/</span>JP</div>
+                    </div>
+                </div>
             </div>
         </div>
 
