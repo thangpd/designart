@@ -41,7 +41,7 @@ if ( empty( $events ) ) {
 $prefix_varible_slider = get_prefix_languagle( $language, "-" );
 
 //echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider"]' );
-echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider-2019"]' );
+//echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider-2019"]' );
 ?>
 <section>
     <div class="banner-top">
