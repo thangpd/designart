@@ -168,13 +168,13 @@
                     </li>
                     <li>
                         <a href="#">
-                            CONFERENCE
+                            CONFERENCE <img src="<?php echo URL_STATICS; ?>/images/top/edit.png" alt="" class="img-edit"/>
                             <span>カンファレンス</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            GUIDE MAP
+                            GUIDE MAP <i class="fa fa-map-marker"></i>
                             <span> 展示マップ</span>
                         </a>
                     </li>
@@ -191,6 +191,7 @@
                         <div class="item"><span>EN/</span>JP</div>
                     </div>
                 </div>
+                <div class="slogan">Tokyo  transformed  into a museum</div>
             </div>
         </div>
 

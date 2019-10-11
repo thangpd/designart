@@ -3,9 +3,9 @@
     <div class="container">
         <nav class="footer-link">
             <div class="footer-cols row">
-                <div class="col-md-6">
+                <div class="col-md-7">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6 col-xs-6 footer-col">
+                        <div class="col-md-7 col-sm-6 col-xs-6 footer-col">
                             <img src="<?php echo URL_STATICS; ?>/images/top/arrow-footer.png" alt="" />
                             <ul class="footer-col-1">
                                 <li>
@@ -29,7 +29,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 footer-col">
+                        <div class="col-md-5 col-sm-6 col-xs-6 footer-col">
                             <img src="<?php echo URL_STATICS; ?>/images/top/arrow-footer.png" alt="" />
                             <ul class="footer-col-2">
                                 <li>
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-6 footer-col">
                             <ul class="footer-col-3">

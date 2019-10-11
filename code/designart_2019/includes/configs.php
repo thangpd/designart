@@ -100,16 +100,12 @@ $cfg_text_translate = array(
 		'jp' => 'プレス登録'
 	),
 	'If you would like to register as a press from here'                     => array(
-		'jp' => 'プレス登録をご希望の方は<br>
-こちらから'
+		'jp' => 'プレス登録をご希望の方は<br>こちらから'
 	),
 
 
 	//=============
 
-	'Press registration from here' => array(
-		'jp' => 'プレス登録をご希望の方はこちらから'
-	),
 	'Privacy Policy'               => array(
 		'jp' => 'プライバシーポリシー'
 	),
@@ -191,7 +187,7 @@ $cfg_text_translate = array(
 	),
 
 	'"DESIGNART TOKYO" is a design & art festival held every fall. There are many exhibitions to bring together diverse objects and experiences created in crossover fields of art, interior design, fashion, and food from around the globe to be presented on the stages in various locations in Tokyo, one of the world\'s leading mixed culture cities.' => array(
-		'jp' => '「DESIGNART TOKYO」は、毎年秋に開催するデザイン＆アートフェスティバルです。世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、インテリア、ファッション、テクノロジーなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩な作品を発表していきます。',
+		'jp' => '「DESIGNART TOKYO」は、毎年秋に開催するデザイン＆アートフェスティバルです。<br>世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、インテリア、ファッション、テクノロジーなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩な作品を発表していきます。',
 	),
 
 	'Everyone can enjoy design & art' => array(

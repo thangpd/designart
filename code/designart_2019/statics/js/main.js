@@ -134,10 +134,10 @@ jQuery(function ($) {
 
         // if user scrolls down - show scroll to top button
         if (topPos > 200) {
-            $(scrollTop).css("opacity", "1");
+            $(scrollTop).addClass('show');
 
         } else {
-            $(scrollTop).css("opacity", "0");
+            $(scrollTop).removeClass('show');
         }
 
     });
