@@ -27,7 +27,7 @@ $events = get_posts( array(
 	'post_type'      => 'event-party',
 	'posts_per_page' => 4,
 	'order'          => 'ASC',
-	'orderby'=>'post_date',
+	'orderby'        => 'post_date',
 	'post_status'    => array( 'future' )
 ) );
 
@@ -41,7 +41,21 @@ if ( empty( $events ) ) {
 $prefix_varible_slider = get_prefix_languagle( $language, "-" );
 
 //echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider"]' );
-echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider-2019"]' );
+//echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider-2019"]' );
+if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
+
+	$accessToken = 'EAAGeTfHqa2sBAGT5cdF3PZAqZAibKrtFBzHTpHMRSZBK8x7pgsWkFC5Lt8m8xUyFIdZBM1qjiC4ZCZC4giAexGs5dD3AkHukA8dEU3IV5CQExSQFQ7gGMtFXVwx5M66z7IUEZAOvgZBF9XVkUJt3pTVP2MhAMWemhAWpsldIdEZCVSgZDZD'; // designart アクセストークン(User Token)
+	$search      = 'designart.jp/feed';
+	$url         = 'https://graph.facebook.com/v4.0/' . $search . '?access_token=' . $accessToken;
+	$jsonData    = file_get_contents( $url );
+
+	// jsonデータの整形・出力
+	$json = json_decode( $jsonData, true );
+//    $str = json_encode($json['data']);
+	// It wasn't there, so regenerate the data and save the transient
+	set_transient( 'special_query_fb', $json, 6000 );
+}
+
 ?>
 <section>
     <div class="banner-top">
@@ -49,16 +63,61 @@ echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider
             <h1 class="title-h1">DESIGN & ART
                 <span>into emotions</span></h1>
             <div class="banner-top-sub">DESIGNART TOKYO 2019
-                <p>2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p> </div>
+                <p>2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p></div>
         </div>
+
         <button class="banner-top-btn">
-            <span class="arrow"><img src="<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png"></span>
+            <!--
+            <span class="arrow"><img src="<?php /*echo URL_STATICS; */ ?>/images/top/arrow-left-banner.png"></span>
             <div class="content">
                 <div class="date">2019.10.18</div>
                 <div class="desc dt-block">表参道・外苑前を中心に全11エリアで開催！東京の街全体がアートになる。</div>
                 <div class="desc mb-block">表参道・外苑前 を中心に全11エリアで開催！</div>
             </div>
-            <span class="arrow"><img src="<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png"></i></span>
+            <span class="arrow"><img src="<?php /*echo URL_STATICS; */ ?>/images/top/arrow-right-banner.png"></i></span>
+-->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+
+
+				<?php if ( ! empty( $json ) && isset( $json['data'] ) ):
+					$active = 'active';
+					?>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+						<?php foreach ( $json['data'] as $value ):
+							if ( empty( $value['message'] ) ) {
+								continue;
+							}
+							?>
+                            <div class="item <?php echo $active; ?>">
+                                <div class="date"><?php echo date( "Y-m-d", strtotime( $value['created_time'] ) ); ?></div>
+                                <div class="desc dt-block">
+									<?php
+									$str1 = trim( strtok( $value['message'], "\n" ) );
+									echo strlen( $str1 ) > 100 ? substr( $str1, 0, 100 ) . "..." : $str1;
+									?>
+
+                                </div>
+                            </div>
+
+							<?php
+							$active = '';
+						endforeach; ?>
+                    </div>
+				<?php endif; ?>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="arrow"><img src="<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png"></span>
+
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="arrow"><img
+                                src="<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png"></i></span>
+
+                </a>
+            </div>
         </button>
     </div>
 </section>
@@ -79,8 +138,10 @@ echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider
             <span>INTO LIVES <span class="mb-block">感動を、すべての人々に</span></span>
         </h4>
         <p class="text-18 dt-block">感動を、すべての人々に</p>
-        <p class="text-20">「DESIGNART TOKYO」は、毎年秋に開催するデザイン＆アートフェスティバルです。世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、インテリア、ファッション、テクノロジーなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩な作品を発表していきます。</p>
-        <a href="#" class="text-38 more dt-block">more <span><img src="<?php echo URL_STATICS; ?>/images/top/arrow-item.png"></span></a>
+        <p class="text-20">「DESIGNART
+            TOKYO」は、毎年秋に開催するデザイン＆アートフェスティバルです。世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、インテリア、ファッション、テクノロジーなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩な作品を発表していきます。</p>
+        <a href="#" class="text-38 more dt-block">more <span><img
+                        src="<?php echo URL_STATICS; ?>/images/top/arrow-item.png"></span></a>
     </div>
 </section>
 <section class="container">
@@ -160,7 +221,37 @@ echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider
                     </div>
                 </div>
                 <div class="img-wrapper img-slick">
-                    <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" alt=""/>
+
+                    <!-- <div class="img-slick-item">
+                        <div class="img-item">
+                            <img src="<?php /*echo URL_STATICS; */ ?>/images/top/eventandparty.jpg" alt=""/>
+                        </div>
+
+                    </div>-->
+                    <div class="slideshow-container">
+
+                        <div class="mySlides ">
+                            <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides ">
+                            <img src="<?php echo URL_STATICS; ?>/images/top/buyart.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides ">
+                            <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    </div>
+                    <div style="text-align:center;display:none;">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
                 </div>
                 <div class="desc">
                     <p class="text-16">10.18 19:00〜</p>
@@ -189,8 +280,44 @@ echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider
                         <span>OFFICIAL CAFE <br> & GOODS</span>
                     </div>
                 </div>
+                <!--<div class="img-wrapper img-slick mb-230">
+                    <img src="<?php /*echo URL_STATICS; */ ?>/images/top/cafeandgood.jpg" alt=""/>
+                </div>-->
                 <div class="img-wrapper img-slick mb-230">
-                    <img src="<?php echo URL_STATICS; ?>/images/top/cafeandgood.jpg" alt=""/>
+
+                    <!-- <div class="img-slick-item">
+                        <div class="img-item">
+                            <img src="<?php /*echo URL_STATICS; */ ?>/images/top/eventandparty.jpg" alt=""/>
+                        </div>
+
+                    </div>-->
+                    <div class="slideshow-container">
+
+                        <div class="mySlides2 ">
+                            <img src="<?php echo URL_STATICS; ?>/images/top/slide01.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides2 ">
+                            <img src="<?php echo URL_STATICS; ?>/images/top/slide02.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides2 ">
+                            <img src="<?php echo URL_STATICS; ?>/images/top/slide03.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides2 ">
+                            <img src="<?php echo URL_STATICS; ?>/images/top/slide04.jpg" style="width:100%">
+                        </div>
+
+                        <a class="prev " onclick="plusSlides2(-1)">&#10094;</a>
+                        <a class="next " onclick="plusSlides2(1)">&#10095;</a>
+
+                    </div>
+                    <div style="text-align:center;display:none;">
+                        <span class="dot" onclick="currentSlide2(1)"></span>
+                        <span class="dot" onclick="currentSlide2(2)"></span>
+                        <span class="dot" onclick="currentSlide2(3)"></span>
+                        <span class="dot" onclick="currentSlide2(4)"></span>
+                    </div>
                 </div>
                 <div class="desc">
                     <p class="text-16 cs-mb"> 展示巡りに役立つオフィシャルガイドブック</p>
@@ -216,7 +343,6 @@ echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider
 </div>
 
 
-
 <?php get_footer( 'top2' ); ?>
 
 <script type="text/javascript">
@@ -239,4 +365,76 @@ echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider
         //     $(this).find('a').attr('data-demo', 'item-'+index);
         // })
     })(jQuery);
+</script>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+
+    var slideIndex2 = 1;
+    showSlides2(slideIndex2);
+
+    function plusSlides2(n) {
+        showSlides2(slideIndex2 += n);
+    }
+
+    function currentSlide2(n) {
+        showSlides2(slideIndex2 = n);
+    }
+
+    function showSlides2(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides2");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex2 = 1
+        }
+        if (n < 1) {
+            slideIndex2 = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex2 - 1].style.display = "block";
+        dots[slideIndex2 - 1].className += " active";
+        // setInterval(plusSlides2(1), 3000);
+    }
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        setInterval(function () {
+            plusSlides2(1)
+        }, 3000);
+    });
+
 </script>

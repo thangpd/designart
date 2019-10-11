@@ -125,4 +125,27 @@ jQuery(function ($) {
     };
     _me.init();
     console.log('load mainjs');
+
+    var scrollTop = $(".btn-footer");
+
+    $(window).scroll(function() {
+        // declare variable
+        var topPos = $(this).scrollTop();
+
+        // if user scrolls down - show scroll to top button
+        if (topPos > 200) {
+            $(scrollTop).css("opacity", "1");
+
+        } else {
+            $(scrollTop).css("opacity", "0");
+        }
+
+    });
+
+//    SLICK SLIDER
+//     $('.img-slick-item').slick({
+//         infinite: true,
+//         slidesToShow: 1,
+//         slidesToScroll: 1
+//     });
 });
