@@ -5599,3 +5599,9 @@ footer.site-footer{
 .footer-link .footer-cols ul a.title{
   font-family: art-m;
 }
+.en .footer-col-1 li:last-child, .en .footer-col-2 li:last-child, .en .footer-col-3 li, .en .footer-col-4 li{
+  margin-top: 3px;
+}
+.en .footer-col-1 li:nth-child(2), .en .footer-col-2 li:nth-child(2){
+  margin-top: 8px;
+}
