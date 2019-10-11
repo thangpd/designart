@@ -2280,7 +2280,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
 
                                 <div class="wp-section-goods">
                                     <div class="area-section">
-                                        <div class="title-head background-black">展示会場の目印はスタイリッシュなフラッグバッグ</div>
+                                        <div class="title-head background-black">The hallmark of the exhibition hall is a stylish flag bag</div>
                                         <div class="wp-content-inner wp-content-img-left row">
                                             <div class="left col-md-4">
                                                 <div class="wrap-img no-padding">
@@ -2289,26 +2289,12 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                 </div>
                                             </div>
                                             <div class="right col-md-8">
-                                                <div class="title-a">DESIGNART TOKYO 2019 <br/><span class="sub-title">オフィシャルフラッグ</span>
+                                                <div class="title-a">DESIGNART TOKYO 2019 <br/><span class="sub-title">OFFICIAL FLAG</span>
                                                 </div>
                                                 <div class="info-area-a">
-                                                    街中に点在するDESIGNART
-                                                    の展示会場の目印となるのが、
-                                                    オフィシャルフラッグです。
-                                                    　今年は、ブラックとメタリック
-                                                    ゴールドをベースにしたリバーシブ
-                                                    ル仕様にリニューアル。両方向か
-                                                    らの視認性が高まり、会場がさら
-                                                    に見つけやすくなりました。ロゴ
-                                                    を取り囲む図形のかたちは５種類
-                                                    あるのもユニーク。制作はサイン
-                                                    やディスプレイのプロ集団、光伸
-                                                    プランニングが担当しています。
-                                                    　なお、昨年まで使用していたフ
-                                                    ラッグとフラッグスタンドも継続利
-                                                    用。DESIGNART が初年度から
-                                                    コンセプトに掲げている持続可能
-                                                    性を体現しています。
+                                                    The venues of DESIGNART scattered in the city can be spotted by the official flag.
+                                                    This year, the flag is updated to be two-sided in black and metallic gold. The venues are easier to find with the increasing visibility from both directions. The five different shapes around the logo is also unique. It is made by Koshin Planning, the professional group of signage and display.
+                                                    The flags and flag stands from the previous years are also in use. DESIGNART embodies the sustainability that has been the concept from the first year.
                                                 </div>
                                             </div>
                                         </div>
