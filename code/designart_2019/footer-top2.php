@@ -10,7 +10,9 @@
                             <ul class="footer-col-1">
                                 <li>
                                     <a href="#" class="title text-30">
-                                        mail magazine
+	                                    <?php echo translate_text_language('mail magazine') ?>
+
+
                                     </a>
                                 </li>
                                 <li>
@@ -22,7 +24,7 @@
                                 <li>
                                     <a href="#" class="text-16">
 	                                    <?php echo translate_text_language('DESIGNART will be informed through press release.') ?>
-                                        DESIGNARTの年間活動などをプレスリリースでおしらせします
+
                                     </a>
                                 </li>
                             </ul>
@@ -37,13 +39,14 @@
                                 </li>
                                 <li>
                                     <a href="#" class="text-18">
-                                        プレス登録
+	                                    <?php echo translate_text_language('Press registration from here') ?>
+
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" class="text-16">
-                                        プレス登録をご希望の方は
-                                        こちらから
+	                                    <?php echo translate_text_language('If you would like to register as a press from here') ?>
+
                                     </a>
                                 </li>
                             </ul>

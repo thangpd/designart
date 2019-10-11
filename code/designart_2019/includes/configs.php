@@ -81,6 +81,8 @@ $cfg_text_translate = array(
 		'jp' => 'プレスの問い合わせ',
 		'cn' => '联系方式'
 	),
+
+	//footer 2019
 	'Mail magazine registration' => array(
 		'jp' => 'メルマガ登録'
 	),
@@ -91,6 +93,19 @@ $cfg_text_translate = array(
 	'Annual activities of DESIGNART will be informed through press release.' => array(
 		'jp' => 'デザイナートの年間活動などをプレスリリースでお知らせします。'
 	),
+	'DESIGNART will be informed through press release.'                      => array(
+		'jp' => 'DESIGNARTの年間活動などをプレスリリースでおしらせします'
+	),
+	'Press registration from here'                                           => array(
+		'jp' => 'プレス登録'
+	),
+	'If you would like to register as a press from here'                     => array(
+		'jp' => 'プレス登録をご希望の方は<br>
+こちらから'
+	),
+
+
+	//=============
 
 	'Press registration from here' => array(
 		'jp' => 'プレス登録をご希望の方はこちらから'
@@ -245,10 +260,10 @@ $cfg_text_translate = array(
 		'jp' => 'エリア',
 	),
 
-	'CATEGORY' => array(
+	'CATEGORY'                                                                        => array(
 		'jp' => 'カテゴリー',
 	),
-	'Annual activities of' => array(
+	'Annual activities of'                                                            => array(
 		'jp' => ' メルマガ登録',
 	),
 	'Annual activities of <br> DESIGNART will be informed <br>through press release.' => array(
