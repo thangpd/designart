@@ -154,26 +154,27 @@
             <div class="nav-collapse menu-sp">
                 <ul class="nav-menu">
                     <li>
-                        <a href="#">
+                        <a href="<?php echo home_url() ?>/about/">
                             ABOUT <br>
                             DESIGNART
                             <span>デザイナートについて</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="<?php echo home_url() ?>/exhibitor/">
                             EXHIBITION
                             <span>展示作品</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+
+                        <a href="<?php echo get_home_url() ?>">
                             CONFERENCE <img src="<?php echo URL_STATICS; ?>/images/top/edit.png" alt="" class="img-edit"/>
                             <span>カンファレンス</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://www.google.com/maps/d/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397678%2C139.72963319999997&z=13">
                             GUIDE MAP <i class="fa fa-map-marker"></i>
                             <span> 展示マップ</span>
                         </a>
@@ -188,6 +189,9 @@
                     </div>
                     <div class="language ">
                         <div class="language-text title text-22">LANGUAGE</div>
+	                    <?php
+	                    generate_select_languagle();
+	                    ?>
                         <div class="item"><span>EN/</span>JP</div>
                     </div>
                 </div>

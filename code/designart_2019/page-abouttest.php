@@ -21,6 +21,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
 
 //echo $description;
 ?>
+<!--jap-->
     <section class="about-page about-outline-page">
         <div class="container">
 
@@ -827,7 +828,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                 <div class="info-area">
                                                     DESIGNART TOKYO 2019のハイライト情報を掲載。<br><br>
 
-                                                    <a href="" target="_blank"> <span
+                                                    <a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/Designart2019_guidebook.pdf" target="_blank"> <span
                                                                 style="text-decoration: underline;">PDFをダウンロードする</span></a>
                                                 </div>
                                                 <div class="title">DESIGNART TOKYO 2019
@@ -843,7 +844,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                         <li>各展示会場 / インフォメーションセンター / オフィシャルカフェなど</li>
                                                     </ul>
                                                     <br><br>
-                                                    <a href="" target="_blank"><span
+                                                    <a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/Designart2019_tabloid.pdf" target="_blank"><span
                                                                 style="text-decoration: underline;">PDFをダウンロードする</span></a>
                                                 </div>
 
@@ -1398,7 +1399,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
 
 
     <!-- 固定ページ入力ソースここから-->
-
+<!--//eng-->
     <section class="about-page about-outline-page">
         <div class="container">
 
@@ -2207,7 +2208,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
 
 
                                                     <br/><br>
-                                                    <a href="" target="_blank"><span
+                                                    <a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/Designart2019_guidebook.pdf" target="_blank"><span
                                                                 style="text-decoration: underline;">PDF download</span></a>
                                                 </div>
 
@@ -2226,7 +2227,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         <li>・information center, official café etc.</li>
 
                                                     </ul>
-                                                    <br><a href="" target="_blank"><span
+                                                    <br><a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/Designart2019_tabloid.pdf" target="_blank"><span
                                                                 style="text-decoration: underline;">PDF download</span></a>
                                                 </div>
 

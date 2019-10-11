@@ -1,5 +1,5 @@
 </div><!-- #content -->
-<footer id="footer" class="site-footer">
+<footer id="footer" class="site-footer <?php echo get_key_languagle(); ?>">
     <div class="container">
         <nav class="footer-link">
             <div class="footer-cols row">
