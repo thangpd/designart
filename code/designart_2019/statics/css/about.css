@@ -41,7 +41,7 @@
 }
 .about-page .wp-content{ display: none;}
 .about-page .wp-content.show-content{ display: block;}
-.about-page .wp-section-area{margin-top: 0;}
+/*.about-page .wp-section-area{margin-top: 0;}*/
 .about-page .heading-style-01 {padding-bottom: 25px;}
 .about-page .block-st {margin-bottom: 35px;}
 .about-page .block-st > .heading-title {margin-bottom: 25px;}
@@ -392,8 +392,8 @@
   line-height: 20px;
 }
 .about-page .heading-title.heading-style-02 .line-middle{
-  width:180px;
-  margin-left:25px;
+  width:164px;
+  margin-left:22px;
 }
 .language-en .about-page ul.table_col_right_text li{
   white-space: nowrap;
@@ -642,3 +642,232 @@ ul.table_col_right_text li {
 }
 
 /*=====  End of RESPONSIVE  ======*/
+
+.wp-content.official.program .heading-title.heading-style-02,
+.wp-content.coffee .heading-title.heading-style-02{
+  margin-bottom: 0px !important;
+}
+
+.wp-content.coffee .heading-title.heading-style-02.height {
+  margin-top: 50px;
+}
+
+
+.tab-filter-section.tab-official-page .heading-des.official_cafe {
+  margin-top: 39px;
+}
+.tab-filter-section.tab-official-page .heading-des.official_cafe .info {
+  font-family: YuGo;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: left;
+  color: black;
+}
+
+.wp-content.official.program .heading-title.heading-style-02 .title.upper-text,
+.wp-content.coffee .heading-title.heading-style-02 .title.upper-text{
+  margin-bottom: 0px !important;
+}
+
+/*PROGRAMS*/
+.wp-content.official.program .wp-section-area .area-section .wp-content-area .wp-left .img--big img{
+  height: 475px;
+  object-fit: cover;
+}
+
+.wp-content.official.program .wp-section-area .area-section .wp-content-area .wp-right .title {
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #c3a384;
+  /*margin: 0px 0px 15px 0px !important;*/
+  margin: 0px;
+}
+
+.wp-content.official.program .wp-section-area .area-section .wp-content-area .wp-right .info {
+  font-size: 12px !important;
+  font-weight: bold !important;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5 !important;
+  letter-spacing: normal;
+  text-align: left;
+  color: black;
+}
+
+.wp-content.official.program .wp-section-area .area-section .wp-content-area .wp-right .info a:not(.noborder) {
+  font-family: YuGo;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #c3a384;
+  border-radius: 4px;
+  border: solid 1px #c3a384;
+  background-color: #fff;
+  padding: 9px 21px 9px 25px;
+  display: inline-block;
+  margin-top: 14px;
+}
+
+.wp-content.official.program .wp-section-area .area-section .wp-content-area .wp-right a.info {
+  margin-top: 14px !important;
+}
+
+.wp-content.official.program .wp-section-area .area-section .wp-content-area .wp-right .info p{
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-family: YuGo;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #311212;
+}
+
+@media (max-width: 991px) {
+  .area-section .wp-right {
+    padding-left: 15px !important;
+  }
+}
+
+
+/*CAFE&GOODS*/
+.wp-content .shoplist .wp-section-area  .area-section .wp-content-area .title {
+  font-family: YuGo;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: black;
+}
+
+.wp-content .shoplist .wp-section-area  .area-section .wp-content-area .address {
+  font-family: YuGo;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.83;
+  letter-spacing: normal;
+  text-align: left;
+  color: #311212;
+}
+
+.wp-content .shoplist .wp-section-area .area-section .wp-content-area .address a {
+  font-family: YuGo;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #c3a384;
+  border-radius: 4px;
+  border: solid 1px #c3a384;
+  background-color: #fff;
+  padding: 9px 23px 9px 24px;
+  display: inline-block;
+  margin-top: 21px;
+}
+
+.wp-content .special-drink {
+  margin-top: 51px;
+}
+
+.wp-content .special-drink .wp-image.img-cafe {
+  padding: 40px 72px 39px 72px;
+  border: solid 2px #c3a384;
+  background-color: #ffffff;
+}
+
+.wp-content .special-drink .wp-image.img-cafe img {
+  width: 280px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+.wp-content .special-drink .product .title {
+  font-family: YuGo;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  text-align: left;
+  color: #c3a384;
+  font-size: 22px;
+}
+.wp-content .special-drink .product .description {
+  font-family: YuGo;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: left;
+  color: #121111;
+}
+
+.wp-content.coffee .wp-section-goods .wrap-img{
+  border: solid 4px #c3a384;
+  padding: 17px 35px 14px 34px;
+}
+
+.wp-content.coffee .wp-section-goods .wrap-img img{
+  margin: 0 auto;
+}
+.wp-content.coffee .wp-section-goods .wrap-img.no-padding{
+  border: solid 4px #c3a384;
+  padding: 0;
+}
+
+.wp-content.coffee .wp-section-goods .title-a{
+  font-family: artlessgrotesk;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  text-align: left;
+  color: #c3a384;
+}
+
+.wp-content.coffee .wp-section-goods .sub-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.wp-content.coffee .wp-content-img-left-1 .wp-left {
+  border: 0 !important;
+}
+
+.wp-content.coffee .wp-content-img-left-1 .wp-left {
+  margin-top: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .wp-content.coffee .right {
+    margin-left: 0px !important;
+  }
+}
