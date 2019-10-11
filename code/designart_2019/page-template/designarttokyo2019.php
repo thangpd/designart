@@ -2,7 +2,7 @@
 <?php
 get_header( 'top2' );
 
-$post           = get_page_by_title( 'top' );
+$post           = get_page_by_title( 'Designart 2019' );
 $post_id        = $post->ID;
 $language       = get_key_languagle();
 $prefix_varible = get_prefix_languagle( $language, "_" );
@@ -43,7 +43,7 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
 $active  = 'active';
 $format  = '<div class="item %1$s">
                                 <div class="date">%2$s</div>
-                                <div class="desc dt-block">
+                                <div class="desc">
 									%3$s
                                 </div>
                             </div>';
@@ -60,15 +60,16 @@ foreach ( $json['data'] as $value ):
 	$active = '';
 endforeach;
 
-$description    = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
+$description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
 
-echo $description;
+//echo $description;
 
 //$prefix_varible_slider = get_prefix_languagle( $language, "-" );
 
 //echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider"]' );
 //echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider-2019"]' );
 ?>
+
 
 <section>
     <div class="banner-top">
@@ -78,7 +79,7 @@ echo $description;
             <div class="banner-top-sub">DESIGNART TOKYO 2019
                 <p>2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p></div>
         </div>
-
+        <div class="scroll mb-block"><img src="{%URL_STATICS%}/images/top/scroll.png" alt="" /> </div>
         <button class="banner-top-btn">
             <!--
             <span class="arrow"><img src="<?php /*echo URL_STATICS; */ ?>/images/top/arrow-left-banner.png"></span>
@@ -94,17 +95,17 @@ echo $description;
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
-                    {%CAROUSEL_NEWS%}
+                                        {%CAROUSEL_NEWS%}
                 </div>
 
                 <!-- Left and right controls -->
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                    <span class="arrow"><img src="<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png"></span>
+                    <span class="arrow"><img src="{%URL_STATICS%}/images/top/arrow-left-banner.png"></span>
 
                 </a>
                 <a class="right carousel-control" href="#myCarousel" data-slide="next">
                     <span class="arrow"><img
-                                src="<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png"></i></span>
+                                src="{%URL_STATICS%}/images/top/arrow-right-banner.png"></i></span>
 
                 </a>
             </div>
@@ -115,9 +116,9 @@ echo $description;
     <div class="banner-center">
         <h2 class="title-h2">TOKYO TRANSFORMED <br>
             INTO A MUSEUM</h2>
-        <p class="text-32">東京の街全体がミュージアムになる10日間</p>
         <p class="text-35">2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p>
-        <p class="text-28">表参道・外苑前、原宿・明治神宮前、渋谷・恵比寿、代官山・中目黒、六本木、新宿、銀座 で開催</p>
+        <p class="text-28">HELD IN OMOTESANDO / GAIENMAE / HARAJUKU・MEIJI JINGUMAE / SHIBUYA・EBISU /
+            DAIKANYAMA・NAKAMEGURO / ROPPONGI / SHINJUKU / GINZA</p>
     </div>
 </section>
 <section class="container-black">
@@ -125,16 +126,18 @@ echo $description;
         <span class="about">ABOUT</span>
         <h4 class="title-h4">
             BRINGING EMOTION
-            <span>INTO LIVES <span class="mb-block">感動を、すべての人々に</span></span>
+            <span>INTO LIVES</span>
         </h4>
-        <p class="text-18 dt-block">感動を、すべての人々に</p>
-        <p class="text-20">「DESIGNART
-            TOKYO」は、毎年秋に開催するデザイン＆アートフェスティバルです。世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、インテリア、ファッション、テクノロジーなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩な作品を発表していきます。</p>
+
+        <p class="text-20">"DESIGNART TOKYO" IS A DESIGN & ART FESTIVAL HELD EVERY FALL. THERE ARE MANY EXHIBITIONS TO
+            BRING TOGETHER DIVERSE OBJECTS AND EXPERIENCES CREATED IN CROSSOVER FIELDS OF ART, INTERIOR DESIGN, FASHION,
+            AND FOOD FROM AROUND THE GLOBE TO BE PRESENTED ON THE STAGES IN VARIOUS LOCATIONS IN TOKYO, ONE OF THE
+            WORLD'S LEADING MIXED CULTURE CITIES.</p>
         <a href="#" class="text-38 more dt-block">more <span><img
-                        src="<?php echo URL_STATICS; ?>/images/top/arrow-item.png"></span></a>
+                        src="{%URL_STATICS%}/images/top/arrow-item.png"></span></a>
     </div>
 </section>
-<section class="container">
+<section class="container en">
     <div class="main-content">
         <h3 class="title-h3">DESIGNART GUIDE</h3>
         <p class="text-28 sub-title">EVERYONE CAN ENJOY<br>
@@ -146,31 +149,29 @@ echo $description;
                         <span class="number">01.</span>
                         <span>DISCOVER ART</span>
                     </div>
-                    <div class="sub-title">アートに出会う
+                    <div class="sub-title">
                     </div>
                 </div>
                 <div class="img-wrapper">
-                    <img src="<?php echo URL_STATICS; ?>/images/top/discoverart.jpg" alt=""/>
+                    <img src="{%URL_STATICS%}/images/top/discoverart.jpg" alt=""/>
                 </div>
                 <div class="desc">
-                    <p class="text-18">2019年は120組、11エリアで作品を展示します。</p>
+                    <p class="text-18"> The 120 groups exhibit their works in the 11 areas in <br> 2019.</p>
                     <div class="link-group">
                         <a href="#" class="link-step">
                             <div class="left">
                                 <div class="text-38">exhibition list</div>
-                                <div class="text-20">展示作品一覧</div>
                             </div>
                             <div class="right">
-                                <img src="<?php echo URL_STATICS; ?>/images/top/arrow-item.png" alt=""/>
+                                <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                             </div>
                         </a>
                         <a href="#" class="link-step">
                             <div class="left">
                                 <div class="text-38">guide map</div>
-                                <div class="text-20">展示マップ</div>
                             </div>
                             <div class="right">
-                                <img src="<?php echo URL_STATICS; ?>/images/top/arrow-item.png" alt=""/>
+                                <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                             </div>
                         </a>
                     </div>
@@ -182,23 +183,25 @@ echo $description;
                         <span class="number">02.</span>
                         <span>LEARN ART</span>
                     </div>
-                    <div class="sub-title">アートを学ぶ
-                    </div>
+                    <div class="sub-title">
+                        </div>
                 </div>
                 <div class="img-wrapper">
-                    <img src="<?php echo URL_STATICS; ?>/images/top/learnart.jpg" alt=""/>
+                    <img src="{%URL_STATICS%}/images/top/learnart.jpg" alt=""/>
                 </div>
                 <div class="desc">
-                    <p class="text-16">デザイナートカンファレンス「BRIDGE」は、アート<br>
-                        とデザインの視点から今、社会で起きている変化につ<br>
-                        いて考え学び意見を交換し合う場です。</p>
+                    <p class="text-16">
+                        DESIGNART Conference “BRIDGE” is a platform to learn
+                        <br> and exchange opinions about what is happening in the
+                        <br> field of art and design.
+                    </p>
                     <div class="link-group">
                         <a href="#" class="more link-step">
                             <div class="left">
                                 <div class="text-38">more</div>
                             </div>
                             <div class="right">
-                                <img src="<?php echo URL_STATICS; ?>/images/top/arrow-item.png" alt=""/>
+                                <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                             </div>
                         </a>
                     </div>
@@ -221,19 +224,19 @@ echo $description;
                     <div class="slideshow-container">
 
                         <div class="mySlides ">
-                            <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/eventandparty.jpg" style="width:100%">
                         </div>
 
                         <div class="mySlides ">
-                            <img src="<?php echo URL_STATICS; ?>/images/top/buyart.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/buyart.jpg" style="width:100%">
                         </div>
 
                         <div class="mySlides ">
-                            <img src="<?php echo URL_STATICS; ?>/images/top/eventandparty.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/eventandparty.jpg" style="width:100%">
                         </div>
 
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <a class="prev" onclick="plusSlides(-1)"><img src="{%URL_STATICS%}/images/top/arrow-left-banner.png" /></a>
+                        <a class="next" onclick="plusSlides(1)"><img src="{%URL_STATICS%}/images/top/arrow-right-banner.png" /></a>
 
                     </div>
                     <div style="text-align:center;display:none;">
@@ -245,7 +248,7 @@ echo $description;
                 </div>
                 <div class="desc">
                     <p class="text-16">10.18 19:00〜</p>
-                    <p class="text-24"> OPENING PARTY DESIGNART <br> TOKYO 2019 @ ワールド北青山</p>
+                    <p class="text-24 art-m">OPENING PARTY @ WORLD <br> KITA-AOYAMA BLDG.1F</p>
                 </div>
             </div>
             <div class="step-item step-3">
@@ -254,14 +257,14 @@ echo $description;
                         <span class="number">03.</span>
                         <span>BY ART</span>
                     </div>
-                    <div class="sub-title">アートを買う
-                    </div>
+
                 </div>
                 <div class="img-wrapper">
-                    <img src="<?php echo URL_STATICS; ?>/images/top/buyart.jpg" alt=""/>
+                    <img src="{%URL_STATICS%}/images/top/buyart.jpg" alt=""/>
                 </div>
                 <div class="desc">
-                    <p class="text-16">デザイナートで展示されているアート作品は一部を除<br>いて全て購入可能です。</p>
+                    <p class="text-16">All but a few art works on display at the designer can be <br>purchased.
+                    </p>
                 </div>
             </div>
             <div class="step-item step-slick mb-110">
@@ -278,22 +281,22 @@ echo $description;
                     <div class="slideshow-container">
 
                         <div class="mySlides2 ">
-                            <img src="<?php echo URL_STATICS; ?>/images/top/slide01.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide01.jpg" style="width:100%">
                         </div>
 
                         <div class="mySlides2 ">
-                            <img src="<?php echo URL_STATICS; ?>/images/top/slide02.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide02.jpg" style="width:100%">
                         </div>
 
                         <div class="mySlides2 ">
-                            <img src="<?php echo URL_STATICS; ?>/images/top/slide03.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide03.jpg" style="width:100%">
                         </div>
                         <div class="mySlides2 ">
-                            <img src="<?php echo URL_STATICS; ?>/images/top/slide04.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide04.jpg" style="width:100%">
                         </div>
 
-                        <a class="prev " onclick="plusSlides2(-1)">&#10094;</a>
-                        <a class="next " onclick="plusSlides2(1)">&#10095;</a>
+                        <a class="prev " onclick="plusSlides2(-1)"><img src="{%URL_STATICS%}/images/top/arrow-left-banner.png" /></a>
+                        <a class="next " onclick="plusSlides2(1)"><img src="{%URL_STATICS%}/images/top/arrow-right-banner.png" /></a>
 
                     </div>
                     <div style="text-align:center;display:none;">
@@ -304,14 +307,15 @@ echo $description;
                     </div>
                 </div>
                 <div class="desc">
-                    <p class="text-16 cs-mb"> 展示巡りに役立つオフィシャルガイドブック</p>
+                    <p class="text-16 cs-mb">An official guidebook to help you get around the <br> exhibition
+                    </p>
                     <div class="link-group">
                         <a href="#" class=" more link-step">
                             <div class="left">
                                 <div class="text-38">more</div>
                             </div>
                             <div class="right">
-                                <img src="<?php echo URL_STATICS; ?>/images/top/arrow-item.png" alt=""/>
+                                <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                             </div>
                         </a>
                     </div>
@@ -322,7 +326,7 @@ echo $description;
 </section>
 <div class="wp-back-to-top-wrap">
     <div class="wp-back-to-top top top2">
-        <img src="<?php echo URL_STATICS; ?>/images/commons/to_top_bt.png" alt="TOP">
+        <img src="{%URL_STATICS%}/images/commons/to_top_bt.png" alt="TOP">
     </div>
 </div>
 

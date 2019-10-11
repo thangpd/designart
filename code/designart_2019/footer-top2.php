@@ -15,11 +15,13 @@
                                 </li>
                                 <li>
                                     <a href="#" class="text-18">
-                                        メルマガ登録
+	                                    <?php echo translate_text_language('Annual activities of') ?>
+
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" class="text-16">
+	                                    <?php echo translate_text_language('DESIGNART will be informed through press release.') ?>
                                         DESIGNARTの年間活動などをプレスリリースでおしらせします
                                     </a>
                                 </li>
