@@ -62,7 +62,7 @@ endforeach;
 
 $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
 
-//echo $description;
+echo $description;
 
 //$prefix_varible_slider = get_prefix_languagle( $language, "-" );
 
