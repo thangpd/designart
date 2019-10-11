@@ -67,7 +67,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                         <div class="row">
                                             <div class="col-left">
                                                 <img alt="" class="img-responsive"
-                                                     src="<?php echo URL_STATICS; ?>/images/about/img-about-01.png">
+                                                     src="{%URL_STATICS%}/images/about/img-about-01.png">
                                             </div>
                                             <div class="col-right">
                                                 <div class="desc">
@@ -229,7 +229,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         <div class="pic-wrap"><a
                                                                     href="http://www.agb.co.jp/english/index.html"
                                                                     target="_blank"><img
-                                                                        src="<?php echo URL_STATICS; ?>/images/about/logo/logo-asahibuil.png"
+                                                                        src="{%URL_STATICS%}/images/about/logo/logo-asahibuil.png"
                                                                         alt="logo-asahibuil">
                                                             </a>
                                                         </div>
@@ -238,7 +238,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         <div class="pic-wrap"><a
                                                                     href="https://www.askul.co.jp/kaisya/english/"
                                                                     target="_blank"><img
-                                                                        src="<?php echo URL_STATICS; ?>/images/about/logo/logo-askul.png"
+                                                                        src="{%URL_STATICS%}/images/about/logo/logo-askul.png"
                                                                         alt="logo-askul">
                                                             </a>
                                                         </div>
@@ -246,7 +246,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     <div class="brand-item">
                                                         <div class="pic-wrap">
                                                             <a href="http://www.canadagoose.jp/" target="_blank">
-                                                                <img src="<?php echo URL_STATICS; ?>/images/about/logo/logo-canadagoose.png"
+                                                                <img src="{%URL_STATICS%}/images/about/logo/logo-canadagoose.png"
                                                                      alt="logo-canadagoose">
                                                             </a>
                                                         </div>
@@ -254,7 +254,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="https://www.dbrain.co.jp/en/"
                                                                                  target="_blank">
-                                                                <img src="<?php echo URL_STATICS; ?>/images/about/logo/logo-dbrain.png"
+                                                                <img src="{%URL_STATICS%}/images/about/logo/logo-dbrain.png"
                                                                      alt="logo-dbrain">
                                                             </a>
                                                         </div>
@@ -262,7 +262,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="https://www.francfranc.co.jp/en/"
                                                                                  target="_blank">
-                                                                <img src="<?php echo URL_STATICS; ?>/images/about/logo/logo-francfranc.png"
+                                                                <img src="{%URL_STATICS%}/images/about/logo/logo-francfranc.png"
                                                                      alt="logo-francfranc">
                                                             </a>
                                                         </div>
@@ -270,7 +270,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     <div class="brand-item">
                                                         <div class="pic-wrap">
                                                             <a href="http://gervasoni.jp/" target="_blank">
-                                                                <img src="<?php echo URL_STATICS; ?>/images/about/logo/logo-gervasoni.png"
+                                                                <img src="{%URL_STATICS%}/images/about/logo/logo-gervasoni.png"
                                                                      alt="logo-gervasoni">
                                                             </a>
                                                         </div>
@@ -279,7 +279,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         <div class="pic-wrap"><a
                                                                     href="https://www.panasonic.com/jp/home.html"
                                                                     target="_blank">
-                                                                <img src="<?php echo URL_STATICS; ?>/images/about/logo/logo-panasonic.png"
+                                                                <img src="{%URL_STATICS%}/images/about/logo/logo-panasonic.png"
                                                                      alt="logo-panasonic">
                                                             </a>
                                                         </div>
@@ -288,7 +288,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         <div class="pic-wrap"><a
                                                                     href="https://www.perrier-jouet.com/en-ww/"
                                                                     target="_blank">
-                                                                <img src="<?php echo URL_STATICS; ?>/images/about/logo/logo-perrierjouet.png"
+                                                                <img src="{%URL_STATICS%}/images/about/logo/logo-perrierjouet.png"
                                                                      alt="logo-perrierjouet">
                                                             </a>
                                                         </div>
@@ -296,7 +296,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="https://www.sony.co.jp/"
                                                                                  target="_blank">
-                                                                <img src="<?php echo URL_STATICS; ?>/images/about/logo/logo-sony.png"
+                                                                <img src="{%URL_STATICS%}/images/about/logo/logo-sony.png"
                                                                      alt="logo-sony">
                                                             </a>
                                                         </div>
@@ -304,7 +304,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="https://www.space-tokyo.co.jp/"
                                                                                  target="_blank">
-                                                                <img src="<?php echo URL_STATICS; ?>/images/about/logo/logo-space.png"
+                                                                <img src="{%URL_STATICS%}/images/about/logo/logo-space.png"
                                                                      alt="logo-space">
                                                             </a>
                                                         </div>
@@ -313,7 +313,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="https://www.tanseisha.co.jp/"
                                                                                  target="_blank">
-                                                                <img src="<?php echo URL_STATICS; ?>/images/about/logo/logo-tanseisha.png"
+                                                                <img src="{%URL_STATICS%}/images/about/logo/logo-tanseisha.png"
                                                                      alt="logo-tanseisha">
                                                             </a>
                                                         </div>
@@ -322,7 +322,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         <div class="pic-wrap"><a
                                                                     href="https://www.volvocars.com/jp/about/our-company/aoyama"
                                                                     target="_blank">
-                                                                <img src="<?php echo URL_STATICS; ?>/images/about/logo/logo-volvostudioaoyama.png"
+                                                                <img src="{%URL_STATICS%}/images/about/logo/logo-volvostudioaoyama.png"
                                                                      alt="logo-volvostudioaoyama">
                                                             </a>
                                                         </div>
@@ -495,7 +495,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="col-left"><span class="lb-text">SUPPORTING MEDIA</span></div>
                                             <div class="col-right"><a target="_blank"
                                                                       href="https://www.j-wave.co.jp"><img
-                                                            src="<?php echo URL_STATICS; ?>/images/about/logo/logo-jwave.png"
+                                                            src="{%URL_STATICS%}/images/about/logo/logo-jwave.png"
                                                             alt="logo-jwave"></a></div>
                                         </div>
                                         <div class="brand-block">
@@ -506,14 +506,14 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="https://www.dezeen.com"
                                                                                  target="_blank"><img
-                                                                        src="<?php echo URL_STATICS; ?>/images/about/logo/logo-dezeen.png"
+                                                                        src="{%URL_STATICS%}/images/about/logo/logo-dezeen.png"
                                                                         alt="logo-dezeen"></a>
                                                         </div>
                                                     </div>
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="https://www.elle.com"
                                                                                  target="_blank"><img
-                                                                        src="<?php echo URL_STATICS; ?>/images/about/logo/logo-elledecor_designwalk.png"
+                                                                        src="{%URL_STATICS%}/images/about/logo/logo-elledecor_designwalk.png"
                                                                         alt="logo-elledecor_designwalk">
                                                             </a>
                                                         </div>
@@ -521,14 +521,14 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="https://www.fashionsnap.com"
                                                                                  target="_blank"><img
-                                                                        src="<?php echo URL_STATICS; ?>/images/about/logo/logo-fashionsnapcom.png"
+                                                                        src="{%URL_STATICS%}/images/about/logo/logo-fashionsnapcom.png"
                                                                         alt="logo-fashionsnapcom"></a>
                                                         </div>
                                                     </div>
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="http://imhome-style.com"
                                                                                  target="_blank"><img
-                                                                        src="<?php echo URL_STATICS; ?>/images/about/logo/logo-imhome.png"
+                                                                        src="{%URL_STATICS%}/images/about/logo/logo-imhome.png"
                                                                         alt="logo-imhome">
                                                             </a>
                                                         </div>
@@ -536,7 +536,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="https://www.japandesign.ne.jp"
                                                                                  target="_blank"><img
-                                                                        src="<?php echo URL_STATICS; ?>/images/about/logo/logo-jdn.png"
+                                                                        src="{%URL_STATICS%}/images/about/logo/logo-jdn.png"
                                                                         alt="logo-jdn">
                                                             </a>
                                                         </div>
@@ -544,14 +544,14 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="https://madamefigaro.jp"
                                                                                  target="_blank"><img
-                                                                        src="<?php echo URL_STATICS; ?>/images/about/logo/logo-figaro.png"
+                                                                        src="{%URL_STATICS%}/images/about/logo/logo-figaro.png"
                                                                         alt="logo-figaro"></a>
                                                         </div>
                                                     </div>
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="https://www.pen-online.jp"
                                                                                  target="_blank"><img
-                                                                        src="<?php echo URL_STATICS; ?>/images/about/logo/logo-pen.png"
+                                                                        src="{%URL_STATICS%}/images/about/logo/logo-pen.png"
                                                                         alt="logo-pen"></a>
                                                         </div>
                                                     </div>
@@ -559,14 +559,14 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         <div class="pic-wrap"><a
                                                                     href="http://www.shotenkenchiku.com/blog/en/"
                                                                     target="_blank"><img
-                                                                        src="<?php echo URL_STATICS; ?>/images/about/logo/logo-shotenkenchiku.png"
+                                                                        src="{%URL_STATICS%}/images/about/logo/logo-shotenkenchiku.png"
                                                                         alt="logo-shotenkenchiku"></a>
                                                         </div>
                                                     </div>
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="https://theartling.com/en/"
                                                                                  target="_blank"><img
-                                                                        src="<?php echo URL_STATICS; ?>/images/about/logo/logo-theartling.png"
+                                                                        src="{%URL_STATICS%}/images/about/logo/logo-theartling.png"
                                                                         alt="logo-theartling">
                                                             </a>
                                                         </div>
@@ -574,21 +574,21 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="https://www.timeout.com/tokyo"
                                                                                  target="_blank"><img
-                                                                        src="<?php echo URL_STATICS; ?>/images/about/logo/logo-timeouttokyo.png"
+                                                                        src="{%URL_STATICS%}/images/about/logo/logo-timeouttokyo.png"
                                                                         alt="logo-timeouttokyo"></a>
                                                         </div>
                                                     </div>
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="http://www.tokyoartbeat.com"
                                                                                  target="_blank"><img
-                                                                        src="<?php echo URL_STATICS; ?>/images/about/logo/logo-tokyoartbeat.png"
+                                                                        src="{%URL_STATICS%}/images/about/logo/logo-tokyoartbeat.png"
                                                                         alt="logo-tokyoartbeat"></a>
                                                         </div>
                                                     </div>
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="https://www.wwdjapan.com"
                                                                                  target="_blank"><img
-                                                                        src="<?php echo URL_STATICS; ?>/images/about/logo/logo-wwdjapan.png"
+                                                                        src="{%URL_STATICS%}/images/about/logo/logo-wwdjapan.png"
                                                                         alt="logo-wwdjapan"></a>
                                                         </div>
                                                     </div>
@@ -618,7 +618,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                 </div>
                                 <div class="heading-des official_cafe row">
                                     <div class="left col-md-6">
-                                        <img src="<?php echo URL_STATICS; ?>/images/official/cafe_2.png"
+                                        <img src="{%URL_STATICS%}/images/official/cafe_2.png"
                                              alt="Aoyama Area" class="img-responsive">
                                         </a>
                                     </div>
@@ -655,7 +655,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                         <div class="area-section">
                                             <div id="aoyama-area">
                                                 <div class="wp-content-area">
-                                                    <div class="title">DEAN & DELUCA CAFE <span class="sub-title"> AOYAMA</span>
+                                                    <div class="title">DEAN & DELUCA CAFE
+                                                        <span class="sub-title"> AOYAMA</span>
                                                     </div>
 
                                                     <div class="address">
@@ -695,7 +696,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                         <div class="area-section">
                                             <div id="shibuya-area">
                                                 <div class="wp-content-area">
-                                                    <div class="title">DEAN & DELUCA CAFE <span class="sub-title"> ROPPONGI</span>
+                                                    <div class="title">DEAN & DELUCA CAFE
+                                                        <span class="sub-title"> ROPPONGI</span>
                                                     </div>
 
                                                     <div class="address">
@@ -723,11 +725,13 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                        <li> <!-- item-pickup-->
                                            <div class="row">
                                                 <div class="wp-image img-cafe col-md-5">
-                                                    <img src="<?php echo URL_STATICS; ?>/images/official/cafe_1.png" alt=""
+                                                    <img src="{%URL_STATICS%}/images/official/cafe_1.png" alt=""
                                                          class="img-responsive">
                                                 </div>
                                                 <div class="product col-md-7">
-                                                    <h2 class="title">DESIGNART TOKYO 2019 ORIGINAL DRINK <br>EARLGREY PEAR
+                                                    <h2 class="title">
+                                                        DESIGNART TOKYO 2019 ORIGINAL DRINK
+                                                        <br>EARLGREY PEAR
                                                         NECTAR</h2>
                                                     <p class="description">
                                                         Non alcohol<br>
@@ -748,29 +752,30 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                 </div>
                                 <div class="wp-section-goods" id="audio-guide1">
                                     <div class="area-section">
-                                        <div class="title-head background-black">DESIGNART 2019 official tabroid &
+                                        <div class="title-head background-black">
+                                            DESIGNART 2019 official tabroid &
                                             booklet
                                         </div>
                                         <div class="wp-content-inner row">
                                             <div class="wp-left col-md-4">
                                                 <div class="wrap-img">
-                                                    <img src="<?php echo URL_STATICS; ?>/images/official/official_goods_renew.png"
+                                                    <img src="{%URL_STATICS%}/images/official/official_goods_renew.png"
                                                          alt="" class="img-responsive">
                                                 </div>
                                             </div>
                                             <div class="wp-right col-md-8">
-                                                <div class="title">DESIGNART TOKYO 2019 <span class="sub-title">official tabroid</span>
+                                                <div class="title">
+                                                    DESIGNART TOKYO 2019 <span class="sub-title">official tabroid</span>
                                                 </div>
                                                 <div class="info-area">
                                                     Highlights of DESIGNART TOKYO 2019.
-
-
                                                     <br/><br>
                                                     <a href="" target="_blank"><span
                                                                 style="text-decoration: underline;">PDF download</span></a>
                                                 </div>
 
-                                                <div class="title">DESIGNART TOKYO 2019 <span class="sub-title">official guide book</span>
+                                                <div class="title">DESIGNART TOKYO 2019
+                                                    <span class="sub-title">official guide book</span>
                                                 </div>
                                                 <div class="info-area">
                                                     Special articles on exhibits and official programs,
@@ -803,11 +808,12 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-left col-md-4">
                                                 <div class="wrap-img no-padding">
                                                     <img alt="" class="img-responsive"
-                                                         src="<?php echo URL_STATICS; ?>/images/official/official_goods_renew-02.png">
+                                                         src="{%URL_STATICS%}/images/official/official_goods_renew-02.png">
                                                 </div>
                                             </div>
                                             <div class="wp-right col-md-8">
-                                                <div class="title-a">DESIGNART TOKYO 2019 <br/><span
+                                                <div class="title-a">DESIGNART TOKYO 2019 <br/>
+                                                    <span
                                                             class="sub-title">OFFICIALT-SHIRT</span></div>
                                                 <div class="info-area-a">
                                                     This year’s official T-shirt
@@ -838,16 +844,18 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
 
                                 <div class="wp-section-goods">
                                     <div class="area-section">
-                                        <div class="title-head background-black">展示会場の目印はスタイリッシュなフラッグバッグ</div>
+                                        <div class="title-head background-black">
+                                            展示会場の目印はスタイリッシュなフラッグバッグ</div>
                                         <div class="wp-content-inner wp-content-img-left row">
                                             <div class="left col-md-4">
                                                 <div class="wrap-img no-padding">
-                                                <img src="<?php echo URL_STATICS; ?>/images/official/official_goods_renew-05.png"
+                                                <img src="{%URL_STATICS%}/images/official/official_goods_renew-05.png"
                                                      alt="" class="img-responsive">
                                                 </div>
                                             </div>
                                             <div class="right col-md-8">
-                                                <div class="title-a">DESIGNART TOKYO 2019 <br/><span class="sub-title">オフィシャルフラッグ</span>
+                                                <div class="title-a">DESIGNART TOKYO 2019 <br/>
+                                                    <span class="sub-title">オフィシャルフラッグ</span>
                                                 </div>
                                                 <div class="info-area-a">
                                                     街中に点在するDESIGNART
@@ -872,7 +880,6 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <!-- ./end About CafeGoods -->
 
@@ -890,12 +897,13 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#" class="">
-                                                        <img src="<?php echo URL_STATICS; ?>/images/official/program_1.png"
+                                                        <img src="{%URL_STATICS%}/images/official/program_1.png"
                                                              alt="Aoyama Area" class="img-responsive">
                                                     </a>
                                                 </div>
                                                 <div class="wp-right col-md-8">
-                                                    <div class="title">DESIGNART FEATURE 1% for Art EXHIBITION</div>
+                                                    <div class="title">
+                                                        DESIGNART FEATURE 1% for Art EXHIBITION</div>
                                                     <div class="info">
                                                         Design Pier proudly partners with DESIGNART TOKYO to curate and
                                                         organize the Design Week’s main event joining the 1% for Art
@@ -919,7 +927,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#" class="">
-                                                        <img src="<?php echo URL_STATICS; ?>/images/official/program_2.png"
+                                                        <img src="{%URL_STATICS%}/images/official/program_2.png"
                                                              alt="Roppongi Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -944,7 +952,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#" class=" img-small">
-                                                        <img src="<?php echo URL_STATICS; ?>/images/official/program_3.png"
+                                                        <img src="{%URL_STATICS%}/images/official/program_3.png"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -995,12 +1003,13 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#">
-                                                        <img src="<?php echo URL_STATICS; ?>/images/official/program_4.png"
+                                                        <img src="{%URL_STATICS%}/images/official/program_4.png"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
                                                 <div class="wp-right col-md-8">
-                                                    <div class="title">DESIGNART GALLERY at LIVING DESIGN CENTER OZONE
+                                                    <div class="title">
+                                                        DESIGNART GALLERY at LIVING DESIGN CENTER OZONE
                                                     </div>
                                                     <div class="info">
                                                         In its 25th anniversary year of establishment, LIVING DESIGN
@@ -1033,7 +1042,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#">
-                                                        <img src="<?php echo URL_STATICS; ?>/images/official/program_4.png"
+                                                        <img src="{%URL_STATICS%}/images/official/program_4.png"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -1070,7 +1079,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#">
-                                                        <img src="<?php echo URL_STATICS; ?>/images/official/program_5.png"
+                                                        <img src="{%URL_STATICS%}/images/official/program_5.png"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -1097,7 +1106,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#">
-                                                        <img src="<?php echo URL_STATICS; ?>/images/official/program_5.png"
+                                                        <img src="{%URL_STATICS%}/images/official/program_5.png"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -1123,7 +1132,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#" class=" img--big">
-                                                        <img src="<?php echo URL_STATICS; ?>/images/official/program_6.png"
+                                                        <img src="{%URL_STATICS%}/images/official/program_6.png"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -1159,7 +1168,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#" class=" img--big">
-                                                        <img src="<?php echo URL_STATICS; ?>/images/official/program_7.png"
+                                                        <img src="{%URL_STATICS%}/images/official/program_7.png"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
