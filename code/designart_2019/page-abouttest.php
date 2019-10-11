@@ -932,7 +932,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#" class="">
-                                                        <img src="{%URL_STATICS%}/images/official/program_1.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program01.jpg"
                                                              alt="Aoyama Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -958,7 +958,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#" class="">
-                                                        <img src="{%URL_STATICS%}/images/official/program_2.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program02.jpg"
                                                              alt="Roppongi Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -982,7 +982,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#" class=" img-small">
-                                                        <img src="{%URL_STATICS%}/images/official/program_3.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program03.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -1025,7 +1025,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#">
-                                                        <img src="{%URL_STATICS%}/images/official/program_4.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program04.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -1060,7 +1060,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#">
-                                                        <img src="{%URL_STATICS%}/images/official/program_4.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program05.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -1092,7 +1092,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#">
-                                                        <img src="{%URL_STATICS%}/images/official/program_5.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program06.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -1115,7 +1115,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#">
-                                                        <img src="{%URL_STATICS%}/images/official/program_5.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program07.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -1176,7 +1176,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#" class=" img--big">
-                                                        <img src="{%URL_STATICS%}/images/official/program_7.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program08.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -2331,7 +2331,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#" class="">
-                                                        <img src="{%URL_STATICS%}/images/official/program_1.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program01.jpg"
                                                              alt="Aoyama Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -2360,7 +2360,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#" class="">
-                                                        <img src="{%URL_STATICS%}/images/official/program_2.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program02.jpg"
                                                              alt="Roppongi Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -2385,7 +2385,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#" class=" img-small">
-                                                        <img src="{%URL_STATICS%}/images/official/program_3.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program03.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -2436,7 +2436,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#">
-                                                        <img src="{%URL_STATICS%}/images/official/program_4.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program04.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -2474,7 +2474,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#">
-                                                        <img src="{%URL_STATICS%}/images/official/program_4.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program05.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -2511,7 +2511,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#">
-                                                        <img src="{%URL_STATICS%}/images/official/program_5.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program06.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -2538,7 +2538,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#">
-                                                        <img src="{%URL_STATICS%}/images/official/program_5.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program07.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
@@ -2600,7 +2600,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="wp-content-area row">
                                                 <div class="wp-left col-md-4">
                                                     <a href="#" class=" img--big">
-                                                        <img src="{%URL_STATICS%}/images/official/program_7.png"
+                                                        <img src="{%URL_STATICS%}/images/about/program/program08.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </a>
                                                 </div>
