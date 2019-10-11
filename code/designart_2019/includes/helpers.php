@@ -40,65 +40,121 @@ function get_prefix_languagle( $languagle = "", $after_text = "" ) {
 	}
 }
 
-function generate_select_languagle() {
+function generate_select_languagle( $en = 'ENGLISH', $jp = '日本語', $format = '' ) {
 	$languagle = get_key_languagle();
-	?>
-    <div class="language-dropdown dropdown" id="custome-multi-languagle" data-current="<?php echo $languagle ?>"
-         data-home="<?php echo home_url(); ?>">
-        <span class="lb-text">language:</span>
-        <a href="javascript:void(0)" class="btn btn-lang dropdown-toggle" data-toggle="dropdown">ENGLISH</a>
-        <ul class="dropdown-menu">
-            <li class="current"><a href="javascript:void(0)" data-val="">日本語</a></li>
-            <li><a href="javascript:void(0)" data-val="en">ENGLISH</a></li>
-        </ul>
+	if ( empty( $format ) ):
+		?>
+        <div class="language-dropdown dropdown" id="custome-multi-languagle" data-current="<?php echo $languagle ?>"
+             data-home="<?php echo home_url(); ?>">
+            <span class="lb-text">language:</span>
+            <a href="javascript:void(0)" class="btn btn-lang dropdown-toggle"
+               data-toggle="dropdown"><?php echo $en ?></a>
+            <ul class="dropdown-menu">
+                <li class="current"><a href="javascript:void(0)" data-val=""><?php echo $jp ?></a></li>
+                <li><a href="javascript:void(0)" data-val="en"><?php echo $en ?></a></li>
+            </ul>
 
-        <ul class="language-select">
-            <li><a href="javascript:void(0)" data-val="">日本語</a></li>
-            <li><a href="javascript:void(0)" data-val="en">ENGLISH</a></li>
-        </ul>
+            <ul class="language-select">
+                <li><a href="javascript:void(0)" data-val=""><?php echo $jp ?></a></li>
+                <li><a href="javascript:void(0)" data-val="en"><?php echo $en ?></a></li>
+            </ul>
 
-    </div>
-    <script !src="">
-        ;(function ($) {
-            function gotoLanguageurl(languagle_change, home_url, full_link) {
-                if (full_link == undefined) {
-                    full_link = window.location.href;
+        </div>
+        <script !src="">
+            ;(function ($) {
+                function gotoLanguageurl(languagle_change, home_url, full_link) {
+                    if (full_link == undefined) {
+                        full_link = window.location.href;
+                    }
+
+                    if (languagle_change != undefined) {
+                        full_link = full_link.replace(new RegExp('\/en($|\/)', 'g'), '/');
+                        full_link = full_link.replace(new RegExp('\/cn($|\/)', 'g'), '/');
+                        full_link = full_link.replace(home_url, home_url + '/' + languagle_change);
+                    }
+                    if (full_link.match(/\/$/) == null) {
+                        full_link += '/';
+                    }
+                    return full_link;
                 }
 
-                if (languagle_change != undefined) {
-                    full_link = full_link.replace(new RegExp('\/en($|\/)', 'g'), '/');
-                    full_link = full_link.replace(new RegExp('\/cn($|\/)', 'g'), '/');
-                    full_link = full_link.replace(home_url, home_url + '/' + languagle_change);
+                if ($('#custome-multi-languagle').length > 0) {
+                    var languagle = $('#custome-multi-languagle').attr('data-current');
+                    var home_url = $('#custome-multi-languagle').attr('data-home');
+                    $('#custome-multi-languagle .dropdown-menu li').removeClass("current");
+                    $('#custome-multi-languagle').find('a[data-val="' + languagle + '"]').parents("li").addClass('current');
+                    var txt = $('#custome-multi-languagle .dropdown-menu li.current a[data-val="' + languagle + '"]').text();
+                    $(".language-dropdown .btn-lang").text(txt);
+                    $(document).on('click', '.language-dropdown .dropdown-menu a, .language-dropdown .language-select a', function () {
+                        var languagle_change = $(this).data("val");
+
+                        jCookies.set('language', languagle_change, 1);
+
+                        var txt = $('#custome-multi-languagle .dropdown-menu li a[data-val="' + languagle + '"]').text();
+
+                        $(this).parents(".language-dropdown ").find(".btn-lang").text(txt);
+                        // console.log("check", gotoLanguageurl(languagle_change, home_url));
+                        window.location = gotoLanguageurl(languagle_change, home_url);
+                    })
                 }
-                if (full_link.match(/\/$/) == null) {
-                    full_link += '/';
-                }
-                return full_link;
-            }
+            })(jQuery);
 
-            if ($('#custome-multi-languagle').length > 0) {
-                var languagle = $('#custome-multi-languagle').attr('data-current');
-                var home_url = $('#custome-multi-languagle').attr('data-home');
-                $('#custome-multi-languagle .dropdown-menu li').removeClass("current");
-                $('#custome-multi-languagle').find('a[data-val="' + languagle + '"]').parents("li").addClass('current');
-                var txt = $('#custome-multi-languagle .dropdown-menu li.current a[data-val="' + languagle + '"]').text();
-                $(".language-dropdown .btn-lang").text(txt);
-                $(document).on('click', '.language-dropdown .dropdown-menu a, .language-dropdown .language-select a', function () {
-                    var languagle_change = $(this).data("val");
-
-                    jCookies.set('language', languagle_change, 1);
-
-                    var txt = $('#custome-multi-languagle .dropdown-menu li a[data-val="' + languagle + '"]').text();
-
-                    $(this).parents(".language-dropdown ").find(".btn-lang").text(txt);
-                    // console.log("check", gotoLanguageurl(languagle_change, home_url));
-                    window.location = gotoLanguageurl(languagle_change, home_url);
-                })
-            }
-        })(jQuery);
-
-    </script>
+        </script>
 	<?php
+	else:
+		?>
+        <div class="language-dropdown dropdown" id="custome-multi-languagle" data-current="<?php echo $languagle ?>"
+             data-home="<?php echo home_url(); ?>">
+            <div class="language-select">
+                <span><a href="javascript:void(0)" data-val=""><?php echo $jp ?></a></span>
+                |
+                <span><a href="javascript:void(0)" data-val="en"><?php echo $en ?></a></span>
+            </div>
+        </div>
+
+        <script !src="">
+            ;(function ($) {
+                function gotoLanguageurl(languagle_change, home_url, full_link) {
+                    if (full_link == undefined) {
+                        full_link = window.location.href;
+                    }
+
+                    if (languagle_change != undefined) {
+                        full_link = full_link.replace(new RegExp('\/en($|\/)', 'g'), '/');
+                        full_link = full_link.replace(new RegExp('\/cn($|\/)', 'g'), '/');
+                        full_link = full_link.replace(home_url, home_url + '/' + languagle_change);
+                    }
+                    if (full_link.match(/\/$/) == null) {
+                        full_link += '/';
+                    }
+                    return full_link;
+                }
+
+                if ($('#custome-multi-languagle').length > 0) {
+                    var languagle = $('#custome-multi-languagle').attr('data-current');
+                    var home_url = $('#custome-multi-languagle').attr('data-home');
+                    $('#custome-multi-languagle .dropdown-menu li').removeClass("current");
+                    $('#custome-multi-languagle').find('a[data-val="' + languagle + '"]').parents("li").addClass('current');
+                    var txt = $('#custome-multi-languagle .dropdown-menu li.current a[data-val="' + languagle + '"]').text();
+                    $(".language-dropdown .btn-lang").text(txt);
+                    $(document).on('click', '.language-dropdown .dropdown-menu a, .language-dropdown .language-select a', function () {
+                        var languagle_change = $(this).data("val");
+
+                        jCookies.set('language', languagle_change, 1);
+
+                        var txt = $('#custome-multi-languagle .dropdown-menu li a[data-val="' + languagle + '"]').text();
+
+                        $(this).parents(".language-dropdown ").find(".btn-lang").text(txt);
+                        // console.log("check", gotoLanguageurl(languagle_change, home_url));
+                        window.location = gotoLanguageurl(languagle_change, home_url);
+                    })
+                }
+            })(jQuery);
+
+        </script>
+	<?php
+	endif;
+
 }
 
 function get_key_languagle() {
@@ -483,8 +539,8 @@ function get_request_url() {
 			if ( isset( $maths[1] ) ) {
 				return $maths[1];
 			}
-        }
 		}
+	}
 
 	return '';
 }
@@ -726,8 +782,8 @@ function get_google_analytic() {
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
             i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
             a = s.createElement(o),
                 m = s.getElementsByTagName(o)[0];
             a.async = 1;
@@ -837,7 +893,7 @@ function get_category_exhibitor( $get_the_term, $format = '', $hide_empty = fals
 					continue;
 				}
 			}
-			$cat_name      = translate_category_name( $vl_term, $prefix_varible );
+			$cat_name = translate_category_name( $vl_term, $prefix_varible );
 //            echo $cat_name;
 //            echo "--------";
 //            echo $vl_term->slug;
