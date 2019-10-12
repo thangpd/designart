@@ -14,6 +14,8 @@ $description = str_replace( '{%HTML_SHARE%}', $html_share, $description );
 
 $description = str_replace( '{%HOME_URL%}', home_url(), $description );
 
+$description = str_replace( '{%HOME_MAIN_URL%}', get_home_url(), $description );
+
 $html_info   = get_html_information_post();
 $description = str_replace( '{%INFORMATION_POST%}', $html_info, $description );
 
@@ -195,7 +197,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                         <br> field of art and design.
                     </p>
                     <div class="link-group">
-                        <a href="{%HOME_URL%}" class="more link-step">
+                        <a href="http://designart.jp/conference2019/" class="more link-step">
                             <div class="left">
                                 <div class="text-38">more</div>
                             </div>
@@ -386,8 +388,9 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
         <span class="about">ABOUT</span>
         <h4 class="title-h4">
             BRINGING EMOTION
-            <span>INTO LIVES </span>
+            <span>INTO LIVES <span class="mb-block">感動を、すべての人々に</span></span>
         </h4>
+        <p class="text-18 dt-block">感動を、すべての人々に</p>
         <p class="text-20">「DESIGNART
             TOKYO」は、毎年秋に開催するデザイン＆アートフェスティバルです。世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、インテリア、ファッション、テクノロジーなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩な作品を発表していきます。</p>
         <a href="{%HOME_URL%}/about" class="text-38 more dt-block">more <span><img
@@ -453,7 +456,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                         とデザインの視点から今、社会で起きている変化につ<br>
                         いて考え学び意見を交換し合う場です。</p>
                     <div class="link-group">
-                        <a href="{%HOME_URL%}" class="more link-step">
+                        <a href="http://designart.jp/conference2019/" class="more link-step">
                             <div class="left">
                                 <div class="text-38">more</div>
                             </div>
