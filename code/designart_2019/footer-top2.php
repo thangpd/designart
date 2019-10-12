@@ -21,12 +21,12 @@
 
                                     </a>
                                 </li>
-                                <!--<li>
+                                <li>
                                     <a href="#" class="text-16">
-                                        <?php /*echo translate_text_language('DESIGNART will be informed through press release.') */?>
+                                        <?php echo translate_text_language('DESIGNART will be informed through press release.') ?>
 
                                     </a>
-                                </li>-->
+                                </li>
                             </ul>
                         </div>
                         <div class="col-md-5 col-sm-6 col-xs-6 footer-col">
@@ -39,16 +39,8 @@
                                 </li>
                                 <li>
                                     <a href="#" class="text-18">
-                                        <?php echo translate_text_language('Press registration from here') ?>
+                                        <?php echo translate_text_language('Press registration from here</a></li>') ?>
 
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-16">
-                                        <?php echo translate_text_language('If you would like to register as a press from here') ?>
-
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                     </div>
