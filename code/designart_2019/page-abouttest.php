@@ -1,27 +1,27 @@
 <?php
-get_header( 'top2' );
+get_header('top2');
 
 
-$post           = get_page_by_path( 'about' );
+$post           = get_page_by_path('about');
 $post_id        = $post->ID;
 $language       = get_key_languagle();
-$prefix_varible = get_prefix_languagle( $language, "_" );
-$description    = get_field( $prefix_varible . 'description', $post_id, false );
-$description    = str_replace( '{%URL_STATICS%}', URL_STATICS, $description );
+$prefix_varible = get_prefix_languagle($language, "_");
+$description    = get_field($prefix_varible . 'description', $post_id, false);
+$description    = str_replace('{%URL_STATICS%}', URL_STATICS, $description);
 
-$html_share  = get_html_share( false );
-$description = str_replace( '{%HTML_SHARE%}', $html_share, $description );
+$html_share  = get_html_share(false);
+$description = str_replace('{%HTML_SHARE%}', $html_share, $description);
 
 //    back history
-$html_back   = back_page_history( false );
-$description = str_replace( '{%BACK_HISTORY%}', $html_back, $description );
+$html_back   = back_page_history(false);
+$description = str_replace('{%BACK_HISTORY%}', $html_back, $description);
 // html banner page
 $html_banner_page = get_html_banner_page();
-$description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $description );
+$description      = str_replace('{%BANNER_PAGE%}', $html_banner_page, $description);
 
 //echo $description;
 ?>
-<!--jap-->
+    <!--jap-->
     <section class="about-page about-outline-page">
         <div class="container">
 
@@ -209,8 +209,9 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                         </div>
                                                     </div>
                                                     <div class="brand-item">
-                                                        <div class="pic-wrap"><a href="https://www.dsautomobiles.jp/index.html"
-                                                                                 target="_blank">
+                                                        <div class="pic-wrap"><a
+                                                                    href="https://www.dsautomobiles.jp/index.html"
+                                                                    target="_blank">
                                                                 <img src="{%URL_STATICS%}/images/about/section1/04_DS_Logo_2019_reversed_RGB.png"
                                                                      alt="logo-dbrain">
                                                             </a>
@@ -259,8 +260,9 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                         </div>
                                                     </div>
                                                     <div class="brand-item">
-                                                        <div class="pic-wrap"><a href="http://www.jda.gov.il/english.aspx"
-                                                                                 target="_blank">
+                                                        <div class="pic-wrap"><a
+                                                                    href="http://www.jda.gov.il/english.aspx"
+                                                                    target="_blank">
                                                                 <img src="{%URL_STATICS%}/images/about/section1/10_Jerusalem__.png"
                                                                      alt="logo-space">
                                                             </a>
@@ -268,8 +270,9 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                     </div>
 
                                                     <div class="brand-item">
-                                                        <div class="pic-wrap"><a href="https://www.perrier-jouet.com/ja-jp"
-                                                                                 target="_blank">
+                                                        <div class="pic-wrap"><a
+                                                                    href="https://www.perrier-jouet.com/ja-jp"
+                                                                    target="_blank">
                                                                 <img src="{%URL_STATICS%}/images/about/section1/11_logo-perrierjouet.png"
                                                                      alt="logo-tanseisha">
                                                             </a>
@@ -283,7 +286,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                                      alt="logo-volvostudioaoyama">
                                                             </a>
                                                         </div>
-                                                    </div> <div class="brand-item">
+                                                    </div>
+                                                    <div class="brand-item">
                                                         <div class="pic-wrap"><a
                                                                     href="https://sivans.jp/"
                                                                     target="_blank">
@@ -291,7 +295,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                                      alt="logo-volvostudioaoyama">
                                                             </a>
                                                         </div>
-                                                    </div> <div class="brand-item">
+                                                    </div>
+                                                    <div class="brand-item">
                                                         <div class="pic-wrap"><a
                                                                     href="https://www.stratasys.com/"
                                                                     target="_blank">
@@ -299,7 +304,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                                      alt="logo-volvostudioaoyama">
                                                             </a>
                                                         </div>
-                                                    </div> <div class="brand-item">
+                                                    </div>
+                                                    <div class="brand-item">
                                                         <div class="pic-wrap"><a
                                                                     href="https://www.tky-lab.com/"
                                                                     target="_blank">
@@ -307,7 +313,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                                      alt="logo-volvostudioaoyama">
                                                             </a>
                                                         </div>
-                                                    </div> <div class="brand-item">
+                                                    </div>
+                                                    <div class="brand-item">
                                                         <div class="pic-wrap"><a
                                                                     href="https://www.company.theginza.co.jp/space/"
                                                                     target="_blank">
@@ -315,7 +322,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                                      alt="logo-volvostudioaoyama">
                                                             </a>
                                                         </div>
-                                                    </div> <div class="brand-item">
+                                                    </div>
+                                                    <div class="brand-item">
                                                         <div class="pic-wrap"><a
                                                                     href="https://www.tokyo-midtown.com/jp/designtouch/"
                                                                     target="_blank">
@@ -784,7 +792,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                         <li> <!-- item-pickup-->
                                             <div class="row">
                                                 <div class="wp-image img-cafe col-md-5">
-                                                    <img src="{%URL_STATICS%}/images/about/goodcafe/about_cafegoods_specialdrink.jpg" alt=""
+                                                    <img src="{%URL_STATICS%}/images/about/goodcafe/about_cafegoods_specialdrink.jpg"
+                                                         alt=""
                                                          class="img-responsive ">
                                                 </div>
                                                 <div class="product col-md-7">
@@ -827,8 +836,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                 </div>
                                                 <div class="info-area">
                                                     DESIGNART TOKYO 2019のハイライト情報を掲載。<br><br>
-
-                                                    <a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/Designart2019_guidebook.pdf" target="_blank"> <span
+                                                    <a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/Designart2019_tabloid.pdf"
+                                                       target="_blank"><span
                                                                 style="text-decoration: underline;">PDFをダウンロードする</span></a>
                                                 </div>
                                                 <div class="title">DESIGNART TOKYO 2019
@@ -844,7 +853,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                         <li>各展示会場 / インフォメーションセンター / オフィシャルカフェなど</li>
                                                     </ul>
                                                     <br><br>
-                                                    <a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/Designart2019_tabloid.pdf" target="_blank"><span
+                                                    <a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/Designart2019_guidebook.pdf"
+                                                       target="_blank"> <span
                                                                 style="text-decoration: underline;">PDFをダウンロードする</span></a>
                                                 </div>
 
@@ -861,7 +871,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                         <div class="wp-content-inner wp-content-img-left wp-content-img-left-1 row">
                                             <div class="wp-left col-md-4">
                                                 <div class="wrap-img no-padding">
-                                                    <img src="{%URL_STATICS%}/images/about/goodcafe/official_tshirt.jpg" alt=""
+                                                    <img src="{%URL_STATICS%}/images/about/goodcafe/official_tshirt.jpg"
+                                                         alt=""
                                                          class="img-responsive ">
                                                 </div>
                                             </div>
@@ -939,7 +950,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                 </div>
                                                 <div class="wp-right col-md-8">
                                                     <div class="title">
-                                                        DESIGNART FEATURE 1% for Art EXHIBITION</div>
+                                                        DESIGNART FEATURE 1% for Art EXHIBITION
+                                                    </div>
                                                     <div class="info">
                                                         Design PierはDESIGNART TOKYOとのコラボレーションにより、1％ for
                                                         Artのプログラムとアジア各国のデザインスタジオによる非常に多様で創造的なデザインオブジェクトを展示します。<br>
@@ -965,7 +977,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                 </div>
                                                 <div class="wp-right col-md-8">
                                                     <div class="title">
-                                                        PARTNER COUNTRY ISRAEL</div>
+                                                        PARTNER COUNTRY ISRAEL
+                                                    </div>
                                                     <div class="info">
                                                         国際的なデザイン業界でも独特のDNAを育んできたイスラエルを、 DESIGNART TOKYO
                                                         2019のパートナーカントリーとしてご招待。<br>
@@ -995,23 +1008,32 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                         ループエキシビジョンです。
                                                         <br><br>
                                                         Beyond molecular weight<br>
-                                                        <a  class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         FIL<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         「DECO」by Triple A / デザインイメージシート & VONDS RANSEL / 大沼 敦<br>
-                                                        <a class="multi-btn"  href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         TIMON<br>
-                                                        <a class="multi-btn"  href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         ハフトデザイン<br>
-                                                        <a class="multi-btn"  href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         カツキコネクション<br>
-                                                        <a class="multi-btn"  href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         炭酸デザイン室<br>
-                                                        <a class="multi-btn"  href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         荒木 宏介<br>
-                                                        <a class="multi-btn"  href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         タラマンプラス<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1032,7 +1054,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                 </div>
                                                 <div class="wp-right col-md-8">
                                                     <div class="title">
-                                                        DESIGNART GALLERY at リビングデザインセンターOZONE</div>
+                                                        DESIGNART GALLERY at リビングデザインセンターOZONE
+                                                    </div>
                                                     <div class="info">
                                                         今年で開館25 周年を迎えるリビングデザインセンターOZONE が、DESIGNART
                                                         TOKYO の新エリア新宿にて初参加します。1F
@@ -1399,7 +1422,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
 
 
     <!-- 固定ページ入力ソースここから-->
-<!--//eng-->
+    <!--//eng-->
     <section class="about-page about-outline-page">
         <div class="container">
 
@@ -1630,8 +1653,9 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         </div>
                                                     </div>
                                                     <div class="brand-item">
-                                                        <div class="pic-wrap"><a href="https://www.dsautomobiles.jp/index.html"
-                                                                                 target="_blank">
+                                                        <div class="pic-wrap"><a
+                                                                    href="https://www.dsautomobiles.jp/index.html"
+                                                                    target="_blank">
                                                                 <img src="{%URL_STATICS%}/images/about/section1/04_DS_Logo_2019_reversed_RGB.png"
                                                                      alt="logo-dbrain">
                                                             </a>
@@ -1680,8 +1704,9 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         </div>
                                                     </div>
                                                     <div class="brand-item">
-                                                        <div class="pic-wrap"><a href="http://www.jda.gov.il/english.aspx"
-                                                                                 target="_blank">
+                                                        <div class="pic-wrap"><a
+                                                                    href="http://www.jda.gov.il/english.aspx"
+                                                                    target="_blank">
                                                                 <img src="{%URL_STATICS%}/images/about/section1/10_Jerusalem__.png"
                                                                      alt="logo-space">
                                                             </a>
@@ -1689,8 +1714,9 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     </div>
 
                                                     <div class="brand-item">
-                                                        <div class="pic-wrap"><a href="https://www.perrier-jouet.com/ja-jp"
-                                                                                 target="_blank">
+                                                        <div class="pic-wrap"><a
+                                                                    href="https://www.perrier-jouet.com/ja-jp"
+                                                                    target="_blank">
                                                                 <img src="{%URL_STATICS%}/images/about/section1/11_logo-perrierjouet.png"
                                                                      alt="logo-tanseisha">
                                                             </a>
@@ -1704,7 +1730,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                                      alt="logo-volvostudioaoyama">
                                                             </a>
                                                         </div>
-                                                    </div> <div class="brand-item">
+                                                    </div>
+                                                    <div class="brand-item">
                                                         <div class="pic-wrap"><a
                                                                     href="https://sivans.jp/"
                                                                     target="_blank">
@@ -1712,7 +1739,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                                      alt="logo-volvostudioaoyama">
                                                             </a>
                                                         </div>
-                                                    </div> <div class="brand-item">
+                                                    </div>
+                                                    <div class="brand-item">
                                                         <div class="pic-wrap"><a
                                                                     href="https://www.stratasys.com/"
                                                                     target="_blank">
@@ -1720,7 +1748,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                                      alt="logo-volvostudioaoyama">
                                                             </a>
                                                         </div>
-                                                    </div> <div class="brand-item">
+                                                    </div>
+                                                    <div class="brand-item">
                                                         <div class="pic-wrap"><a
                                                                     href="https://www.tky-lab.com/"
                                                                     target="_blank">
@@ -1728,7 +1757,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                                      alt="logo-volvostudioaoyama">
                                                             </a>
                                                         </div>
-                                                    </div> <div class="brand-item">
+                                                    </div>
+                                                    <div class="brand-item">
                                                         <div class="pic-wrap"><a
                                                                     href="https://www.company.theginza.co.jp/space/"
                                                                     target="_blank">
@@ -1736,7 +1766,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                                      alt="logo-volvostudioaoyama">
                                                             </a>
                                                         </div>
-                                                    </div> <div class="brand-item">
+                                                    </div>
+                                                    <div class="brand-item">
                                                         <div class="pic-wrap"><a
                                                                     href="https://www.tokyo-midtown.com/jp/designtouch/"
                                                                     target="_blank">
@@ -2165,11 +2196,13 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                         <li> <!-- item-pickup-->
                                             <div class="row">
                                                 <div class="wp-image img-cafe col-md-5">
-                                                    <img src="{%URL_STATICS%}/images/about/goodcafe/about_cafegoods_specialdrink.jpg" alt=""
+                                                    <img src="{%URL_STATICS%}/images/about/goodcafe/about_cafegoods_specialdrink.jpg"
+                                                         alt=""
                                                          class="img-responsive ">
                                                 </div>
                                                 <div class="product col-md-7">
-                                                    <h2 class="title">DESIGNART TOKYO 2019 ORIGINAL DRINK <br>EARLGREY PEAR
+                                                    <h2 class="title">DESIGNART TOKYO 2019 ORIGINAL DRINK <br>EARLGREY
+                                                        PEAR
                                                         NECTAR</h2>
                                                     <p class="description">
                                                         Non alcohol<br>
@@ -2208,7 +2241,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
 
 
                                                     <br/><br>
-                                                    <a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/Designart2019_guidebook.pdf" target="_blank"><span
+                                                    <br><a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/Designart2019_tabloid.pdf"
+                                                           target="_blank"><span
                                                                 style="text-decoration: underline;">PDF download</span></a>
                                                 </div>
 
@@ -2227,7 +2261,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         <li>・information center, official café etc.</li>
 
                                                     </ul>
-                                                    <br><a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/Designart2019_tabloid.pdf" target="_blank"><span
+                                                    <a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/Designart2019_guidebook.pdf"
+                                                       target="_blank"><span
                                                                 style="text-decoration: underline;">PDF download</span></a>
                                                 </div>
 
@@ -2244,7 +2279,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                         <div class="wp-content-inner wp-content-img-left wp-content-img-left-1 row">
                                             <div class="wp-left col-md-4">
                                                 <div class="wrap-img no-padding">
-                                                    <img src="{%URL_STATICS%}/images/about/goodcafe/official_tshirt.jpg" alt=""
+                                                    <img src="{%URL_STATICS%}/images/about/goodcafe/official_tshirt.jpg"
+                                                         alt=""
                                                          class="img-responsive ">
                                                 </div>
                                             </div>
@@ -2280,7 +2316,9 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
 
                                 <div class="wp-section-goods">
                                     <div class="area-section">
-                                        <div class="title-head background-black">The hallmark of the exhibition hall is a stylish flag bag</div>
+                                        <div class="title-head background-black">The hallmark of the exhibition hall is
+                                            a stylish flag bag
+                                        </div>
                                         <div class="wp-content-inner wp-content-img-left row">
                                             <div class="left col-md-4">
                                                 <div class="wrap-img no-padding">
@@ -2292,9 +2330,16 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                 <div class="title-a">DESIGNART TOKYO 2019 <br/><span class="sub-title">OFFICIAL FLAG</span>
                                                 </div>
                                                 <div class="info-area-a">
-                                                    The venues of DESIGNART scattered in the city can be spotted by the official flag.
-                                                    This year, the flag is updated to be two-sided in black and metallic gold. The venues are easier to find with the increasing visibility from both directions. The five different shapes around the logo is also unique. It is made by Koshin Planning, the professional group of signage and display.
-                                                    The flags and flag stands from the previous years are also in use. DESIGNART embodies the sustainability that has been the concept from the first year.
+                                                    The venues of DESIGNART scattered in the city can be spotted by the
+                                                    official flag.
+                                                    This year, the flag is updated to be two-sided in black and metallic
+                                                    gold. The venues are easier to find with the increasing visibility
+                                                    from both directions. The five different shapes around the logo is
+                                                    also unique. It is made by Koshin Planning, the professional group
+                                                    of signage and display.
+                                                    The flags and flag stands from the previous years are also in use.
+                                                    DESIGNART embodies the sustainability that has been the concept from
+                                                    the first year.
                                                 </div>
                                             </div>
                                         </div>
@@ -2384,28 +2429,37 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         domains of design and art.
                                                         <br><br>
                                                         Beyond molecular weight<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         FIL<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         “DECO” by Triple A / Design image seat & VONDS RANSEL / Atsushi
                                                         onuma<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         TIMON<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         HAFT DESIGN<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         Katsuki Connection
                                                         <br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         TANSAN DESIGN STUDIO
                                                         <br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         Kosuke Araki
                                                         <br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
                                                         TARAMAN+
                                                         <br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE INFO</a><br><br>
+                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                            INFO</a><br><br>
 
                                                     </div>
 
@@ -2819,7 +2873,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
 
     <div class="landing-st contact-st">
         <div class="container">
-			<?php get_html_contact(); ?>
+            <?php get_html_contact(); ?>
         </div>
     </div>
 
@@ -2830,7 +2884,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
         </div>
     </div>
 
-    <script src="<?php echo esc_url( URL_STATICS ) ?>/js/officialgoodcafe.js"></script>
+    <script src="<?php echo esc_url(URL_STATICS) ?>/js/officialgoodcafe.js"></script>
     <script !src="">
         jQuery(function ($) {
             $(document).ready(function () {
@@ -2840,4 +2894,4 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
 
         })
     </script>
-<?php get_footer( 'top2' ) ?>
+<?php get_footer('top2') ?>
