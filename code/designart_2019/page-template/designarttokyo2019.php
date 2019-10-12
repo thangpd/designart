@@ -56,7 +56,7 @@ foreach ( $json['data'] as $value ):
 //	wp-content/themes/designart_2019/statics/images/top/banner2019.jpg
 	$time    = date( "Y-m-d", strtotime( $value['created_time'] ) );
 	$str1    = trim( strtok( $value['message'], "\n" ) );
-	$str1    = strlen( $str1 ) > 80 ? substr( $str1, 0, 80 ) . "..." : $str1;
+	$str1    = strlen( $str1 ) > 70 ? substr( $str1, 0, 70 ) . "..." : $str1;
 	$content .= sprintf( $format, $active, $time, $str1, $value['id'] );
 
 	$active = '';
