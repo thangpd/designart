@@ -132,7 +132,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
             BRING TOGETHER DIVERSE OBJECTS AND EXPERIENCES CREATED IN CROSSOVER FIELDS OF ART, INTERIOR DESIGN, FASHION,
             AND FOOD FROM AROUND THE GLOBE TO BE PRESENTED ON THE STAGES IN VARIOUS LOCATIONS IN TOKYO, ONE OF THE
             WORLD'S LEADING MIXED CULTURE CITIES.</p>
-        <a href="#" class="text-38 more dt-block">more <span><img
+        <a href="{%HOME_URL%}/about" class="text-38 more dt-block">more <span><img
                         src="{%URL_STATICS%}/images/top/arrow-item.png"></span></a>
     </div>
 </section>
@@ -157,7 +157,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 <div class="desc">
                     <p class="text-18"> The 120 groups exhibit their works in the 11 areas in <br> 2019.</p>
                     <div class="link-group">
-                        <a href="#" class="link-step">
+                        <a href="{%HOME_URL%}/exhibitor/" class="link-step">
                             <div class="left">
                                 <div class="text-38">exhibition list</div>
                             </div>
@@ -165,7 +165,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                                 <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                             </div>
                         </a>
-                        <a href="#" class="link-step">
+                        <a href="https://www.google.com/maps/d/u/0/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397681%2C139.72963319999997&z=13" class="link-step">
                             <div class="left">
                                 <div class="text-38">guide map</div>
                             </div>
@@ -195,7 +195,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                         <br> field of art and design.
                     </p>
                     <div class="link-group">
-                        <a href="#" class="more link-step">
+                        <a href="{%HOME_URL%}" class="more link-step">
                             <div class="left">
                                 <div class="text-38">more</div>
                             </div>
@@ -391,7 +391,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
         <p class="text-18 dt-block">感動を、すべての人々に</p>
         <p class="text-20">「DESIGNART
             TOKYO」は、毎年秋に開催するデザイン＆アートフェスティバルです。世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、インテリア、ファッション、テクノロジーなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩な作品を発表していきます。</p>
-        <a href="#" class="text-38 more dt-block">more <span><img
+        <a href="{%HOME_URL%}/about" class="text-38 more dt-block">more <span><img
                         src="{%URL_STATICS%}/images/top/arrow-item.png"></span></a>
     </div>
 </section>
@@ -416,7 +416,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 <div class="desc">
                     <p class="text-18">2019年は120組、11エリアで作品を展示します。</p>
                     <div class="link-group">
-                        <a href="#" class="link-step">
+                        <a href="{%HOME_URL%}/exhibitor/" class="link-step">
                             <div class="left">
                                 <div class="text-38">exhibition list</div>
                                 <div class="text-20">展示作品一覧</div>
@@ -425,7 +425,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                                 <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                             </div>
                         </a>
-                        <a href="#" class="link-step">
+                        <a href="https://www.google.com/maps/d/u/0/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397681%2C139.72963319999997&z=13" class="link-step">
                             <div class="left">
                                 <div class="text-38">guide map</div>
                                 <div class="text-20">展示マップ</div>
@@ -454,7 +454,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                         とデザインの視点から今、社会で起きている変化につ<br>
                         いて考え学び意見を交換し合う場です。</p>
                     <div class="link-group">
-                        <a href="#" class="more link-step">
+                        <a href="{%HOME_URL%}" class="more link-step">
                             <div class="left">
                                 <div class="text-38">more</div>
                             </div>
