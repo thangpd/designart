@@ -386,9 +386,8 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
         <span class="about">ABOUT</span>
         <h4 class="title-h4">
             BRINGING EMOTION
-            <span>INTO LIVES <span class="mb-block">感動を、すべての人々に</span></span>
+            <span>INTO LIVES </span>
         </h4>
-        <p class="text-18 dt-block">感動を、すべての人々に</p>
         <p class="text-20">「DESIGNART
             TOKYO」は、毎年秋に開催するデザイン＆アートフェスティバルです。世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、インテリア、ファッション、テクノロジーなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩な作品を発表していきます。</p>
         <a href="{%HOME_URL%}/about" class="text-38 more dt-block">more <span><img

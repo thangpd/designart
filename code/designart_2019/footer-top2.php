@@ -21,12 +21,12 @@
 
                                     </a>
                                 </li>
-                                <li>
+                                <!--<li>
                                     <a href="#" class="text-16">
-                                        <?php echo translate_text_language('DESIGNART will be informed through press release.') ?>
+                                        <?php /*echo translate_text_language('DESIGNART will be informed through press release.') */?>
 
                                     </a>
-                                </li>
+                                </li>-->
                             </ul>
                         </div>
                         <div class="col-md-5 col-sm-6 col-xs-6 footer-col">
