@@ -40,14 +40,15 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
 }
 
 $active  = 'active';
-$format  = '<div class="item %1$s">
-                                <a href="%4$s">
-                                <div class="date">%2$s</div>
+$format  = '<div class="js-slide u-bg-img-hero-center">
+                            <div class="item">
+                               
+                                    <div class="date">%2$s</div>
                                 <div class="desc">
-									%3$s
+									 <a href="https://www.facebook.com/designart.jp/posts/%4$s" >%3$s                                </a>
                                 </div>
-                                </a>
-                            </div>';
+                                </div>
+                                </div>';
 $content = '';
 foreach ( $json['data'] as $value ):
 	if ( empty( $value['message'] ) ) {
@@ -56,15 +57,59 @@ foreach ( $json['data'] as $value ):
 //	wp-content/themes/designart_2019/statics/images/top/banner2019.jpg
 	$time = date( "Y年m月d", strtotime( $value['created_time'] ) );
 	$str1 = trim( strtok( $value['message'], "\n" ) );
-	$str1 =  strlen( $str1 ) > 70 ? substr( $str1, 0, 70 ) . "..." : $str1;
+	$str1 = strlen( $str1 ) > 70 ? substr( $str1, 0, 70 ) . "..." : $str1;
 //	$str1    = preg_replace( '/[^\w\s]+/u', '', strlen( $str1 ) > 70 ? substr( $str1, 0, 70 ) . "..." : $str1 );
-	$content .= sprintf( $format, $active, $time, $str1, $value['id'] );
+	$id = explode( '_', $value['id'] );
+
+	$content .= sprintf( $format, $active, $time, $str1, $id[1] );
 
 	$active = '';
 endforeach;
 
 $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
 
+$exhibitors               = get_posts( array(
+	'post_type'      => 'exhibitor',
+	'post_status'    => 'publish',
+	'posts_per_page' => 10,
+	'orderby'        => 'rand'
+//    'orderby'    => ['post_modified' => 'desc'],
+) );
+$exhibitor_thumbnail_list = '';
+$exhibitor_list           = '';
+foreach ( $exhibitors as $exhibitor ) {
+	$exhibitor_id        = $exhibitor->ID;
+	$exhibitor_thumbnail = get_field( 'exhibitor_thumbnail', $exhibitor_id, '' );
+	$gallery             = get_field( 'exhibitor_gallery', $exhibitor_id );
+	$time                = get_field( $prefix_varible . 'exhibitor_venue', $exhibitor_id );
+	$thumbail_url        = '';
+	if ( ! empty( $gallery ) ) {
+		$thumbail_url = take_value_array( 'url', $gallery[0] );
+	}
+
+	if ( ! empty( $exhibitor_thumbnail ) ) {
+		$exhibitor_thumbnail = take_value_array( 'url', $exhibitor_thumbnail, $exhibitor_thumbnail );
+		$thumbail_url        = wp_get_attachment_image_url( $exhibitor_thumbnail );
+	}
+
+	$exhibitor_title          = get_field( $prefix_varible . 'exhibitor_title', $exhibitor_id );
+	$exhibitor_thumbnail_list .= '
+<div class="mySlides">
+<a href="' . get_permalink( $exhibitor_id ) . '" class="link">  
+<img src="' . $thumbail_url . '"  style="width:100%" alt="" class="img-responsive">
+ </a>
+</div>';
+	$exhibitor_list           .= '<div class="exhibitor_mySlides desc-wrapp">
+                                         <p class="text-16">' . $time[0]['information'][2]['value'] . ':</p> 
+                                        <p class="text-24">
+                                            ' . $exhibitor_title . '
+                                        </p>
+                                </div>';
+}
+
+
+$description = str_replace( '{%EXHIBITOR_LIST%}', $exhibitor_list, $description );
+$description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list, $description );
 echo $description;
 
 //$prefix_varible_slider = get_prefix_languagle( $language, "-" );
@@ -72,8 +117,6 @@ echo $description;
 //echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider"]' );
 //echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider-2019"]' );
 ?>
-
-
 
 
 <?php get_footer( 'top2' ); ?>
@@ -94,6 +137,19 @@ echo $description;
         if (url) {
             $('body').addClass('body-white');
         }
+
+        $('.js-slick-carousel').slick(
+            {
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: true,
+                prevArrow: "<img class='a-left control-c prev slick-prev' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'>",
+                nextArrow: "<img class='a-right control-c next slick-next' src='<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png'>"
+
+            }
+        );
+
+
         // $.each($('#primary-menu li'), function (index) {
         //     $(this).find('a').attr('data-demo', 'item-'+index);
         // })
@@ -114,6 +170,7 @@ echo $description;
     function showSlides(n) {
         var i;
         var slides = document.getElementsByClassName("mySlides");
+        var exhibitor = document.getElementsByClassName("exhibitor_mySlides");
         var dots = document.getElementsByClassName("dot");
         if (n > slides.length) {
             slideIndex = 1
@@ -123,11 +180,14 @@ echo $description;
         }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
+            exhibitor[i].style.display = "none";
+
         }
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
         slides[slideIndex - 1].style.display = "block";
+        exhibitor[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
     }
 

@@ -81,35 +81,16 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 <p>2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p></div>
         </div>
         <div class="scroll mb-block"><img src="{%URL_STATICS%}/images/top/scroll.png" alt="" /> </div>
-        <button class="banner-top-btn">
-            <!--
-            <span class="arrow"><img src="<?php /*echo URL_STATICS; */ ?>/images/top/arrow-left-banner.png"></span>
-            <div class="content">
-                <div class="date">2019.10.18</div>
-                <div class="desc dt-block">表参道・外苑前を中心に全11エリアで開催！東京の街全体がアートになる。</div>
-                <div class="desc mb-block">表参道・外苑前 を中心に全11エリアで開催！</div>
-            </div>
-            <span class="arrow"><img src="<?php /*echo URL_STATICS; */ ?>/images/top/arrow-right-banner.png"></i></span>
--->
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
+        <div class=" banner-top-btn js-slick-carousel u-slick"
+             data-autoplay="true"
+             data-speed="10000"
+             data-infinite="true"
+             data-arrows-classes="d-none d-lg-inline-block u-slick__arrow-classic u-slick__arrow-centered--y rounded-circle"
+             data-arrow-left-classes="fa fa-arrow-left u-slick__arrow-classic-inner u-slick__arrow-classic-inner--left ml-lg-2 ml-xl-4"
+             data-arrow-right-classes="fa fa-arrow-right u-slick__arrow-classic-inner u-slick__arrow-classic-inner--right mr-lg-2 mr-xl-4">
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    {%CAROUSEL_NEWS%}
-                </div>
-
-                <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                    <span class="arrow"><img src="{%URL_STATICS%}/images/top/arrow-left-banner.png"></span>
-
-                </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                    <span class="arrow"><img
-                                src="{%URL_STATICS%}/images/top/arrow-right-banner.png"></i></span>
-
-                </a>
-            </div>
+            {%CAROUSEL_NEWS%}
+        </div>
         </button>
     </div>
 </section>
@@ -216,25 +197,10 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 </div>
                 <div class="img-wrapper img-slick">
 
-                    <!-- <div class="img-slick-item">
-                        <div class="img-item">
-                            <img src="<?php /*echo URL_STATICS; */ ?>/images/top/eventandparty.jpg" alt=""/>
-                        </div>
 
-                    </div>-->
                     <div class="slideshow-container">
-
-                        <div class="mySlides ">
-                            <img src="{%URL_STATICS%}/images/top/eventandparty.jpg" style="width:100%">
-                        </div>
-
-                        <div class="mySlides ">
-                            <img src="{%URL_STATICS%}/images/top/buyart.jpg" style="width:100%">
-                        </div>
-
-                        <div class="mySlides ">
-                            <img src="{%URL_STATICS%}/images/top/eventandparty.jpg" style="width:100%">
-                        </div>
+                        <!--thumbail-->
+                        {%EXHIBITOR_THUMBNAIL%}
 
                         <a class="prev" onclick="plusSlides(-1)"><img src="{%URL_STATICS%}/images/top/arrow-left-banner.png" /></a>
                         <a class="next" onclick="plusSlides(1)"><img src="{%URL_STATICS%}/images/top/arrow-right-banner.png" /></a>
@@ -248,8 +214,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                     </div>
                 </div>
                 <div class="desc">
-                    <p class="text-16">10.18 19:00〜</p>
-                    <p class="text-24 art-m">OPENING PARTY @ WORLD <br> KITA-AOYAMA BLDG.1F</p>
+                    {%EXHIBITOR_LIST%}
                 </div>
             </div>
             <div class="step-item step-3">
@@ -341,37 +306,18 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
             <div class="banner-top-sub">DESIGNART TOKYO 2019
                 <p>2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p></div>
         </div>
-        <div class="scroll mb-block"><img src="{%URL_STATICS%}/images/top/scroll.png" alt="" /> </div>
-        <button class="banner-top-btn">
-            <!--
-            <span class="arrow"><img src="<?php /*echo URL_STATICS; */ ?>/images/top/arrow-left-banner.png"></span>
-            <div class="content">
-                <div class="date">2019.10.18</div>
-                <div class="desc dt-block">表参道・外苑前を中心に全11エリアで開催！東京の街全体がアートになる。</div>
-                <div class="desc mb-block">表参道・外苑前 を中心に全11エリアで開催！</div>
-            </div>
-            <span class="arrow"><img src="<?php /*echo URL_STATICS; */ ?>/images/top/arrow-right-banner.png"></i></span>
--->
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
+        <div class="scroll mb-block"><img src="{%URL_STATICS%}/images/top/scroll.png" alt=""/></div>
+        <div class=" banner-top-btn js-slick-carousel u-slick"
+             data-autoplay="true"
+             data-speed="10000"
+             data-infinite="true"
+             data-arrows-classes="d-none d-lg-inline-block u-slick__arrow-classic u-slick__arrow-centered--y rounded-circle"
+             data-arrow-left-classes="fa fa-arrow-left u-slick__arrow-classic-inner u-slick__arrow-classic-inner--left ml-lg-2 ml-xl-4"
+             data-arrow-right-classes="fa fa-arrow-right u-slick__arrow-classic-inner u-slick__arrow-classic-inner--right mr-lg-2 mr-xl-4">
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    {%CAROUSEL_NEWS%}
-                </div>
+            {%CAROUSEL_NEWS%}
+        </div>
 
-                <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                    <span class="arrow"><img src="{%URL_STATICS%}/images/top/arrow-left-banner.png"></span>
-
-                </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                    <span class="arrow"><img
-                                src="{%URL_STATICS%}/images/top/arrow-right-banner.png"></i></span>
-
-                </a>
-            </div>
-        </button>
     </div>
 </section>
 <section class="container">
@@ -427,7 +373,8 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                                 <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                             </div>
                         </a>
-                        <a href="https://www.google.com/maps/d/u/0/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397681%2C139.72963319999997&z=13" class="link-step">
+                        <a href="https://www.google.com/maps/d/u/0/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397681%2C139.72963319999997&z=13"
+                           class="link-step">
                             <div class="left">
                                 <div class="text-38">guide map</div>
                                 <div class="text-20">展示マップ</div>
@@ -475,40 +422,25 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 </div>
                 <div class="img-wrapper img-slick">
 
-                    <!-- <div class="img-slick-item">
-                        <div class="img-item">
-                            <img src="<?php /*echo URL_STATICS; */ ?>/images/top/eventandparty.jpg" alt=""/>
-                        </div>
 
-                    </div>-->
                     <div class="slideshow-container">
+                        <!--thumbail-->
+                        {%EXHIBITOR_THUMBNAIL%}
 
-                        <div class="mySlides ">
-                            <img src="{%URL_STATICS%}/images/top/eventandparty.jpg" style="width:100%">
-                        </div>
-
-                        <div class="mySlides ">
-                            <img src="{%URL_STATICS%}/images/top/buyart.jpg" style="width:100%">
-                        </div>
-
-                        <div class="mySlides ">
-                            <img src="{%URL_STATICS%}/images/top/eventandparty.jpg" style="width:100%">
-                        </div>
-
-                        <a class="prev" onclick="plusSlides(-1)"><img src="{%URL_STATICS%}/images/top/arrow-left-banner.png"></a>
-                        <a class="next" onclick="plusSlides(1)"><img src="{%URL_STATICS%}/images/top/arrow-right-banner.png"></a>
+                        <a class="prev" onclick="plusSlides(-1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"></a>
+                        <a class="next" onclick="plusSlides(1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"></a>
 
                     </div>
                     <div style="text-align:center;display:none;">
                         <span class="dot" onclick="currentSlide(1)"></span>
                         <span class="dot" onclick="currentSlide(2)"></span>
                         <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
                     </div>
                 </div>
                 <div class="desc">
-                    <p class="text-16">10.18 19:00〜</p>
-                    <p class="text-24"> OPENING PARTY DESIGNART <br> TOKYO 2019 @ ワールド北青山</p>
+                    {%EXHIBITOR_LIST%}
                 </div>
             </div>
             <div class="step-item step-3">
@@ -555,8 +487,10 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                             <img src="{%URL_STATICS%}/images/top/slide04.jpg" style="width:100%">
                         </div>
 
-                        <a class="prev " onclick="plusSlides2(-1)"><img src="{%URL_STATICS%}/images/top/arrow-left-banner.png" /></a>
-                        <a class="next " onclick="plusSlides2(1)"><img src="{%URL_STATICS%}/images/top/arrow-right-banner.png" /></a>
+                        <a class="prev " onclick="plusSlides2(-1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
+                        <a class="next " onclick="plusSlides2(1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
                     </div>
                     <div style="text-align:center;display:none;">
                         <span class="dot" onclick="currentSlide2(1)"></span>
@@ -589,6 +523,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
 </div>
 
 
+
 <?php get_footer( 'top2' ); ?>
 
 <script type="text/javascript">
@@ -607,6 +542,19 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
         if (url) {
             $('body').addClass('body-white');
         }
+
+        $('.js-slick-carousel').slick(
+            {
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: true,
+                prevArrow: "<img class='a-left control-c prev slick-prev' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'>",
+                nextArrow: "<img class='a-right control-c next slick-next' src='<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png'>"
+
+            }
+        );
+
+
         // $.each($('#primary-menu li'), function (index) {
         //     $(this).find('a').attr('data-demo', 'item-'+index);
         // })
@@ -627,6 +575,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
     function showSlides(n) {
         var i;
         var slides = document.getElementsByClassName("mySlides");
+        var exhibitor = document.getElementsByClassName("exhibitor_mySlides");
         var dots = document.getElementsByClassName("dot");
         if (n > slides.length) {
             slideIndex = 1
@@ -636,11 +585,14 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
         }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
+            exhibitor[i].style.display = "none";
+
         }
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
         slides[slideIndex - 1].style.display = "block";
+        exhibitor[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
     }
 
