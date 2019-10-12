@@ -6,31 +6,31 @@
                 <div class="col-md-7">
                     <div class="row">
                         <div class="col-md-7 col-sm-6 col-xs-6 footer-col">
-                            <img src="<?php echo URL_STATICS; ?>/images/top/arrow-footer.png" alt="" />
+                            <img src="<?php echo URL_STATICS; ?>/images/top/arrow-footer.png" alt=""/>
                             <ul class="footer-col-1">
                                 <li>
                                     <a href="#" class="title text-30">
-	                                    <?php echo translate_text_language('mail magazine') ?>
+                                        <?php echo translate_text_language('mail magazine') ?>
 
 
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" class="text-18">
-	                                    <?php echo translate_text_language('Annual activities of') ?>
+                                        <?php echo translate_text_language('Annual activities of') ?>
 
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" class="text-16">
-	                                    <?php echo translate_text_language('DESIGNART will be informed through press release.') ?>
+                                        <?php echo translate_text_language('DESIGNART will be informed through press release.') ?>
 
                                     </a>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-md-5 col-sm-6 col-xs-6 footer-col">
-                            <img src="<?php echo URL_STATICS; ?>/images/top/arrow-footer.png" alt="" />
+                            <img src="<?php echo URL_STATICS; ?>/images/top/arrow-footer.png" alt=""/>
                             <ul class="footer-col-2">
                                 <li>
                                     <a href="#" class="title text-30">
@@ -39,13 +39,13 @@
                                 </li>
                                 <li>
                                     <a href="#" class="text-18">
-	                                    <?php echo translate_text_language('Press registration from here') ?>
+                                        <?php echo translate_text_language('Press registration from here') ?>
 
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" class="text-16">
-	                                    <?php echo translate_text_language('If you would like to register as a press from here') ?>
+                                        <?php echo translate_text_language('If you would like to register as a press from here') ?>
 
                                     </a>
                                 </li>
@@ -91,32 +91,40 @@
                     </div>
                 </div>
             </div>
-<!--            <ul class="footer-menu">-->
-<!--                <li class="li1"><a-->
-<!--                            href="mailto:info@designart.jp">--><?php //echo translate_text_language( 'Contact about DESIGNART' ); ?><!--</a>-->
-<!--                </li>-->
-<!--                <li class="li2"><a-->
-<!--                            href="mailto:press@designart.jp">--><?php //echo translate_text_language( 'Contact about Press' ); ?><!--</a>-->
-<!--                </li>-->
-<!--                <br>-->
-<!--                <li class="li3"><a-->
-<!--                            href="--><?php //echo site_url( '/privacy-policy/' ); ?><!--">--><?php //echo translate_text_language( 'Privacy Policy' ); ?><!--</a>-->
-<!--                </li>-->
-<!--                <li class="li4"><a href="--><?php //echo network_site_url(); ?><!--">--><?php //echo translate_text_language( 'BRAND SITE' ); ?><!--</a></li>-->
-<!--            </ul>-->
+            <!--            <ul class="footer-menu">-->
+            <!--                <li class="li1"><a-->
+            <!--                            href="mailto:info@designart.jp">-->
+            <?php //echo translate_text_language( 'Contact about DESIGNART' ); ?><!--</a>-->
+            <!--                </li>-->
+            <!--                <li class="li2"><a-->
+            <!--                            href="mailto:press@designart.jp">-->
+            <?php //echo translate_text_language( 'Contact about Press' ); ?><!--</a>-->
+            <!--                </li>-->
+            <!--                <br>-->
+            <!--                <li class="li3"><a-->
+            <!--                            href="--><?php //echo site_url( '/privacy-policy/' ); ?><!--">-->
+            <?php //echo translate_text_language( 'Privacy Policy' ); ?><!--</a>-->
+            <!--                </li>-->
+            <!--                <li class="li4"><a href="--><?php //echo network_site_url(); ?><!--">-->
+            <?php //echo translate_text_language( 'BRAND SITE' ); ?><!--</a></li>-->
+            <!--            </ul>-->
         </nav>
 
 
         <div class="copy-text">©DESIGNART. All rights Reserved.</div>
     </div>
-    <div class="row btn-footer">
-        <div class="sp to-exhibitor-wrap first col-xs-6">
-            <div class="to-exhibitor"><a href="<?php echo home_url() ?>/exhibitor/">展示作品</a></div>
+    <?php if (is_front_page()) { ?>
+        <div class="row btn-footer">
+            <div class="sp to-exhibitor-wrap first col-xs-6">
+                <div class="to-exhibitor"><a href="<?php echo home_url() ?>/exhibitor/">展示作品</a></div>
+            </div>
+            <div class="sp to-exhibitor-wrap last col-xs-6">
+                <div class="to-exhibitor"><a
+                            href="https://www.google.com/maps/d/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397678%2C139.72963319999997&z=13">展示マップ</a>
+                </div>
+            </div>
         </div>
-        <div class="sp to-exhibitor-wrap last col-xs-6">
-            <div class="to-exhibitor"><a href="https://www.google.com/maps/d/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397678%2C139.72963319999997&z=13">展示マップ</a></div>
-        </div>
-    </div>
+    <?php } ?>
 </footer><!-- #footer -->
 </div><!-- #page -->
 
