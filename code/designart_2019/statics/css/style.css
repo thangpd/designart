@@ -726,11 +726,15 @@ body.body-white.scrollActive .menu .sub-menu a:hover {
   color: #C3A384;
 }
 .menu>.menu-item>a.external:after {
-  content:url("../images/commons/external.png");
+  background: url("../images/commons/external.png");
   position: absolute;
   margin-left: 7px;
-  transform: scale(0.5);
   transform-origin: left top;
+  top: 2px;
+  background-size: cover;
+  width: 16px;
+  height: 17px;
+  content: '';
 }
 
 
@@ -3071,7 +3075,7 @@ ul.pl-list.has-arrow > li::before {
 }
 
 .site-content {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .box-info .item {
@@ -4720,6 +4724,7 @@ h1.title-h1 span{
   min-height: 725px;
   background-position: center;
   position: relative;
+  background-size: cover;
 }
 .banner-top > .content{
   position: absolute;
@@ -5117,11 +5122,11 @@ footer.site-footer{
 .en .step-item .title-wrapper .sub-title{
     font-family: art-r;
 }
-.step-item .desc{
-    font-family: art-r;
-}
 .art-m{
     font-family: art-m;
+}
+.footer-col-3 li a{
+  font-family: art-l;
 }
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
@@ -5234,9 +5239,7 @@ footer.site-footer{
     .step-item .title-wrapper{
         width: auto;
     }
-  .footer-col-3 li a{
-    font-family: art-l;
-  }
+
   .footer-cols li a.title{
     font-family: art-m;
   }
@@ -5346,13 +5349,13 @@ footer.site-footer{
   }
   .banner-center h2.title-h2{
     font-size: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
   .text-32{
     font-size: 16px;
   }
   .banner-center p{
-    margin-bottom: 20px;
+    margin-bottom: 6px;
   }
   .text-35{
     font-size: 16px;
@@ -5405,7 +5408,7 @@ footer.site-footer{
   }
   .step-item .main-title .number{
     font-size: 35px;
-    line-height: normal;
+    line-height: 35px;
   }
   .step-item .main-title span + span{
     font-size: 21px;
@@ -5593,7 +5596,7 @@ footer.site-footer{
     margin-right: 0;
   }
 }
-.footer-link .footer-cols ul a{
+.en .footer-link .footer-cols ul a{
   font-family: art-l;
 }
 .footer-link .footer-cols ul a.title{
@@ -5604,4 +5607,8 @@ footer.site-footer{
 }
 .en .footer-col-1 li:nth-child(2), .en .footer-col-2 li:nth-child(2){
   margin-top: 8px;
+}
+.jp .footer-col-1 li:nth-child(n + 2) a,
+.jp .footer-col-2 li:nth-child(n + 2) a{
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
 }

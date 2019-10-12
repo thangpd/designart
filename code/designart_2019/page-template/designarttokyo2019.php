@@ -39,23 +39,25 @@ if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
 	set_transient( 'special_query_fb', $json, 6000 );
 }
 
-
 $active  = 'active';
 $format  = '<div class="item %1$s">
+                                <a href="%4$s">
                                 <div class="date">%2$s</div>
                                 <div class="desc">
 									%3$s
                                 </div>
+                                </a>
                             </div>';
 $content = '';
 foreach ( $json['data'] as $value ):
 	if ( empty( $value['message'] ) ) {
 		continue;
 	}
+//	wp-content/themes/designart_2019/statics/images/top/banner2019.jpg
 	$time    = date( "Y-m-d", strtotime( $value['created_time'] ) );
 	$str1    = trim( strtok( $value['message'], "\n" ) );
 	$str1    = strlen( $str1 ) > 100 ? substr( $str1, 0, 100 ) . "..." : $str1;
-	$content .= sprintf( $format, $active, $time, $str1 );
+	$content .= sprintf( $format, $active, $time, $str1, $value['id'] );
 
 	$active = '';
 endforeach;

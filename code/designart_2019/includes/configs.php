@@ -94,7 +94,7 @@ $cfg_text_translate = array(
 		'jp' => 'デザイナートの年間活動などをプレスリリースでお知らせします。'
 	),
 	'DESIGNART will be informed through press release.'                      => array(
-		'jp' => 'DESIGNARTの年間活動などをプレスリリースでおしらせします'
+		'jp' => 'DESIGNARTの年間活動などを <br> プレスリリースでおしらせします'
 	),
 	'Press registration from here</a></li>'                                           => array(
 		'jp' => 'プレス登録</a></li><li><a href="#" class="text-16">プレス登録をご希望の方は<br>こちらから</a></li>'
