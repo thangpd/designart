@@ -443,6 +443,33 @@ ul.table_col_right_text li {
     width: 128px;
   }
 }
+@media screen and (max-width: 684px){
+    body .show-tabs{
+        display: none;
+    }
+    body .wp-scroll-page.tab-filter .list-scroll-item{
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        margin-bottom: 25px;
+        position: unset;
+        border-bottom: 1px solid #000000;
+        padding: 0 10px;
+        justify-content: center;
+    }
+    body .wp-scroll-page.tab-filter .list-scroll-item > li{
+        margin-right: 20px;
+    }
+    body .wp-scroll-page.tab-filter .list-scroll-item > li:last-child{
+        margin-right: 0;
+    }
+    body .wp-scroll-page.tab-filter .list-scroll-item > li > .item-filter.active-tab{
+        border-bottom: 4px solid #C3A384;
+    }
+    body .wp-scroll-page.tab-filter .list-scroll-item > li > .item-filter{
+        padding-bottom: 5px;
+    }
+}
 @media(max-width:425px){
   ul.table_col_right_text li {
 
