@@ -4765,6 +4765,9 @@ h1.title-h1 span{
   margin: 0 auto;
   text-align: left;
 }
+.banner-top-btn .carousel-inner>.item .desc{
+  color: black;
+}
 .banner-top-btn .date{
   font-size: 10px;
   color: #b5987c;
@@ -5134,6 +5137,9 @@ footer.site-footer{
 }
 
 @media screen and (max-width: 1350px){
+  .site-content{
+    padding-top: 70px;
+  }
   .menu-pc{
     display: none;
   }
