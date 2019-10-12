@@ -144,13 +144,12 @@ $terms2 = get_field( 'exhibitor_category_setting2', 'option' );
         </div>
     </div>-->
 
-    <div class="landing-st contact-st">
+    <!--<div class="landing-st contact-st">
         <div class="container">
-            <?php get_html_contact(); ?>
+            <?php /*get_html_contact(); */?>
         </div>
-    </div><!-- ./end .contact-st -->
-
-
+    </div>
+-->
     <!-- landing-back-to-top -->
     <div class="wp-back-to-top-wrap">
         <div class="wp-back-to-top top2">
