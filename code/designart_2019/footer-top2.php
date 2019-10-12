@@ -113,7 +113,6 @@
 
         <div class="copy-text">©DESIGNART. All rights Reserved.</div>
     </div>
-    <?php if (is_front_page()) { ?>
         <div class="row btn-footer">
             <div class="sp to-exhibitor-wrap first col-xs-6">
                 <div class="to-exhibitor"><a href="<?php echo home_url() ?>/exhibitor/">展示作品</a></div>
@@ -124,7 +123,6 @@
                 </div>
             </div>
         </div>
-    <?php } ?>
 </footer><!-- #footer -->
 </div><!-- #page -->
 

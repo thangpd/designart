@@ -28,12 +28,12 @@ echo $description;
 
     <!-- 固定ページ入力ソースここまで-->
 
-
+<!--
     <div class="landing-st contact-st">
         <div class="container">
-			<?php get_html_contact(); ?>
+			<?php /*get_html_contact(); */?>
         </div>
-    </div>
+    </div>-->
 
     <!-- landing-back-to-top -->
     <div class="wp-back-to-top-wrap">
