@@ -5507,7 +5507,15 @@ footer.site-footer{
     height: 300px;
   }
   .step-2 + .step-item.step-slick .img-wrapper .slideshow-container{
-    height: auto;
+    height: 100%;
+  }
+  .step-2 + .step-item.step-slick .img-wrapper .slideshow-container .mySlidesmb{
+    height: 100%;
+  }
+  .step-2 + .step-item.step-slick .img-wrapper .slideshow-container .mySlidesmb a{
+    display: flex;
+    height: 100%;
+    align-items: center;
   }
   .step-3 + .step-item .img-wrapper.img-slick .slideshow-container{
     height: auto;
