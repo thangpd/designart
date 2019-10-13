@@ -436,7 +436,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 </div>
 
             </div>
-            <div class="step-item step-slick ">
+            <div class="step-item step-slick margin100 ">
                     <div class="title-wrapper">
                         <div class="main-title">
                             <span>OFFICIAL CAFE <br> & GOODS</span>
@@ -625,7 +625,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                     <img src="{%URL_STATICS%}/images/top/learnart.jpg" alt=""/>
                 </div>
             </div>
-            <div class="step-item step-slick ">
+            <div class="step-item step-slick margin100">
                 <div class="left">
                     <div class="title-wrapper">
                         <div class="main-title">
@@ -679,7 +679,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 </div>
 
             </div>
-            <div class="step-item step-slick">
+            <div class="step-item step-slick margin100">
                 <div class="left">
                     <div class="title-wrapper">
                         <div class="main-title">
@@ -800,7 +800,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                     </div>
                 </div>
             </div>
-            <div class="step-item step-slick ">
+            <div class="step-item step-slick margin100">
                 <div class="left">
                     <div class="title-wrapper">
                         <div class="main-title">
@@ -848,7 +848,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                     <p class="text-16">デザイナートで展示されているアート作品は一部を除<br>いて全て購入可能です。</p>
                 </div>
             </div>
-            <div class="step-item step-slick">
+            <div class="step-item step-slick margin100">
                 <div class="title-wrapper">
                     <div class="main-title">
                         <span>OFFICIAL CAFE <br> & GOODS</span>

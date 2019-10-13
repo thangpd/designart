@@ -3512,6 +3512,10 @@ body.language-en .font-auto{
     overflow: hidden;
     display:flex;
     align-items:center;
+    justify-content: center;
+}
+.step-item.step-slick.margin100 {
+    margin-bottom:100px;
 }
 /*exhibition-guide-st*/
 .designart-page .exhibition-guide-st .blog-item{
