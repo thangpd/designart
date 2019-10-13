@@ -676,7 +676,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
 
                                                     <div class="address">
                                                         住所: 東京都港区北青山 3-2-2 <br/>
-                                                        TEL: 03-5413-8748 <br/>
+                                                        TEL: <a class="telephone"  href="tel:03-5413-8748"
+                                                                target="_blank">03-5413-8748</a> <br/>
                                                         営業時間: 月-金 8:00 - 23:00 土日祝 8:00 - 22:00 <br/>
 
                                                         <a href="https://www.deandeluca.co.jp/ddshop/50029"
@@ -697,7 +698,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
 
                                                     <div class="address">
                                                         住所: 東京都港区北青山 3‒6‒12 東京メトロ表参道駅　Echika表参道<br/>
-                                                        TEL: 03‒5413‒6863<br/>
+                                                        TEL: <a class="telephone"  href="tel:03‒5413‒6863"
+                                                                target="_blank">03‒5413‒6863</a><br/>
                                                         営業時間: 月‒金 8:00 ‒ 22:00 土日祝 9:00 ‒ 22:00<br/>
 
                                                         <a href="https://www.deandeluca.co.jp/ddshop/50012"
@@ -721,7 +723,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
 
                                                     <div class="address">
                                                         住所: 東京都港区赤坂9-7-3 東京ミッドタウン B1<br/>
-                                                        TEL: 03-5413-3585<br/>
+                                                        TEL: <a class="telephone"  href="tel:03-5413-3585"
+                                                                target="_blank">03-5413-3585</a><br/>
                                                         営業時間：7:00 - 23:00 <br>
                                                         ※マーケット店舗は対象外です。<br/>
 
@@ -745,7 +748,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
 
                                                     <div class="address">
                                                         住所: 東京都渋谷区渋谷3-21-3渋谷ストリーム2F<br/>
-                                                        TEL: 03-6427-3601<br/>
+                                                        TEL: <a class="telephone"  href="tel:03-6427-3601"
+                                                               target="_blank">03-6427-3601</a> <br/>
                                                         営業時間：7:00 - 22:00 <br>
 
                                                         <a href="https://www.deandeluca.co.jp/ddshop/50044"
@@ -767,7 +771,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
 
                                                     <div class="address">
                                                         住所: 東京都目黒区上目黒1-9 東京音楽大学中目黒・代官山キャンパス 3F<br/>
-                                                        TEL: 03-6416-3431<br/>
+                                                        TEL: <a class="telephone"  href="tel:03-6416-3431"
+                                                                target="_blank">03-6416-3431</a><br/>
                                                         営業時間：月-金 8:00 - 18:00 土日祝 9:00 - 18:00（不定休） <br>
 
                                                         <a href="https://www.deandeluca.co.jp/ddshop/50051/"
