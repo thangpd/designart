@@ -68,15 +68,17 @@ endforeach;
 
 $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
 
-$exhibitors               = get_posts( array(
+$exhibitors                  = get_posts( array(
 	'post_type'      => 'exhibitor',
 	'post_status'    => 'publish',
 	'posts_per_page' => 10,
 	'orderby'        => 'rand'
 //    'orderby'    => ['post_modified' => 'desc'],
 ) );
-$exhibitor_thumbnail_list = '';
-$exhibitor_list           = '';
+$exhibitor_list              = '';
+$exhibitor_thumbnail_list    = '';
+$exhibitor_list_mb           = '';
+$exhibitor_thumbnail_list_mb = '';
 foreach ( $exhibitors as $exhibitor ) {
 	$exhibitor_id        = $exhibitor->ID;
 	$exhibitor_thumbnail = get_field( 'exhibitor_thumbnail', $exhibitor_id, '' );
@@ -105,7 +107,6 @@ foreach ( $exhibitors as $exhibitor ) {
 <img src="' . $thumbail_url . '"  style="width:100%" alt="" class="img-responsive">
  </a>
 </div>';
-
 
 
 	$exhibitor_list_mb           .= '<div class="exhibitor_mySlidesmb desc-wrapp">
@@ -207,6 +208,7 @@ echo $description;
         exhibitor[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
     }
+
     var slideIndexmb = 1;
     showSlidesmb(slideIndexmb);
 
@@ -241,6 +243,7 @@ echo $description;
         exhibitor[slideIndexmb - 1].style.display = "block";
         dots[slideIndexmb - 1].className += " active";
     }
+
     var slideIndexmb2 = 1;
     showSlidesmb2(slideIndexmb2);
 

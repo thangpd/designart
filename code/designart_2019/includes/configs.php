@@ -33,60 +33,72 @@ $cfg_text_translate = array(
 		'jp' => '展示MAP'
 	),
 
-	'architectures'              => array(
+	'architectures'                                                                                       => array(
 		'jp' => '建築スポット',
 	),
-	'architecture guide'         => array(
+	'architecture guide'                                                                                  => array(
 		'jp' => '建築ガイド',
 		'cn' => '建筑'
 	),
-	'event &amp; party'          => array(
+	'event &amp; party'                                                                                   => array(
 		'jp' => 'イベント＆パーティー',
 		'cn' => '活动与派对'
 	),
-	'explore more'               => array(
+	'explore more'                                                                                        => array(
 		'jp' => '巡り方',
 		'cn' => '访问地图'
 	),
-	'access to exhibit area'     => array(
+	'access to exhibit area'                                                                              => array(
 		'jp' => '展示会場へ行き方',
 		'cn' => '概念'
 	),
-	'exhibition guide'           => array(
+	'exhibition guide'                                                                                    => array(
 		'jp' => 'テーマ別巡り方',
 		'cn' => '概念'
 	),
-	'conference'                 => array(
+	'conference'                                                                                          => array(
 		'jp' => 'カンファレンス'
 	),
-	'report'                     => array(
+	'report'                                                                                              => array(
 		'jp' => 'レポート'
 	),
-	'concept'                    => array(
+	'concept'                                                                                             => array(
 		'jp' => 'concept',
 		'cn' => '概念'
 	),
-	'share'                      => array(
+	'share'                                                                                               => array(
 		'jp' => 'このページをシェア'
 	),
-	'contact'                    => array(
+	'contact'                                                                                             => array(
 		'jp' => 'お問い合わせ',
 		'cn' => '联系方式'
 	),
-	'Contact about DESIGNART'    => array(
+	'Contact about DESIGNART'                                                                             => array(
 		'jp' => 'DESIGNARTへの問い合わせ',
 		'cn' => '联系方式'
 	),
-	'Contact about Press'        => array(
+	'Contact about Press'                                                                                 => array(
 		'jp' => 'プレスの問い合わせ',
 		'cn' => '联系方式'
 	),
 
 	//footer 2019
-	'Mail magazine registration' => array(
+	'https://docs.google.com/forms/d/e/1FAIpQLSdSWZa58t587HPY5JoP-GwW527z2rXhn0KNNfM2iTN_Ki1F8g/viewform' => array(
+		'jp' => 'https://docs.google.com/forms/d/e/1FAIpQLSdyCbRINFfrORznLiiqDBL9pFwRuWJ9Xy9tx7abssraPl2EFA/viewform'
+	),
+	'https://docs.google.com/forms/d/e/1FAIpQLScRG7lZN5jodO08ZABtdpsJGk-kdvNMPOVMLytlDJYVzdc3dQ/viewform' => array(
+		'jp' => 'https://docs.google.com/forms/d/e/1FAIpQLSc8D3ZbGHlbPzTRHQ7yYt7do9SFQH7AemvAgFBX_CI7x1EvmQ/viewform'
+	),
+	'http://designart.jp/designarttokyo2019/en/privacy-policy/' => array(
+		'jp' => 'http://designart.jp/designarttokyo2019/privacy-policy/'
+	),
+	'http://designart.jp/en/' => array(
+		'jp' => 'http://designart.jp/'
+	),
+	'Mail magazine registration'                                                                          => array(
 		'jp' => 'メルマガ登録'
 	),
-	'Press registration'         => array(
+	'Press registration'                                                                                  => array(
 		'jp' => 'プレス登録'
 	),
 
@@ -96,17 +108,17 @@ $cfg_text_translate = array(
 	'DESIGNART will be informed through press release.'                      => array(
 		'jp' => 'DESIGNARTの年間活動などを <br> プレスリリースでおしらせします'
 	),
-	'Press registration from here</a></li>'                                           => array(
+	'Press registration from here</a></li>'                                  => array(
 		'jp' => 'プレス登録</a></li><li><a href="#" class="text-16">プレス登録をご希望の方は<br>こちらから</a></li>'
 	),
 
 
 	//=============
 
-	'Privacy Policy'               => array(
+	'Privacy Policy'          => array(
 		'jp' => 'プライバシーポリシー'
 	),
-	'Contact about DESIGNART'      => array(
+	'Contact about DESIGNART' => array(
 		'jp' => 'デザイナートへお問い合わせ'
 	),
 

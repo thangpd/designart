@@ -12,7 +12,8 @@ $class = get_key_languagle();
                             <img src="<?php echo URL_STATICS; ?>/images/top/arrow-footer.png" alt=""/>
                             <ul class="footer-col-1">
                                 <li>
-                                    <a href="#" class="title text-30">
+                                    <a href="<?php echo translate_text_language( 'https://docs.google.com/forms/d/e/1FAIpQLSdSWZa58t587HPY5JoP-GwW527z2rXhn0KNNfM2iTN_Ki1F8g/viewform' ) ?>
+                                    " class="title text-30">
 										<?php echo translate_text_language( 'mail magazine' ) ?>
 
 
@@ -36,7 +37,7 @@ $class = get_key_languagle();
                             <img src="<?php echo URL_STATICS; ?>/images/top/arrow-footer.png" alt=""/>
                             <ul class="footer-col-2">
                                 <li>
-                                    <a href="#" class="title text-30">
+                                    <a href="<?php echo translate_text_language('https://docs.google.com/forms/d/e/1FAIpQLScRG7lZN5jodO08ZABtdpsJGk-kdvNMPOVMLytlDJYVzdc3dQ/viewform') ?>" class="title text-30">
                                         press
                                     </a>
                                 </li>
@@ -58,12 +59,12 @@ $class = get_key_languagle();
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-20">
+                                    <a href="mailto:info@designart.jp" class="text-20">
                                         about DESIGNART
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-20">
+                                    <a href="mailto:press@designart.jp" class="text-20">
                                         about Press
                                     </a>
                                 </li>
@@ -72,12 +73,12 @@ $class = get_key_languagle();
                         <div class="col-md-6 col-sm-6 col-xs-6 footer-col">
                             <ul class="footer-col-4">
                                 <li>
-                                    <a href="#" class="title text-20">
+                                    <a href="<?php echo translate_text_language('http://designart.jp/designarttokyo2019/en/privacy-policy/') ?>" class="title text-20">
                                         PRIVACY POLICY
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="title text-20">
+                                    <a href="<?php echo translate_text_language('http://designart.jp/en/') ?>" class="title text-20">
                                         BRAND SITE
                                     </a>
                                 </li>
