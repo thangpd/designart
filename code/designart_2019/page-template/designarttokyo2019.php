@@ -86,11 +86,11 @@ foreach ( $exhibitors as $exhibitor ) {
 	if ( ! empty( $gallery ) ) {
 		$thumbail_url = take_value_array( 'url', $gallery[0] );
 	}
-
+	/*
 	if ( ! empty( $exhibitor_thumbnail ) ) {
 		$exhibitor_thumbnail = take_value_array( 'url', $exhibitor_thumbnail, $exhibitor_thumbnail );
 		$thumbail_url        = wp_get_attachment_image_url( $exhibitor_thumbnail );
-	}
+	}*/
 
 	$exhibitor_title          = get_field( $prefix_varible . 'exhibitor_title', $exhibitor_id );
 	$exhibitor_thumbnail_list .= '
@@ -118,7 +118,6 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
 //echo do_shortcode( '[rev_slider alias="'.$prefix_varible_slider.'page-top-slider-2019"]' );
 ?>
 
-
 <section>
     <div class="banner-top">
         <div class="content">
@@ -127,7 +126,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
             <div class="banner-top-sub">DESIGNART TOKYO 2019
                 <p>2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p></div>
         </div>
-        <div class="scroll mb-block"><img src="<?php echo URL_STATICS ?>/images/top/scroll.png" alt=""/></div>
+        <div class="scroll mb-block"><img src="{%URL_STATICS%}/images/top/scroll.png" alt=""/></div>
         <div class=" banner-top-btn js-slick-carousel u-slick"
              data-autoplay="true"
              data-speed="10000"
@@ -135,8 +134,8 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
              data-arrows-classes="d-none d-lg-inline-block u-slick__arrow-classic u-slick__arrow-centered--y rounded-circle"
              data-arrow-left-classes="fa fa-arrow-left u-slick__arrow-classic-inner u-slick__arrow-classic-inner--left ml-lg-2 ml-xl-4"
              data-arrow-right-classes="fa fa-arrow-right u-slick__arrow-classic-inner u-slick__arrow-classic-inner--right mr-lg-2 mr-xl-4">
+            {%CAROUSEL_NEWS%}
 
-            <?php echo $content; ?>
         </div>
 
     </div>
@@ -161,7 +160,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
         <p class="text-20">「DESIGNART
             TOKYO」は、毎年秋に開催するデザイン＆アートフェスティバルです。世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、インテリア、ファッション、テクノロジーなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩な作品を発表していきます。</p>
         <a href="{%HOME_URL%}/about" class="text-38 more dt-block">more <span><img
-                        src="<?php echo URL_STATICS ?>/images/top/arrow-item.png"></span></a>
+                        src="{%URL_STATICS%}/images/top/arrow-item.png"></span></a>
     </div>
 </section>
 <section class="container">
@@ -189,7 +188,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
                                     <div class="text-20">展示作品一覧</div>
                                 </div>
                                 <div class="right">
-                                    <img src="<?php echo URL_STATICS ?>/images/top/arrow-item.png" alt=""/>
+                                    <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                                 </div>
                             </a>
                             <a href="https://www.google.com/maps/d/u/0/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397681%2C139.72963319999997&z=13"
@@ -199,14 +198,14 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
                                     <div class="text-20">展示マップ</div>
                                 </div>
                                 <div class="right">
-                                    <img src="<?php echo URL_STATICS ?>/images/top/arrow-item.png" alt=""/>
+                                    <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="img-wrapper">
-                    <img src="<?php echo URL_STATICS ?>/images/top/discoverart.jpg" alt=""/>
+                    <img src="{%URL_STATICS%}/images/top/discoverart.jpg" alt=""/>
                 </div>
             </div>
             <div class="step-item step-2">
@@ -229,7 +228,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
                                     <div class="text-38">more</div>
                                 </div>
                                 <div class="right">
-                                    <img src="<?php echo URL_STATICS ?>/images/top/arrow-item.png" alt=""/>
+                                    <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                                 </div>
                             </a>
                         </div>
@@ -237,7 +236,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
 
                 </div>
                 <div class="img-wrapper">
-                    <img src="<?php echo URL_STATICS ?>/images/top/learnart.jpg" alt=""/>
+                    <img src="{%URL_STATICS%}/images/top/learnart.jpg" alt=""/>
                 </div>
             </div>
             <div class="step-item step-slick ">
@@ -248,7 +247,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
                         </div>
                     </div>
                     <div class="desc">
-		                <?php echo $exhibitor_list; ?>
+                        {%EXHIBITOR_LIST%}
                     </div>
                 </div>
 
@@ -257,12 +256,12 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
 
                     <div class="slideshow-container">
                         <!--thumbail-->
-					    <?php echo $exhibitor_thumbnail_list; ?>
+                        {%EXHIBITOR_THUMBNAIL%}
 
                         <a class="prev" onclick="plusSlides(-1)"><img
-                                    src="<?php echo URL_STATICS ?>/images/top/arrow-left-banner.png"></a>
+                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"></a>
                         <a class="next" onclick="plusSlides(1)"><img
-                                    src="<?php echo URL_STATICS ?>/images/top/arrow-right-banner.png"></a>
+                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"></a>
 
                     </div>
                     <div style="text-align:center;display:none;">
@@ -289,7 +288,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
                 </div>
 
                 <div class="img-wrapper">
-                    <img src="<?php echo URL_STATICS ?>/images/top/buyart.jpg" alt=""/>
+                    <img src="{%URL_STATICS%}/images/top/buyart.jpg" alt=""/>
                 </div>
 
             </div>
@@ -308,7 +307,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
                                     <div class="text-38">more</div>
                                 </div>
                                 <div class="right">
-                                    <img src="<?php echo URL_STATICS ?>/images/top/arrow-item.png" alt=""/>
+                                    <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                                 </div>
                             </a>
                         </div>
@@ -319,25 +318,25 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
 
                     <div class="slideshow-container">
 
-                        <div class="mySlides2 ">
-                            <img src="<?php echo URL_STATICS ?>/images/top/slide01.jpg" style="width:100%">
+                        <div class="mySlidesmb2 ">
+                            <img src="{%URL_STATICS%}/images/top/slide01.jpg" style="width:100%">
                         </div>
 
-                        <div class="mySlides2 ">
-                            <img src="<?php echo URL_STATICS ?>/images/top/slide02.jpg" style="width:100%">
+                        <div class="mySlidesmb2 ">
+                            <img src="{%URL_STATICS%}/images/top/slide02.jpg" style="width:100%">
                         </div>
 
-                        <div class="mySlides2 ">
-                            <img src="<?php echo URL_STATICS ?>/images/top/slide03.jpg" style="width:100%">
+                        <div class="mySlidesmb2 ">
+                            <img src="{%URL_STATICS%}/images/top/slide03.jpg" style="width:100%">
                         </div>
-                        <div class="mySlides2 ">
-                            <img src="<?php echo URL_STATICS ?>/images/top/slide04.jpg" style="width:100%">
+                        <div class="mySlidesmb2 ">
+                            <img src="{%URL_STATICS%}/images/top/slide04.jpg" style="width:100%">
                         </div>
 
                         <a class="prev " onclick="plusSlides2(-1)"><img
-                                    src="<?php echo URL_STATICS ?>/images/top/arrow-left-banner.png"/></a>
+                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
                         <a class="next " onclick="plusSlides2(1)"><img
-                                    src="<?php echo URL_STATICS ?>/images/top/arrow-right-banner.png"/></a>
+                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
                     </div>
                     <div style="text-align:center;display:none;">
                         <span class="dot" onclick="currentSlide2(1)"></span>
@@ -360,7 +359,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
                     </div>
                 </div>
                 <div class="img-wrapper">
-                    <img src="<?php echo URL_STATICS ?>/images/top/discoverart.jpg" alt=""/>
+                    <img src="{%URL_STATICS%}/images/top/discoverart.jpg" alt=""/>
                 </div>
                 <div class="desc">
                     <p class="text-18">2019年は120組、11エリアで作品を展示します。</p>
@@ -371,7 +370,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
                                 <div class="text-20">展示作品一覧</div>
                             </div>
                             <div class="right">
-                                <img src="<?php echo URL_STATICS ?>/images/top/arrow-item.png" alt=""/>
+                                <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                             </div>
                         </a>
                         <a href="https://www.google.com/maps/d/u/0/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397681%2C139.72963319999997&z=13"
@@ -381,7 +380,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
                                 <div class="text-20">展示マップ</div>
                             </div>
                             <div class="right">
-                                <img src="<?php echo URL_STATICS ?>/images/top/arrow-item.png" alt=""/>
+                                <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                             </div>
                         </a>
                     </div>
@@ -397,7 +396,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
                     </div>
                 </div>
                 <div class="img-wrapper">
-                    <img src="<?php echo URL_STATICS ?>/images/top/learnart.jpg" alt=""/>
+                    <img src="{%URL_STATICS%}/images/top/learnart.jpg" alt=""/>
                 </div>
                 <div class="desc">
                     <p class="text-16">デザイナートカンファレンス「BRIDGE」は、アート<br>
@@ -409,7 +408,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
                                 <div class="text-38">more</div>
                             </div>
                             <div class="right">
-                                <img src="<?php echo URL_STATICS ?>/images/top/arrow-item.png" alt=""/>
+                                <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                             </div>
                         </a>
                     </div>
@@ -426,12 +425,12 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
 
                     <div class="slideshow-container">
                         <!--thumbail-->
-                        <?php echo $exhibitor_thumbnail_list; ?>
+						<?php echo $exhibitor_thumbnail_list; ?>
 
                         <a class="prev" onclick="plusSlides(-1)"><img
-                                    src="<?php echo URL_STATICS ?>/images/top/arrow-left-banner.png"></a>
+                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"></a>
                         <a class="next" onclick="plusSlides(1)"><img
-                                    src="<?php echo URL_STATICS ?>/images/top/arrow-right-banner.png"></a>
+                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"></a>
 
                     </div>
                     <div style="text-align:center;display:none;">
@@ -441,7 +440,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
                     </div>
                 </div>
                 <div class="desc">
-                    <?php echo $exhibitor_list; ?>
+					<?php echo $exhibitor_list; ?>
                 </div>
             </div>
             <div class="step-item step-3">
@@ -454,7 +453,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
                     </div>
                 </div>
                 <div class="img-wrapper">
-                    <img src="<?php echo URL_STATICS ?>/images/top/buyart.jpg" alt=""/>
+                    <img src="{%URL_STATICS%}/images/top/buyart.jpg" alt=""/>
                 </div>
                 <div class="desc">
                     <p class="text-16">デザイナートで展示されているアート作品は一部を除<br>いて全て購入可能です。</p>
@@ -474,24 +473,24 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
                     <div class="slideshow-container">
 
                         <div class="mySlides2 ">
-                            <img src="<?php echo URL_STATICS ?>/images/top/slide01.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide01.jpg" style="width:100%">
                         </div>
 
                         <div class="mySlides2 ">
-                            <img src="<?php echo URL_STATICS ?>/images/top/slide02.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide02.jpg" style="width:100%">
                         </div>
 
                         <div class="mySlides2 ">
-                            <img src="<?php echo URL_STATICS ?>/images/top/slide03.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide03.jpg" style="width:100%">
                         </div>
                         <div class="mySlides2 ">
-                            <img src="<?php echo URL_STATICS ?>/images/top/slide04.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide04.jpg" style="width:100%">
                         </div>
 
                         <a class="prev " onclick="plusSlides2(-1)"><img
-                                    src="<?php echo URL_STATICS ?>/images/top/arrow-left-banner.png"/></a>
+                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
                         <a class="next " onclick="plusSlides2(1)"><img
-                                    src="<?php echo URL_STATICS ?>/images/top/arrow-right-banner.png"/></a>
+                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
                     </div>
                     <div style="text-align:center;display:none;">
                         <span class="dot" onclick="currentSlide2(1)"></span>
@@ -508,7 +507,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
                                 <div class="text-38">more</div>
                             </div>
                             <div class="right">
-                                <img src="<?php echo URL_STATICS ?>/images/top/arrow-item.png" alt=""/>
+                                <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                             </div>
                         </a>
                     </div>
@@ -519,7 +518,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
 </section>
 <div class="wp-back-to-top-wrap">
     <div class="wp-back-to-top top top2">
-        <img src="<?php echo URL_STATICS ?>/images/commons/to_top_bt.png" alt="TOP">
+        <img src="{%URL_STATICS%}/images/commons/to_top_bt.png" alt="TOP">
     </div>
 </div>
 
@@ -595,6 +594,37 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
         exhibitor[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
     }
+    var slideIndexmb2 = 1;
+    showSlidesmb2(slideIndexmb2);
+
+    function plusSlidesmb2(n) {
+        showSlidesmb2(slideIndexmb2 += n);
+    }
+
+    function currentSlidemb2(n) {
+        showSlidesmb2(slideIndexmb2 = n);
+    }
+
+    function showSlidesmb2(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlidesmb2");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndexmb2 = 1
+        }
+        if (n < 1) {
+            slideIndexmb2 = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndexmb2 - 1].style.display = "block";
+        dots[slideIndexmb2 - 1].className += " active";
+    }
 
 
     var slideIndex2 = 1;
@@ -611,6 +641,7 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
     function showSlides2(n) {
         var i;
         var slides = document.getElementsByClassName("mySlides2");
+        console.log(slides);
         var dots = document.getElementsByClassName("dot");
         if (n > slides.length) {
             slideIndex2 = 1
@@ -626,12 +657,13 @@ $description = str_replace( '{%EXHIBITOR_THUMBNAIL%}', $exhibitor_thumbnail_list
         }
         slides[slideIndex2 - 1].style.display = "block";
         dots[slideIndex2 - 1].className += " active";
-        // setInterval(plusSlides2(1), 3000);
     }
 
     document.addEventListener("DOMContentLoaded", function (event) {
         setInterval(function () {
+            plusSlides(1)
             plusSlides2(1)
+            plusSlidesmb2(1)
         }, 3000);
     });
 
