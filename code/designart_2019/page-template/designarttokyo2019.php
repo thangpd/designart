@@ -72,7 +72,8 @@ $exhibitors                  = get_posts( array(
 	'post_type'      => 'exhibitor',
 	'post_status'    => 'publish',
 	'posts_per_page' => 10,
-	'orderby'        => 'rand'
+	'orderby'        => 'publish_date',
+	'order'          => 'DESC'
 //    'orderby'    => ['post_modified' => 'desc'],
 ) );
 $exhibitor_list              = '';

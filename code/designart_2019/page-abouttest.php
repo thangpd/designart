@@ -1,23 +1,23 @@
 <?php
-get_header('top2');
+get_header( 'top2' );
 
 
-$post           = get_page_by_path('about');
+$post           = get_page_by_path( 'about' );
 $post_id        = $post->ID;
 $language       = get_key_languagle();
-$prefix_varible = get_prefix_languagle($language, "_");
-$description    = get_field($prefix_varible . 'description', $post_id, false);
-$description    = str_replace('{%URL_STATICS%}', URL_STATICS, $description);
+$prefix_varible = get_prefix_languagle( $language, "_" );
+$description    = get_field( $prefix_varible . 'description', $post_id, false );
+$description    = str_replace( '{%URL_STATICS%}', URL_STATICS, $description );
 
-$html_share  = get_html_share(false);
-$description = str_replace('{%HTML_SHARE%}', $html_share, $description);
+$html_share  = get_html_share( false );
+$description = str_replace( '{%HTML_SHARE%}', $html_share, $description );
 
 //    back history
-$html_back   = back_page_history(false);
-$description = str_replace('{%BACK_HISTORY%}', $html_back, $description);
+$html_back   = back_page_history( false );
+$description = str_replace( '{%BACK_HISTORY%}', $html_back, $description );
 // html banner page
 $html_banner_page = get_html_banner_page();
-$description      = str_replace('{%BANNER_PAGE%}', $html_banner_page, $description);
+$description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $description );
 
 //echo $description;
 ?>
@@ -2183,8 +2183,52 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
 
                                         </div>
                                     </div>
+
                                 </div>
 
+                                <div class="shoplist row">
+
+                                    <div class="wp-section-area col-md-4">
+                                        <div class="area-section">
+                                            <div id="shibuya-area">
+                                                <div class="wp-content-area">
+                                                    <div class="title">DEAN & DELUCA CAFE <span class="sub-title"> SHIBUYA STREAM</span>
+                                                    </div>
+
+                                                    <div class="address">
+                                                        Address : Shibuya Stream 2F, 3-21-3 Shibuya, Shibuya-ku<br/>
+                                                        TEL : 03-6427-3601<br/>
+                                                        Hours : 7:00 - 22:00<br/>
+                                                        <a href="https://www.deandeluca.co.jp/ddshop/50044"
+                                                           target="_blank">SHOP INFO</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="wp-section-area col-md-4">
+                                        <div class="area-section">
+                                            <div id="shibuya-area">
+                                                <div class="wp-content-area">
+                                                    <div class="title">DEAN & DELUCA CAFE<span class="sub-title"> TOKYO COLLEGE OF MUSIC NAKAMEGURO / DAIKANYAMA CAMPUS</span>
+                                                    </div>
+
+                                                    <div class="address">
+                                                        Address : Tokyo College of Music Nakameguro / Daikanyama 3F,
+                                                        1-9 Kamimeguro, Meguro-ku<br/>
+                                                        TEL : 03-6416-3431<br/>
+                                                        Hours : 8:00 - 18:00, Mon - Fri 9:00 - 18:00, Sat, Sun &
+                                                        Holidays (Irregular Holidays)<br/>
+                                                        <a href="https://www.deandeluca.co.jp/ddshop/50051/"
+                                                           target="_blank">SHOP INFO</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                                 <div id="pickup-aoyama">
                                     <div class="heading-title heading-style-02 height">
                                         <h2 class="title upper-text">
@@ -2873,7 +2917,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
 
     <div class="landing-st contact-st">
         <div class="container">
-            <?php get_html_contact(); ?>
+			<?php get_html_contact(); ?>
         </div>
     </div>
 
@@ -2884,7 +2928,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
         </div>
     </div>
 
-    <script src="<?php echo esc_url(URL_STATICS) ?>/js/officialgoodcafe.js"></script>
+    <script src="<?php echo esc_url( URL_STATICS ) ?>/js/officialgoodcafe.js"></script>
     <script !src="">
         jQuery(function ($) {
             $(document).ready(function () {
@@ -2894,4 +2938,4 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
 
         })
     </script>
-<?php get_footer('top2') ?>
+<?php get_footer( 'top2' ) ?>
