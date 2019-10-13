@@ -1051,3 +1051,9 @@ ul.table_col_right_text li {
     }
 
 }
+@media screen and (max-width: 376px){
+    body .about-page .heading-title.heading-style-02 .line-middle{
+        width: 16%;
+    }
+
+}
