@@ -5500,6 +5500,18 @@ footer.site-footer{
   .step-item .title-wrapper{
     margin-bottom: 14px;
   }
+  .step-item .img-wrapper{
+    height: auto;
+  }
+  .step-2 + .step-item.step-slick .img-wrapper{
+    height: 300px;
+  }
+  .step-2 + .step-item.step-slick .img-wrapper .slideshow-container{
+    height: auto;
+  }
+  .step-3 + .step-item .img-wrapper.img-slick .slideshow-container{
+    height: auto;
+  }
   .text-18{
     font-size: 14px;
   }
