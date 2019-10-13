@@ -903,7 +903,7 @@ body.body-white.scrollActive .menu .sub-menu a:hover {
   .language-dropdown .btn-lang {
     padding: 0 0 0 8px;
   }
-  .prev,next {
+  .prev,.next {
     background-color: rgba(0,0,0,0.8);
   }
 }
