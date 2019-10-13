@@ -629,7 +629,8 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                         </div>
                     </div>
                     <div class="desc">
-                        {%EXHIBITOR_LIST%}
+                        <!--{%EXHIBITOR_LIST%}-->
+						<?php echo $exhibitor_list; ?>
                     </div>
                 </div>
 
@@ -638,7 +639,8 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
 
                     <div class="slideshow-container">
                         <!--thumbail-->
-                        {%EXHIBITOR_THUMBNAIL%}
+                        <!--                        {%EXHIBITOR_THUMBNAIL%}-->
+						<?php echo $exhibitor_thumbnail_list ?>
 
                         <a class="prev" onclick="plusSlides(-1)"><img
                                     src="{%URL_STATICS%}/images/top/arrow-left-banner.png"></a>
@@ -674,7 +676,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 </div>
 
             </div>
-            <div class="step-item step-slick mb-110">
+            <div class="step-item step-slick">
                 <div class="left">
                     <div class="title-wrapper">
                         <div class="main-title">
@@ -696,7 +698,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                     </div>
                 </div>
 
-                <div class="img-wrapper img-slick mb-230">
+                <div class="img-wrapper img-slick">
 
                     <div class="slideshow-container">
 
@@ -715,16 +717,16 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                             <img src="{%URL_STATICS%}/images/top/slide04.jpg" style="width:100%">
                         </div>
 
-                        <a class="prev " onclick="plusSlides2(-1)"><img
+                        <a class="prev " onclick="plusSlidesmb2(-1)"><img
                                     src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
-                        <a class="next " onclick="plusSlides2(1)"><img
+                        <a class="next " onclick="plusSlidesmb2(1)"><img
                                     src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
                     </div>
                     <div style="text-align:center;display:none;">
-                        <span class="dot" onclick="currentSlide2(1)"></span>
-                        <span class="dot" onclick="currentSlide2(2)"></span>
-                        <span class="dot" onclick="currentSlide2(3)"></span>
-                        <span class="dot" onclick="currentSlide2(4)"></span>
+                        <span class="dot" onclick="currentSlidemb2(1)"></span>
+                        <span class="dot" onclick="currentSlidemb2(2)"></span>
+                        <span class="dot" onclick="currentSlidemb2(3)"></span>
+                        <span class="dot" onclick="currentSlidemb2(4)"></span>
                     </div>
                 </div>
 
@@ -797,21 +799,28 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 </div>
             </div>
             <div class="step-item step-slick ">
-                <div class="title-wrapper">
-                    <div class="main-title">
-                        <span>EVENT & PARTY</span>
+                <div class="left">
+                    <div class="title-wrapper">
+                        <div class="main-title">
+                            <span>EVENT & PARTY</span>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <!-- {%EXHIBITOR_LIST_MB%}-->
+						<?php echo $exhibitor_list_mb ?>
                     </div>
                 </div>
+
                 <div class="img-wrapper img-slick">
 
 
                     <div class="slideshow-container">
                         <!--thumbail-->
-						<?php echo $exhibitor_thumbnail_list; ?>
-
-                        <a class="prev" onclick="plusSlides(-1)"><img
+                        <!--{%EXHIBITOR_THUMBNAIL_MB%}-->
+						<?php echo $exhibitor_thumbnail_list_mb ?>
+                        <a class="prev" onclick="plusSlidesmb(-1)"><img
                                     src="{%URL_STATICS%}/images/top/arrow-left-banner.png"></a>
-                        <a class="next" onclick="plusSlides(1)"><img
+                        <a class="next" onclick="plusSlidesmb(1)"><img
                                     src="{%URL_STATICS%}/images/top/arrow-right-banner.png"></a>
 
                     </div>
@@ -821,9 +830,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                         <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
                 </div>
-                <div class="desc">
-					<?php echo $exhibitor_list; ?>
-                </div>
+
             </div>
             <div class="step-item step-3">
                 <div class="title-wrapper">
@@ -841,16 +848,14 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                     <p class="text-16">デザイナートで展示されているアート作品は一部を除<br>いて全て購入可能です。</p>
                 </div>
             </div>
-            <div class="step-item step-slick mb-110">
+            <div class="step-item step-slick">
                 <div class="title-wrapper">
                     <div class="main-title">
                         <span>OFFICIAL CAFE <br> & GOODS</span>
                     </div>
                 </div>
-                <!--<div class="img-wrapper img-slick mb-230">
-                    <img src="<?php /*echo URL_STATICS; */ ?>/images/top/cafeandgood.jpg" alt=""/>
-                </div>-->
-                <div class="img-wrapper img-slick mb-230">
+
+                <div class="img-wrapper img-slick">
 
                     <div class="slideshow-container">
 
@@ -869,9 +874,9 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                             <img src="{%URL_STATICS%}/images/top/slide04.jpg" style="width:100%">
                         </div>
 
-                        <a class="prev " onclick="plusSlides2(-1)"><img
+                        <a class="prev " onclick="plusSlidesmb2(-1)"><img
                                     src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
-                        <a class="next " onclick="plusSlides2(1)"><img
+                        <a class="next " onclick="plusSlidesmb2(1)"><img
                                     src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
                     </div>
                     <div style="text-align:center;display:none;">
@@ -976,6 +981,71 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
         exhibitor[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
     }
+    var slideIndexmb = 1;
+    showSlidesmb(slideIndexmb);
+
+    function plusSlidesmb(n) {
+        showSlidesmb(slideIndexmb += n);
+    }
+
+    function currentSlidemb(n) {
+        showSlidesmb(slideIndexmb = n);
+    }
+
+    function showSlidesmb(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlidesmb");
+        let exhibitor = document.getElementsByClassName("exhibitor_mySlidesmb");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndexmb = 1
+        }
+        if (n < 1) {
+            slideIndexmb = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            exhibitor[i].style.display = "none";
+
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndexmb - 1].style.display = "block";
+        exhibitor[slideIndexmb - 1].style.display = "block";
+        dots[slideIndexmb - 1].className += " active";
+    }
+    var slideIndexmb2 = 1;
+    showSlidesmb2(slideIndexmb2);
+
+    function plusSlidesmb2(n) {
+        showSlidesmb2(slideIndexmb2 += n);
+    }
+
+    function currentSlidemb2(n) {
+        showSlidesmb2(slideIndexmb2 = n);
+    }
+
+    function showSlidesmb2(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlidesmb2");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndexmb2 = 1
+        }
+        if (n < 1) {
+            slideIndexmb2 = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndexmb2 - 1].style.display = "block";
+        dots[slideIndexmb2 - 1].className += " active";
+    }
 
 
     var slideIndex2 = 1;
@@ -992,6 +1062,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
     function showSlides2(n) {
         var i;
         var slides = document.getElementsByClassName("mySlides2");
+        console.log(slides);
         var dots = document.getElementsByClassName("dot");
         if (n > slides.length) {
             slideIndex2 = 1
@@ -1007,12 +1078,14 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
         }
         slides[slideIndex2 - 1].style.display = "block";
         dots[slideIndex2 - 1].className += " active";
-        // setInterval(plusSlides2(1), 3000);
     }
 
     document.addEventListener("DOMContentLoaded", function (event) {
         setInterval(function () {
+            plusSlides(1)
+            plusSlidesmb(1)
             plusSlides2(1)
+            plusSlidesmb2(1)
         }, 3000);
     });
 
