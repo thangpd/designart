@@ -3633,6 +3633,9 @@ body.language-en .font-auto{
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
+  .img-wrapper img {
+    width: 100%;
+  }
 }
 @media (max-width: 767px){
   .guide-map-step{
@@ -4898,6 +4901,7 @@ h3.title-h3{
   .step-item {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 50px;
   }
   .step-item .img-wrapper {
     width: 58%;
@@ -5282,9 +5286,6 @@ footer.site-footer{
     }
 }
 @media screen and (max-width: 1199px){
-  .step-item .img-wrapper{
-    max-width: 450px;
-  }
     .en .step-item .desc{
         width: 40%;
     }
@@ -5309,16 +5310,14 @@ footer.site-footer{
     .en .step-item .desc{
         width: 50%;
     }
-  .step-item .img-wrapper{
-    max-width: 310px;
-  }
+
   .step-2 .img-wrapper,
   .step-1 .link-step:last-child,
   .step-slick .img-wrapper, .step-3 .img-wrapper{
     margin-bottom: 0;
   }
   .step-item .desc{
-    margin-bottom: 50px;
+    margin-bottom: 0;
   }
   .footer-cols ul a.title{
     line-height: 1;
@@ -5350,6 +5349,9 @@ footer.site-footer{
     }
 }
 @media screen and (max-width: 767px){
+  .step-item{
+    margin-bottom: 35px;
+  }
   .step-item .img-wrapper{
     max-width: 100%;
   }
@@ -5554,7 +5556,7 @@ footer.site-footer{
     margin-left: 20px;
   }
   .step-item .desc{
-    margin-bottom: 35px;
+    margin-bottom: 0;
   }
   .text-16{
     font-size: 14px;
