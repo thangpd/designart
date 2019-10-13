@@ -3497,6 +3497,13 @@ body.language-en .font-auto{
     position: absolute;
     right: 10px; bottom: 10px;
   }
+  .step-item .img-wrapper{
+    height: 376px;
+    overflow: hidden;
+  }
+  .step-item.step-3 .img-wrapper{
+    height: auto;
+  }
 }
 
 /*exhibition-guide-st*/
@@ -5151,6 +5158,7 @@ footer.site-footer{
 .footer-col-3 li a{
   font-family: art-l;
 }
+
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
@@ -5313,6 +5321,9 @@ footer.site-footer{
     }
 }
 @media screen and (max-width: 767px){
+  .step-3 + .step-item.step-slick .desc .text-16{
+    margin-bottom: 20px;
+  }
   .step-slick .img-wrapper img{
     width: auto;
   }

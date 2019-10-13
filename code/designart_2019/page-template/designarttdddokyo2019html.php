@@ -80,7 +80,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
             <div class="banner-top-sub">DESIGNART TOKYO 2019
                 <p>2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p></div>
         </div>
-        <div class="scroll mb-block"><img src="{%URL_STATICS%}/images/top/scroll.png" alt="" /> </div>
+        <div class="scroll mb-block"><img src="{%URL_STATICS%}/images/top/scroll.png" alt=""/></div>
         <div class=" banner-top-btn js-slick-carousel u-slick"
              data-autoplay="true"
              data-speed="10000"
@@ -91,7 +91,6 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
 
             {%CAROUSEL_NEWS%}
         </div>
-        </button>
     </div>
 </section>
 <section class="container">
@@ -134,11 +133,10 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                     <div class="sub-title">
                     </div>
                 </div>
-                <div class="img-wrapper">
-                    <img src="{%URL_STATICS%}/images/top/discoverart.jpg" alt=""/>
-                </div>
                 <div class="desc">
-                    <p class="text-18"> The 100 groups exhibit their works in the 11 areas in <br> 2019.The photo shows the 2018 exhibition <br>“60'S SOUNDS, 60'S SPIRITS” by Keita Suzuki + <br>Ichiro Yamaguchi at Fritz Hansen Aoyama.
+                    <p class="text-18"> The 100 groups exhibit their works in the 11 areas in <br> 2019.The photo shows
+                        the 2018 exhibition <br>“60'S SOUNDS, 60'S SPIRITS” by Keita Suzuki + <br>Ichiro Yamaguchi at
+                        Fritz Hansen Aoyama.
                     </p>
                     <div class="link-group">
                         <a href="{%HOME_URL%}/exhibitor/" class="link-step">
@@ -149,7 +147,8 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                                 <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
                             </div>
                         </a>
-                        <a href="https://www.google.com/maps/d/u/0/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397681%2C139.72963319999997&z=13" class="link-step">
+                        <a href="https://www.google.com/maps/d/u/0/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397681%2C139.72963319999997&z=13"
+                           class="link-step">
                             <div class="left">
                                 <div class="text-38">guide map</div>
                             </div>
@@ -159,41 +158,54 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                         </a>
                     </div>
                 </div>
+
+                <div class="img-wrapper">
+                    <img src="{%URL_STATICS%}/images/top/discoverart.jpg" alt=""/>
+                </div>
             </div>
             <div class="step-item step-2">
-                <div class="title-wrapper">
-                    <div class="main-title">
-                        <span class="number">02.</span>
-                        <span>LEARN ART</span>
+                <div class="left">
+                    <div class="title-wrapper">
+                        <div class="main-title">
+                            <span class="number">02.</span>
+                            <span>LEARN ART</span>
+                        </div>
+                        <div class="sub-title">
+                        </div>
                     </div>
-                    <div class="sub-title">
+
+                    <div class="desc">
+                        <p class="text-16">
+                            DESIGNART Conference “BRIDGE” is a platform to learn
+                            <br> and exchange opinions about what is happening in the
+                            <br> field of art and design.
+                        </p>
+                        <div class="link-group">
+                            <a href="http://designart.jp/conference2019/" class="more link-step">
+                                <div class="left">
+                                    <div class="text-38">more</div>
+                                </div>
+                                <div class="right">
+                                    <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="img-wrapper">
                     <img src="{%URL_STATICS%}/images/top/learnart.jpg" alt=""/>
                 </div>
-                <div class="desc">
-                    <p class="text-16">
-                        DESIGNART Conference “BRIDGE” is a platform to learn
-                        <br> and exchange opinions about what is happening in the
-                        <br> field of art and design.
-                    </p>
-                    <div class="link-group">
-                        <a href="http://designart.jp/conference2019/" class="more link-step">
-                            <div class="left">
-                                <div class="text-38">more</div>
-                            </div>
-                            <div class="right">
-                                <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
-                            </div>
-                        </a>
-                    </div>
-                </div>
             </div>
             <div class="step-item step-slick ">
-                <div class="title-wrapper">
-                    <div class="main-title">
-                        <span>EVENT & PARTY</span>
+                <div class="left">
+                    <div class="title-wrapper">
+                        <div class="main-title">
+                            <span>EVENT & PARTY</span>
+                        </div>
+                    </div>
+                    <div class="desc">
+
+                        {%EXHIBITOR_LIST%}
                     </div>
                 </div>
                 <div class="img-wrapper img-slick">
@@ -203,47 +215,63 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                         <!--thumbail-->
                         {%EXHIBITOR_THUMBNAIL%}
 
-                        <a class="prev" onclick="plusSlides(-1)"><img src="{%URL_STATICS%}/images/top/arrow-left-banner.png" /></a>
-                        <a class="next" onclick="plusSlides(1)"><img src="{%URL_STATICS%}/images/top/arrow-right-banner.png" /></a>
+                        <a class="prev" onclick="plusSlides(-1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
+                        <a class="next" onclick="plusSlides(1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
 
                     </div>
                     <div style="text-align:center;display:none;">
                         <span class="dot" onclick="currentSlide(1)"></span>
                         <span class="dot" onclick="currentSlide(2)"></span>
                         <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
                     </div>
                 </div>
-                <div class="desc">
-                    {%EXHIBITOR_LIST%}
-                </div>
+
             </div>
             <div class="step-item step-3">
-                <div class="title-wrapper">
-                    <div class="main-title">
-                        <span class="number">03.</span>
-                        <span>BY ART</span>
+                <div class="left">
+                    <div class="title-wrapper">
+                        <div class="main-title">
+                            <span class="number">03.</span>
+                            <span>BY ART</span>
+                        </div>
+
+                    </div>
+
+                    <div class="desc">
+                        <p class="text-16">All but a few art works on display at the designer can be <br>purchased.
+                        </p>
                     </div>
 
                 </div>
                 <div class="img-wrapper">
                     <img src="{%URL_STATICS%}/images/top/buyart.jpg" alt=""/>
                 </div>
-                <div class="desc">
-                    <p class="text-16">All but a few art works on display at the designer can be <br>purchased.
-                    </p>
-                </div>
             </div>
-            <div class="step-item step-slick mb-110">
-                <div class="title-wrapper">
-                    <div class="main-title">
-                        <span>OFFICIAL CAFE <br> & GOODS</span>
+            <div class="step-item step-slick ">
+                <div class="left">
+                    <div class="title-wrapper">
+                        <div class="main-title">
+                            <span>OFFICIAL CAFE <br> & GOODS</span>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <p class="text-16 cs-mb">An official guidebook to help you get around the <br> exhibition
+                        </p>
+                        <div class="link-group">
+                            <a href="{%HOME_URL%}/about" class=" more link-step">
+                                <div class="left">
+                                    <div class="text-38">more</div>
+                                </div>
+                                <div class="right">
+                                    <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <!--<div class="img-wrapper img-slick mb-230">
-                    <img src="<?php /*echo URL_STATICS; */ ?>/images/top/cafeandgood.jpg" alt=""/>
-                </div>-->
-                <div class="img-wrapper img-slick mb-230">
+                <div class="img-wrapper img-slick">
 
                     <div class="slideshow-container">
 
@@ -262,8 +290,10 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                             <img src="{%URL_STATICS%}/images/top/slide04.jpg" style="width:100%">
                         </div>
 
-                        <a class="prev " onclick="plusSlides2(-1)"><img src="{%URL_STATICS%}/images/top/arrow-left-banner.png" /></a>
-                        <a class="next " onclick="plusSlides2(1)"><img src="{%URL_STATICS%}/images/top/arrow-right-banner.png" /></a>
+                        <a class="prev " onclick="plusSlides2(-1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
+                        <a class="next " onclick="plusSlides2(1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
 
                     </div>
                     <div style="text-align:center;display:none;">
@@ -273,13 +303,37 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                         <span class="dot" onclick="currentSlide2(4)"></span>
                     </div>
                 </div>
+
+            </div>
+        </div>
+        <div class="steps mb-block">
+            <div class="step-item step-1">
+                <div class="title-wrapper">
+                    <div class="main-title">
+                        <span class="number">01.</span>
+                        <span>DISCOVER ART</span>
+                    </div>
+                    <div class="sub-title">
+                    </div>
+                </div>
                 <div class="desc">
-                    <p class="text-16 cs-mb">An official guidebook to help you get around the <br> exhibition
+                    <p class="text-18"> The 100 groups exhibit their works in the 11 areas in <br> 2019.The photo shows
+                        the 2018 exhibition <br>“60'S SOUNDS, 60'S SPIRITS” by Keita Suzuki + <br>Ichiro Yamaguchi at
+                        Fritz Hansen Aoyama.
                     </p>
                     <div class="link-group">
-                        <a href="{%HOME_URL%}/about" class=" more link-step">
+                        <a href="{%HOME_URL%}/exhibitor/" class="link-step">
                             <div class="left">
-                                <div class="text-38">more</div>
+                                <div class="text-38">exhibition list</div>
+                            </div>
+                            <div class="right">
+                                <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
+                            </div>
+                        </a>
+                        <a href="https://www.google.com/maps/d/u/0/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397681%2C139.72963319999997&z=13"
+                           class="link-step">
+                            <div class="left">
+                                <div class="text-38">guide map</div>
                             </div>
                             <div class="right">
                                 <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
@@ -287,8 +341,155 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                         </a>
                     </div>
                 </div>
+
+                <div class="img-wrapper">
+                    <img src="{%URL_STATICS%}/images/top/discoverart.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="step-item step-2">
+                <div class="left">
+                    <div class="title-wrapper">
+                        <div class="main-title">
+                            <span class="number">02.</span>
+                            <span>LEARN ART</span>
+                        </div>
+                        <div class="sub-title">
+                        </div>
+                    </div>
+
+                    <div class="desc">
+                        <p class="text-16">
+                            DESIGNART Conference “BRIDGE” is a platform to learn
+                            <br> and exchange opinions about what is happening in the
+                            <br> field of art and design.
+                        </p>
+                        <div class="link-group">
+                            <a href="http://designart.jp/conference2019/" class="more link-step">
+                                <div class="left">
+                                    <div class="text-38">more</div>
+                                </div>
+                                <div class="right">
+                                    <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="{%URL_STATICS%}/images/top/learnart.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="step-item step-slick ">
+                <div class="left">
+                    <div class="title-wrapper">
+                        <div class="main-title">
+                            <span>EVENT & PARTY</span>
+                        </div>
+                    </div>
+                    <div class="desc">
+
+                        {%EXHIBITOR_LIST_MB%}
+                    </div>
+                </div>
+                <div class="img-wrapper img-slick">
+
+
+                    <div class="slideshow-container">
+                        <!--thumbail-->
+                        {%EXHIBITOR_THUMBNAIL_MB%}
+
+                        <a class="prev" onclick="plusSlidesmb(-1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
+                        <a class="next" onclick="plusSlidesmb(1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
+
+                    </div>
+                    <div style="text-align:center;display:none;">
+                        <span class="dot" onclick="currentSlidemb(1)"></span>
+                        <span class="dot" onclick="currentSlidemb(2)"></span>
+                        <span class="dot" onclick="currentSlidemb(3)"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="step-item step-3">
+                <div class="left">
+                    <div class="title-wrapper">
+                        <div class="main-title">
+                            <span class="number">03.</span>
+                            <span>BY ART</span>
+                        </div>
+
+                    </div>
+
+                    <div class="desc">
+                        <p class="text-16">All but a few art works on display at the designer can be <br>purchased.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="img-wrapper">
+                    <img src="{%URL_STATICS%}/images/top/buyart.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="step-item step-slick ">
+                <div class="left">
+                    <div class="title-wrapper">
+                        <div class="main-title">
+                            <span>OFFICIAL CAFE <br> & GOODS</span>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <p class="text-16 cs-mb">An official guidebook to help you get around the <br> exhibition
+                        </p>
+                        <div class="link-group">
+                            <a href="{%HOME_URL%}/about" class=" more link-step">
+                                <div class="left">
+                                    <div class="text-38">more</div>
+                                </div>
+                                <div class="right">
+                                    <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-wrapper img-slick">
+
+                    <div class="slideshow-container">
+
+                        <div class="mySlidesmb2 ">
+                            <img src="{%URL_STATICS%}/images/top/slide01.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlidesmb2 ">
+                            <img src="{%URL_STATICS%}/images/top/slide02.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlidesmb2 ">
+                            <img src="{%URL_STATICS%}/images/top/slide03.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlidesmb2 ">
+                            <img src="{%URL_STATICS%}/images/top/slide04.jpg" style="width:100%">
+                        </div>
+
+                        <a class="prev " onclick="plusSlidesmb2(-1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
+                        <a class="next " onclick="plusSlidesmb2(1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
+
+                    </div>
+                    <div style="text-align:center;display:none;">
+                        <span class="dot" onclick="currentSlidemb2(1)"></span>
+                        <span class="dot" onclick="currentSlidemb2(2)"></span>
+                        <span class="dot" onclick="currentSlidemb2(3)"></span>
+                        <span class="dot" onclick="currentSlidemb2(4)"></span>
+                    </div>
+                </div>
+
             </div>
         </div>
+
     </div>
 </section>
 <div class="wp-back-to-top-wrap">
@@ -315,8 +516,8 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
              data-arrows-classes="d-none d-lg-inline-block u-slick__arrow-classic u-slick__arrow-centered--y rounded-circle"
              data-arrow-left-classes="fa fa-arrow-left u-slick__arrow-classic-inner u-slick__arrow-classic-inner--left ml-lg-2 ml-xl-4"
              data-arrow-right-classes="fa fa-arrow-right u-slick__arrow-classic-inner u-slick__arrow-classic-inner--right mr-lg-2 mr-xl-4">
-
             {%CAROUSEL_NEWS%}
+
         </div>
 
     </div>
@@ -327,7 +528,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
             INTO A MUSEUM</h2>
         <p class="text-32">東京の街全体がミュージアムになる10日間</p>
         <p class="text-35">2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p>
-        <p class="text-28">表参道・外苑前、原宿・明治神宮前、渋谷・恵比寿、代官山・中目黒、六本木、新宿、銀座で開催</p>
+        <p class="text-28">表参道・外苑前、原宿・明治神宮前、渋谷・恵比寿、代官山・中目黒、六本木、新宿、銀座 で開催</p>
     </div>
 </section>
 <section class="container-black">
@@ -349,7 +550,187 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
         <h3 class="title-h3">DESIGNART GUIDE</h3>
         <p class="text-28 sub-title">EVERYONE CAN ENJOY<br>
             DESIGN & ART</p>
-        <div class="steps">
+        <div class="steps dt-block">
+            <div class="step-item step-1">
+                <div class="left">
+                    <div class="title-wrapper">
+                        <div class="main-title">
+                            <span class="number">01.</span>
+                            <span>DISCOVER ART</span>
+                        </div>
+                        <div class="sub-title">アートに出会う
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <p class="text-18">2019年は120組、11エリアで作品を展示します。</p>
+                        <div class="link-group">
+                            <a href="{%HOME_URL%}/exhibitor/" class="link-step">
+                                <div class="left">
+                                    <div class="text-38">exhibition list</div>
+                                    <div class="text-20">展示作品一覧</div>
+                                </div>
+                                <div class="right">
+                                    <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
+                                </div>
+                            </a>
+                            <a href="https://www.google.com/maps/d/u/0/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397681%2C139.72963319999997&z=13"
+                               class="link-step">
+                                <div class="left">
+                                    <div class="text-38">guide map</div>
+                                    <div class="text-20">展示マップ</div>
+                                </div>
+                                <div class="right">
+                                    <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="{%URL_STATICS%}/images/top/discoverart.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="step-item step-2">
+                <div class="left">
+                    <div class="title-wrapper">
+                        <div class="main-title">
+                            <span class="number">02.</span>
+                            <span>LEARN ART</span>
+                        </div>
+                        <div class="sub-title">アートを学ぶ
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <p class="text-16">デザイナートカンファレンス「BRIDGE」は、アート<br>
+                            とデザインの視点から今、社会で起きている変化につ<br>
+                            いて考え学び意見を交換し合う場です。</p>
+                        <div class="link-group">
+                            <a href="http://designart.jp/conference2019/" class="more link-step">
+                                <div class="left">
+                                    <div class="text-38">more</div>
+                                </div>
+                                <div class="right">
+                                    <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="img-wrapper">
+                    <img src="{%URL_STATICS%}/images/top/learnart.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="step-item step-slick ">
+                <div class="left">
+                    <div class="title-wrapper">
+                        <div class="main-title">
+                            <span>EVENT & PARTY</span>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        {%EXHIBITOR_LIST%}
+                    </div>
+                </div>
+
+                <div class="img-wrapper img-slick">
+
+
+                    <div class="slideshow-container">
+                        <!--thumbail-->
+                        {%EXHIBITOR_THUMBNAIL%}
+
+                        <a class="prev" onclick="plusSlides(-1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"></a>
+                        <a class="next" onclick="plusSlides(1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"></a>
+
+                    </div>
+                    <div style="text-align:center;display:none;">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="step-item step-3">
+                <div class="left">
+                    <div class="title-wrapper">
+                        <div class="main-title">
+                            <span class="number">03.</span>
+                            <span>BY ART</span>
+                        </div>
+                        <div class="sub-title">アートを買う
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <p class="text-16">デザイナートで展示されているアート作品は一部を除<br>いて全て購入可能です。</p>
+                    </div>
+                </div>
+
+                <div class="img-wrapper">
+                    <img src="{%URL_STATICS%}/images/top/buyart.jpg" alt=""/>
+                </div>
+
+            </div>
+            <div class="step-item step-slick mb-110">
+                <div class="left">
+                    <div class="title-wrapper">
+                        <div class="main-title">
+                            <span>OFFICIAL CAFE <br> & GOODS</span>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <p class="text-16 cs-mb"> 展示巡りに役立つオフィシャルガイドブック</p>
+                        <div class="link-group">
+                            <a href="{%HOME_URL%}/about" class=" more link-step">
+                                <div class="left">
+                                    <div class="text-38">more</div>
+                                </div>
+                                <div class="right">
+                                    <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="img-wrapper img-slick mb-230">
+
+                    <div class="slideshow-container">
+
+                        <div class="mySlidesmb2 ">
+                            <img src="{%URL_STATICS%}/images/top/slide01.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlidesmb2 ">
+                            <img src="{%URL_STATICS%}/images/top/slide02.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlidesmb2 ">
+                            <img src="{%URL_STATICS%}/images/top/slide03.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlidesmb2 ">
+                            <img src="{%URL_STATICS%}/images/top/slide04.jpg" style="width:100%">
+                        </div>
+
+                        <a class="prev " onclick="plusSlides2(-1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
+                        <a class="next " onclick="plusSlides2(1)"><img
+                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
+                    </div>
+                    <div style="text-align:center;display:none;">
+                        <span class="dot" onclick="currentSlide2(1)"></span>
+                        <span class="dot" onclick="currentSlide2(2)"></span>
+                        <span class="dot" onclick="currentSlide2(3)"></span>
+                        <span class="dot" onclick="currentSlide2(4)"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="steps mb-block">
             <div class="step-item step-1">
                 <div class="title-wrapper">
                     <div class="main-title">
@@ -363,7 +744,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                     <img src="{%URL_STATICS%}/images/top/discoverart.jpg" alt=""/>
                 </div>
                 <div class="desc">
-                    <p class="text-18">2019年は全展示会場100箇所以上11エリアで<br>開催致します。写真は、2018年のエキシビション<br>「 “60'S SOUNDS, 60'S SPIRITS” by Keita Suzuki +<br> Ichiro Yamaguchi at Fritz Hansen Aoyama」</p>
+                    <p class="text-18">2019年は120組、11エリアで作品を展示します。</p>
                     <div class="link-group">
                         <a href="{%HOME_URL%}/exhibitor/" class="link-step">
                             <div class="left">
@@ -426,7 +807,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
 
                     <div class="slideshow-container">
                         <!--thumbail-->
-                        {%EXHIBITOR_THUMBNAIL%}
+						<?php echo $exhibitor_thumbnail_list; ?>
 
                         <a class="prev" onclick="plusSlides(-1)"><img
                                     src="{%URL_STATICS%}/images/top/arrow-left-banner.png"></a>
@@ -441,7 +822,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                     </div>
                 </div>
                 <div class="desc">
-                    {%EXHIBITOR_LIST%}
+					<?php echo $exhibitor_list; ?>
                 </div>
             </div>
             <div class="step-item step-3">
@@ -522,7 +903,6 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
         <img src="{%URL_STATICS%}/images/commons/to_top_bt.png" alt="TOP">
     </div>
 </div>
-
 
 
 <?php get_footer( 'top2' ); ?>
