@@ -15,21 +15,6 @@ $cate = isset( $_GET['cate'] ) ? $_GET['cate'] : '';
 $language       = get_key_languagle();
 $prefix_varible = get_prefix_languagle( $language, "_" );
 
-/*
-if(count($area) == 0){
-    $area = array();
-    foreach($terms as $term){
-        array_push($area, $term->slug);
-    }
-}
-
-if(count($cate) == 0){
-    $cate = array();
-    foreach($terms2 as $term){
-        array_push($cate, $term->slug);
-    }
-}*/
-
 ?>
 
 <form method="get" id="searchform" action="<?php bloginfo( 'url' ); ?>">
