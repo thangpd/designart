@@ -179,65 +179,6 @@ $posts = get_posts( array(
 ) );
 
 
-function get_category_list( $area, $terms, $metaquerysp, $taxquerysp2, $format = '', $hide_empty = false ){
-    $language       = get_key_languagle();
-    $prefix_varible = get_prefix_languagle( $language, "_" );
-    $res            = '';
-
-    if ( empty( $format ) ) {
-        $format = '<a class="category" href="#%1$s">%2$s<i
-                class="fas fa-angle-down"></i></a>';
-    }
-    $cat_list_html = '';
-
-
-    foreach ( $terms as $term ) {
-        //選択されてない地域はスルーする
-        $bool = false;
-        foreach ( $area as $val ) if(strcmp($val, $term->slug) == 0) $bool = true;
-        if($bool == false) continue;
-
-        if ( $hide_empty ) {
-            $search = array(
-                'post_type' => 'exhibitor',
-                'posts_per_page' => -1,
-                'meta_query' => $metaquerysp,                           //カスタムフィールド内、フリーワード検索
-                'tax_query' => array(
-                    //チェックされたareaを指定
-                    array(
-                        array(
-                            'taxonomy' => $term->taxonomy,
-                            'field' => 'slug',
-                            'terms' => $term->slug,
-                        ),
-                        'relation'=>'OR'
-                    ),
-                    $taxquerysp2                                       //チェックされたcateのみ(チェックされなければ全て)
-                ),
-                'orderby' => 'post_title',
-                'order' => 'ASC'
-            );
-            $posts = get_posts($search);
-
-            if ( empty( $posts ) ) {
-                continue;
-            }
-        }
-
-        $cat_name      = translate_category_name( $term, $prefix_varible );
-
-        $cat_list_html .= sprintf( $format,
-            $term->slug,
-            $cat_name );
-
-    }
-
-    if ( ! empty( $cat_list_html ) ) {
-        $res = $cat_list_html;
-    }
-
-    return $res;
-}
 ?>
 
 
@@ -256,16 +197,6 @@ function get_category_list( $area, $terms, $metaquerysp, $taxquerysp2, $format =
             <p class="title-des"><?php echo $description ?></p>
 
             <?php get_search_form(); ?>
-
-            <!-- Filter category -->
-<!--            <div class="filter_category">
-                <div class="block-category">
-                    <?php
-/*                        $tranlated_term = get_category_list($area, $terms, $metaquerysp, $taxquerysp2, '',true);
-                        echo $tranlated_term;
-                    */?>
-                </div>
-            </div>-->
 
             <!-- scroll - page -->
             <?php if ( ! empty( $terms ) ): ?>
