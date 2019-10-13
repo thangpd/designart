@@ -3626,6 +3626,9 @@ body.language-en .font-auto{
   .guide-map .guide-map-title{
     font-size: 16px;
   }
+  .mySlidesmb2 {
+    width: 100%;
+  }
 }
 @media (min-width: 768px){
   .guide-map-step{
@@ -3636,6 +3639,9 @@ body.language-en .font-auto{
   .img-wrapper img {
     width: 100%;
   }
+}
+.step-3 + .step-item .img-wrapper.img-slick .slideshow-container .mySlides2 {
+  width: 100%;
 }
 @media (max-width: 767px){
   .guide-map-step{
