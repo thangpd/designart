@@ -499,6 +499,7 @@ ul.table_col_right_text li {
 
 .shoplist a.telephone {
     color: black !important;
+    border:none !important;
 }
 
 /*=====  End of About Page  ======*/
