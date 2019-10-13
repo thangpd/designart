@@ -5093,7 +5093,7 @@ footer.site-footer{
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-
+  background-color: rgba(0,0,0,0.2);
   width: auto;
   padding: 16px;
 
