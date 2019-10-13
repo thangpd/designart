@@ -524,8 +524,10 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
 </section>
 <section class="container">
     <div class="banner-center">
-        <h2 class="title-h2">TOKYO TRANSFORMED <br>
+        <h2 class="title-h2 pc-hidden">TOKYO TRANSFORMED <br>
             INTO A MUSEUM</h2>
+        <h2 class="title-h2 mobile-hidden">TOKYO TRANSFORMED <br>
+            INTO A <br>MUSEUM</h2>
         <p class="text-32">東京の街全体がミュージアムになる10日間</p>
         <p class="text-35">2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p>
         <p class="text-28">表参道・外苑前、原宿・明治神宮前、渋谷・恵比寿、代官山・中目黒、六本木、新宿、銀座 で開催</p>

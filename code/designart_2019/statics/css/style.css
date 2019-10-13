@@ -4875,6 +4875,7 @@ h3.title-h3{
 
 
 @media screen and (min-width: 768px){
+
   .step-item {
     display: flex;
     justify-content: space-between;
@@ -5137,6 +5138,9 @@ footer.site-footer{
   animation-name: fade;
   animation-duration: 1.5s;
 }
+.title-h2.mobile-hidden{
+  display:none;
+}
 
 @-webkit-keyframes fade {
   from {opacity: .4}
@@ -5270,6 +5274,12 @@ footer.site-footer{
     }
 }
 @media screen and (max-width: 991px){
+  .title-h2.mobile-hidden{
+    display:block;
+  }
+  .title-h2.pc-hidden{
+    display:none;
+  }
     .step-item .title-wrapper{
         width: auto;
     }
@@ -5321,6 +5331,7 @@ footer.site-footer{
     }
 }
 @media screen and (max-width: 767px){
+
   .step-3 + .step-item.step-slick .desc .text-16{
     margin-bottom: 20px;
   }
