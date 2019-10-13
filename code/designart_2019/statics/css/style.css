@@ -5282,7 +5282,7 @@ footer.site-footer{
     }
 }
 @media screen and (max-width: 1199px){
-  .img-wrapper img{
+  .step-item .img-wrapper{
     max-width: 450px;
   }
     .en .step-item .desc{
@@ -5309,7 +5309,7 @@ footer.site-footer{
     .en .step-item .desc{
         width: 50%;
     }
-  .img-wrapper img{
+  .step-item .img-wrapper{
     max-width: 310px;
   }
   .step-2 .img-wrapper,
@@ -5350,7 +5350,9 @@ footer.site-footer{
     }
 }
 @media screen and (max-width: 767px){
-
+  .step-item .img-wrapper{
+    max-width: 100%;
+  }
   .step-3 + .step-item.step-slick .desc .text-16{
     margin-bottom: 20px;
   }
