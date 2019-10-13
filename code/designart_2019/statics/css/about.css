@@ -1041,3 +1041,8 @@ ul.table_col_right_text li {
         margin-left: 0px !important;
     }
 }
+@media screen and (max-width: 400px){
+    body .about-page .heading-title.heading-style-02 .line-middle{
+        width: 90px;
+    }
+}

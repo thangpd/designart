@@ -3486,6 +3486,7 @@ body.language-en .font-auto{
     height: 23px;
     line-height: 23px;
   }
+
   .designart-page .text-center .btn.btn-line{
     font-size: 10px;
     padding: 5px 20px;
@@ -3497,15 +3498,21 @@ body.language-en .font-auto{
     position: absolute;
     right: 10px; bottom: 10px;
   }
-  .step-item .img-wrapper{
-    height: 376px;
-    overflow: hidden;
-  }
+
   .step-item.step-3 .img-wrapper{
     height: auto;
   }
 }
-
+.step-item .img-wrapper{
+    height: 376px;
+    overflow: hidden;
+}
+.step-item .img-wrapper.img-slick .slideshow-container{
+    height: 376px;
+    overflow: hidden;
+    display:flex;
+    align-items:center;
+}
 /*exhibition-guide-st*/
 .designart-page .exhibition-guide-st .blog-item{
   display: -ms-flexbox;
