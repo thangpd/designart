@@ -4794,6 +4794,10 @@ h1.title-h1 span{
 }
 .banner-top-btn .item a{
     color:black;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  height: 20px;
 }.banner-top-btn .item a:hover{
     color:#b5987c;
 }
