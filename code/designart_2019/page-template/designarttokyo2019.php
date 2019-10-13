@@ -312,7 +312,7 @@ echo $description;
 
     document.addEventListener("DOMContentLoaded", function (event) {
         setInterval(function () {
-            plusSlides(1)
+            // plusSlides(1)
             plusSlidesmb(1)
             plusSlides2(1)
             plusSlidesmb2(1)
