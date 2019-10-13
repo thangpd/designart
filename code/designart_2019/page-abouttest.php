@@ -2202,7 +2202,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
 
                                                     <div class="address">
                                                         Address : Shibuya Stream 2F, 3-21-3 Shibuya, Shibuya-ku<br/>
-                                                        TEL : 03-6427-3601<br/>
+                                                        TEL :<a class="telephone"  href="tel:03-6427-3601"
+                                                                target="_blank">03-6427-3601</a> <br/>
                                                         Hours : 7:00 - 22:00<br/>
                                                         <a href="https://www.deandeluca.co.jp/ddshop/50044"
                                                            target="_blank">SHOP INFO</a>
@@ -2222,7 +2223,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     <div class="address">
                                                         Address : Tokyo College of Music Nakameguro / Daikanyama 3F,
                                                         1-9 Kamimeguro, Meguro-ku<br/>
-                                                        TEL : 03-6416-3431<br/>
+                                                        TEL : <a class="telephone"  href="tel:03-6416-3431"
+                                                                 target="_blank">03-6416-3431</a><br/>
                                                         Hours : 8:00 - 18:00, Mon - Fri 9:00 - 18:00, Sat, Sun &
                                                         Holidays (Irregular Holidays)<br/>
                                                         <a href="https://www.deandeluca.co.jp/ddshop/50051/"

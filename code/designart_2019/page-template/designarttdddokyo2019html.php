@@ -95,8 +95,10 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
 </section>
 <section class="container">
     <div class="banner-center">
-        <h2 class="title-h2">TOKYO TRANSFORMED <br>
+        <h2 class="title-h2 pc-hidden">TOKYO TRANSFORMED <br>
             INTO A MUSEUM</h2>
+        <h2 class="title-h2 mobile-hidden">TOKYO <br>
+            TRANSFORMED  <br> INTO A MUSEUM</h2>
         <p class="text-35">2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p>
         <p class="text-28">HELD IN OMOTESANDO / GAIENMAE / HARAJUKU・MEIJI JINGUMAE / SHIBUYA・EBISU /
             DAIKANYAMA・NAKAMEGURO / ROPPONGI / SHINJUKU / GINZA</p>
