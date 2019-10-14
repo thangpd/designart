@@ -3502,8 +3502,10 @@ body.language-en .font-auto{
     position: absolute;
     right: 10px; bottom: 10px;
   }
-
-  .step-item.step-3 .img-wrapper{
+    .step-item .title-wrapper .sub-title{
+        margin-bottom: 15px !important;
+    }
+    .step-item.step-3 .img-wrapper{
     height: auto;
   }
 }
@@ -4946,7 +4948,7 @@ h3.title-h3{
 }
 .step-item .title-wrapper .sub-title{
   font-size: 16px;
-}  }
+}
 .step-item .desc .text-18{
   margin-bottom: 30px;
 }
@@ -5425,7 +5427,10 @@ footer.site-footer{
     display: block;
   }
   .dt-block{
-    display: none;
+    /*display: none;*/
+  }
+  .container-black .text-20{
+      margin-bottom:20px;
   }
   .banner-center h2.title-h2{
     font-size: 32px;
