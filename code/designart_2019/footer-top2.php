@@ -111,7 +111,7 @@ $class = get_key_languagle();
     </div>
     <div class="row btn-footer">
         <div class="sp to-exhibitor-wrap first col-xs-6">
-            <div class="to-exhibitor"><a href="<?php echo home_url() ?>/exhibitor/"><?php translate_text_language('exhibition list') ?></a></div>
+            <div class="to-exhibitor"><a href="<?php echo home_url() ?>/exhibitor/"><?php echo translate_text_language('exhibition list') ?></a></div>
         </div>
         <div class="sp to-exhibitor-wrap last col-xs-6">
             <div class="to-exhibitor"><a
