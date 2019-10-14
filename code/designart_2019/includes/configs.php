@@ -95,6 +95,9 @@ $cfg_text_translate = array(
     'guide map' => array(
         'jp' => '展示マップ'
     ),
+    'Search by keyword' => array(
+        'jp' => 'キーワードで検索'
+    ),
 
 
     //footer 2019

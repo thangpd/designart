@@ -144,7 +144,7 @@
                 <!-- ./end .main-navigation -->
                 <div class="btn-map"><a
                             href="https://www.google.com/maps/d/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397678%2C139.72963319999997&z=13"><i
-                                class="fa fa-map-marker"></i>「<?php echo translate_text_language('GUIDE MAP') ?>」</a></div>
+                                class="fa fa-map-marker"></i><?php echo translate_text_language('GUIDE MAP') ?></a></div>
                 <div class="right-site">
                     <div class="tit">SNS:</div>
                     <div class="social-list">

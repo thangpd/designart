@@ -19,7 +19,7 @@ $prefix_varible = get_prefix_languagle( $language, "_" );
 
 <form method="get" id="searchform" action="<?php bloginfo( 'url' ); ?>">
     <!-- フリーワード検索 -->
-    <input type="text" class="freeword" placeholder="キーワードで検索" id="s" name="s"
+    <input type="text" class="freeword" placeholder="<?php echo translate_text_language('Search by keyword') ?>" id="s" name="s"
            value="<?php echo ! empty( $s ) ? $s : ''; ?>" size="30" maxlength="128">
     <input type="image" class="submit_bt" name="" src="<?php echo URL_STATICS; ?>/images/commons/search_icon.png"
            width="25" value="検索">
