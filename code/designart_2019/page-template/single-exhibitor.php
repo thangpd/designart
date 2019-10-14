@@ -283,14 +283,7 @@ if (!empty($custom_page)) {
         </div>
 
         <!-- landing-share -->
-        <div class="landing-st contact-st">
-            <div class="container">
-                <!--					--><?php //get_html_share() ?>
-                <div class="contact-info">
-                    <?php get_html_contact(); ?>
-                </div>
-            </div>
-        </div>
+
         <!-- landing-back-to-top -->
         <div class="wp-back-to-top-wrap">
             <div class="wp-back-to-top top2">

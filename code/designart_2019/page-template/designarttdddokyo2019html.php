@@ -239,7 +239,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                     <div class="title-wrapper">
                         <div class="main-title">
                             <span class="number">03.</span>
-                            <span>BY ART</span>
+                            <span>BUY ART</span>
                         </div>
 
                     </div>
@@ -566,7 +566,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                         </div>
                     </div>
                     <div class="desc">
-                        <p class="text-18">2019年は120組、11エリアで作品を展示します。</p>
+                        <p class="text-18">2019年は全展示会場100箇所以上11エリアで開催致します。<br>写真は、2018年のエキシビション「 “60'S SOUNDS, 60'S SPIRITS” by Keita Suzuki + Ichiro Yamaguchi at Fritz Hansen Aoyama」</p>
                         <div class="link-group">
                             <a href="{%HOME_URL%}/exhibitor/" class="link-step">
                                 <div class="left">
@@ -664,7 +664,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                     <div class="title-wrapper">
                         <div class="main-title">
                             <span class="number">03.</span>
-                            <span>BY ART</span>
+                            <span>BUY ART</span>
                         </div>
                         <div class="sub-title">アートを買う
                         </div>
