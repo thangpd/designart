@@ -239,7 +239,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                     <div class="title-wrapper">
                         <div class="main-title">
                             <span class="number">03.</span>
-                            <span>BY ART</span>
+                            <span>BUY ART</span>
                         </div>
 
                     </div>
