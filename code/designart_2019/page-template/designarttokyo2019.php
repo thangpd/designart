@@ -240,7 +240,6 @@ echo $description;
     function showSlides2(n) {
         var i;
         var slides = document.getElementsByClassName("mySlides2");
-        console.log(slides);
         var dots = document.getElementsByClassName("dot");
         if (n > slides.length) {
             slideIndex2 = 1
