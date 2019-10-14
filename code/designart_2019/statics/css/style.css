@@ -5974,7 +5974,7 @@ footer.site-footer {
     }
 
     .dt-block {
-        /*display: none;*/
+        display: none;
     }
 
     .container-black .text-20 {
