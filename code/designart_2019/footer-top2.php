@@ -111,11 +111,11 @@ $class = get_key_languagle();
     </div>
     <div class="row btn-footer">
         <div class="sp to-exhibitor-wrap first col-xs-6">
-            <div class="to-exhibitor"><a href="<?php echo home_url() ?>/exhibitor/">展示作品</a></div>
+            <div class="to-exhibitor"><a href="<?php echo home_url() ?>/exhibitor/"><?php translate_text_language('exhibition list') ?></a></div>
         </div>
         <div class="sp to-exhibitor-wrap last col-xs-6">
             <div class="to-exhibitor"><a
-                        href="https://www.google.com/maps/d/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397678%2C139.72963319999997&z=13">展示マップ</a>
+                        href="https://www.google.com/maps/d/viewer?mid=1FFBUJ7kpkClWfUhbNioWGEH4kynf8Nuf&ll=35.66768702397678%2C139.72963319999997&z=13"><?php echo translate_text_language('guide map') ?></a>
             </div>
         </div>
     </div>

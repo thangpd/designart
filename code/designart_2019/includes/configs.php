@@ -89,6 +89,12 @@ $cfg_text_translate = array(
     'GUIDE MAP' => array(
         'jp' => '展示マップ'
     ),
+    'exhibition list' => array(
+        'jp' => '展示作品'
+    ),
+    'guide map' => array(
+        'jp' => '展示マップ'
+    ),
 
 
     //footer 2019
