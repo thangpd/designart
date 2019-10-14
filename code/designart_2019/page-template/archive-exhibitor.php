@@ -134,23 +134,7 @@ $terms2 = get_field( 'exhibitor_category_setting2', 'option' );
         <!-- back button -->
 		<?php back_page_history( false, 'bot' ) ?>
     </div>
-    <!-- landing-share -->
-<!--    <div class="landing-st contact-st">
-        <div class="container">
-			<?php /*get_html_share() */?>
-            <div class="contact-info">
-				<?php /*get_html_contact(); */?>
-            </div>
-        </div>
-    </div>-->
-
-    <!--<div class="landing-st contact-st">
-        <div class="container">
-            <?php /*get_html_contact(); */?>
-        </div>
-    </div>
--->
-    <!-- landing-back-to-top -->
+ 
     <div class="wp-back-to-top-wrap">
         <div class="wp-back-to-top top2">
             <img src="<?php echo URL_STATICS; ?>/images/commons/to_top_bt.png" alt="TOP">
