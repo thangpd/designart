@@ -6272,6 +6272,7 @@ footer.site-footer {
         visibility: visible;
         overflow: visible;
         max-height: 1000px;
+        z-index: 2;
     }
 
     .btn-footer .first {
@@ -6340,4 +6341,9 @@ footer.site-footer {
 .jp .footer-col-1 li:nth-child(n + 2) a,
 .jp .footer-col-2 li:nth-child(n + 2) a {
     font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+
+.slick-arrow img.prev,.slick-arrow img.next {
+    width: unset;
+    z-index: 1;
 }

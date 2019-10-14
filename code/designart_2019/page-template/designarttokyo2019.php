@@ -168,6 +168,23 @@ echo $description;
             }
         );
 
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            focusOnSelect: true,
+            nextArrow: "<div><img class='next ' src='<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png'></div>",
+            prevArrow: "<div><img class='prev ' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'></div>",
+
+        });
+
 
         // $.each($('#primary-menu li'), function (index) {
         //     $(this).find('a').attr('data-demo', 'item-'+index);
@@ -175,75 +192,6 @@ echo $description;
     })(jQuery);
 </script>
 <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var exhibitor = document.getElementsByClassName("exhibitor_mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-            exhibitor[i].style.display = "none";
-
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        exhibitor[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
-
-    var slideIndexmb = 1;
-    showSlidesmb(slideIndexmb);
-
-    function plusSlidesmb(n) {
-        showSlidesmb(slideIndexmb += n);
-    }
-
-    function currentSlidemb(n) {
-        showSlidesmb(slideIndexmb = n);
-    }
-
-    function showSlidesmb(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlidesmb");
-        let exhibitor = document.getElementsByClassName("exhibitor_mySlidesmb");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndexmb = 1
-        }
-        if (n < 1) {
-            slideIndexmb = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-            exhibitor[i].style.display = "none";
-
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndexmb - 1].style.display = "block";
-        exhibitor[slideIndexmb - 1].style.display = "block";
-        dots[slideIndexmb - 1].className += " active";
-    }
 
     var slideIndexmb2 = 1;
     showSlidesmb2(slideIndexmb2);

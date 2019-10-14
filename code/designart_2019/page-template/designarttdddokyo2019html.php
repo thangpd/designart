@@ -208,7 +208,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                             <span>EVENT & PARTY</span>
                         </div>
                     </div>
-                    <div class="desc">
+                    <div class="desc slide-for">
 
                         {%EXHIBITOR_LIST%}
                     </div>
@@ -216,20 +216,10 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 <div class="img-wrapper img-slick">
 
 
-                    <div class="slideshow-container">
+                    <div class="slideshow-container slide-nav">
                         <!--thumbail-->
                         {%EXHIBITOR_THUMBNAIL%}
 
-                        <a class="prev" onclick="plusSlides(-1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
-                        <a class="next" onclick="plusSlides(1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
-
-                    </div>
-                    <div style="text-align:center;display:none;">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
                 </div>
 
@@ -391,7 +381,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                             <span>EVENT & PARTY</span>
                         </div>
                     </div>
-                    <div class="desc">
+                    <div class="desc slide-for">
 
                         {%EXHIBITOR_LIST_MB%}
                     </div>
@@ -399,21 +389,13 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 <div class="img-wrapper img-slick">
 
 
-                    <div class="slideshow-container">
+                    <div class="slideshow-container slide-nav">
                         <!--thumbail-->
                         {%EXHIBITOR_THUMBNAIL_MB%}
 
-                        <a class="prev" onclick="plusSlidesmb(-1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
-                        <a class="next" onclick="plusSlidesmb(1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
 
                     </div>
-                    <div style="text-align:center;display:none;">
-                        <span class="dot" onclick="currentSlidemb(1)"></span>
-                        <span class="dot" onclick="currentSlidemb(2)"></span>
-                        <span class="dot" onclick="currentSlidemb(3)"></span>
-                    </div>
+
                 </div>
 
             </div>
@@ -632,7 +614,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                             <span>EVENT & PARTY</span>
                         </div>
                     </div>
-                    <div class="desc">
+                    <div class="desc slider-for">
                         {%EXHIBITOR_LIST%}
 
                     </div>
@@ -641,21 +623,13 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 <div class="img-wrapper img-slick">
 
 
-                    <div class="slideshow-container">
+                    <div class="slideshow-container slider-nav">
                         <!--thumbail-->
                         {%EXHIBITOR_THUMBNAIL%}
 
-                        <a class="prev" onclick="plusSlides(-1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"></a>
-                        <a class="next" onclick="plusSlides(1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"></a>
 
                     </div>
-                    <div style="text-align:center;display:none;">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                    </div>
+
                 </div>
 
             </div>
@@ -807,7 +781,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                             <span>EVENT & PARTY</span>
                         </div>
                     </div>
-                    <div class="desc">
+                    <div class="desc slider-for">
                         {%EXHIBITOR_LIST_MB%}
                     </div>
                 </div>
@@ -815,20 +789,12 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 <div class="img-wrapper img-slick">
 
 
-                    <div class="slideshow-container">
+                    <div class="slideshow-container slider-nav">
                         <!--thumbail-->
                         {%EXHIBITOR_THUMBNAIL_MB%}
-                        <a class="prev" onclick="plusSlidesmb(-1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"></a>
-                        <a class="next" onclick="plusSlidesmb(1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"></a>
 
                     </div>
-                    <div style="text-align:center;display:none;">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                    </div>
+
                 </div>
 
             </div>
@@ -939,6 +905,23 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
             }
         );
 
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            focusOnSelect: true,
+            nextArrow: "<div><img class='next ' src='<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png'></div>",
+            prevArrow: "<div><img class='prev ' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'></div>",
+
+        });
+
 
         // $.each($('#primary-menu li'), function (index) {
         //     $(this).find('a').attr('data-demo', 'item-'+index);
@@ -946,75 +929,6 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
     })(jQuery);
 </script>
 <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var exhibitor = document.getElementsByClassName("exhibitor_mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-            exhibitor[i].style.display = "none";
-
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        exhibitor[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
-
-    var slideIndexmb = 1;
-    showSlidesmb(slideIndexmb);
-
-    function plusSlidesmb(n) {
-        showSlidesmb(slideIndexmb += n);
-    }
-
-    function currentSlidemb(n) {
-        showSlidesmb(slideIndexmb = n);
-    }
-
-    function showSlidesmb(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlidesmb");
-        let exhibitor = document.getElementsByClassName("exhibitor_mySlidesmb");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndexmb = 1
-        }
-        if (n < 1) {
-            slideIndexmb = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-            exhibitor[i].style.display = "none";
-
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndexmb - 1].style.display = "block";
-        exhibitor[slideIndexmb - 1].style.display = "block";
-        dots[slideIndexmb - 1].className += " active";
-    }
 
     var slideIndexmb2 = 1;
     showSlidesmb2(slideIndexmb2);
@@ -1083,8 +997,8 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
 
     document.addEventListener("DOMContentLoaded", function (event) {
         setInterval(function () {
-            plusSlides(1)
-            plusSlidesmb(1)
+            // plusSlides(1)
+            // plusSlidesmb(1)
             plusSlides2(1)
             plusSlidesmb2(1)
         }, 3000);
