@@ -82,7 +82,16 @@ $cfg_text_translate = array(
 		'cn' => '联系方式'
 	),
 
-	//footer 2019
+
+
+	//Header 2019
+
+    'GUIDE MAP' => array(
+        'jp' => '展示マップ'
+    ),
+
+
+    //footer 2019
 	'https://docs.google.com/forms/d/e/1FAIpQLSdSWZa58t587HPY5JoP-GwW527z2rXhn0KNNfM2iTN_Ki1F8g/viewform' => array(
 		'jp' => 'https://docs.google.com/forms/d/e/1FAIpQLSdyCbRINFfrORznLiiqDBL9pFwRuWJ9Xy9tx7abssraPl2EFA/viewform'
 	),
