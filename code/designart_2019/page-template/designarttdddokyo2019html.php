@@ -116,7 +116,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
             BRING TOGETHER DIVERSE OBJECTS AND EXPERIENCES CREATED IN CROSSOVER FIELDS OF ART, INTERIOR DESIGN, FASHION,
             AND FOOD FROM AROUND THE GLOBE TO BE PRESENTED ON THE STAGES IN VARIOUS LOCATIONS IN TOKYO, ONE OF THE
             WORLD'S LEADING MIXED CULTURE CITIES.</p>
-        <a href="{%HOME_URL%}/about" class="text-38 more dt-block">more <span><img
+        <a href="{%HOME_URL%}/about" class="text-38 more">more <span><img
                         src="{%URL_STATICS%}/images/top/arrow-item.png"></span></a>
     </div>
 </section>
@@ -545,7 +545,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
         <p class="text-18 dt-block">感動を、すべての人々に</p>
         <p class="text-20">「DESIGNART
             TOKYO」は、毎年秋に開催するデザイン＆アートフェスティバルです。世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、インテリア、ファッション、テクノロジーなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩な作品を発表していきます。</p>
-        <a href="{%HOME_URL%}/about" class="text-38 more dt-block">more <span><img
+        <a href="{%HOME_URL%}/about" class="text-38 more" >more <span><img
                         src="{%URL_STATICS%}/images/top/arrow-item.png"></span></a>
     </div>
 </section>
