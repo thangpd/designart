@@ -482,7 +482,7 @@ body.language-en .exhibitor-item .desc-wrapp .desc {
 
   .wp-back-to-top.absolute{
     position: absolute;
-    top: 0;
+    top: unset;
     bottom:-125px;
   }
 
