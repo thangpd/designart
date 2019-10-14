@@ -265,9 +265,9 @@ $cfg_text_translate = array(
 	'More Info'                                          => array(
 		'jp' => 'もっと見る',
 	),
-	'Exhibition List'                                    => array(
+	/*'Exhibition List'                                    => array(
 		'jp' => '展示作品一覧',
-	),
+	),*/
 	'Squeeze by tag'                                     => array(
 		'jp' => 'タグで絞る',
 	),
