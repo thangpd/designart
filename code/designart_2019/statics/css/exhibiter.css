@@ -973,5 +973,9 @@ li.exhibitor-cat-list {
     width: 60%;
   }*/
 }
-
+._item .text{
+  position:relative !important;
+  bottom: unset !important;
+  color:black;
+}
 /*=====  End of Responsive  ======*/

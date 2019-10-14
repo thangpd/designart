@@ -1,5 +1,4 @@
 <?php get_header('top2') ?>
-    <div id="testdemo"></div>
 <?php
 global $custom_page;
 if (!empty($custom_page)) {
