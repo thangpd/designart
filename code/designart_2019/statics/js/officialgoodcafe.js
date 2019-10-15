@@ -35,6 +35,7 @@ jQuery(function($) {
 
     $(document).ready(function () {
         processRender();
+        $(".wp-tab .list-scroll-item .item-filter[data-value='about-cafegoods']").click();
     });
 
     function rtrim(str){
