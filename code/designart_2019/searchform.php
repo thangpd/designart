@@ -41,12 +41,12 @@ $prefix_varible = get_prefix_languagle( $language, "_" );
 						}
 					}
 					?>
-                    <li>
-                        <a class="radio_area<?php echo $selected; ?>" href="javascript:void(0);">
-                            <input type="checkbox" name="area[]" value="all_area" <?php echo $checked; ?> id='all_area'><label
+                    <!--<li>
+                        <a class="radio_area<?php /*echo $selected; */?>" href="javascript:void(0);">
+                            <input type="checkbox" name="area[]" value="all_area" <?php /*echo $checked; */?> id='all_area'><label
                                     for="all_area">ALL</label>
                         </a>
-                    </li>
+                    </li>-->
 					<?php if ( ! empty( $terms ) ): ?>
 						<?php foreach ( $terms as $term ):
 							$selected = "";
@@ -59,14 +59,14 @@ $prefix_varible = get_prefix_languagle( $language, "_" );
 								}
 							}
 							?>
-                            <li>
-                                <a class="radio_area<?php echo $selected; ?>" href="javascript:void(0);">
+                            <!--<li>
+                                <a class="radio_area<?php /*echo $selected; */?>" href="javascript:void(0);">
                                     <input type="checkbox" name="area[]"
-                                           value="<?php echo $term->slug; ?>" <?php echo $checked; ?>
-                                           id='<?php echo $term->slug; ?>'><label
-                                            for="<?php echo $term->slug; ?>"><?php echo $terms_traned; ?></label>
+                                           value="<?php /*echo $term->slug; */?>" <?php /*echo $checked; */?>
+                                           id='<?php /*echo $term->slug; */?>'><label
+                                            for="<?php /*echo $term->slug; */?>"><?php /*echo $terms_traned; */?></label>
                                 </a>
-                            </li>
+                            </li>-->
 						<?php endforeach; ?>
 					<?php endif; ?>
                 </ul>
