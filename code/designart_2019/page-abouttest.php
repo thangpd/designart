@@ -510,10 +510,11 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                         </div>
                                         <div class="brand-block">
                                             <div class="col-left"><span class="lb-text">後援（サポーティングメディア）</span></div>
-                                            <div class="col-right"><a target="_blank"
-                                                                      href="https://www.j-wave.co.jp"><img
-                                                            src="{%URL_STATICS%}/images/about/logo/logo-jwave.png"
-                                                            alt="logo-jwave"></a>
+                                            <div class="col-right"><a
+                                                        href="https://www.j-wave.co.jp/"
+                                                        target="_blank"><img
+                                                            src="{%URL_STATICS%}/images/about/section2/8jwat.png"
+                                                            alt="section2-shotenkenchiku"></a>
                                             </div>
                                         </div>
                                         <div class="brand-block">
@@ -572,14 +573,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                                         alt="section2-pen"></a>
                                                         </div>
                                                     </div>
-                                                    <div class="brand-item">
-                                                        <div class="pic-wrap"><a
-                                                                    href="https://www.j-wave.co.jp/"
-                                                                    target="_blank"><img
-                                                                        src="{%URL_STATICS%}/images/about/section2/8jwat.png"
-                                                                        alt="section2-shotenkenchiku"></a>
-                                                        </div>
-                                                    </div>
+
                                                     <div class="brand-item">
                                                         <div class="pic-wrap"><a href="https://www.merci-magazine.com/"
                                                                                  target="_blank"><img
@@ -1965,10 +1959,12 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                         </div>
                                         <div class="brand-block">
                                             <div class="col-left"><span class="lb-text">SUPPORTING MEDIA</span></div>
-                                            <div class="col-right"><a target="_blank"
-                                                                      href="https://www.j-wave.co.jp"><img
-                                                            src="{%URL_STATICS%}/images/about/logo/logo-jwave.png"
-                                                            alt="logo-jwave"></a></div>
+                                            <div class="col-right"><a
+                                                        href="https://www.j-wave.co.jp/"
+                                                        target="_blank"><img
+                                                            src="{%URL_STATICS%}/images/about/section2/8jwat.png"
+                                                            alt="section2-shotenkenchiku"></a>
+                                            </div>
                                         </div>
                                         <div class="brand-block">
                                             <div class="col-left"><span class="lb-text">MEDIA PARTNERS</span></div>
@@ -2024,14 +2020,6 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                                                  target="_blank"><img
                                                                         src="{%URL_STATICS%}/images/about/section2/7imhome.png"
                                                                         alt="section2-pen"></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="brand-item">
-                                                        <div class="pic-wrap"><a
-                                                                    href="https://www.j-wave.co.jp/"
-                                                                    target="_blank"><img
-                                                                        src="{%URL_STATICS%}/images/about/section2/8jwat.png"
-                                                                        alt="section2-shotenkenchiku"></a>
                                                         </div>
                                                     </div>
                                                     <div class="brand-item">
