@@ -621,6 +621,11 @@ li.exhibitor-cat-list {
   margin-top: 0;
   display: none;
 }
+#searchform input[type=radio] {
+ 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 
 #searchform .radio_group_wrap{
   position: relative;
