@@ -104,9 +104,7 @@ foreach ( $exhibitors as $exhibitor ) {
                                 </div>';
 	$exhibitor_thumbnail_list .= '
 <div class="mySlides">
-<a href="' . get_permalink( $exhibitor_id ) . '" class="link">  
 <img src="' . $thumbail_url . '"  style="width:100%" alt="" class="img-responsive">
- </a>
 </div>';
 
 
@@ -118,9 +116,7 @@ foreach ( $exhibitors as $exhibitor ) {
                                 </div>';
 	$exhibitor_thumbnail_list_mb .= '
 <div class="mySlidesmb">
-<a href="' . get_permalink( $exhibitor_id ) . '" class="link">  
 <img src="' . $thumbail_url . '"  style="width:100%" alt="" class="img-responsive">
- </a>
 </div>';
 }
 
