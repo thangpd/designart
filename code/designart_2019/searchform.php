@@ -59,14 +59,14 @@ $prefix_varible = get_prefix_languagle( $language, "_" );
 								}
 							}
 							?>
-                            <!--<li>
-                                <a class="radio_area<?php /*echo $selected; */?>" href="javascript:void(0);">
-                                    <input type="checkbox" name="area[]"
-                                           value="<?php /*echo $term->slug; */?>" <?php /*echo $checked; */?>
-                                           id='<?php /*echo $term->slug; */?>'><label
-                                            for="<?php /*echo $term->slug; */?>"><?php /*echo $terms_traned; */?></label>
+                            <li>
+                                <a class="radio_area<?php echo $selected; ?>" href="javascript:void(0);">
+                                    <input type="checkbox" name="area"
+                                           value="<?php echo $term->slug; ?>" <?php echo $checked; ?>
+                                           id='<?php echo $term->slug; ?>'><label
+                                            for="<?php echo $term->slug; ?>"><?php echo $terms_traned; ?></label>
                                 </a>
-                            </li>-->
+                            </li>
 						<?php endforeach; ?>
 					<?php endif; ?>
                 </ul>
@@ -88,13 +88,13 @@ $prefix_varible = get_prefix_languagle( $language, "_" );
 					}
 					?>
 
-                    <li>
-                        <a class="radio_area<?php echo $selected; ?>" href="javascript:void(0);">
-                            <input type="checkbox" name="cate[]" value="all_cate" <?php echo $checked; ?> id='all_cate'><label
+                   <!-- <li>
+                        <a class="radio_area<?php /*echo $selected; */?>" href="javascript:void(0);">
+                            <input type="checkbox" name="cate[]" value="all_cate" <?php /*echo $checked; */?> id='all_cate'><label
                                     for="all_cate">ALL</label>
                         </a>
                     </li>
-
+-->
 					<?php if ( ! empty( $terms2 ) ): ?>
 						<?php foreach ( $terms2 as $term ):
 							$selected = "";
@@ -110,7 +110,7 @@ $prefix_varible = get_prefix_languagle( $language, "_" );
 							?>
                             <li>
                                 <a class="radio_area<?php echo $selected; ?>" href="javascript:void(0);">
-                                    <input type="checkbox" name="cate[]"
+                                    <input type="checkbox" name="cate"
                                            value="<?php echo $term->slug; ?>" <?php echo $checked; ?>
                                            id='<?php echo $term->slug; ?>'><label
                                             for="<?php echo $term->slug; ?>"><?php echo $terms_traned; ?></label>
