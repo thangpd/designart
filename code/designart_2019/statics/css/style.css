@@ -5908,6 +5908,11 @@ footer.site-footer {
         max-width: unset;
     }
 
+    .step-3 + .step-item .img-wrapper.img-slick .slideshow-container {
+        height: auto;
+        overflow: auto;
+    }
+
     .banner-top-btn .carousel-inner > .item .date {
         text-align: center;
     }
