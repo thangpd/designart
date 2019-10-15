@@ -210,20 +210,24 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                             <span>EVENT & PARTY</span>
                         </div>
                     </div>
-                    <div class="desc slide-for">
-
+                    <div class="desc slider-for">
                         {%EXHIBITOR_LIST%}
+
                     </div>
                 </div>
+
                 <div class="img-wrapper img-slick">
 
 
-                    <div class="slideshow-container slide-nav">
+                    <div class="slideshow-container slider-nav">
                         <!--thumbail-->
                         {%EXHIBITOR_THUMBNAIL%}
 
+
                     </div>
+
                 </div>
+
 
             </div>
             <div class="step-item step-3">
@@ -287,17 +291,6 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                             <img src="{%URL_STATICS%}/images/top/slide04.jpg">
                         </div>
 
-                        <a class="prev " onclick="plusSlides2(-1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
-                        <a class="next " onclick="plusSlides2(1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
-
-                    </div>
-                    <div style="text-align:center;display:none;">
-                        <span class="dot" onclick="currentSlide2(1)"></span>
-                        <span class="dot" onclick="currentSlide2(2)"></span>
-                        <span class="dot" onclick="currentSlide2(3)"></span>
-                        <span class="dot" onclick="currentSlide2(4)"></span>
                     </div>
                 </div>
 
@@ -383,18 +376,17 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                             <span>EVENT & PARTY</span>
                         </div>
                     </div>
-                    <div class="desc slide-for">
-
+                    <div class="desc slider-for">
                         {%EXHIBITOR_LIST_MB%}
                     </div>
                 </div>
+
                 <div class="img-wrapper img-slick">
 
 
-                    <div class="slideshow-container slide-nav">
+                    <div class="slideshow-container slider-nav">
                         <!--thumbail-->
                         {%EXHIBITOR_THUMBNAIL_MB%}
-
 
                     </div>
 
@@ -420,7 +412,7 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                 </div>
 
             </div>
-            <div class="step-item step-slick margin100 ">
+            <div class="step-item step-slick ">
                 <div class="title-wrapper">
                     <div class="main-title">
                         <span>OFFICIAL CAFE <br> & GOODS</span>
@@ -445,17 +437,6 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                             <img src="{%URL_STATICS%}/images/top/slide04.jpg">
                         </div>
 
-                        <a class="prev " onclick="plusSlidesmb2(-1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
-                        <a class="next " onclick="plusSlidesmb2(1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
-
-                    </div>
-                    <div style="text-align:center;display:none;">
-                        <span class="dot" onclick="currentSlidemb2(1)"></span>
-                        <span class="dot" onclick="currentSlidemb2(2)"></span>
-                        <span class="dot" onclick="currentSlidemb2(3)"></span>
-                        <span class="dot" onclick="currentSlidemb2(4)"></span>
                     </div>
                 </div>
 
@@ -505,7 +486,6 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
             {%CAROUSEL_NEWS%}
 
         </div>
-
     </div>
 </section>
 <section class="container">
