@@ -88,12 +88,12 @@ $prefix_varible = get_prefix_languagle( $language, "_" );
 					}
 					?>
 
-                    <li>
-                        <a class="radio_area<?php echo $selected; ?>" href="javascript:void(0);">
-                            <input type="checkbox" name="cate[]" value="all_cate" <?php echo $checked; ?> id='all_cate'><label
+                   <!-- <li>
+                        <a class="radio_area<?php /*echo $selected; */?>" href="javascript:void(0);">
+                            <input type="checkbox" name="cate[]" value="all_cate" <?php /*echo $checked; */?> id='all_cate'><label
                                     for="all_cate">ALL</label>
                         </a>
-                    </li>
+                    </li>-->
 
 					<?php if ( ! empty( $terms2 ) ): ?>
 						<?php foreach ( $terms2 as $term ):
