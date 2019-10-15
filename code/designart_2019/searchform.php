@@ -61,7 +61,7 @@ $prefix_varible = get_prefix_languagle( $language, "_" );
 							?>
                             <li>
                                 <a class="radio_area<?php echo $selected; ?>" href="javascript:void(0);">
-                                    <input type="radio" name="area"
+                                    <input type="checkbox" name="area"
                                            value="<?php echo $term->slug; ?>" <?php echo $checked; ?>
                                            id='<?php echo $term->slug; ?>'><label
                                             for="<?php echo $term->slug; ?>"><?php echo $terms_traned; ?></label>
@@ -110,7 +110,7 @@ $prefix_varible = get_prefix_languagle( $language, "_" );
 							?>
                             <li>
                                 <a class="radio_area<?php echo $selected; ?>" href="javascript:void(0);">
-                                    <input type="radio" name="cate"
+                                    <input type="checkbox" name="cate"
                                            value="<?php echo $term->slug; ?>" <?php echo $checked; ?>
                                            id='<?php echo $term->slug; ?>'><label
                                             for="<?php echo $term->slug; ?>"><?php echo $terms_traned; ?></label>
