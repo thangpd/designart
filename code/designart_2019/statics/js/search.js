@@ -26,7 +26,7 @@ jQuery(function ($) {
         });
 
 
-        $("#searchform input[type=radio]").each(function(i){
+        $("#searchform input[type=checkbox]").each(function(i){
             //init
             if($(this).prop('checked')) {
                 //ブラウザのbackで戻ったりするとcheckが残っていたりするため表示を同期させる
