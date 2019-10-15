@@ -70,38 +70,43 @@ endforeach;
 
 $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
 
-$exhibitors                  = get_posts(array(
+/*$exhibitors = get_posts(array(
 	'post_type'      => 'exhibitor',
 	'post_status'    => 'publish',
 	'posts_per_page' => 10,
 	'orderby'        => 'publish_date',
 	'order'          => 'DESC'
 //    'orderby'    => ['post_modified' => 'desc'],
+));*/
+$events     = get_posts(array(
+	'post_type'      => 'event-party',
+	'posts_per_page' => 10,
+	'order'          => 'DESC',
+	'orderby'        => 'post_date',
+	'post_status'    => array('future', 'private')
+
 ));
+
 $exhibitor_list              = '';
 $exhibitor_thumbnail_list    = '';
 $exhibitor_list_mb           = '';
 $exhibitor_thumbnail_list_mb = '';
-foreach ($exhibitors as $exhibitor)
+foreach ($events as $event)
 {
-	$exhibitor_id        = $exhibitor->ID;
-	$exhibitor_thumbnail = get_field('exhibitor_thumbnail', $exhibitor_id, '');
-	$gallery             = get_field('exhibitor_gallery', $exhibitor_id);
-	$time                = get_field($prefix_varible . 'exhibitor_venue', $exhibitor_id);
-	$thumbail_url        = '';
-	if ( ! empty($gallery))
+	$exhibitor_id = $event->ID;
+	$gallery      = get_field('thumbnail', $exhibitor_id);
+	$time         = get_field('time_schedule', $exhibitor_id);
+
+
+	$thumbail_url = $gallery;
+	/*if ( ! empty($gallery))
 	{
 		$thumbail_url = take_value_array('url', $gallery[0]);
-	}
-	/*
-	if ( ! empty( $exhibitor_thumbnail ) ) {
-		$exhibitor_thumbnail = take_value_array( 'url', $exhibitor_thumbnail, $exhibitor_thumbnail );
-		$thumbail_url        = wp_get_attachment_image_url( $exhibitor_thumbnail );
 	}*/
+	$exhibitor_title = get_field($prefix_varible . 'title', $exhibitor_id);
 
-	$exhibitor_title          = get_field($prefix_varible . 'exhibitor_title', $exhibitor_id);
 	$exhibitor_list           .= '<div class="exhibitor_mySlides desc-wrapp">
-                                         <p class="text-16">' . $time[0]['information'][2]['value'] . ':</p> 
+                                         <p class="text-16">' . $time . ':</p> 
                                         <p class="text-24">
                                             ' . $exhibitor_title . '
                                         </p>
@@ -113,7 +118,7 @@ foreach ($exhibitors as $exhibitor)
 
 
 	$exhibitor_list_mb           .= '<div class="exhibitor_mySlidesmb desc-wrapp">
-                                         <p class="text-16">' . $time[0]['information'][2]['value'] . ':</p> 
+                                         <p class="text-16">' . $time . ':</p> 
                                         <p class="text-24">
                                             ' . $exhibitor_title . '
                                         </p>
