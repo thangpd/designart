@@ -1,44 +1,45 @@
 <?php /* Template Name: DesignArt2019*/ ?>
 <?php
-get_header( 'top2' );
+get_header('top2');
 
-$post           = get_page_by_title( 'Designart 2019' );
+$post           = get_page_by_title('Designart 2019');
 $post_id        = $post->ID;
 $language       = get_key_languagle();
-$prefix_varible = get_prefix_languagle( $language, "_" );
-$description    = get_field( $prefix_varible . 'description', $post_id, false );
-$description    = str_replace( '{%URL_STATICS%}', URL_STATICS, $description );
+$prefix_varible = get_prefix_languagle($language, "_");
+$description    = get_field($prefix_varible . 'description', $post_id, FALSE);
+$description    = str_replace('{%URL_STATICS%}', URL_STATICS, $description);
 
-$html_share  = get_html_share( false );
-$description = str_replace( '{%HTML_SHARE%}', $html_share, $description );
+$html_share  = get_html_share(FALSE);
+$description = str_replace('{%HTML_SHARE%}', $html_share, $description);
 
-$description = str_replace( '{%HOME_URL%}', home_url(), $description );
+$description = str_replace('{%HOME_URL%}', home_url(), $description);
 
-$description = str_replace( '{%HOME_MAIN_URL%}', get_home_url(), $description );
+$description = str_replace('{%HOME_MAIN_URL%}', get_home_url(), $description);
 
 $html_info   = get_html_information_post();
-$description = str_replace( '{%INFORMATION_POST%}', $html_info, $description );
+$description = str_replace('{%INFORMATION_POST%}', $html_info, $description);
 
 //    back history
-$html_back   = back_page_history( false );
-$description = str_replace( '{%BACK_HISTORY%}', $html_back, $description );
+$html_back   = back_page_history(FALSE);
+$description = str_replace('{%BACK_HISTORY%}', $html_back, $description);
 
 //    back history
-$html_countdown = getHtmlCountdown( $post_id );
-$description    = str_replace( '{%COUNT_DOWN%}', $html_countdown, $description );
+$html_countdown = getHtmlCountdown($post_id);
+$description    = str_replace('{%COUNT_DOWN%}', $html_countdown, $description);
 
-if ( false === ( $json = get_transient( 'special_query_fb' ) ) ) {
+if (FALSE === ($json = get_transient('special_query_fb')))
+{
 
 	$accessToken = 'EAAGeTfHqa2sBAGT5cdF3PZAqZAibKrtFBzHTpHMRSZBK8x7pgsWkFC5Lt8m8xUyFIdZBM1qjiC4ZCZC4giAexGs5dD3AkHukA8dEU3IV5CQExSQFQ7gGMtFXVwx5M66z7IUEZAOvgZBF9XVkUJt3pTVP2MhAMWemhAWpsldIdEZCVSgZDZD'; // designart アクセストークン(User Token)
 	$search      = 'designart.jp/feed';
 	$url         = 'https://graph.facebook.com/v4.0/' . $search . '?access_token=' . $accessToken;
-	$jsonData    = file_get_contents( $url );
+	$jsonData    = file_get_contents($url);
 
 	// jsonデータの整形・出力
-	$json = json_decode( $jsonData, true );
+	$json = json_decode($jsonData, TRUE);
 //    $str = json_encode($json['data']);
 	// It wasn't there, so regenerate the data and save the transient
-	set_transient( 'special_query_fb', $json, 6000 );
+	set_transient('special_query_fb', $json, 6000);
 }
 
 
@@ -50,19 +51,20 @@ $format  = '<div class="item %1$s">
                                 </div>
                             </div>';
 $content = '';
-foreach ( $json['data'] as $value ):
-	if ( empty( $value['message'] ) ) {
+foreach ($json['data'] as $value):
+	if (empty($value['message']))
+	{
 		continue;
 	}
-	$time    = date( "Y-m-d", strtotime( $value['created_time'] ) );
-	$str1    = trim( strtok( $value['message'], "\n" ) );
-	$str1    = strlen( $str1 ) > 100 ? substr( $str1, 0, 100 ) . "..." : $str1;
-	$content .= sprintf( $format, $active, $time, $str1 );
+	$time    = date("Y-m-d", strtotime($value['created_time']));
+	$str1    = trim(strtok($value['message'], "\n"));
+	$str1    = strlen($str1) > 100 ? substr($str1, 0, 100) . "..." : $str1;
+	$content .= sprintf($format, $active, $time, $str1);
 
 	$active = '';
 endforeach;
 
-$description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
+$description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
 
 //echo $description;
 
@@ -98,7 +100,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
         <h2 class="title-h2 pc-hidden">TOKYO TRANSFORMED <br>
             INTO A MUSEUM</h2>
         <h2 class="title-h2 mobile-hidden">TOKYO <br>
-            TRANSFORMED  <br> INTO A MUSEUM</h2>
+            TRANSFORMED <br> INTO A MUSEUM</h2>
         <p class="text-35">2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p>
         <p class="text-28">HELD IN OMOTESANDO / GAIENMAE / HARAJUKU・MEIJI JINGUMAE / SHIBUYA・EBISU /
             DAIKANYAMA・NAKAMEGURO / ROPPONGI / SHINJUKU / GINZA</p>
@@ -268,21 +270,21 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 </div>
                 <div class="img-wrapper img-slick">
 
-                    <div class="slideshow-container">
+                    <div class="slideshow-container slick-office-good">
 
                         <div class="mySlides2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide01.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide01.jpg">
                         </div>
 
                         <div class="mySlides2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide02.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide02.jpg">
                         </div>
 
                         <div class="mySlides2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide03.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide03.jpg">
                         </div>
                         <div class="mySlides2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide04.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide04.jpg">
                         </div>
 
                         <a class="prev " onclick="plusSlides2(-1)"><img
@@ -419,28 +421,28 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
 
             </div>
             <div class="step-item step-slick margin100 ">
-                    <div class="title-wrapper">
-                        <div class="main-title">
-                            <span>OFFICIAL CAFE <br> & GOODS</span>
-                        </div>
+                <div class="title-wrapper">
+                    <div class="main-title">
+                        <span>OFFICIAL CAFE <br> & GOODS</span>
                     </div>
+                </div>
                 <div class="img-wrapper img-slick">
 
-                    <div class="slideshow-container">
+                    <div class="slideshow-container slick-office-good">
 
                         <div class="mySlidesmb2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide01.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide01.jpg">
                         </div>
 
                         <div class="mySlidesmb2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide02.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide02.jpg">
                         </div>
 
                         <div class="mySlidesmb2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide03.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide03.jpg">
                         </div>
                         <div class="mySlidesmb2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide04.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide04.jpg">
                         </div>
 
                         <a class="prev " onclick="plusSlidesmb2(-1)"><img
@@ -458,19 +460,19 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 </div>
 
                 <div class="desc">
-                        <p class="text-16 cs-mb">An official guidebook to help you get around the <br> exhibition
-                        </p>
-                        <div class="link-group">
-                            <a href="{%HOME_URL%}/about" class=" more link-step">
-                                <div class="left">
-                                    <div class="text-38">more</div>
-                                </div>
-                                <div class="right">
-                                    <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
-                                </div>
-                            </a>
-                        </div>
+                    <p class="text-16 cs-mb">An official guidebook to help you get around the <br> exhibition
+                    </p>
+                    <div class="link-group">
+                        <a href="{%HOME_URL%}/about" class=" more link-step">
+                            <div class="left">
+                                <div class="text-38">more</div>
+                            </div>
+                            <div class="right">
+                                <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
+                            </div>
+                        </a>
                     </div>
+                </div>
 
             </div>
         </div>
@@ -511,7 +513,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
         <h2 class="title-h2 pc-hidden">TOKYO TRANSFORMED <br>
             INTO A MUSEUM</h2>
         <h2 class="title-h2 mobile-hidden">TOKYO <br>
-            TRANSFORMED  <br> INTO A MUSEUM</h2>
+            TRANSFORMED <br> INTO A MUSEUM</h2>
         <p class="text-32">東京の街全体がミュージアムになる10日間</p>
         <p class="text-35">2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p>
         <p class="text-28">表参道・外苑前、原宿・明治神宮前、渋谷・恵比寿、代官山・中目黒、六本木、新宿、銀座 で開催</p>
@@ -527,7 +529,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
         <p class="text-18 dt-block">感動を、すべての人々に</p>
         <p class="text-20">「DESIGNART
             TOKYO」は、毎年秋に開催するデザイン＆アートフェスティバルです。世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、インテリア、ファッション、テクノロジーなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩な作品を発表していきます。</p>
-        <a href="{%HOME_URL%}/about" class="text-38 more" >more <span><img
+        <a href="{%HOME_URL%}/about" class="text-38 more">more <span><img
                         src="{%URL_STATICS%}/images/top/arrow-item.png"></span></a>
     </div>
 </section>
@@ -548,7 +550,8 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                         </div>
                     </div>
                     <div class="desc">
-                        <p class="text-18">2019年は全展示会場100箇所以上11エリアで開催致します。<br>写真は、2018年のエキシビション「 “60'S SOUNDS, 60'S SPIRITS” by Keita Suzuki + Ichiro Yamaguchi at Fritz Hansen Aoyama」</p>
+                        <p class="text-18">2019年は全展示会場100箇所以上11エリアで開催致します。<br>写真は、2018年のエキシビション「 “60'S SOUNDS, 60'S
+                            SPIRITS” by Keita Suzuki + Ichiro Yamaguchi at Fritz Hansen Aoyama」</p>
                         <div class="link-group">
                             <a href="{%HOME_URL%}/exhibitor/" class="link-step">
                                 <div class="left">
@@ -653,7 +656,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
                 </div>
 
             </div>
-            <div class="step-item step-slick margin100">
+            <div class="step-item step-slick">
                 <div class="left">
                     <div class="title-wrapper">
                         <div class="main-title">
@@ -677,32 +680,23 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
 
                 <div class="img-wrapper img-slick">
 
-                    <div class="slideshow-container">
+                    <div class="slideshow-container slick-office-good">
 
                         <div class="mySlides2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide01.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide01.jpg">
                         </div>
 
                         <div class="mySlides2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide02.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide02.jpg">
                         </div>
 
                         <div class="mySlides2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide03.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide03.jpg">
                         </div>
                         <div class="mySlides2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide04.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide04.jpg">
                         </div>
 
-                        <a class="prev " onclick="plusSlides2(-1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
-                        <a class="next " onclick="plusSlides2(1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
-                    </div>
-                    <div style="text-align:center;display:none;">
-                        <span class="dot" onclick="currentSlide2(1)"></span>
-                        <span class="dot" onclick="currentSlide2(2)"></span>
-                        <span class="dot" onclick="currentSlide2(3)"></span>
                     </div>
                 </div>
 
@@ -823,32 +817,23 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
 
                 <div class="img-wrapper img-slick">
 
-                    <div class="slideshow-container">
+                    <div class="slideshow-container slick-office-good">
 
                         <div class="mySlidesmb2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide01.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide01.jpg">
                         </div>
 
                         <div class="mySlidesmb2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide02.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide02.jpg">
                         </div>
 
                         <div class="mySlidesmb2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide03.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide03.jpg">
                         </div>
                         <div class="mySlidesmb2 ">
-                            <img src="{%URL_STATICS%}/images/top/slide04.jpg" style="width:100%">
+                            <img src="{%URL_STATICS%}/images/top/slide04.jpg">
                         </div>
 
-                        <a class="prev " onclick="plusSlidesmb2(-1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-left-banner.png"/></a>
-                        <a class="next " onclick="plusSlidesmb2(1)"><img
-                                    src="{%URL_STATICS%}/images/top/arrow-right-banner.png"/></a>
-                    </div>
-                    <div style="text-align:center;display:none;">
-                        <span class="dot" onclick="currentSlidemb2(1)"></span>
-                        <span class="dot" onclick="currentSlidemb2(2)"></span>
-                        <span class="dot" onclick="currentSlidemb2(3)"></span>
                     </div>
                 </div>
                 <div class="desc">
@@ -875,7 +860,7 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
 </div>
 
 
-<?php get_footer( 'top2' ); ?>
+<?php get_footer('top2'); ?>
 
 <script type="text/javascript">
     /* Add current menu
@@ -885,6 +870,48 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
     jQuery(function ($) {
         $(document).ready(function () {
             $('a[data-demo=item-0]').parent().addClass('current-menu-item');
+
+            $('.js-slick-carousel').slick(
+                {
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    arrows: true,
+                    prevArrow: "<img class='a-left control-c prev slick-prev' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'>",
+                    nextArrow: "<img class='a-right control-c next slick-next' src='<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png'>"
+
+                }
+            );
+
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                focusOnSelect: true,
+                nextArrow: "<div><img class='next ' src='<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png'></div>",
+                prevArrow: "<div><img class='prev ' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'></div>",
+
+            });
+
+            setTimeout(function () {
+
+                $('.slick-office-good').slick(
+                    {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        prevArrow: "<div><img class='a-left control-c prev slick-prev' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'></div>",
+                        nextArrow: "<div><img class='a-right control-c next slick-next' src='<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png'></div>"
+
+                    }
+                );
+            }, 500);
+
         });
     })
 
@@ -894,114 +921,8 @@ $description = str_replace( '{%CAROUSEL_NEWS%}', $content, $description );
             $('body').addClass('body-white');
         }
 
-        $('.js-slick-carousel').slick(
-            {
-                autoplay: true,
-                autoplaySpeed: 3000,
-                arrows: true,
-                prevArrow: "<img class='a-left control-c prev slick-prev' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'>",
-                nextArrow: "<img class='a-right control-c next slick-next' src='<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png'>"
-
-            }
-        );
-
-        $('.slider-for').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            asNavFor: '.slider-nav'
-        });
-        $('.slider-nav').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            asNavFor: '.slider-for',
-            focusOnSelect: true,
-            nextArrow: "<div><img class='next ' src='<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png'></div>",
-            prevArrow: "<div><img class='prev ' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'></div>",
-
-        });
-
-
         // $.each($('#primary-menu li'), function (index) {
         //     $(this).find('a').attr('data-demo', 'item-'+index);
         // })
     })(jQuery);
-</script>
-<script>
-
-    var slideIndexmb2 = 1;
-    showSlidesmb2(slideIndexmb2);
-
-    function plusSlidesmb2(n) {
-        showSlidesmb2(slideIndexmb2 += n);
-    }
-
-    function currentSlidemb2(n) {
-        showSlidesmb2(slideIndexmb2 = n);
-    }
-
-    function showSlidesmb2(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlidesmb2");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndexmb2 = 1
-        }
-        if (n < 1) {
-            slideIndexmb2 = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndexmb2 - 1].style.display = "block";
-        dots[slideIndexmb2 - 1].className += " active";
-    }
-
-
-    var slideIndex2 = 1;
-    showSlides2(slideIndex2);
-
-    function plusSlides2(n) {
-        showSlides2(slideIndex2 += n);
-    }
-
-    function currentSlide2(n) {
-        showSlides2(slideIndex2 = n);
-    }
-
-    function showSlides2(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides2");
-        console.log(slides);
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex2 = 1
-        }
-        if (n < 1) {
-            slideIndex2 = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex2 - 1].style.display = "block";
-        dots[slideIndex2 - 1].className += " active";
-    }
-
-    document.addEventListener("DOMContentLoaded", function (event) {
-        setInterval(function () {
-            // plusSlides(1)
-            // plusSlidesmb(1)
-            plusSlides2(1)
-            plusSlidesmb2(1)
-        }, 3000);
-    });
-
 </script>
