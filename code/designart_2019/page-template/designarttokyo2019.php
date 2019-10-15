@@ -181,6 +181,8 @@ echo $description;
 
                 $('.slick-office-good').slick(
                     {
+                        autoplay: true,
+                        autoplaySpeed: 3000,
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         prevArrow: "<div><img class='a-left control-c prev slick-prev' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'></div>",
