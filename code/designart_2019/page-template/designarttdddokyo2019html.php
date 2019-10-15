@@ -496,7 +496,7 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
             TRANSFORMED <br> INTO A MUSEUM</h2>
         <p class="text-32">東京の街全体がミュージアムになる10日間</p>
         <p class="text-35">2019.10.18 <span>fri.</span> - 27 <span>sun.</span></p>
-        <p class="text-28">表参道・外苑前、原宿・明治神宮前、渋谷・恵比寿、代官山・中目黒、六本木、新宿、銀座 で開催</p>
+        <p class="text-28">表参道・外苑前、原宿・明治神宮前、渋谷・恵比寿、代官山・中目黒、六本木、新宿、銀座で開催</p>
     </div>
 </section>
 <section class="container-black">
@@ -696,7 +696,7 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                     <img src="{%URL_STATICS%}/images/top/discoverart.jpg" alt=""/>
                 </div>
                 <div class="desc">
-                    <p class="text-18">2019年は120組、11エリアで作品を展示します。</p>
+                    <p class="text-18">2019年は全展示会場100箇所以上11エリアで開催致します。写真は、2018年のエキシビション「 “60'S SOUNDS, 60'S SPIRITS” by Keita Suzuki + Ichiro Yamaguchi at Fritz Hansen Aoyama」</p>
                     <div class="link-group">
                         <a href="{%HOME_URL%}/exhibitor/" class="link-step">
                             <div class="left">
