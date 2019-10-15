@@ -5912,7 +5912,9 @@ footer.site-footer {
         height: auto;
         overflow: auto;
     }
-
+    .step-3 + .step-item .img-wrapper{
+        height: 100%;
+    }
     .banner-top-btn .carousel-inner > .item .date {
         text-align: center;
     }
