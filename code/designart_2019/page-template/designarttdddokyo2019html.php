@@ -261,7 +261,7 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                         <p class="text-16 cs-mb">An official guidebook to help you get around the <br> exhibition
                         </p>
                         <div class="link-group">
-                            <a href="{%HOME_URL%}/about" class=" more link-step">
+                            <a href="{%HOME_URL%}/about/?tab=cafe" class=" more link-step">
                                 <div class="left">
                                     <div class="text-38">more</div>
                                 </div>
@@ -444,7 +444,7 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                     <p class="text-16 cs-mb">An official guidebook to help you get around the <br> exhibition
                     </p>
                     <div class="link-group">
-                        <a href="{%HOME_URL%}/about" class=" more link-step">
+                        <a href="{%HOME_URL%}/about/?tab=cafe" class=" more link-step">
                             <div class="left">
                                 <div class="text-38">more</div>
                             </div>
@@ -646,7 +646,7 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                     <div class="desc">
                         <p class="text-16 cs-mb"> 展示巡りに役立つオフィシャルガイドブック</p>
                         <div class="link-group">
-                            <a href="{%HOME_URL%}/about" class=" more link-step">
+                            <a href="{%HOME_URL%}/about/?tab=cafe" class=" more link-step">
                                 <div class="left">
                                     <div class="text-38">more</div>
                                 </div>
@@ -819,7 +819,7 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                 <div class="desc">
                     <p class="text-16 cs-mb"> 展示巡りに役立つオフィシャルガイドブック</p>
                     <div class="link-group">
-                        <a href="{%HOME_URL%}/about" class=" more link-step">
+                        <a href="{%HOME_URL%}/about/?tab=cafe" class=" more link-step">
                             <div class="left">
                                 <div class="text-38">more</div>
                             </div>
