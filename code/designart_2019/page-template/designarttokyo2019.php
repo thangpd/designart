@@ -81,7 +81,7 @@ $events = get_posts( array(
 	'posts_per_page' => 5,
 	'order'          => 'DESC',
 	'orderby'        => 'post_date',
-	'post_status'    => [ 'future', 'private' ],
+	'post_status'    => [ 'future' ],
 ) );
 
 $exhibitor_list              = '';
