@@ -29,42 +29,16 @@ jQuery(function ($) {
 
         $("#searchform .area .radio_area").on('click', function (e) {
             console.log($(this));
-            $(this).parents().find('.radio_area.selected').removeClass("selected");
+            $(this).parents("ul.area").find('.radio_area.selected').removeClass("selected");
             $(this).addClass("selected");
 
-            // $(this).parent().removeClass("selected");
 
-            //init
-            /*if ($(this).is(':checked')) {
-                //ブラウザのbackで戻ったりするとcheckが残っていたりするため表示を同期させる
-                console.log($(this).parent())
-                $(this).parent().removeClass("selected");
-
-            } else {
-                console.log($(this).parent())
-                $(this).parent().addClass("selected");
-            }*/
-
-            //change
         });
 
         $("#searchform .cate .radio_area").on('click', function (e) {
             console.log($(this));
-            $(this).parents().find('.radio_area.selected').removeClass("selected");
+            $(this).parents("ul.cate").find('.radio_area.selected').removeClass("selected");
             $(this).addClass("selected");
-
-            // $(this).parent().removeClass("selected");
-
-            //init
-            /*if ($(this).is(':checked')) {
-                //ブラウザのbackで戻ったりするとcheckが残っていたりするため表示を同期させる
-                console.log($(this).parent())
-                $(this).parent().removeClass("selected");
-
-            } else {
-                console.log($(this).parent())
-                $(this).parent().addClass("selected");
-            }*/
 
             //change
         });
