@@ -83,7 +83,6 @@ $events     = get_posts(array(
 	'posts_per_page' => 10,
 	'order'          => 'DESC',
 	'orderby'        => 'post_date',
-	'post_status'    => array('future', 'private')
 
 ));
 
@@ -164,11 +163,9 @@ echo $description;
 
                 }
             );
+            var img = document.querySelector('img')
 
-
-
-            setTimeout(function () {
-
+            function loaded() {
                 $('.slick-office-good').slick(
                     {
                         autoplay: true,
@@ -180,9 +177,6 @@ echo $description;
 
                     }
                 );
-            }, 500);
-            setTimeout(function () {
-
                 $('.slider-for').slick({
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -199,7 +193,23 @@ echo $description;
                     prevArrow: "<div><img class='prev ' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'></div>",
 
                 });
+            }
+
+            if (img.complete) {
+                loaded()
+            } else {
+                img.addEventListener('load', loaded)
+                img.addEventListener('error', function() {
+                    console.log('error')
+                })
+            }
+
+
+            setTimeout(function () {
+
+
             }, 500);
+
 
         });
     })
