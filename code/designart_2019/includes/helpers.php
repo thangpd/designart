@@ -1360,7 +1360,7 @@ function designart_filter_exhibitor()
                 'field'    => 'slug',
                 'terms'    => $area
             ),
-            'relation' => 'OR'
+            'relation' => 'AND'
         );
     }
 
@@ -1375,7 +1375,7 @@ function designart_filter_exhibitor()
                 'field'    => 'slug',
                 'terms'    => $cate
             ),
-            'relation' => 'OR'
+            'relation' => 'AND'
         );
 
     }
