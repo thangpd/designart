@@ -825,7 +825,7 @@ ul.table_col_right_text li {
 }
 
 .tab-filter-section.tab-official-page .heading-des.official_cafe .info {
-    font-family: YuGo;
+    font-family: YuGo, sans-serif;
     font-size: 14px;
     font-weight: 500;
     font-style: normal;
@@ -939,7 +939,7 @@ ul.table_col_right_text li {
 }
 
 .wp-content .shoplist .wp-section-area .area-section .wp-content-area .address a {
-    font-family: YuGo;
+    font-family: YuGo, sans-serif;
     font-size: 12px;
     font-weight: bold;
     font-style: normal;
