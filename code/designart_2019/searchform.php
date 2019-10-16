@@ -6,7 +6,9 @@
  */
 
 $terms  = get_field( 'exhibitor_category_setting', 'option' );
+
 $terms2 = get_field( 'exhibitor_category_setting2', 'option' );
+
 
 $s    = isset( $_GET['s'] ) ? $_GET['s'] : '';
 $area = isset( $_GET['area'] ) ? $_GET['area'] : '';
@@ -47,26 +49,31 @@ $prefix_varible = get_prefix_languagle( $language, "_" );
                                     for="all_area">ALL</label>
                         </a>
                     </li>-->
-					<?php if ( ! empty( $terms ) ): ?>
+					<?php if ( ! empty( $terms ) ):
+
+
+                        ?>
 						<?php foreach ( $terms as $term ):
 							$selected = "";
 							$checked = "";
 							$terms_traned = translate_category_name( $term, $prefix_varible );
-							foreach ( $area as $a ) {
-								if ( strcmp( $a, $term->slug ) == 0 ) {
-									$selected = " selected";
-									$checked  = "checked";
+							if(!empty($area)){
+								foreach ( $area as $a ) {
+									if ( strcmp( $a, $term->slug ) == 0 ) {
+										$selected = " selected";
+										$checked  = "checked";
+									}
 								}
-							}
+                            }
 							?>
-                            <!--<li>
-                                <a class="radio_area<?php /*echo $selected; */?>" href="javascript:void(0);">
+                            <li>
+                                <a class="radio_area<?php echo $selected; ?>" href="javascript:void(0);">
                                     <input type="checkbox" name="area[]"
-                                           value="<?php /*echo $term->slug; */?>" <?php /*echo $checked; */?>
-                                           id='<?php /*echo $term->slug; */?>'><label
-                                            for="<?php /*echo $term->slug; */?>"><?php /*echo $terms_traned; */?></label>
+                                           value="<?php echo $term->slug; ?>" <?php echo $checked; ?>
+                                           id='<?php echo $term->slug; ?>'><label
+                                            for="<?php echo $term->slug; ?>"><?php echo $terms_traned; ?></label>
                                 </a>
-                            </li>-->
+                            </li>
 						<?php endforeach; ?>
 					<?php endif; ?>
                 </ul>
@@ -95,18 +102,22 @@ $prefix_varible = get_prefix_languagle( $language, "_" );
                         </a>
                     </li>-->
 
-					<?php if ( ! empty( $terms2 ) ): ?>
+					<?php if ( ! empty( $terms2 ) ):
+
+
+                        ?>
 						<?php foreach ( $terms2 as $term ):
 							$selected = "";
 							$checked = "";
 							$terms_traned = translate_category_name( $term, $prefix_varible );
+							if(!empty($cate)){
 							foreach ( $cate as $c ) {
 								if ( strcmp( $c, $term->slug ) == 0 ) {
 									$selected = " selected";
 									$checked  = "checked";
 								}
 							}
-
+							}
 							?>
                             <li>
                                 <a class="radio_area<?php echo $selected; ?>" href="javascript:void(0);">

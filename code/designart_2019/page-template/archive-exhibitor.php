@@ -26,7 +26,6 @@ $page        = get_page_by_path( 'exhibitor' );
 
 $description = get_field( $prefix_varible . 'description', $page->ID, '' );
 
-$terms2 = get_field( 'exhibitor_category_setting2', 'option' );
 ?>
 
 <div class="exhibition-page padding-t-50">
