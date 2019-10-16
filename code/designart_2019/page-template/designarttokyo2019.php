@@ -198,7 +198,7 @@ echo $description;
                     prevArrow: "<div><img class='prev ' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'></div>",
 
                 });
-            }, 500);
+            }, 800);
 
         });
     })
