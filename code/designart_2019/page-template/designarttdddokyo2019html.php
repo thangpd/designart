@@ -310,7 +310,7 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                     <img src="{%URL_STATICS%}/images/top/discoverart.jpg" alt=""/>
                 </div>
                 <div class="desc">
-                    <p class="text-18"> The 100 groups exhibit their works in the 11 areas in <br> 2019.The photo
+                    <p class="text-16"> The 100 groups exhibit their works in the 11 areas in <br> 2019.The photo
                         shows
                         the 2018 exhibition <br>“60'S SOUNDS, 60'S SPIRITS” by Keita Suzuki + <br>Ichiro Yamaguchi
                         at
@@ -530,7 +530,7 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                         </div>
                     </div>
                     <div class="desc">
-                        <p class="text-18">2019年は全展示会場100箇所以上11エリアで開催致します。<br>写真は、2018年のエキシビション「 “60'S SOUNDS, 60'S
+                        <p class="text-16">2019年は全展示会場100箇所以上11エリアで開催致します。<br>写真は、2018年のエキシビション「 “60'S SOUNDS, 60'S
                             SPIRITS” by Keita Suzuki + Ichiro Yamaguchi at Fritz Hansen Aoyama」</p>
                         <div class="link-group">
                             <a href="{%HOME_URL%}/exhibitor/" class="link-step">
