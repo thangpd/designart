@@ -165,22 +165,7 @@ echo $description;
                 }
             );
 
-            $('.slider-for').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                fade: true,
-                asNavFor: '.slider-nav'
-            });
-            $('.slider-nav').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                asNavFor: '.slider-for',
-                focusOnSelect: true,
-                nextArrow: "<div><img class='next ' src='<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png'></div>",
-                prevArrow: "<div><img class='prev ' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'></div>",
 
-            });
 
             setTimeout(function () {
 
@@ -195,6 +180,25 @@ echo $description;
 
                     }
                 );
+            }, 500);
+            setTimeout(function () {
+
+                $('.slider-for').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    fade: true,
+                    asNavFor: '.slider-nav'
+                });
+                $('.slider-nav').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    asNavFor: '.slider-for',
+                    focusOnSelect: true,
+                    nextArrow: "<div><img class='next ' src='<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png'></div>",
+                    prevArrow: "<div><img class='prev ' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'></div>",
+
+                });
             }, 500);
 
         });
