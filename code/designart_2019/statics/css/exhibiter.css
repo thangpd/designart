@@ -622,7 +622,8 @@ li.exhibitor-cat-list {
   display: none;
 }
 #searchform input[type=radio] {
-
+  visibility: hidden;
+  opacity: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
