@@ -163,9 +163,11 @@ echo $description;
 
                 }
             );
-            var img = document.querySelector('img')
 
-            function loaded() {
+
+
+            setTimeout(function () {
+
                 $('.slick-office-good').slick(
                     {
                         autoplay: true,
@@ -177,6 +179,9 @@ echo $description;
 
                     }
                 );
+            }, 500);
+            setTimeout(function () {
+
                 $('.slider-for').slick({
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -193,23 +198,7 @@ echo $description;
                     prevArrow: "<div><img class='prev ' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'></div>",
 
                 });
-            }
-
-            if (img.complete) {
-                loaded()
-            } else {
-                img.addEventListener('load', loaded)
-                img.addEventListener('error', function() {
-                    console.log('error')
-                })
-            }
-
-
-            setTimeout(function () {
-
-
             }, 500);
-
 
         });
     })
