@@ -16,15 +16,29 @@ if ( isset( $term_venue ) ) {
 
 if ( function_exists( 'acf_add_options_page' ) && ! empty( $terms = get_field( 'exhibitor_category_setting', 'option' ) ) ) {
 } else {
-	$terms          = get_terms( [ 'taxonomy' => 'exhibitor-cat', 'hide_empty' => true ] );
+	$terms = get_terms( [ 'taxonomy' => 'exhibitor-cat', 'hide_empty' => true ] );
 }
 
 $language       = get_key_languagle();
 $prefix_varible = get_prefix_languagle( $language, "_" );
 
-$page        = get_page_by_path( 'exhibitor' );
+$page = get_page_by_path( 'exhibitor' );
 
 $description = get_field( $prefix_varible . 'description', $page->ID, '' );
+
+
+/*
+ * $terms : exhibitor_category_setting一覧
+ * $terms2 : exhibitor_category_setting2一覧
+ */
+
+$terms = get_field( 'exhibitor_category_setting', 'option' );
+
+$terms2 = get_field( 'exhibitor_category_setting2', 'option' );
+
+$s    = isset( $_GET['s'] ) ? $_GET['s'] : '';
+$area = isset( $_GET['area'] ) ? $_GET['area'] : '';
+$cate = isset( $_GET['cate'] ) ? $_GET['cate'] : '';
 
 ?>
 
@@ -35,105 +49,153 @@ $description = get_field( $prefix_varible . 'description', $page->ID, '' );
         <!-- title -->
         <div class="heading-title heading-style-01 padding-tb-50">
             <div class="title-wrapp">
-                <div class="first-letter"><?php echo translate_text_language('exhibition'); ?></div>
-                <h2 class="title case-1"><?php echo translate_text_language('exhibition'); ?></h2>
+                <div class="first-letter"><?php echo translate_text_language( 'exhibition' ); ?></div>
+                <h2 class="title case-1"><?php echo translate_text_language( 'exhibition' ); ?></h2>
             </div>
         </div>
         <p class="title-des"><?php echo $description ?></p>
 
 
-        <?php get_search_form(); ?>
+		<?php
+
+
+		?>
+
+        <form method="get" id="searchform" action="<?php bloginfo( 'url' ); ?>">
+            <!-- フリーワード検索 -->
+            <input type="text" class="freeword"
+                   placeholder="<?php echo translate_text_language( 'Search by keyword' ) ?>" id="s" name="s"
+                   value="<?php echo ! empty( $s ) ? $s : ''; ?>" size="30" maxlength="128">
+            <input type="image" class="submit_bt" name=""
+                   src="<?php echo URL_STATICS; ?>/images/commons/search_icon.png"
+                   width="25" value="検索">
+
+            <div class="radio_group_wrap">
+                <div class="radio_group">
+                    <div class="radios">
+                        <div class="tit"><?php echo translate_text_language( 'AREA' ); ?></div>
+                        <ul class="area">
+							<?php
+							$selected = "";
+							$checked  = "";
+							if ( ! empty( $area ) ) {
+								foreach ( $area as $a ) {
+									if ( strcmp( $a, "all_area" ) == 0 ) {
+										$selected = " selected";
+										$checked  = "checked";
+									}
+								}
+							}
+							?>
+                            <!--<li>
+                        <a class="radio_area<?php /*echo $selected; */ ?>" href="javascript:void(0);">
+                            <input type="checkbox" name="area[]" value="all_area" <?php /*echo $checked; */ ?> id='all_area'><label
+                                    for="all_area">ALL</label>
+                        </a>
+                    </li>-->
+							<?php if ( ! empty( $terms ) ):
+
+
+								?>
+								<?php foreach ( $terms as $term ):
+								$selected = "";
+								$checked = "";
+								$terms_traned = translate_category_name( $term, $prefix_varible );
+								if ( ! empty( $area ) ) {
+									foreach ( $area as $a ) {
+										if ( strcmp( $a, $term->slug ) == 0 ) {
+											$selected = " selected";
+											$checked  = "checked";
+										}
+									}
+								}
+								?>
+                                <li>
+                                    <a class="radio_area<?php echo $selected; ?>" href="javascript:void(0);">
+                                        <input type="radio" name="area"
+                                               value="<?php echo $term->slug; ?>" <?php echo $checked; ?>><label
+                                                for="<?php echo $term->slug; ?>"><?php echo $terms_traned; ?></label>
+                                    </a>
+                                </li>
+							<?php endforeach; ?>
+							<?php endif; ?>
+                        </ul>
+                    </div>
+
+                    <div class="radios">
+                        <div class="tit"><?php echo translate_text_language( 'CATEGORY' ); ?></div>
+                        <ul class="cate">
+							<?php
+							$selected = "";
+							$checked  = "";
+							if ( ! empty( $cate ) ) {
+								foreach ( $cate as $c ) {
+									if ( strcmp( $c, "all_cate" ) == 0 ) {
+										$selected = " selected";
+										$checked  = "checked";
+									}
+								}
+							}
+							?>
+
+                            <!-- <li>
+                        <a class="radio_area<?php /*echo $selected; */ ?>" href="javascript:void(0);">
+                            <input type="checkbox" name="cate[]" value="all_cate" <?php /*echo $checked; */ ?> id='all_cate'><label
+                                    for="all_cate">ALL</label>
+                        </a>
+                    </li>-->
+
+							<?php if ( ! empty( $terms2 ) ):
+
+
+								?>
+								<?php foreach ( $terms2 as $term ):
+								$selected = "";
+								$checked = "";
+								$terms_traned = translate_category_name( $term, $prefix_varible );
+								if ( ! empty( $cate ) ) {
+									foreach ( $cate as $c ) {
+										if ( strcmp( $c, $term->slug ) == 0 ) {
+											$selected = " selected";
+											$checked  = "checked";
+										}
+									}
+								}
+								?>
+                                <li>
+                                    <a class="radio_area<?php echo $selected; ?>" href="javascript:void(0);">
+                                        <input type="radio" name="cate"
+                                               value="<?php echo $term->slug; ?>" <?php echo $checked; ?>
+                                               ><label
+                                                for="<?php echo $term->slug; ?>"><?php echo $terms_traned; ?></label>
+                                    </a>
+                                </li>
+							<?php endforeach; ?>
+							<?php endif; ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+
 
         <!-- Filter category -->
-<!--        <div class="filter_category">
+        <!--        <div class="filter_category">
             <div class="block-category">
 	            <?php
-/*	            $tranlated_term = get_category_exhibitor($terms,'',true);
-	            echo $tranlated_term;
-	            */?>
+		/*	            $tranlated_term = get_category_exhibitor($terms,'',true);
+						echo $tranlated_term;
+						*/ ?>
             </div>
         </div>
 -->
         <!-- scroll - page -->
-		<?php if ( ! empty( $terms ) ): ?>
-            <!-- wp-block-section -->
-			<?php
-			foreach (
-				$terms
-
-				as $term
-			):
-
-				$posts = get_posts( array(
-					'post_type'      => 'exhibitor',
-					'posts_per_page' => - 1,
-					'tax_query'      => array(
-						array(
-							'taxonomy' => $term->taxonomy,
-							'field'    => 'term_id',
-							'terms'    => $term->term_id,
-						)
-					),
-					'orderby'        => 'post_title',
-					'order'          => 'ASC',
-				) );
-				if ( ! isset( $term ) || empty( $term ) || empty($posts) ) {
-					continue;
-				}
-
-				$map_cat = get_field( 'map', 'exhibitor-cat_' . $term->term_id, '' );
-				$terms_traned=translate_category_name( $term, $prefix_varible );
-				?>
-                <div id="<?php echo $term->slug ?>" class="section_scroll wp-block-section">
-                    <div class="heading-title heading-style-02">
-                        <h2 class="title upper-text"><?php echo $terms_traned ?><span class="line-middle"></span></h2>
-                    </div>
-                    <ul class="wp-list-exhibiter">
-						<?php
-
-						foreach ( $posts as $post ) {
-							$post_id = $post->ID;
-
-							$title               = get_field( $prefix_varible . 'exhibitor_title', $post_id );
-							$exhibitor_thumbnail = get_field( 'exhibitor_thumbnail', $post_id, '' );
-							$gallery             = get_field( 'exhibitor_gallery', $post_id );
-							$thumbail_url        = '';
-							if ( ! empty( $gallery ) ) {
-								$thumbail_url = take_value_array( 'url', $gallery[0] );
-							}
-
-							if ( ! empty( $exhibitor_thumbnail ) ) {
-								$exhibitor_thumbnail = take_value_array( 'url', $exhibitor_thumbnail, $exhibitor_thumbnail );
-								$thumbail_url        = wp_get_attachment_image_url( $exhibitor_thumbnail );
-							}
-							echo '<li class="item">
-                                <div class="item-left images">
-                                    <a href="' . get_permalink( $post_id ) . '" class="link-img">
-                                        <img src="' . $thumbail_url . '" alt="' . $title . '" class="img-responsive">
-                                    </a>
-                                </div>
-                                <div class="item-right information">
-                                    <div class="description">
-                                        ' . $title . '
-                                    </div>
-                                </div>
-                            </li>';
-						}
-						?>
-                        <!--wp-list-exhibiter--></ul>
-                    <!--section_scroll wp-block-section--></div>
-
-			<?php
-
-			endforeach;
-			?>
-		<?php endif; ?>
-
+		<?php echo designart_render_exhibitorarchive( $terms ) ?>
 
         <!-- back button -->
 		<?php back_page_history( false, 'bot' ) ?>
     </div>
- 
+
     <div class="wp-back-to-top-wrap">
         <div class="wp-back-to-top top2">
             <img src="<?php echo URL_STATICS; ?>/images/commons/to_top_bt.png" alt="TOP">
@@ -146,6 +208,7 @@ $description = get_field( $prefix_varible . 'description', $page->ID, '' );
             $('a[data-demo=item-1]').parent().addClass('current-menu-item');
             $('.filter_category a.category').on('click', function (e) {
                 e.preventDefault();
+                alert('ok');
                 var window = screen.width;
                 var descrease_offset = 0;
                 if (window >= 1024) {

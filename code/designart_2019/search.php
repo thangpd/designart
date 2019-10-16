@@ -30,32 +30,7 @@ $s = $_GET['s'];
 $area = $_GET['area'];
 $cate = $_GET['cate'];
 $taxonomy = $terms[0]->taxonomy;
-$taxquerysp2;
 
-
-/*var_dump($terms);
-echo "-------------------";
-var_dump($terms2);
-echo "-------------------";
-var_dump($area);
-echo "-------------------";
-var_dump($cate);
-
-echo count($area);*/
-
-/*if(count($area) == 0){
-    $area = array();
-    foreach($terms as $term){
-        array_push($area, $term->slug);
-    }
-}
-
-if(count($cate) == 0){
-    $cate = array();
-    foreach($terms2 as $term){
-        array_push($cate, $term->slug);
-    }
-}*/
 
 //エリアでALL選択時
 foreach($area as $a){
@@ -165,7 +140,7 @@ if($s){
     );
 }
 
-
+/*
 $posts = get_posts( array(
     'post_type'      => 'exhibitor',
     'posts_per_page' => - 1,
@@ -176,7 +151,7 @@ $posts = get_posts( array(
     ),
     'orderby'        => 'post_title',
     'order'          => 'ASC'
-) );
+) );*/
 
 
 ?>
@@ -204,34 +179,38 @@ $posts = get_posts( array(
                 <?php
                 foreach ($terms as $term):
                     //選択されてない地域はスルーする
-                    $bool = false;
+                    $bool  = false;
                     foreach ( $area as $val ) if(strcmp($val, $term->slug) == 0) $bool = true;
                     if($bool == false) continue;
 
-                    $posts = get_posts( array(
-                        'post_type'      => 'exhibitor',
-                        'posts_per_page' => - 1,
-                        'meta_query' => $metaquerysp,       //カスタムフィールド内、フリーワード検索
-                        'tax_query'      => array(
-                            array(
-                                array(
-                                    'taxonomy' => $term->taxonomy,
-                                    'field'    => 'slug',
-                                    'terms'    => $term->slug,
-                                ),
-                                'relation'=>'OR'
-                            ),
-                            $taxquerysp2
-                        ),
-                        'orderby'        => 'post_title',
-                        'order'          => 'ASC'
-                    ) );
+	                $args = array(
+		                'post_type'      => 'exhibitor',
+		                'posts_per_page' => - 1,
+		                'meta_query'     => $metaquerysp,       //カスタムフィールド内、フリーワード検索
+		                'tax_query'      => array(
+			                array(
+				                array(
+					                'taxonomy' => $term->taxonomy,
+					                'field'    => 'slug',
+					                'terms'    => $term->slug,
+				                ),
+				                'relation' => 'OR'
+			                ),
+			                $taxquerysp2
+		                ),
+		                'orderby'        => 'post_title',
+		                'order'          => 'ASC'
+	                );
+
+	              
+
+
+	                $posts = get_posts( $args );
 
                     if ( ! isset( $term ) || empty( $term ) || empty($posts) ) {
                         continue;
                     }
 
-                    $map_cat = get_field( 'map', 'exhibitor-cat_' . $term->term_id, '' );
                     $terms_traned=translate_category_name( $term, $prefix_varible );
                     ?>
                     <div id="<?php echo $term->slug ?>" class="section_scroll wp-block-section">

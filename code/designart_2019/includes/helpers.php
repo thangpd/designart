@@ -1080,5 +1080,335 @@ function redirect_multilanguage() {
 
 add_action( 'after_setup_theme', 'redirect_multilanguage' );
 
+function designart_render_exhibitorarchive( $terms, $taxquerysp2 = [], $metaquerysp = [], $cats = [] ) {
+	if ( ! empty( $terms ) ):
+		$language          = get_key_languagle();
+		$prefix_varible    = get_prefix_languagle( $language, "_" );
+		$container_formart = '<div id="%1$s" class="section_scroll wp-block-section">
+                <div class="heading-title heading-style-02">
+                    <h2 class="title upper-text">%2$s<span class="line-middle"></span></h2>
+                </div>
+                <ul class="wp-list-exhibiter">%3$s</ul></div>';
+
+		$content_format = '<li class="item">
+                                <div class="item-left images">
+                                    <a href="%1$s" class="link-img">
+                                        <img src="%2$s" alt="%3$s" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="item-right information">
+                                    <div class="description">
+                                        %3$s
+                                    </div>
+                                </div>
+                            </li>';
+		$sprintf        = '';
+		foreach ( $terms as $term ):
+			if ( ! empty( $cats ) ) {
+				foreach ( $cats as $val ) {
+					if ( strcmp( $val, $term->slug ) == 0 ) {
+						$bool = true;
+					}
+				}
+				if ( $bool == false ) {
+					continue;
+				}
+			}
+			/*$posts = get_posts( array(
+				'post_type'      => 'exhibitor',
+				'posts_per_page' => - 1,
+				'meta_query' => $metaquerysp,       //カスタムフィールド内、フリーワード検索
+				'tax_query'      => array(
+					array(
+						array(
+							'taxonomy' => $term->taxonomy,
+							'field'    => 'slug',
+							'terms'    => $term->slug,
+						),
+						'relation'=>'OR'
+					),
+					$taxquerysp2
+				),
+				'orderby'        => 'post_title',
+				'order'          => 'ASC'
+			) );*/
 
 
+			$sub_taxonomy = array_merge( array(
+				array(
+					'taxonomy' => $term->taxonomy,
+					'field'    => 'slug',
+					'terms'    => $term->slug,
+				),
+				'relation' => 'OR'
+			), $taxquerysp2 );
+			$tax_query    = $sub_taxonomy;
+			$args         = array_merge( array(
+				'post_type'      => 'exhibitor',
+				'posts_per_page' => - 1,
+				'tax_query'      => $tax_query,
+				'orderby'        => 'post_title',
+				'order'          => 'ASC',
+			), $metaquerysp );
+
+			/*Array
+			(
+				[post_type] => exhibitor
+				[posts_per_page] => -1
+				[meta_query] => Array
+					(
+						[0] => Array
+							(
+								[0] => Array
+									(
+										[key] => exhibitor_area
+										[value] => asdfasdf
+										[compare] => LIKE
+									)
+
+								[1] => Array
+									(
+										[key] => exhibitor_gallery
+										[value] => asdfasdf
+										[compare] => LIKE
+									)
+
+								[2] => Array
+									(
+										[key] => exhibitor_title
+										[value] => asdfasdf
+										[compare] => LIKE
+									)
+
+
+								[relation] => OR
+							)
+
+					)
+
+				[tax_query] => Array
+					(
+						[0] => Array
+							(
+								[0] => Array
+									(
+										[taxonomy] => exhibitor-cat
+										[field] => slug
+										[terms] => ebisu
+									)
+
+								[relation] => OR
+							)
+
+						[1] =>
+					)
+
+				[orderby] => post_title
+				[order] => ASC
+			)*/
+			$posts = get_posts( $args );
+
+
+			if ( ! isset( $term ) || empty( $term ) || empty( $posts ) ) {
+				continue;
+			}
+
+			$terms_traned = translate_category_name( $term, $prefix_varible );
+			$content      = '';
+			foreach ( $posts as $post ) {
+				$post_id = $post->ID;
+
+				$title               = get_field( $prefix_varible . 'exhibitor_title', $post_id );
+				$exhibitor_thumbnail = get_field( 'exhibitor_thumbnail', $post_id, '' );
+				$gallery             = get_field( 'exhibitor_gallery', $post_id );
+				$thumbail_url        = '';
+				if ( ! empty( $gallery ) ) {
+					$thumbail_url = take_value_array( 'url', $gallery[0] );
+				}
+
+				if ( ! empty( $exhibitor_thumbnail ) ) {
+					$exhibitor_thumbnail = take_value_array( 'url', $exhibitor_thumbnail, $exhibitor_thumbnail );
+					$thumbail_url        = wp_get_attachment_image_url( $exhibitor_thumbnail );
+				}
+
+				$content .= sprintf( $content_format, get_permalink( $post_id ), $thumbail_url, $title );
+
+			}
+			$sprintf .= sprintf( $container_formart, $term->slug, $terms_traned, $content );
+
+
+		endforeach;
+
+		return sprintf( '<div class="ajax_respone">%1$s</div>', $sprintf );
+	endif;
+
+}
+
+
+function designart_filter_exhibitor() {
+
+	$language       = get_key_languagle();
+	$prefix_varible = get_prefix_languagle( $language, "_" );
+	$term_venue     = get_term_by( 'slug', 'artist-venue', 'exhibitor-cat' );
+	$term_parent    = 0;
+	if ( isset( $term_venue ) ) {
+		$term_parent = $term_venue->term_id;
+	}
+
+	if ( function_exists( 'acf_add_options_page' ) && ! empty( $terms = get_field( 'exhibitor_category_setting', 'option' ) ) ) {
+	} else {
+		$terms = get_terms( [ 'taxonomy' => 'exhibitor-cat', 'hide_empty' => true ] );
+	}
+	$page = get_page_by_path( 'exhibitor' );
+
+	$description = get_field( $prefix_varible . 'description', $page->ID, '' );
+
+	$terms2 = get_field( 'exhibitor_category_setting2', 'option' );
+
+
+	/*
+	 * $terms : exhibitor_category_setting 一覧
+	 * $terms2 : exhibitor_category_setting2 一覧
+	 */
+
+	$s        = $_GET['s'];
+	$area[]   = $_GET['area'];
+	$cate[]   = $_GET['cate'];
+	$taxonomy = $terms[0]->taxonomy;
+
+
+//エリアでALL選択時
+	foreach ( $area as $a ) {
+		if ( strcmp( $a, "all_area" ) == 0 ) {
+			$area = array();
+			foreach ( $terms as $term ) {
+				array_push( $area, $term->slug );
+			}
+		}
+	}
+
+//カテゴリーでALL選択時
+	foreach ( $cate as $c ) {
+		if ( strcmp( $c, "all_cate" ) == 0 ) {
+			$cate = array();
+			foreach ( $terms2 as $term ) {
+				array_push( $cate, $term->slug );
+			}
+		}
+	}
+
+//検索対象エリアを設定
+	if ( $area ) {
+		;
+
+		foreach ( $area as $val ) {
+			$taxquerysp[] = array(
+				'taxonomy' => $taxonomy,
+				'field'    => 'slug',
+				'terms'    => $val
+			);
+		}
+		$taxquerysp['relation'] = 'OR';
+	}
+
+//検索対象カテゴリーを設定
+	if ( $cate ) {
+
+
+		foreach ( $cate as $val ) {
+			$taxquerysp2[] = array(
+				'taxonomy' => $taxonomy,
+				'field'    => 'slug',
+				'terms'    => $val
+			);
+		}
+		$taxquerysp2['relation'] = 'OR';
+	}
+	$taxquery = array( $taxquerysp, $taxquerysp2 );
+	$cats     = array_merge( $area, $cate );
+
+//フリーワード検索対象フィールドを設定
+	if ( $s ) {
+		$metaquerysp['meta_query'] = array(
+			array(
+				'key'     => 'exhibitor_area',
+				'value'   => $s,
+				"compare" => "LIKE"
+			),
+			array(
+				'key'     => 'exhibitor_gallery',
+				'value'   => $s,
+				"compare" => "LIKE"
+			),
+			array(
+				'key'     => 'exhibitor_title',
+				'value'   => $s,
+				"compare" => "LIKE"
+			),
+			array(
+				'key'     => 'exhibitor_description',
+				'value'   => $s,
+				"compare" => "LIKE"
+			),
+			array(
+				'key'     => 'text_artist',
+				'value'   => $s,
+				"compare" => "LIKE"
+			),
+			array(
+				'key'     => 'text_venue',
+				'value'   => $s,
+				"compare" => "LIKE"
+			),
+			array(
+				'key'     => 'exhibitor_artist',
+				'value'   => $s,
+				"compare" => "LIKE"
+			),
+			array(
+				'key'     => 'exhibitor_venue',
+				'value'   => $s,
+				"compare" => "LIKE"
+			),
+			array(
+				'key'     => 'jp_exhibitor_title',
+				'value'   => $s,
+				"compare" => "LIKE"
+			),
+			array(
+				'key'     => 'jp_exhibitor_description',
+				'value'   => $s,
+				"compare" => "LIKE"
+			),
+			array(
+				'key'     => 'jp_text_artist',
+				'value'   => $s,
+				"compare" => "LIKE"
+			),
+			array(
+				'key'     => 'jp_text_venue',
+				'value'   => $s,
+				"compare" => "LIKE"
+			),
+			array(
+				'key'     => 'jp_exhibitor_artist',
+				'value'   => $s,
+				"compare" => "LIKE"
+			),
+			array(
+				'key'     => 'jp_exhibitor_venue',
+				'value'   => $s,
+				"compare" => "LIKE"
+			),
+			'relation' => 'OR'
+		);
+	}
+
+	echo designart_render_exhibitorarchive( $terms, $taxquery, $metaquerysp, $cats );
+	die;
+
+}
+
+
+add_action( 'wp_ajax_nopriv_filter_exhibitor', 'designart_filter_exhibitor' );
+add_action( 'wp_ajax_filter_exhibitor', 'designart_filter_exhibitor' );
