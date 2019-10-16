@@ -28,17 +28,27 @@ jQuery(function ($) {
 
 
         $("#searchform .area .radio_area").on('click', function (e) {
-            console.log($(this));
-            $(this).parents("ul.area").find('.radio_area.selected').removeClass("selected");
-            $(this).addClass("selected");
+            if($(this).hasClass('selected')){
+                $(this).removeClass("selected");
+            }else{
+                $(this).addClass("selected");
+
+            }
+            $(this).parents("ul.area").find('.radio_area.selected').not($(this)).removeClass("selected");
 
 
         });
 
         $("#searchform .cate .radio_area").on('click', function (e) {
-            console.log($(this));
-            $(this).parents("ul.cate").find('.radio_area.selected').removeClass("selected");
-            $(this).addClass("selected");
+            if($(this).hasClass('selected')){
+                $(this).removeClass("selected");
+            }else{
+                $(this).addClass("selected");
+
+            }
+            $(this).parents("ul.cate").find('.radio_area.selected').not($(this)).removeClass("selected");
+
+
 
             //change
         });
@@ -55,6 +65,10 @@ jQuery(function ($) {
             var input = $("#searchform .cate .radio_area.selected input");
             if (input.length > 0) {
                 cate = input.val();
+            }
+            var input = $("#searchform input[name='s']");
+            if (input.length > 0) {
+                searchtext = input.val();
             }
 
 

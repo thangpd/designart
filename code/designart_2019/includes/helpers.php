@@ -1128,6 +1128,8 @@ add_action('after_setup_theme', 'redirect_multilanguage');
 
 function designart_render_exhibitorarchive($terms, $taxquerysp2 = [], $metaquerysp = [], $cats = [])
 {
+
+
     if ( ! empty($terms)):
         $language          = get_key_languagle();
         $prefix_varible    = get_prefix_languagle($language, "_");
@@ -1150,18 +1152,17 @@ function designart_render_exhibitorarchive($terms, $taxquerysp2 = [], $metaquery
                                 </div>
                             </li>';
         $sprintf        = '';
+
         foreach ($terms as $term):
+
+
             if ( ! empty($cats)) {
-                $bool = true;
-                foreach ($cats as $val) {
-                    if (strcmp($val, $term->slug) == 0) {
-                        $bool = true;
-                    }
-                }
-                if ($bool == false) {
+                if ( ! in_array($term->slug, $cats)) {
                     continue;
                 }
+
             }
+
             /*$posts = get_posts( array(
                 'post_type'      => 'exhibitor',
                 'posts_per_page' => - 1,
@@ -1263,7 +1264,9 @@ function designart_render_exhibitorarchive($terms, $taxquerysp2 = [], $metaquery
 
             $terms_traned = translate_category_name($term, $prefix_varible);
             $content      = '';
+
             foreach ($posts as $post) {
+
                 $post_id = $post->ID;
 
                 $title               = get_field($prefix_varible . 'exhibitor_title', $post_id);
@@ -1322,60 +1325,59 @@ function designart_filter_exhibitor()
      */
 
     $s        = $_GET['s'];
-    $area[]   = $_GET['area'];
-    $cate[]   = $_GET['cate'];
+    $area     = $_GET['area'];
+    $cate     = $_GET['cate'];
     $taxonomy = $terms[0]->taxonomy;
-
+    $cats     = [];
 
 //エリアでALL選択時
-    foreach ($area as $a) {
-        if (strcmp($a, "all_area") == 0) {
-            $area = array();
-            foreach ($terms as $term) {
-                array_push($area, $term->slug);
-            }
+    if (strcmp($area, "all_area") == 0) {
+        $area = array();
+        foreach ($terms as $term) {
+            array_push($area, $term->slug);
         }
     }
 
 //カテゴリーでALL選択時
-    foreach ($cate as $c) {
-        if (strcmp($c, "all_cate") == 0) {
-            $cate = array();
-            foreach ($terms2 as $term) {
-                array_push($cate, $term->slug);
-            }
+    if (strcmp($cate, "all_cate") == 0) {
+        $cate = array();
+        foreach ($terms2 as $term) {
+            array_push($cate, $term->slug);
         }
     }
 
-//検索対象エリアを設定
-    if ($area) {
-        ;
 
-        foreach ($area as $val) {
-            $taxquerysp[] = array(
+//検索対象エリアを設定
+    $taxquerysp = [];
+    if ( ! empty($area)) {
+        $cats[]     = $area;
+        $taxquerysp = array(
+            array(
                 'taxonomy' => $taxonomy,
                 'field'    => 'slug',
-                'terms'    => $val
-            );
-        }
-        $taxquerysp['relation'] = 'OR';
+                'terms'    => $area
+            ),
+            'relation' => 'OR'
+        );
     }
 
 //検索対象カテゴリーを設定
-    if ($cate) {
 
-
-        foreach ($cate as $val) {
-            $taxquerysp2[] = array(
+    $taxquerysp2 = [];
+    if ( ! empty($cate)) {
+//        $cats[]      = $cate;
+        $taxquerysp2 = array(
+            array(
                 'taxonomy' => $taxonomy,
                 'field'    => 'slug',
-                'terms'    => $val
-            );
-        }
-        $taxquerysp2['relation'] = 'OR';
+                'terms'    => $cate
+            ),
+            'relation' => 'OR'
+        );
+
     }
-    $taxquery = array($taxquerysp, $taxquerysp2);
-    $cats     = array_merge($area, $cate);
+    $taxquery = array_merge($taxquerysp, $taxquerysp2);
+
 
 //フリーワード検索対象フィールドを設定
     $metaquerysp = [];
@@ -1454,6 +1456,8 @@ function designart_filter_exhibitor()
             'relation' => 'OR'
         );
     }
+
+    $terms = array_merge($terms, $terms2);
 
     echo designart_render_exhibitorarchive($terms, $taxquery, $metaquerysp, $cats);
     die;
