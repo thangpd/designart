@@ -1156,8 +1156,9 @@ function designart_render_exhibitorarchive($terms, $taxquerysp2 = [], $metaquery
         foreach ($terms as $term):
 
 
-            if ( ! empty($cats)) {
-                if ( ! in_array($term->slug, $cats)) {
+            if ( ! empty($cats) && is_array($cats)) {
+
+                if ( strcmp($term->slug, $cats[0])!=0) {
                     continue;
                 }
 
@@ -1182,15 +1183,17 @@ function designart_render_exhibitorarchive($terms, $taxquerysp2 = [], $metaquery
                 'order'          => 'ASC'
             ) );*/
 
-
-            $sub_taxonomy = array_merge(array(
-                array(
-                    'taxonomy' => $term->taxonomy,
-                    'field'    => 'slug',
-                    'terms'    => $term->slug,
-                ),
-                'relation' => 'OR'
-            ), $taxquerysp2);
+            if(!empty($cats)){
+	        $sub_taxonomy =  $taxquerysp2;
+            }else{
+	            $sub_taxonomy = array(
+		            array(
+			            'taxonomy' => $term->taxonomy,
+			            'field'    => 'slug',
+			            'terms'    => $term->slug,
+		            ),
+		            'relation' => 'OR');
+            }
             $tax_query    = $sub_taxonomy;
             $args         = array_merge(array(
                 'post_type'      => 'exhibitor',
@@ -1365,7 +1368,7 @@ function designart_filter_exhibitor()
 
     $taxquerysp2 = [];
     if ( ! empty($cate)) {
-//        $cats[]      = $cate;
+        $cats[]      = $cate;
         $taxquerysp2 = array(
             array(
                 'taxonomy' => $taxonomy,
