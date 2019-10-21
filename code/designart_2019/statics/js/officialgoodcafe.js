@@ -96,9 +96,9 @@ jQuery(function ($) {
                 var id = regex[1];
                 var offset = -$('.header-main').outerHeight() + 20;
 
-                $('html, body').animate({
+                /*$('html, body').animate({
                     scrollTop: $('#' + id).offset().top + offset
-                }, 2000);
+                }, 2000);*/
             }
         }
 
