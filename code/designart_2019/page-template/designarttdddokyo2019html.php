@@ -139,11 +139,8 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                         </div>
                     </div>
                     <div class="desc">
-                        <p class="text-18"> The 100 groups exhibit their works in the 11 areas in <br> 2019.The photo
-                            shows
-                            the 2018 exhibition <br>“60'S SOUNDS, 60'S SPIRITS” by Keita Suzuki + <br>Ichiro Yamaguchi
-                            at
-                            Fritz Hansen Aoyama.
+                        <p class="text-18"> The 100 groups exhibit their works in the 11 areas in
+                            2019.<br>The photo shows The exhibition “Garden of Eden” of Israel as the Partner Country, DESIGNART TOKYO 2019
                         </p>
                         <div class="link-group">
                             <a href="{%HOME_URL%}/exhibitor/" class="link-step">
@@ -212,6 +209,18 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                     </div>
                     <div class="desc slider-for">
                         {%EXHIBITOR_LIST%}
+
+                    </div>
+                    <div class="link-group">
+                        <a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/DA_schedule.pdf" target="_blank" class="more link-step">
+                            <div class="left">
+                                <div class="text-38">more</div>
+
+                            </div>
+                            <div class="right">
+                                <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
+                            </div>
+                        </a>
 
                     </div>
                 </div>
@@ -310,11 +319,8 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                     <img src="{%URL_STATICS%}/images/top/discoverart.jpg" alt=""/>
                 </div>
                 <div class="desc">
-                    <p class="text-16"> The 100 groups exhibit their works in the 11 areas in <br> 2019.The photo
-                        shows
-                        the 2018 exhibition <br>“60'S SOUNDS, 60'S SPIRITS” by Keita Suzuki + <br>Ichiro Yamaguchi
-                        at
-                        Fritz Hansen Aoyama.
+                    <p class="text-16"> The 100 groups exhibit their works in the 11 areas in
+                        2019.<br>The photo shows The exhibition “Garden of Eden” of Israel as the Partner Country, DESIGNART TOKYO 2019
                     </p>
                     <div class="link-group">
                         <a href="{%HOME_URL%}/exhibitor/" class="link-step">
@@ -379,6 +385,19 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                     <div class="desc slider-for">
                         {%EXHIBITOR_LIST_MB%}
                     </div>
+                    <div class="link-group">
+                        <a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/DA_schedule.pdf" target="_blank" class="more link-step">
+                            <div class="left">
+                                <div class="text-38">more</div>
+
+                            </div>
+                            <div class="right">
+                                <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
+                            </div>
+                        </a>
+
+                    </div>
+                    <br>
                 </div>
 
                 <div class="img-wrapper img-slick">
@@ -397,7 +416,7 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                 <div class="title-wrapper">
                     <div class="main-title">
                         <span class="number">03.</span>
-                        <span>BY ART</span>
+                        <span>BUY ART</span>
                     </div>
 
                 </div>
@@ -530,8 +549,7 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                         </div>
                     </div>
                     <div class="desc">
-                        <p class="text-16">2019年は全展示会場100箇所以上11エリアで開催致します。<br>写真は、2018年のエキシビション「 “60'S SOUNDS, 60'S
-                            SPIRITS” by Keita Suzuki + Ichiro Yamaguchi at Fritz Hansen Aoyama」</p>
+                        <p class="text-16">2019年は全展示会場100箇所以上11エリアで<br>開催致します。写真は、今年のパートナーカントリーに<br>選ばれたイスラエルのエキシビション<br>「エデンの園 at スパイラルガーデン」</p>
                         <div class="link-group">
                             <a href="{%HOME_URL%}/exhibitor/" class="link-step">
                                 <div class="left">
@@ -570,9 +588,7 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                         </div>
                     </div>
                     <div class="desc">
-                        <p class="text-16">デザイナートカンファレンス「BRIDGE」は、アート<br>
-                            とデザインの視点から今、社会で起きている変化につ<br>
-                            いて考え学び意見を交換し合う場です。</p>
+                        <p class="text-16">デザイナートカンファレンス「BRIDGE」は、アート<br>とデザインの視点から今、社会で起きている変化に<br>ついて考え学び意見を交換し合う場です。</p>
                         <div class="link-group">
                             <a href="http://designart.jp/conference2019/" class="more link-step">
                                 <div class="left">
@@ -599,8 +615,21 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                     </div>
                     <div class="desc slider-for">
                         {%EXHIBITOR_LIST%}
+                    </div>
+
+                    <div class="link-group">
+                        <a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/DA_schedule.pdf" target="_blank" class="more link-step">
+                            <div class="left">
+                                <div class="text-38">more</div>
+
+                            </div>
+                            <div class="right">
+                                <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
+                            </div>
+                        </a>
 
                     </div>
+
                 </div>
 
                 <div class="img-wrapper img-slick">
@@ -696,7 +725,8 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                     <img src="{%URL_STATICS%}/images/top/discoverart.jpg" alt=""/>
                 </div>
                 <div class="desc">
-                    <p class="text-18">2019年は全展示会場100箇所以上11エリアで開催致します。写真は、2018年のエキシビション「 “60'S SOUNDS, 60'S SPIRITS” by Keita Suzuki + Ichiro Yamaguchi at Fritz Hansen Aoyama」</p>
+                    <p class="text-18">2019年は全展示会場100箇所以上11エリアで開催致します。
+                        写真は、今年のパートナーカントリーに選ばれたイスラエルのエキシビション「エデンの園 at スパイラルガーデン」</p>
                     <div class="link-group">
                         <a href="{%HOME_URL%}/exhibitor/" class="link-step">
                             <div class="left">
@@ -758,6 +788,20 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                     <div class="desc slider-for">
                         {%EXHIBITOR_LIST_MB%}
                     </div>
+
+                    <div class="link-group">
+                        <a href="http://designart.jp/designarttokyo2019/wp-content/uploads/sites/8/2019/10/DA_schedule.pdf" target="_blank" class="more link-step">
+                            <div class="left">
+                                <div class="text-38">more</div>
+
+                            </div>
+                            <div class="right">
+                                <img src="{%URL_STATICS%}/images/top/arrow-item.png" alt=""/>
+                            </div>
+                        </a>
+
+                    </div>
+                    <br>
                 </div>
 
                 <div class="img-wrapper img-slick">
@@ -776,7 +820,7 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                 <div class="title-wrapper">
                     <div class="main-title">
                         <span class="number">03.</span>
-                        <span>BY ART</span>
+                        <span>BUY ART</span>
                     </div>
                     <div class="sub-title">アートを買う
                     </div>
@@ -785,7 +829,7 @@ $description = str_replace('{%CAROUSEL_NEWS%}', $content, $description);
                     <img src="{%URL_STATICS%}/images/top/buyart.jpg" alt=""/>
                 </div>
                 <div class="desc">
-                    <p class="text-16">デザイナートで展示されているアート作品は一部を除<br>いて全て購入可能です。</p>
+                    <p class="text-16">デザイナートで展示されているアート作品は一部を除いて全て購入可能です。</p>
                 </div>
             </div>
             <div class="step-item step-slick ">
