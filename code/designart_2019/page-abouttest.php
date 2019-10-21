@@ -1219,11 +1219,32 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                     <div class="area-section">
                                         <div id="shibuya-area">
                                             <div class="wp-content-area row">
-                                                <div class="wp-left col-md-4">
-                                                    <a href="#" class=" img--big">
-                                                        <img src="{%URL_STATICS%}/images/about/program/program08.jpg"
+                                                <div class="wp-left col-md-4 slice-slick-office-good">
+
+                                                    <div class="img--big">
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp01.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
-                                                    </a>
+                                                    </div>
+                                                    <div class="img--big">
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp02.jpg"
+                                                             alt="Shibuya Area" class="img-responsive">
+                                                    </div>
+                                                    <div class="img--big">
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp03.jpg"
+                                                             alt="Shibuya Area" class="img-responsive">
+                                                    </div>
+                                                    <div class="img--big">
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp04.jpg"
+                                                             alt="Shibuya Area" class="img-responsive">
+                                                    </div>
+                                                    <div class="img--big">
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp05.jpg"
+                                                             alt="Shibuya Area" class="img-responsive">
+                                                    </div>
+                                                    <div class="img--big">
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp06.jpg"
+                                                             alt="Shibuya Area" class="img-responsive">
+                                                    </div>
                                                 </div>
                                                 <div class="wp-right col-md-8">
                                                     <div class="title">JOIN THE STAMP RALLY</div>
@@ -2578,7 +2599,6 @@ Daikanyama, Nakameguro／Roppongi／Shinjyuku／Ginza
 
                                     </div>
                                 </div>
-
                                 <span class="line-sp"></span>
                                 <div class="wp-section-area">
                                     <div class="area-section">
@@ -2692,7 +2712,6 @@ Daikanyama, Nakameguro／Roppongi／Shinjyuku／Ginza
 
                                     </div>
                                 </div>
-
                                 <span class="line-sp"></span>
                                 <div class="wp-section-area">
                                     <div class="area-section">
@@ -2739,11 +2758,32 @@ Daikanyama, Nakameguro／Roppongi／Shinjyuku／Ginza
                                     <div class="area-section">
                                         <div id="shibuya-area">
                                             <div class="wp-content-area row">
-                                                <div class="wp-left col-md-4">
-                                                    <a href="#" class=" img--big">
-                                                        <img src="{%URL_STATICS%}/images/about/program/program08.jpg"
+                                                <div class="wp-left col-md-4 slice-slick-office-good">
+
+                                                    <div class="img--big">
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp01.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
-                                                    </a>
+                                                    </div>
+                                                    <div class="img--big">
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp02.jpg"
+                                                             alt="Shibuya Area" class="img-responsive">
+                                                    </div>
+                                                    <div class="img--big">
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp03.jpg"
+                                                             alt="Shibuya Area" class="img-responsive">
+                                                    </div>
+                                                    <div class="img--big">
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp04.jpg"
+                                                             alt="Shibuya Area" class="img-responsive">
+                                                    </div>
+                                                    <div class="img--big">
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp05.jpg"
+                                                             alt="Shibuya Area" class="img-responsive">
+                                                    </div>
+                                                    <div class="img--big">
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp06.jpg"
+                                                             alt="Shibuya Area" class="img-responsive">
+                                                    </div>
                                                 </div>
                                                 <div class="wp-right col-md-8">
                                                     <div class="title">JOIN THE STAMP RALLY</div>
@@ -2989,6 +3029,21 @@ Daikanyama, Nakameguro／Roppongi／Shinjyuku／Ginza
         jQuery(function ($) {
             $(document).ready(function () {
                 $('a[data-demo=item-0]').parent().addClass('current-menu-item');
+                setTimeout(function () {
+
+                    $('.slice-slick-office-good').slick(
+                        {
+
+                            autoplay: true,
+                            autoplaySpeed: 3000,
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            prevArrow: "<div class='slick-prev'><img class='a-left control-c prev slick-prev' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'></div>",
+                            nextArrow: "<div class='slick-next'><img class='a-right control-c next slick-next' src='<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png'></div>"
+
+                        }
+                    );
+                }, 500);
             });
 
 
