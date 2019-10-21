@@ -73,7 +73,7 @@ $cate = isset( $_GET['cate'] ) ? $_GET['cate'] : '';
             <div class="radio_group_wrap">
                 <div class="radio_group">
                     <div class="radios">
-                        <div class="tit"><?php echo translate_text_language( 'AREA' ); ?></div>
+                        <div class="tit" data-title="<?php echo translate_text_language( 'AREA' ); ?>"><?php echo translate_text_language( 'AREA' ); ?></div>
                         <ul class="area">
 							<?php
 							$selected = "";
@@ -123,7 +123,7 @@ $cate = isset( $_GET['cate'] ) ? $_GET['cate'] : '';
                     </div>
 
                     <div class="radios">
-                        <div class="tit"><?php echo translate_text_language( 'CATEGORY' ); ?></div>
+                        <div class="tit" data-title="<?php echo translate_text_language( 'CATEGORY' ); ?>"><?php echo translate_text_language( 'CATEGORY' ); ?></div>
                         <ul class="cate">
 							<?php
 							$selected = "";

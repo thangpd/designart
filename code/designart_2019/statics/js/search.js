@@ -28,27 +28,31 @@ jQuery(function ($) {
 
 
         $("#searchform .area .radio_area").on('click', function (e) {
-            if($(this).hasClass('selected')){
+            let area = $(this).parents("ul.area");
+            let siblings = area.siblings();
+            siblings.text($(this).find('label').text())
+            if ($(this).hasClass('selected')) {
+                siblings.text(siblings.data('title'));
                 $(this).removeClass("selected");
-            }else{
+            } else {
                 $(this).addClass("selected");
-
             }
-            $(this).parents("ul.area").find('.radio_area.selected').not($(this)).removeClass("selected");
+            area.find('.radio_area.selected').not($(this)).removeClass("selected");
 
 
         });
 
         $("#searchform .cate .radio_area").on('click', function (e) {
-            if($(this).hasClass('selected')){
+            let cate = $(this).parents("ul.cate");
+            let siblings = cate.siblings();
+            siblings.text($(this).find('label').text())
+            if ($(this).hasClass('selected')) {
+                siblings.text(siblings.data('title'));
                 $(this).removeClass("selected");
-            }else{
+            } else {
                 $(this).addClass("selected");
-
             }
-            $(this).parents("ul.cate").find('.radio_area.selected').not($(this)).removeClass("selected");
-
-
+            cate.find('.radio_area.selected').not($(this)).removeClass("selected");
 
             //change
         });
