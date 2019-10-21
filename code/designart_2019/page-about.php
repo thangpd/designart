@@ -1234,23 +1234,27 @@ $description      = str_replace('{%BANNER_PAGE%}', $html_banner_page, $descripti
                                                 <div class="wp-left col-md-4 slice-slick-office-good">
 
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/program08.jpg"
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp01.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/program08.jpg"
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp02.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/program08.jpg"
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp03.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/program08.jpg"
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp04.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/program08.jpg"
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp05.jpg"
+                                                             alt="Shibuya Area" class="img-responsive">
+                                                    </div>
+                                                    <div class="img--big">
+                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp06.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                 </div>
@@ -1501,8 +1505,8 @@ $description      = str_replace('{%BANNER_PAGE%}', $html_banner_page, $descripti
                             autoplaySpeed: 3000,
                             slidesToShow: 1,
                             slidesToScroll: 1,
-                            prevArrow: "<div><img class='a-left control-c prev slick-prev' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'></div>",
-                            nextArrow: "<div><img class='a-right control-c next slick-next' src='<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png'></div>"
+                            prevArrow: "<div class='slick-prev'><img class='a-left control-c prev slick-prev' src='<?php echo URL_STATICS; ?>/images/top/arrow-left-banner.png'></div>",
+                            nextArrow: "<div class='slick-next'><img class='a-right control-c next slick-next' src='<?php echo URL_STATICS; ?>/images/top/arrow-right-banner.png'></div>"
 
                         }
                     );
