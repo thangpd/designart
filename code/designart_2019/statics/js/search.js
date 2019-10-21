@@ -71,10 +71,6 @@ jQuery(function ($) {
                 searchtext = input.val();
             }
 
-
-            console.log(input);
-
-            console.log('ajax');
             var data = {action: 'filter_exhibitor', area: area, cate: cate, s: searchtext};
             $.ajax({
                 type: "GET",
