@@ -72,32 +72,18 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                             <div class="col-right">
                                                 <div class="desc">
                                                     <h3 class="title">東京の街全体がミュージアムになる10日間</h3>
-                                                    <p>DESIGNART（デザイナート）は、ジャンルの垣根を超えて、デザインと
-                                                        アートを横断するモノやコトの素晴らしさを発信・共有してゆく活動です。
+                                                    <p>DESIGNART（デザイナート）は、ジャンルの垣根を超えて、デザインとアートを横断するモノやコトの素晴らしさを発信・共有してゆく活動です。
                                                     </p>
-                                                    <p>「DESIGNART T OKYO」は、その活動の場として2017 年に始まった、
-                                                        毎年秋に開催するデザイン＆アートフェスティバル。世界屈指のミックス
-                                                        カルチャー都市である東京を舞台に、世界中からアート、デザイン、イン
-                                                        テ リア、ファッション、フードなどさまざまなジャンルのモノやコトが集
-                                                        結し 、都内各所で多彩なプレゼンテーションを行います。各展示を回遊
-                                                        し て街歩きが楽しめるのも、このイベントの魅力のひとつ。まさに、東京
-                                                        の街全体がデザイン＆アートミュージアムになる10 日間です。
+                                                    <p>「DESIGNART TOKYO」は、その活動の場として2017年に始まった、毎年秋に開催するデザイン＆アートフェスティバル。世界屈指のミックスカルチャー都市である東京を舞台に、世界中からアート、デザイン、インテリア、ファッション、フードなどさまざまなジャンルのモノやコトが集結し、都内各所で多彩なプレゼンテーションを行います。各展示を回遊して街歩きが楽しめるのも、このイベントの魅力のひとつ。まさに、東京の街全体がデザイン＆アートミュージアムになる10日間です。
+
                                                     </p>
-                                                    <p>過去２年の開催によって、アートやデザインプロダクツを購入し、日常
-                                                        的に愛でるという文化が、東京の人々に着実に根付きつつあります。そこで
-                                                        ３年目となる今年は、個人ではなく社会全体でアートを支える文化を成熟
-                                                        させるための活動をスタートします。
+                                                    <p>過去２年の開催によって、アートやデザインプロダクツを購入し、日常的に愛でるという文化が、東京の人々に着実に根付きつつあります。そこで３年目となる今年は、個人ではなく社会全体でアートを支える文化を成熟させるための活動をスタートします。
                                                     </p>
-                                                    <p>「 1% for Art」は、公共建設の建築費の１% をパブリックアートの制作
-                                                        費用に充てるという、欧米諸国や韓国、台湾などで法制化されている
-                                                        文化制度です。この制度によって、人々が日常的にアートを鑑賞し、感動で
-                                                        きる社会が実現するとともに、アーティストやデザイナーの雇用が創出
-                                                        されクリエイティブ産業を活性化させることができます。
+                                                    <p>「1% for Art」は、公共建設の建築費の１%をパブリックアートの制作費用に充てるという、欧米諸国や韓国、台湾などで法制化されている文化制度です。この制度によって、人々が日常的にアートを鑑賞し、感動できる社会が実現するとともに、アーティストやデザイナーの雇用が創出されクリエイティブ産業を活性化させることができます。
                                                     </p>
-                                                    <p>DESIGNART TOKYO 2 019 では、日本においてこの制度を実現す
-                                                        るための多様なプロジェクトを展開するほか、会期を通じて法制化実現
-                                                        のための著名活動なども実施します。
+                                                    <p>DESIGNART TOKYO 2019では、日本においてこの制度を実現するための多様なプロジェクトを展開するほか、会期を通じて法制化実現のための著名活動なども実施します。
                                                     </p>
+
 
                                                 </div>
                                             </div>
@@ -743,7 +729,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                     <div class="address">
                                                         住所: 東京都渋谷区渋谷3-21-3渋谷ストリーム2F<br/>
                                                         TEL: <a class="telephone"  href="tel:03-6427-3601"
-                                                               target="_blank">03-6427-3601</a> <br/>
+                                                                target="_blank">03-6427-3601</a> <br/>
                                                         営業時間：7:00 - 22:00 <br>
 
                                                         <a href="https://www.deandeluca.co.jp/ddshop/50044"
@@ -797,7 +783,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                 </div>
                                                 <div class="product col-md-7">
                                                     <h2 class="title">
-                                                        デザイナートトーキョー2019限定ドリンク<br>
+                                                        DESIGNART TOKYO 2019 限定ドリンク<br>
                                                         アールグレイ洋ナシネクター</h2>
                                                     <p class="description">
                                                         Non alcohol <br>SIZE S ¥540(税込)</p>
@@ -830,7 +816,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                             </div>
                                             <div class="wp-right col-md-8">
                                                 <div class="title">
-                                                    DESIGNART TOKYO 2019 <span
+                                                    DESIGNART TOKYO 2019 <br><span
                                                             class="sub-title">公式タブロイド</span>
                                                 </div>
                                                 <div class="info-area">
@@ -839,7 +825,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                        target="_blank"><span
                                                                 style="text-decoration: underline;">PDFをダウンロードする</span></a>
                                                 </div>
-                                                <div class="title">DESIGNART TOKYO 2019
+                                                <div class="title">DESIGNART TOKYO 2019<br>
                                                     <span class="sub-title">オフィシャルガイドブック</span>
                                                 </div>
                                                 <div class="info-area">
@@ -981,7 +967,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                     <div class="info">
                                                         国際的なデザイン業界でも独特のDNAを育んできたイスラエルを、 DESIGNART TOKYO
                                                         2019のパートナーカントリーとしてご招待。<br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/garden-of-eden-at-spiral-garden/
+" target="_blank">MORE INFO</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1007,31 +994,39 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                         ループエキシビジョンです。
                                                         <br><br>
                                                         Beyond molecular weight<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/beyond-molecular-weight/
+" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         FIL<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/fil/
+" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         「DECO」by Triple A / デザインイメージシート & VONDS RANSEL / 大沼 敦<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/deco-vondsransel/" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         TIMON<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/timon/
+" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         ハフトデザイン<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/haftdesign/
+" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         カツキコネクション<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/katsuki-connection/
+" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         炭酸デザイン室<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/tansan-design-studio/
+" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         荒木 宏介<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/kosuke-araki/
+" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         タラマンプラス<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/taraman/
+" target="_blank">MORE
                                                             INFO</a><br><br>
                                                     </div>
                                                 </div>
@@ -1062,11 +1057,13 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                         <br>
                                                         Creative Lithuania
                                                         <br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/creative-lithuania/
+" target="_blank">MORE INFO</a>
                                                         <br><br>
                                                         Young Swedish Design
                                                         <br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/young-swedish-design/
+" target="_blank">MORE INFO</a>
 
                                                     </div>
 
@@ -1099,7 +1096,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                         お申し込み：<br>
                                                         <a href="https://dat2019-conf.peatix.com/" target="_blank"
                                                            class="noborder">https://dat2019-conf.peatix.com/</a><br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/conference2019/" target="_blank">MORE INFO</a>
                                                     </div>
 
                                                 </div>
@@ -1122,8 +1119,21 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                 <div class="wp-right col-md-8">
                                                     <div class="title">OPENING PARTY</div>
                                                     <div class="info">
-                                                        誰もが参加できる、みんなでつくるデザインとアートの開幕イベント<br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        誰もが参加できる、みんなでつくるデザインとアートの開幕イベント<br><br>
+                                                        開催日：10/18(金) <br>
+
+                                                        19:00-21:00 <br>
+                                                        Opening Ceremony<br>
+                                                        場所：ワールド北青山ビル<br>
+                                                        住所：東京都港区北青山3-5-10<br>
+                                                        入場：無料<br>
+                                                        ドレスコード：クリエイティブカジュアル<br><br>
+
+                                                        22:00-4:00(OPEN 21:00)<br>
+                                                        Pechakucha Night Special<br>
+                                                        場所：PLUSTOKYO<br>
+                                                        住所：東京都中央区銀座1-18-9 12F<br>
+                                                        入場：¥2,000 with 1Drink
                                                     </div>
                                                 </div>
                                             </div>
@@ -1147,7 +1157,14 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                     <div class="info">
                                                         PARTNER COUNTRY ISRAEL X DESIGNART TOKYO<br>
                                                         フェスティバルの終盤を締めくくるイベントでは新設の「DESIGNART AWARD」を発表！<br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        イスラエルのシンガーソングライターであるDiklaのライブも必見！<br><br>
+                                                        開催日：10/26(土)<br>
+
+                                                        19:00-22:00 <br>
+                                                        場所：スパイラルガーデン<br>
+                                                        住所：東京都港区青山5-6-23<br>
+                                                        入場：無料
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -1171,19 +1188,24 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                     <div class="info">
                                                         デザイン＆アート界の未来を切り拓く５組<br><br>
                                                         チャーリン・チャン<br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/nature-as-metaphor/
+" target="_blank">MORE INFO</a>
                                                         <br><br>
                                                         阿部憲嗣<br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/g-gift-and-lifestyle/
+" target="_blank">MORE INFO</a>
                                                         <br><br>
                                                         中野築月・西山愛香<br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/shibuya-hikarie/
+" target="_blank">MORE INFO</a>
                                                         <br><br>
                                                         ハミッド・シャヒ<br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/hhdmt_axis/
+" target="_blank">MORE INFO</a>
                                                         <br><br>
                                                         M&T<br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/hhdmt_axis/
+" target="_blank">MORE INFO</a>
 
                                                     </div>
                                                 </div>
@@ -1208,12 +1230,11 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                     <div class="info">
                                                         スタンプラリーに参加して、豪華商品をゲット！<br><br>
 
-                                                        1.マップをもらう <br>
-                                                        スタンプラリーの台紙がついたDESIGNART T OKYO 2 019 A RE A M AP
-                                                        を展示会場やインフォメーションセンターでゲット。<br><br>
+                                                        1.マップをもらう<br>
+                                                        スタンプラリーの台紙がついたDESIGNART TOKYO 2019 AREA MAPを展示会場やインフォメーションセンターでゲット。 <br><br>
 
-                                                        2.スタンプを集めよう<br>
-                                                        各展示会場を巡り、マップ裏面の該当箇所にスタンプを押して12 個集めよう。<br><br>
+                                                        2.スタンプを集めよう <br>
+                                                        各展示会場を巡り、マップ裏面の該当箇所にスタンプを押して12個集めよう。<br><br>
 
                                                         3.いざ！抽選に参加<br>
                                                         ワールド北青山ビルにあるインフォメーションセンターにて抽選に参加。
@@ -1252,7 +1273,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                     <p class="info-group-item">Astrid Klein / Klein Dytham
                                                         architecture</p>
                                                     <p class="info-group-item">Hiroshi Koike / NON-GRID / IMG SRC</p>
-                                                    <p class="info-group-item">Okisato Nagata / EXS</p>
+                                                    <p class="info-group-item">Okisato Nagata</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1313,7 +1334,7 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                             <div class="col-right">
                                                 <div class="info-group">
                                                     <p class="info-group-item">Ai Yoshida</p>
-                                                    <p class="info-group-item">Hitomi Kodaka Rehearsal</p>
+                                                    <p class="info-group-item">Hitomi Kodaka / Rehearsal</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1322,8 +1343,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                     インターナショナルPR</span></div>
                                             <div class="col-right">
                                                 <div class="info-group">
-                                                    <p class="info-group-item">Martin Webb COMMUNION</p>
-                                                    <p class="info-group-item">Atsushi Yamauchi COMMUNION</p>
+                                                    <p class="info-group-item">Martin Webb / COMMUNION</p>
+                                                    <p class="info-group-item">Atsushi Yamauchi / COMMUNION</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1332,11 +1353,11 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                     オフィシャルブックレット & タブロイド</span></div>
                                             <div class="col-right">
                                                 <div class="info-group">
-                                                    <p class="info-group-item">Toshiaki Ishii river / Editor in
+                                                    <p class="info-group-item">Toshiaki Ishii / river / Editor in
                                                         Chief</p>
-                                                    <p class="info-group-item">Masato Warita river</p>
-                                                    <p class="info-group-item">Taku Kasuya Photographer</p>
-                                                    <p class="info-group-item">Tohru Yuasa Photographer</p>
+                                                    <p class="info-group-item">Masato Warita / river</p>
+                                                    <p class="info-group-item">Taku Kasuya / Photographer</p>
+                                                    <p class="info-group-item">Tohru Yuasa / Photographer</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1345,12 +1366,12 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                             </div>
                                             <div class="col-right">
                                                 <div class="info-group">
-                                                    <p class="info-group-item">Keiko Chiba Nac.sa & Partners</p>
-                                                    <p class="info-group-item">Futa Moriishi Nac.sa & Partners</p>
-                                                    <p class="info-group-item">Donggyu Kim Nac.sa & Partners</p>
-                                                    <p class="info-group-item">Kai Kanno Nac.sa & Partners</p>
-                                                    <p class="info-group-item">Akira Arai Nac.sa & Partners</p>
-                                                    <p class="info-group-item">Sakura Sueyoshi Nac.sa & Partners</p>
+                                                    <p class="info-group-item">Keiko Chiba / Nacása & Partners</p>
+                                                    <p class="info-group-item">Futa Moriishi / Nacása & Partners</p>
+                                                    <p class="info-group-item">Donggyu Kim / Nacása & Partners</p>
+                                                    <p class="info-group-item">Kai Kanno / Nacása & Partners</p>
+                                                    <p class="info-group-item">Akira Arai / Nacása & Partners</p>
+                                                    <p class="info-group-item">Sakura Sueyoshi / Nacása & Partners</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1359,8 +1380,8 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                             <div class="col-right">
                                                 <div class="info-group">
                                                     <p class="info-group-item">Terrance Young</p>
-                                                    <p class="info-group-item">Haruki Makio Fraze Craze Inc.</p>
-                                                    <p class="info-group-item">Yayoi Morikawa Fraze Craze Inc.</p>
+                                                    <p class="info-group-item">Haruki Makio / Fraze Craze Inc.</p>
+                                                    <p class="info-group-item">Yayoi Morikawa / Fraze Craze Inc.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1588,14 +1609,14 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                         <div class="brand-block">
                                             <div class="col-left"><span class="lb-text">Session</span></div>
                                             <div class="col-right"><span
-                                                        class="info-text">Friday 19th Oct. 2018〜Sunday 28th, Oct. 2018</span>
+                                                        class="info-text">Friday 18th Oct. 2019〜Sunday 27th, Oct. 2019</span>
                                             </div>
                                         </div>
                                         <div class="brand-block">
                                             <div class="col-left"><span class="lb-text">Venue</span></div>
                                             <div class="col-right"><span class="info-text">
                                                     Omotesando, Gaienmae／Harajuku, Meiji-jingumae／Shibuya, Ebisu／
-Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
+Daikanyama, Nakameguro／Roppongi／Shinjyuku／Ginza
                                                 </span>
                                             </div>
                                         </div>
@@ -1612,7 +1633,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                         <div class="brand-block">
                                             <div class="col-left"><span class="lb-text">PARTNER COUNTRY</span></div>
                                             <div class="col-right"><span class="info-text">
-                                                   KINGDOM OF SWEDEN
+                                                   Israel
                                                 </span></div>
                                         </div>
                                         <div class="brand-block">
@@ -2442,7 +2463,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         event in Israel, as the Partner Country to DESIGNART TOKYO 2019
                                                         and share and introduce Israeli design to the Japanese public.
                                                         <br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/garden-of-eden-at-spiral-garden/
+" target="_blank">MORE INFO</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2468,36 +2490,44 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         domains of design and art.
                                                         <br><br>
                                                         Beyond molecular weight<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/beyond-molecular-weight/
+" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         FIL<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/fil/
+" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         “DECO” by Triple A / Design image seat & VONDS RANSEL / Atsushi
                                                         onuma<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/deco-vondsransel/" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         TIMON<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/timon/
+" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         HAFT DESIGN<br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/haftdesign/
+" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         Katsuki Connection
                                                         <br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/katsuki-connection/
+" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         TANSAN DESIGN STUDIO
                                                         <br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/tansan-design-studio/
+" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         Kosuke Araki
                                                         <br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/kosuke-araki/
+" target="_blank">MORE
                                                             INFO</a><br><br>
                                                         TARAMAN+
                                                         <br>
-                                                        <a class="multi-btn" href="" target="_blank">MORE
+                                                        <a class="multi-btn" href="http://designart.jp/designarttokyo2019/exhibitor/taraman/
+" target="_blank">MORE
                                                             INFO</a><br><br>
 
                                                     </div>
@@ -2532,11 +2562,13 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         <br>
                                                         Creative Lithuania
                                                         <br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/creative-lithuania/
+" target="_blank">MORE INFO</a>
                                                         <br><br>
                                                         Young Swedish Design
                                                         <br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/young-swedish-design/
+" target="_blank">MORE INFO</a>
 
                                                     </div>
 
@@ -2576,7 +2608,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         <br>
                                                         <a href="https://dat2019-conf.peatix.com/"
                                                            target="_blank" class="noborder">https://dat2019-conf.peatix.com/</a><br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/conference2019/
+" target="_blank">MORE INFO</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2602,8 +2635,22 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         The design and art festival anyone can participate in an opening
                                                         event made by and for all.
 
-                                                        <br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <br><br>
+                                                        10/18(Fri)<br>
+
+                                                        19:00-21:00 <br>
+                                                        Opening Ceremony<br>
+                                                        WORLD KITA-AOYAMA BLDG.1F<br>
+                                                        Address：3-5-10 Kita-aoyama,Minato-ku<br>
+                                                        Entrance：FREE<br>
+                                                        Dress code：creative casual<br><br>
+
+                                                        22:00-4:00（OPEN 21:00）<br>
+                                                        Pechakucha Night Special<br>
+                                                        PLUSTOKYO<br>
+                                                        Address：12F. 1-18-9 Ginza,Chuo-ku<br>
+                                                        Entrance：¥2,000 with 1Drink
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -2626,9 +2673,18 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     <div class="title">CLOSING EVENT</div>
                                                     <div class="info">
                                                         PARTNER COUNTRY ISRAEL X DESIGNART TOKYO<br>
-                                                        At the closing event of the festival, the newly created
-                                                        “DESIGNART AWARD” will be announced!<br>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        At the closing event of the festival, the newly created “DESIGNART AWARD” will be announced!<br>
+                                                        Israeli singer-songwriter Dikla, who is also known for making<br>
+                                                        Arabian/Mizrahim popmusic mixture sounds will also be live performing!
+                                                        <br><br>
+
+                                                        10/26(Sat)<br>
+
+                                                        19:00-21:00 <br>
+                                                        Spiral Garden<br>
+                                                        Address：5-6-23 Minami-Aoyama,Minato-ku<br>
+                                                        Entrance：FREE
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -2656,15 +2712,20 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                         They present their pick of these promising talents in a unique
                                                         perspective, with the condition that they all be under 30.
                                                         <p>CHIALING CHANG </p>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/nature-as-metaphor/
+" target="_blank">MORE INFO</a>
                                                         <p>KENJI ABE </p>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/g-gift-and-lifestyle/
+" target="_blank">MORE INFO</a>
                                                         <p>KIZUKI NAKANO・AIKA NISHIYAMA</p>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/shibuya-hikarie/
+" target="_blank">MORE INFO</a>
                                                         <p>HAMID SHAHI</p>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/hhdmt_axis/
+" target="_blank">MORE INFO</a>
                                                         <p>M&T</p>
-                                                        <a href="" target="_blank">MORE INFO</a>
+                                                        <a href="http://designart.jp/designarttokyo2019/exhibitor/hhdmt_axis/
+" target="_blank">MORE INFO</a>
 
                                                     </div>
                                                 </div>
@@ -2740,7 +2801,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     <p class="info-group-item">Astrid Klein / Klein Dytham
                                                         architecture</p>
                                                     <p class="info-group-item">Hiroshi Koike / NON-GRID / IMG SRC</p>
-                                                    <p class="info-group-item">Okisato Nagata / EXS</p>
+                                                    <p class="info-group-item">Okisato Nagata</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -2801,7 +2862,7 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="col-right">
                                                 <div class="info-group">
                                                     <p class="info-group-item">Ai Yoshida</p>
-                                                    <p class="info-group-item">Hitomi Kodaka Rehearsal</p>
+                                                    <p class="info-group-item">Hitomi Kodaka / Rehearsal</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -2810,8 +2871,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     インターナショナルPR</span></div>
                                             <div class="col-right">
                                                 <div class="info-group">
-                                                    <p class="info-group-item">Martin Webb COMMUNION</p>
-                                                    <p class="info-group-item">Atsushi Yamauchi COMMUNION</p>
+                                                    <p class="info-group-item">Martin Webb / OMMUNION</p>
+                                                    <p class="info-group-item">Atsushi Yamauchi / COMMUNION</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -2820,11 +2881,11 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                                     オフィシャルブックレット & タブロイド</span></div>
                                             <div class="col-right">
                                                 <div class="info-group">
-                                                    <p class="info-group-item">Toshiaki Ishii river / Editor in
+                                                    <p class="info-group-item">Toshiaki Ishii / river / Editor in
                                                         Chief</p>
-                                                    <p class="info-group-item">Masato Warita river</p>
-                                                    <p class="info-group-item">Taku Kasuya Photographer</p>
-                                                    <p class="info-group-item">Tohru Yuasa Photographer</p>
+                                                    <p class="info-group-item">Masato Warita / river</p>
+                                                    <p class="info-group-item">Taku Kasuya / Photographer</p>
+                                                    <p class="info-group-item">Tohru Yuasa / Photographer</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -2833,12 +2894,12 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             </div>
                                             <div class="col-right">
                                                 <div class="info-group">
-                                                    <p class="info-group-item">Keiko Chiba Nac.sa & Partners</p>
-                                                    <p class="info-group-item">Futa Moriishi Nac.sa & Partners</p>
-                                                    <p class="info-group-item">Donggyu Kim Nac.sa & Partners</p>
-                                                    <p class="info-group-item">Kai Kanno Nac.sa & Partners</p>
-                                                    <p class="info-group-item">Akira Arai Nac.sa & Partners</p>
-                                                    <p class="info-group-item">Sakura Sueyoshi Nac.sa & Partners</p>
+                                                    <p class="info-group-item">Keiko Chiba / Nacása & Partners</p>
+                                                    <p class="info-group-item">Futa Moriishi / Nacása & Partners</p>
+                                                    <p class="info-group-item">Donggyu Kim / Nacása & Partners</p>
+                                                    <p class="info-group-item">Kai Kanno / Nacása & Partners</p>
+                                                    <p class="info-group-item">Akira Arai / Nacása & Partners</p>
+                                                    <p class="info-group-item">Sakura Sueyoshi / Nacása & Partners</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -2847,8 +2908,8 @@ Daikanyama, Nakameguro／Roppongi, Hiroo, Mita
                                             <div class="col-right">
                                                 <div class="info-group">
                                                     <p class="info-group-item">Terrance Young</p>
-                                                    <p class="info-group-item">Haruki Makio Fraze Craze Inc.</p>
-                                                    <p class="info-group-item">Yayoi Morikawa Fraze Craze Inc.</p>
+                                                    <p class="info-group-item">Haruki Makio / Fraze Craze Inc.</p>
+                                                    <p class="info-group-item">Yayoi Morikawa / Fraze Craze Inc.</p>
                                                 </div>
                                             </div>
                                         </div>
