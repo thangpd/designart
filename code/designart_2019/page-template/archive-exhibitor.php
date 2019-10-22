@@ -205,7 +205,7 @@ $cate = isset( $_GET['cate'] ) ? $_GET['cate'] : '';
 <script>
     jQuery(function ($) {
         $(document).ready(function () {
-            let ahref = $('a[data-demo=item-1]');
+            let ahref = $('a[data-demo="item-1"]');
             console.log(ahref);
             let menu = ahref.parents('li.menu-item');
             console.log(menu);
