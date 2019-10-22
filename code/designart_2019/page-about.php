@@ -47,7 +47,7 @@ echo $description;
     <script !src="">
         jQuery(function ($) {
             $(document).ready(function () {
-                $('a[data-demo=item-0]').parent().addClass('current-menu-item');
+                $('a[data-demo=item-1]').parent().addClass('current-menu-item');
 
                 setTimeout(function () {
 
