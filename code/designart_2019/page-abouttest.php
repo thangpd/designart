@@ -1222,27 +1222,27 @@ $description      = str_replace( '{%BANNER_PAGE%}', $html_banner_page, $descript
                                                 <div class="wp-left col-md-4 slice-slick-office-good">
 
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp01.jpg"
+                                                        <img src="{%URL_STATICS%}/images/about/program/stamp01.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp02.jpg"
+                                                        <img src="{%URL_STATICS%}/images/about/program/stamp02.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp03.jpg"
+                                                        <img src="{%URL_STATICS%}/images/about/program/stamp03.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp04.jpg"
+                                                        <img src="{%URL_STATICS%}/images/about/program/stamp04.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp05.jpg"
+                                                        <img src="{%URL_STATICS%}/images/about/program/stamp05.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp06.jpg"
+                                                        <img src="{%URL_STATICS%}/images/about/program/stamp06.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                 </div>
@@ -2761,27 +2761,27 @@ Daikanyama, Nakameguro／Roppongi／Shinjyuku／Ginza
                                                 <div class="wp-left col-md-4 slice-slick-office-good">
 
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp01.jpg"
+                                                        <img src="{%URL_STATICS%}/images/about/program/stamp01.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp02.jpg"
+                                                        <img src="{%URL_STATICS%}/images/about/program/stamp02.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp03.jpg"
+                                                        <img src="{%URL_STATICS%}/images/about/program/stamp03.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp04.jpg"
+                                                        <img src="{%URL_STATICS%}/images/about/program/stamp04.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp05.jpg"
+                                                        <img src="{%URL_STATICS%}/images/about/program/stamp05.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                     <div class="img--big">
-                                                        <img src="<?php echo URL_STATICS ?>/images/about/program/stamp06.jpg"
+                                                        <img src="{%URL_STATICS%}/images/about/program/stamp06.jpg"
                                                              alt="Shibuya Area" class="img-responsive">
                                                     </div>
                                                 </div>
