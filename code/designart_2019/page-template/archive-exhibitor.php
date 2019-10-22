@@ -205,7 +205,9 @@ $cate = isset( $_GET['cate'] ) ? $_GET['cate'] : '';
 <script>
     jQuery(function ($) {
         $(document).ready(function () {
-            $('a[data-demo=item-1]').parents('li.menu-item').addClass('current-menu-item');
+            let menu = $('a[data-demo=item-1]').parents('li.menu-item');
+            console.log(menu);
+            menu.addClass('current-menu-item');
             $('.filter_category a.category').on('click', function (e) {
                 e.preventDefault();
                 var window = screen.width;
