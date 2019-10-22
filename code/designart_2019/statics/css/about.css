@@ -1054,10 +1054,14 @@ ul.table_col_right_text li {
     right: 15px;
 }
 
-@media screen and (max-width: 767px) {
-    .wp-content.official.program .wp-section-area .area-section .wp-content-area .wp-left .img--big img{
-        height:230px;
+@media screen and (max-width: 991px) and (min-width: 426px){
+    .area-section .wp-left{
+        width: 475px;
     }
+}
+
+@media screen and (max-width: 767px) {
+
 
     .wp-content.coffee .right {
         margin-left: 0px !important;
