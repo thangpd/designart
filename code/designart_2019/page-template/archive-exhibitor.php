@@ -208,7 +208,6 @@ $cate = isset( $_GET['cate'] ) ? $_GET['cate'] : '';
             $('a[data-demo=item-1]').parent().addClass('current-menu-item');
             $('.filter_category a.category').on('click', function (e) {
                 e.preventDefault();
-                alert('ok');
                 var window = screen.width;
                 var descrease_offset = 0;
                 if (window >= 1024) {
